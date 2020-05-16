@@ -9,13 +9,9 @@
   
 <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/css/uikit.min.css" />
+<!-- partial -->
+  <script  src=".copy/script.js"></script>
 
-
-<link rel='stylesheet' href='https://codepen.io/wilbo/pen/MbyvJo.css'><link rel="stylesheet" href="./code/style.css">
-
-
-  <script src='https://prismjs.com/prism.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js'></script><script  src="./code/script.js"></script>
 
 
 <!-- UIkit JS -->
@@ -37,16 +33,22 @@
 <hr>
 <h2 id="close-button">Close button</h2>
 <p>To create a close button and enable its functionality, add the <code>.uk-alert-close</code> class to a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element inside the alert box. To apply a close icon, add the <code>uk-close</code> attribute from the <a href="close.md">Close component</a>.</p>
+<div id="textToCopy">
+  
+
+
 <pre class="language-javascript">&lt;<span class="hljs-keyword">div</span> uk-alert&gt;
     &lt;<span class="hljs-keyword">a</span> class=<span class="hljs-string">"uk-alert-close"</span> uk-<span class="hljs-built_in">close</span>&gt;&lt;/<span class="hljs-keyword">a</span>&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
-</pre>
+</pre></div>
+<button id="copyButton">Click to copy</button> <span id="copyResult"></span>
+<div id="textToCopy">
 <pre class="language-javascript"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-alert</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-alert-close"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Notice<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</pre>
+</pre></pre></div>
 <hr>
 <h2 id="style-modifiers">Style modifiers</h2>
 <p>There are several style modifiers available. Just add one of the following classes to apply a different look.</p>
