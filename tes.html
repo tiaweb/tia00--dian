@@ -10,6 +10,14 @@
 <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/css/uikit.min.css" />
 
+
+<link rel='stylesheet' href='https://codepen.io/wilbo/pen/MbyvJo.css'><link rel="stylesheet" href="./code/style.css">
+
+
+  <script src='https://prismjs.com/prism.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js'></script><script  src="./code/script.js"></script>
+
+
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
@@ -29,11 +37,11 @@
 <hr>
 <h2 id="close-button">Close button</h2>
 <p>To create a close button and enable its functionality, add the <code>.uk-alert-close</code> class to a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element inside the alert box. To apply a close icon, add the <code>uk-close</code> attribute from the <a href="close.md">Close component</a>.</p>
-<pre><code class="lang-html">&lt;<span class="hljs-keyword">div</span> uk-alert&gt;
+<pre class="language-javascript"><code class="lang-html">&lt;<span class="hljs-keyword">div</span> uk-alert&gt;
     &lt;<span class="hljs-keyword">a</span> class=<span class="hljs-string">"uk-alert-close"</span> uk-<span class="hljs-built_in">close</span>&gt;&lt;/<span class="hljs-keyword">a</span>&gt;
 &lt;/<span class="hljs-keyword">div</span>&gt;
 </code></pre>
-<pre><code class="lang-example"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-alert</span>&gt;</span>
+<pre class="language-javascript"><code class="lang-example"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-alert</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-alert-close"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Notice<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -68,7 +76,7 @@
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-example"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-alert-primary"</span> <span class="hljs-attr">uk-alert</span>&gt;</span>
+<pre class="language-javascript"><code class="lang-example"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-alert-primary"</span> <span class="hljs-attr">uk-alert</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-alert-close"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -122,13 +130,13 @@
 </tbody>
 </table>
 <p><code>animation</code> is the <em>Primary</em> option and its key may be omitted, if it&#39;s the only option in the attribute value.</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">".my-class"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<pre class="language-javascript"><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">".my-class"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 </code></pre>
 <hr>
 <h2 id="javascript">JavaScript</h2>
 <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
 <h3 id="initialization">Initialization</h3>
-<pre><code class="lang-js"><span class="hljs-selector-tag">UIkit</span><span class="hljs-selector-class">.alert</span>(<span class="hljs-selector-tag">element</span>, <span class="hljs-selector-tag">options</span>);
+<pre class="language-javascript"><code class="lang-js"><span class="hljs-selector-tag">UIkit</span><span class="hljs-selector-class">.alert</span>(<span class="hljs-selector-tag">element</span>, <span class="hljs-selector-tag">options</span>);
 </code></pre>
 <h3 id="events">Events</h3>
 <p>The following events will be triggered on elements with this component attached:</p>
@@ -155,7 +163,7 @@
 <h3 id="methods">Methods</h3>
 <p>The following methods are available for the component:</p>
 <h4 id="close">Close</h4>
-<pre><code class="lang-js"><span class="hljs-selector-tag">UIkit</span><span class="hljs-selector-class">.alert</span>(<span class="hljs-selector-tag">element</span>)<span class="hljs-selector-class">.close</span>();
+<pre class="language-javascript"><code class="lang-js"><span class="hljs-selector-tag">UIkit</span><span class="hljs-selector-class">.alert</span>(<span class="hljs-selector-tag">element</span>)<span class="hljs-selector-class">.close</span>();
 </code></pre>
 <p>Closes and removes the Alert.</p>
 </body>
