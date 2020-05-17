@@ -1,0 +1,157 @@
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Alert_0"></a>Alert</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Display success, warning and error messages.&lt;/p&gt;</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Usage_4"></a>Usage</h2>
+<p class="has-line-data" data-line-start="6" data-line-end="7">To apply this component, add the <code>tiadian-alert</code> attribute to a block element.</p>
+<pre><code class="has-line-data" data-line-start="9" data-line-end="11" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-alert</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<pre><code class="has-line-data" data-line-start="13" data-line-end="15" class="language-example">&lt;div tiadian-alert&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=18 data-line-end=19 ><a id="Close_button_18"></a>Close button</h2>
+<p class="has-line-data" data-line-start="20" data-line-end="21">To create a close button and enable its functionality, add the <code>.tiadian-alert-close</code> class to a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element inside the alert box. To apply a close icon, add the <code>tiadian-close</code> attribute from the <a href="close.md">Close component</a>.</p>
+<pre><code class="has-line-data" data-line-start="23" data-line-end="27" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-alert</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-alert-close"</span> <span class="hljs-attribute">tiadian-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<pre><code class="has-line-data" data-line-start="29" data-line-end="35" class="language-example">&lt;div tiadian-alert&gt;
+    &lt;a class=&quot;tiadian-alert-close&quot; tiadian-close&gt;&lt;/a&gt;
+    &lt;h3&gt;Notice&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=38 data-line-end=39 ><a id="Style_modifiers_38"></a>Style modifiers</h2>
+<p class="has-line-data" data-line-start="40" data-line-end="41">There are several style modifiers available. Just add one of the following classes to apply a different look.</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-alert-primary</code></td>
+<td style="text-align:left">Give the message a prominent styling.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-alert-success</code></td>
+<td style="text-align:left">Indicates success or a positive message.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-alert-warning</code></td>
+<td style="text-align:left">Indicates a message containing a warning.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-alert-danger</code></td>
+<td style="text-align:left">Indicates an important or error message.</td>
+</tr>
+</tbody>
+</table>
+<div class="tiadian-alert-primary" tiadian-alert>
+    <a class="tiadian-alert-close" tiadian-close></a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+</div>
+
+<div class="tiadian-alert-success" tiadian-alert>
+    <a class="tiadian-alert-close" tiadian-close></a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+</div>
+
+<div class="tiadian-alert-warning" tiadian-alert>
+    <a class="tiadian-alert-close" tiadian-close></a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+</div>
+
+<div class="tiadian-alert-danger" tiadian-alert>
+    <a class="tiadian-alert-close" tiadian-close></a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+</div>
+<pre><code class="has-line-data" data-line-start="50" data-line-end="70" class="language-example">&lt;div class=&quot;tiadian-alert-primary&quot; tiadian-alert&gt;
+    &lt;a class=&quot;tiadian-alert-close&quot; tiadian-close&gt;&lt;/a&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-alert-success&quot; tiadian-alert&gt;
+    &lt;a class=&quot;tiadian-alert-close&quot; tiadian-close&gt;&lt;/a&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-alert-warning&quot; tiadian-alert&gt;
+    &lt;a class=&quot;tiadian-alert-close&quot; tiadian-close&gt;&lt;/a&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-alert-danger&quot; tiadian-alert&gt;
+    &lt;a class=&quot;tiadian-alert-close&quot; tiadian-close&gt;&lt;/a&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=73 data-line-end=74 ><a id="Component_options_73"></a>Component options</h2>
+<p class="has-line-data" data-line-start="75" data-line-end="76">Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Default</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>animation</code></td>
+<td style="text-align:left">Boolean, String</td>
+<td style="text-align:left"><code>true</code></td>
+<td style="text-align:left">Fade out or use the <a href="animation.md">Animation component</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>duration</code></td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"><code>150</code></td>
+<td style="text-align:left">Animation duration in milliseconds.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>sel-close</code></td>
+<td style="text-align:left">CSS selector</td>
+<td style="text-align:left"><code>.tiadian-alert-close</code></td>
+<td style="text-align:left">The close trigger element.</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="83" data-line-end="84"><code>animation</code> is the <em>Primary</em> option and its key may be omitted, if it’s the only option in the attribute value.</p>
+<pre><code class="has-line-data" data-line-start="86" data-line-end="88" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">tiadian-toggle</span>=<span class="hljs-value">".my-class"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=91 data-line-end=92 ><a id="JavaScript_91"></a>JavaScript</h2>
+<p class="has-line-data" data-line-start="93" data-line-end="94">Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+<h3 class="code-line" data-line-start=95 data-line-end=96 ><a id="Initialization_95"></a>Initialization</h3>
+<pre><code class="has-line-data" data-line-start="98" data-line-end="100" class="language-js">TIAdian.alert(element, options);
+</code></pre>
+<h3 class="code-line" data-line-start=101 data-line-end=102 ><a id="Events_101"></a>Events</h3>
+<p class="has-line-data" data-line-start="103" data-line-end="104">The following events will be triggered on elements with this component attached:</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>beforehide</code></td>
+<td style="text-align:left">Fires before an item is hidden. Can prevent hiding by calling <code>preventDefault()</code> on the event.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>hide</code></td>
+<td style="text-align:left">Fires after an item is hidden.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="code-line" data-line-start=110 data-line-end=111 ><a id="Methods_110"></a>Methods</h3>
+<p class="has-line-data" data-line-start="112" data-line-end="113">The following methods are available for the component:</p>
+<h4 class="code-line" data-line-start=114 data-line-end=115 ><a id="Close_114"></a>Close</h4>
+<pre><code class="has-line-data" data-line-start="117" data-line-end="119" class="language-js">TIAdian.alert(element).close();
+</code></pre>
+<p class="has-line-data" data-line-start="120" data-line-end="121">Closes and removes the Alert.</p>
