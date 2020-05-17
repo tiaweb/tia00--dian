@@ -7,14 +7,108 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
-	  <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/c1.css">
-
  <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
 
     <!-- TIAWEB CSS -->
     <link rel="stylesheet" href="https://tiaweb.gitlab.io/material/css/tiaweb.css">
     <link rel="stylesheet" href="https://tiaweb.gitlab.io/material/css/material-icons.css">
+<style>
+	
 
+  .wrapper {
+  padding: 100px;
+}
+
+
+.tiaweb-card__media {
+	margin: 0;
+}
+.tiaweb-card__media > img {
+	max-width: 100%;
+}
+.tiaweb-card__actions {
+	display: flex;
+	box-sizing:border-box;
+	align-items: center;
+}
+.tiaweb-card__actions > .tiaweb-button--icon {
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+  </style>
+<style>
+header.custom-header {
+  background: #fff;
+}
+.tiaweb-layout__header-row span.tiaweb-layout-title {
+  color: #000;
+  text-transform: uppercase;
+}
+.custom-header .material-icons {
+  color: #000;
+}
+.custom-header a.tiaweb-navigation__link {
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+}
+.custom-header a.tiaweb-navigation__link:hover {
+  color: #0000FF;
+}
+.tiaweb-layout__drawer span.tiaweb-layout-title {
+  background: #111;
+  color: #ffb648;
+}
+.tiaweb-layout__drawer a.tiaweb-navigation__link {
+  color: #eee;
+  font-weight: 700;
+  font-size: 14px;
+}
+.tiaweb-layout__drawer a.tiaweb-navigation__link:hover {
+  color: #000;
+}
+body{
+  background-color: #efeff4;
+}
+
+.tiaweb-layout__content .p1{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #efeff4;
+  
+}
+
+.tiaweb-layout__content .p2{
+
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+  background-color: #000;
+}
+
+.tiaweb-layout__content .p3{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.tiaweb-layout__content .p4{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.tiaweb-layout__content .p5{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #fff;
+}
+  </style>
 
 
     <title>Hello, world!</title>
@@ -86,21 +180,21 @@ fetch("https://tiaweb.github.io/tiadian/docs/pages/alert")
   .then(data => {
     document.querySelector("tia").innerHTML = data;
   });
-	fetch("https://tiaweb.github.io/tiadian/docs/pages/he1")
+	fetch("https://tiaweb.github.io/tiadian/docs/he1")
   .then(response => {
     return response.text()
   })
   .then(data => {
     document.querySelector("he1").innerHTML = data;
   });
-	fetch("https://tiaweb.github.io/tiadian/docs/pages/he2")
+	fetch("https://tiaweb.github.io/tiadian/docs/he2")
   .then(response => {
     return response.text()
   })
   .then(data => {
     document.querySelector("he2").innerHTML = data;
   });
-	fetch("https://tiaweb.github.io/tiadian/docs/pages/he3")
+	fetch("https://tiaweb.github.io/tiadian/docs/he3")
   .then(response => {
     return response.text()
   })
