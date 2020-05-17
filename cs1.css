@@ -1,0 +1,99 @@
+
+
+  .wrapper {
+  padding: 100px;
+}
+
+
+.tiaweb-card__media {
+	margin: 0;
+}
+.tiaweb-card__media > img {
+	max-width: 100%;
+}
+.tiaweb-card__actions {
+	display: flex;
+	box-sizing:border-box;
+	align-items: center;
+}
+.tiaweb-card__actions > .tiaweb-button--icon {
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+  </style>
+<style>
+header.custom-header {
+  background: #fff;
+}
+.tiaweb-layout__header-row span.tiaweb-layout-title {
+  color: #000;
+  text-transform: uppercase;
+}
+.custom-header .material-icons {
+  color: #000;
+}
+.custom-header a.tiaweb-navigation__link {
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+}
+.custom-header a.tiaweb-navigation__link:hover {
+  color: #0000FF;
+}
+.tiaweb-layout__drawer span.tiaweb-layout-title {
+  background: #111;
+  color: #ffb648;
+}
+.tiaweb-layout__drawer a.tiaweb-navigation__link {
+  color: #eee;
+  font-weight: 700;
+  font-size: 14px;
+}
+.tiaweb-layout__drawer a.tiaweb-navigation__link:hover {
+  color: #000;
+}
+body{
+  background-color: #efeff4;
+}
+
+.tiaweb-layout__content .p1{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #efeff4;
+  
+}
+
+.tiaweb-layout__content .p2{
+
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+  background-color: #000;
+}
+
+.tiaweb-layout__content .p3{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.tiaweb-layout__content .p4{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.tiaweb-layout__content .p5{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+
+ 
+   
