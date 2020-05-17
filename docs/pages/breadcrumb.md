@@ -1,26 +1,69 @@
-# Breadcrumb
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
 
-<p class="uk-text-lead">Create breadcrumbs to show users their location within a website.</p>
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
 
-## Usage
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+	</head>
+	<body>
+    
+ <div class="tiadian-card tiadian-card-default tiadian-card-body">
+    <div class="tiadian-card-badge tiadian-label">V1.0</div>
+    <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
+    <p>
 
-The Breadcrumb component consists of links, which are aligned side by side and separated by a divider. Add the `.uk-breadcrumb` class to a `<ul>` element to define the component. Use `<a>` elements as breadcrumb items within the list. An active state is automatically applied to the last `<li>` element.
 
-To add list items without a link, use a `<span>` element instead of an `<a>`. Alternatively, disable an `<a>` element by adding the `.uk-disabled` class to the `<li>` element and remove the `href` attribute from the anchor to make it inaccessible through keyboard navigation.
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Breadcrumb_0"></a>Breadcrumb</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Create breadcrumbs to show users their location within a website.&lt;/p&gt;</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Usage_4"></a>Usage</h2>
+<p class="has-line-data" data-line-start="6" data-line-end="7">The Breadcrumb component consists of links, which are aligned side by side and separated by a divider. Add the <code>.tiadian-breadcrumb</code> class to a <code>&lt;ul&gt;</code> element to define the component. Use <code>&lt;a&gt;</code> elements as breadcrumb items within the list. An active state is automatically applied to the last <code>&lt;li&gt;</code> element.</p>
+<p class="has-line-data" data-line-start="8" data-line-end="9">To add list items without a link, use a <code>&lt;span&gt;</code> element instead of an <code>&lt;a&gt;</code>. Alternatively, disable an <code>&lt;a&gt;</code> element by adding the <code>.tiadian-disabled</code> class to the <code>&lt;li&gt;</code> element and remove the <code>href</code> attribute from the anchor to make it inaccessible through keyboard navigation.</p>
 
-```html
-<ul class="uk-breadcrumb">
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><span></span></li>
-</ul>
-```
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-breadcrumb"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre>
 
-```example
-<ul class="uk-breadcrumb">
+<ul class="tiadian-breadcrumb">
     <li><a href="#">Item</a></li>
     <li><a href="#">Item</a></li>
-    <li class="uk-disabled"><a>Disabled</a></li>
+    <li class="tiadian-disabled"><a>Disabled</a></li>
     <li><span>Active</span></li>
 </ul>
-```
+<pre>
+<code class="language-java">&lt;ul class=&quot;tiadian-breadcrumb&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;tiadian-disabled&quot;&gt;&lt;a&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Active&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</p>
+</div>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+</body>
+</html>
