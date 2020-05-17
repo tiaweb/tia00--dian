@@ -1,0 +1,109 @@
+
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Align_0"></a>Align</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Control the alignment of inline elements depending on the viewport size.&lt;/p&gt;</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Usage_4"></a>Usage</h2>
+<p class="has-line-data" data-line-start="6" data-line-end="7">To align images or other elements with spacing between the text and the element, add one of these classes.</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-align-left</code></td>
+<td style="text-align:left">Floats the element to the left and creates right and bottom margin.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-align-right</code></td>
+<td style="text-align:left">Floats the element to the right and creates left and bottom margin.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-align-center</code></td>
+<td style="text-align:left">Centers the element and creates bottom margin.</td>
+</tr>
+</tbody>
+</table>
+
+
+<pre><code class="has-line-data" data-line-start="15" data-line-end="17" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-align-left"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+</code></pre>
+<div class="tiadian-panel">
+    <img class="tiadian-align-left tiadian-margin-remove-adjacent" src="https://tiaweb.github.io/tiadian/images/alam.jpg" width="225" height="150" alt="Example image">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+
+<pre><code class="has-line-data" data-line-start="19" data-line-end="25" class="language-example">&lt;div class=&quot;tiadian-panel&quot;&gt;
+    &lt;img class=&quot;tiadian-align-left tiadian-margin-remove-adjacent&quot; src=&quot;images/light.jpg&quot; width=&quot;225&quot; height=&quot;150&quot; alt=&quot;Example image&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+    &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=28 data-line-end=29 ><a id="Responsive_28"></a>Responsive</h2>
+<p class="has-line-data" data-line-start="30" data-line-end="31">Tiadian provides a number of responsive alignment classes. Basically, they work just like the usual alignment classes, except that they have suffixes that represent the breakpoint from which they come to effect.</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-align-left@s</code>&lt;br&gt; <code>.tiadian-align-right@s</code></td>
+<td style="text-align:left">Only affects device widths of <em>640px</em> and higher.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-align-left@m</code>&lt;br&gt; <code>.tiadian-align-right@m</code></td>
+<td style="text-align:left">Only affects device widths of <em>960px</em> and higher.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-align-left@l</code>&lt;br&gt; <code>.tiadian-align-right@l</code></td>
+<td style="text-align:left">Only affects device widths of <em>1200px</em> and higher.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-align-left@xl</code>&lt;br&gt; <code>.tiadian-align-right@xl</code></td>
+<td style="text-align:left">Only affects device widths of <em>1600px</em> and higher.</td>
+</tr>
+</tbody>
+</table><br/>
+<div class="tiadian-panel">
+    <img class="tiadian-align-center tiadian-align-right@m tiadian-margin-remove-adjacent"  src="https://tiaweb.github.io/tiadian/images/alam.jpg" width="225" height="150" alt="Example image">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+
+<pre><code class="has-line-data" data-line-start="40" data-line-end="42" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-align-center tiadian-align-right@m"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+</code></pre>
+<pre><code class="has-line-data" data-line-start="44" data-line-end="50" class="language-example">&lt;div class=&quot;tiadian-panel&quot;&gt;
+    &lt;img class=&quot;tiadian-align-center tiadian-align-right@m tiadian-margin-remove-adjacent&quot;  src=&quot;images/light.jpg&quot; width=&quot;225&quot; height=&quot;150&quot; alt=&quot;Example image&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+    &lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+
+
+
+    
+ 
