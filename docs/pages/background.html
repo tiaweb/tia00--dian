@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
+
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+	</head>
+	<body>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-width-1-2@m">
+    <div class="tiadian-card-badge tiadian-label">V1.0</div>
+    <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
+    <p>
+
+    
+    
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Background_0"></a>Background</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;A collection of utility classes to add different backgrounds to elements.&lt;/p&gt;</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Usage_4"></a>Usage</h2>
+<p class="has-line-data" data-line-start="6" data-line-end="7">To apply a background color to an element, add one of the following classes. The actual color for each modifier is defined by the TIAWEB style that you have chosen or customized.</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-default</code></td>
+<td style="text-align:left">Applies the default background color.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-muted</code></td>
+<td style="text-align:left">Applies a muted background color.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-primary</code></td>
+<td style="text-align:left">Applies the primary background color.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-secondary</code></td>
+<td style="text-align:left">Applies a secondary background color.</td>
+</tr>
+</tbody>
+</table>
+
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-background-primary"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="19" data-line-end="20"><strong>Note</strong> To adapt your content for better visibility on each background, add the <code>.tiadian-light</code> or <code>.tiadian-dark</code> class from the <a href="inverse.md">Inverse component</a>. Use the <a href="padding.md">Padding component</a> to add some padding to the elements.</p>
+
+<div class="tiadian-child-width-1-2@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-background-default tiadian-padding tiadian-panel">
+            <p class="tiadian-h4">Default</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-muted tiadian-padding tiadian-panel">
+            <p class="tiadian-h4">Muted</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-primary tiadian-light tiadian-padding tiadian-panel">
+            <p class="tiadian-h4">Primary</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-secondary tiadian-light tiadian-padding tiadian-panel">
+            <p class="tiadian-h4">Secondary</p>
+        </div>
+    </div>
+</div>
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-child-width-1-2@s tiadian-text-center&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-default tiadian-padding tiadian-panel&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Default&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-muted tiadian-padding tiadian-panel&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Muted&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-primary tiadian-light tiadian-padding tiadian-panel&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Primary&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-secondary tiadian-light tiadian-padding tiadian-panel&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Secondary&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=48 data-line-end=49 ><a id="Size_modifiers_48"></a>Size modifiers</h2>
+<p class="has-line-data" data-line-start="50" data-line-end="51">This component features classes to specify the size of background images by keeping its intrinsic ratio.</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-cover</code></td>
+<td style="text-align:left">Scales the background image to completely cover the containing area.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-contain</code></td>
+<td style="text-align:left">Scales the background image as far as its width and height can fit inside the containing area.</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="57" data-line-end="58"><strong>Note</strong> When using these classes, the background position automatically shifts to the middle and background-repeat is set to no-repeat.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-background-cover"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-child-width-1-2@s tiadian-light" tiadian-grid>
+    <div>
+        <div class="tiadian-background-cover tiadian-height-medium tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/dark.jpg);">
+            <p class="tiadian-h4">Cover</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-contain tiadian-background-muted tiadian-height-medium tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/dark.jpg);">
+            <p class="tiadian-h4">Contain</p>
+        </div>
+    </div>
+</div>
+
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-child-width-1-2@s tiadian-light&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-cover tiadian-height-medium tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/dark.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Cover&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-contain tiadian-background-muted tiadian-height-medium tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/dark.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Contain&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=80 data-line-end=81 ><a id="Position_modifiers_80"></a>Position modifiers</h2>
+<p class="has-line-data" data-line-start="82" data-line-end="83">To alter the background position of your image — which is in the top left hand corner of the area by default, add one of the following classes.</p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-top-left</code></td>
+<td style="text-align:left">The initial position of the image is in the top left hand corner.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-top-center</code></td>
+<td style="text-align:left">The initial position of the image is at the top.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-top-right</code></td>
+<td style="text-align:left">The initial position of the image is in the top right hand corner.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-center-left</code></td>
+<td style="text-align:left">The initial position of the image is on the left.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-center-center</code></td>
+<td style="text-align:left">The initial position of the image is in the middle.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-center-right</code></td>
+<td style="text-align:left">The initial position of the image is on the right.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-bottom-left</code></td>
+<td style="text-align:left">The initial position of the image is in the bottom left hand corner.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-bottom-center</code></td>
+<td style="text-align:left">The initial position of the image is at the bottom.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-bottom-right</code></td>
+<td style="text-align:left">The initial position of the image is in the bottom right hand corner.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-background-top-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+
+<div class="tiadian-child-width-1-2@s tiadian-light" tiadian-grid>
+    <div>
+        <div class="tiadian-background-top-right tiadian-background-cover tiadian-height-medium tiadian-panel tiadian-flex tiadian-flex-middle tiadian-flex-center" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/dark.jpg);">
+            <p class="tiadian-h4">Top Right</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-top-left tiadian-background-cover tiadian-height-medium tiadian-panel tiadian-flex tiadian-flex-middle tiadian-flex-center" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/dark.jpg);">
+            <p class="tiadian-h4">Top Left</p>
+        </div>
+    </div>
+</div><pre>
+<code class="language-java">&lt;div class=&quot;tiadian-child-width-1-2@s tiadian-light&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-top-right tiadian-background-cover tiadian-height-medium tiadian-panel tiadian-flex tiadian-flex-middle tiadian-flex-center&quot; style=&quot;background-image: url(images/dark.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Top Right&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-top-left tiadian-background-cover tiadian-height-medium tiadian-panel tiadian-flex tiadian-flex-middle tiadian-flex-center&quot; style=&quot;background-image: url(images/dark.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Top Left&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=117 data-line-end=118 ><a id="No_repeat_117"></a>No repeat</h2>
+<p class="has-line-data" data-line-start="119" data-line-end="120">To keep smaller images from repeating to fill the background area, add the <code>.tiadian-background-norepeat</code> class.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-background-norepeat"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=127 data-line-end=128 ><a id="Attachment_127"></a>Attachment</h2>
+<p class="has-line-data" data-line-start="129" data-line-end="130">You can also apply a fixed background attachment, so that the image remains in its position while scrolling the site.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-background-fixed"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+<div class="tiadian-background-fixed tiadian-background-center-center tiadian-height-medium tiadian-width-large" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/dark.jpg);"></div>
+<pre>
+
+<code class="language-java">&lt;div class=&quot;tiadian-background-fixed tiadian-background-center-center tiadian-height-medium tiadian-width-large&quot; style=&quot;background-image: url(images/dark.jpg);&quot;&gt;&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=141 data-line-end=142 ><a id="Responsive_141"></a>Responsive</h2>
+<p class="has-line-data" data-line-start="143" data-line-end="144">Add one of the following classes to limit the display of background images to certain viewport sizes. This is great in cases where the image and content overlap on a phone screen in a way that would make text illegible.</p>
+
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-image@s</code></td>
+<td style="text-align:left">Displays the background image on device widths of <em>640px</em> and larger.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-image@m</code></td>
+<td style="text-align:left">Displays the background image on device widths of <em>960px</em> and larger.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-image@l</code></td>
+<td style="text-align:left">Displays the background image on device widths of <em>1200px</em> and larger.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-image@xl</code></td>
+<td style="text-align:left">Displays the background image on device widths of <em>1600px</em> and larger.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-background-image@m"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="156" data-line-end="157">Resize your browser window to see the effect in the example below.</p>
+<div class="tiadian-background-image@m tiadian-background-cover tiadian-background-muted tiadian-height-medium tiadian-width-large tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/dark.jpg);">
+    <p class="tiadian-h4 tiadian-margin-remove tiadian-visible@m tiadian-light">Image shown</p>
+    <p class="tiadian-h4 tiadian-margin-remove tiadian-hidden@m">Image not shown</p>
+</div>
+
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-background-image@m tiadian-background-cover tiadian-background-muted tiadian-height-medium tiadian-width-large tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/dark.jpg);&quot;&gt;
+    &lt;p class=&quot;tiadian-h4 tiadian-margin-remove tiadian-visible@m tiadian-light&quot;&gt;Image shown&lt;/p&gt;
+    &lt;p class=&quot;tiadian-h4 tiadian-margin-remove tiadian-hidden@m&quot;&gt;Image not shown&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=167 data-line-end=168 ><a id="Blend_modes_167"></a>Blend modes</h2>
+<p class="has-line-data" data-line-start="169" data-line-end="170">Add one of the following classes to apply different blend modes to your background image. You can combine these with the background color classes, as well. For a better understanding of how background blend modes work, take a look at this <a href="https://css-tricks.com/almanac/properties/b/background-blend-mode/">CSS Tricks article</a>.</p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-multiply</code></td>
+<td style="text-align:left">This class sets the blend mode to multiply.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-screen</code></td>
+<td style="text-align:left">This class sets the blend mode to screen.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-overlay</code></td>
+<td style="text-align:left">This class sets the blend mode to overlay.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-darken</code></td>
+<td style="text-align:left">This class sets the blend mode to darken.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-lighten</code></td>
+<td style="text-align:left">This class sets the blend mode to lighten.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-color-dodge</code></td>
+<td style="text-align:left">This class sets the blend mode to color dodge.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-color-burn</code></td>
+<td style="text-align:left">This class sets the blend mode to color burn.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-hard-light</code></td>
+<td style="text-align:left">This class sets the blend mode to hard light.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-soft-light</code></td>
+<td style="text-align:left">This class sets the blend mode to soft light.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-difference</code></td>
+<td style="text-align:left">This class sets the blend mode to difference.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-exclusion</code></td>
+<td style="text-align:left">This class sets the blend mode to exclusion.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-hue</code></td>
+<td style="text-align:left">This class sets the blend mode to hue.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-saturation</code></td>
+<td style="text-align:left">This class sets the blend mode to saturation.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-color</code></td>
+<td style="text-align:left">This class sets the blend mode to color.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-background-blend-luminosity</code></td>
+<td style="text-align:left">This class sets the blend mode to luminosity.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-background-blend-multiply tiadian-background-primary"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-child-width-1-2 tiadian-child-width-1-3@s tiadian-grid-small tiadian-light" tiadian-grid>
+    <div>
+        <div class="tiadian-background-blend-multiply tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Multiply</p>
+       </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-screen tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Screen</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-overlay tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Overlay</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-darken tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Darken</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-lighten tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Lighten</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-color-dodge tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Color Dodge</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-color-burn tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Color Burn</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-hard-light tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Hard Light</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-soft-light tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Soft Light</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-difference tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Difference</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-exclusion tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Exclusion</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-hue tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Hue</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-saturation tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Saturation</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-color tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Color</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-background-blend-luminosity tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle" style="background-image: url(https://tiaweb.github.io/tiadian/docs/images/photo.jpg);">
+            <p class="tiadian-h4">Luminosity</p>
+        </div>
+    </div>
+</div>
+
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-child-width-1-2 tiadian-child-width-1-3@s tiadian-grid-small tiadian-light&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-multiply tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Multiply&lt;/p&gt;
+       &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-screen tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Screen&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-overlay tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Overlay&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-darken tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Darken&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-lighten tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Lighten&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-color-dodge tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Color Dodge&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-color-burn tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Color Burn&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-hard-light tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Hard Light&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-soft-light tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Soft Light&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-difference tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Difference&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-exclusion tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Exclusion&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-hue tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Hue&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-saturation tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Saturation&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-color tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Color&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-background-blend-luminosity tiadian-background-primary tiadian-background-cover tiadian-height-small tiadian-panel tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;background-image: url(images/photo.jpg);&quot;&gt;
+            &lt;p class=&quot;tiadian-h4&quot;&gt;Luminosity&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style></body></html>
+
