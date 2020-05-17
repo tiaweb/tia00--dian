@@ -1,206 +1,336 @@
-# Button
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
 
-<p class="uk-text-lead">Easily create nice looking buttons, which come in different styles.</p>
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
 
-## Usage
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+	</head>
+	<body>
+    
+ <div class="tiadian-card tiadian-card-default tiadian-card-body">
+    <div class="tiadian-card-badge tiadian-label">V1.0</div>
+    <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
+    <p>
 
-To apply this component, add the `.uk-button` class and a modifier such as `.uk-button-default` to an `<a>` or `<button>` element. Add the `disabled` attribute to a `<button>` element to disable the button.
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Button_0"></a>Button</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Easily create nice looking buttons, which come in different styles.&lt;/p&gt;</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Usage_4"></a>Usage</h2>
+<p class="has-line-data" data-line-start="6" data-line-end="7">To apply this component, add the <code>.tiadian-button</code> class and a modifier such as <code>.tiadian-button-default</code> to an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element. Add the <code>disabled</code> attribute to a <code>&lt;button&gt;</code> element to disable the button.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-```html
-<a class="uk-button uk-button-default" href=""></a>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 
-<button class="uk-button uk-button-default"></button>
-
-<button class="uk-button uk-button-default" disabled></button>
-```
-
-```example
-<p uk-margin>
-    <a class="uk-button uk-button-default" href="#">Link</a>
-    <button class="uk-button uk-button-default">Button</button>
-    <button class="uk-button uk-button-default" disabled>Disabled</button>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default"</span> <span class="hljs-attribute">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+</code></pre>
+<p tiadian-margin>
+    <a class="tiadian-button tiadian-button-default" href="#">Link</a>
+    <button class="tiadian-button tiadian-button-default">Button</button>
+    <button class="tiadian-button tiadian-button-default" disabled>Disabled</button>
 </p>
-```
+<pre>
+<code class="language-java">
+&lt;p tiadian-margin&gt;
+    &lt;a class=&quot;tiadian-button tiadian-button-default&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default&quot;&gt;Button&lt;/button&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default&quot; disabled&gt;Disabled&lt;/button&gt;
+&lt;/p&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="24" data-line-end="25"><strong>Note</strong> If you are displaying a number of buttons in a row, you can add a top margin to them, when they stack on smaller viewports. Just add the <code>tiadian-margin</code> attribute from the <a href="margin.md">Margin component</a> to their parent element.</p>
+<hr>
+<h2 class="code-line" data-line-start=28 data-line-end=29 ><a id="Style_modifiers_28"></a>Style modifiers</h2>
+<p class="has-line-data" data-line-start="30" data-line-end="31">There are several style modifiers available. Just add one of the following classes to apply a different look.</p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-button-default</code></td>
+<td style="text-align:left">Default button style.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-button-primary</code></td>
+<td style="text-align:left">Indicates the primary action.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-button-secondary</code></td>
+<td style="text-align:left">Indicates an important action.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-button-danger</code></td>
+<td style="text-align:left">Indicates a dangerous or negative action.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-button-text</code></td>
+<td style="text-align:left">Applies an alternative, typographic style.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-button-link</code></td>
+<td style="text-align:left">Makes a <code>&lt;button&gt;</code> look like an <code>&lt;a&gt;</code> element.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-primary"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+</code></pre>
 
-**Note** If you are displaying a number of buttons in a row, you can add a top margin to them, when they stack on smaller viewports. Just add the `uk-margin` attribute from the [Margin component](margin.md) to their parent element.
-
-***
-
-## Style modifiers
-
-There are several style modifiers available. Just add one of the following classes to apply a different look.
-
-| Class                  | Description                                    |
-|:-----------------------|:-----------------------------------------------|
-| `.uk-button-default`   | Default button style.                          |
-| `.uk-button-primary`   | Indicates the primary action.                  |
-| `.uk-button-secondary` | Indicates an important action.                 |
-| `.uk-button-danger`    | Indicates a dangerous or negative action.      |
-| `.uk-button-text`      | Applies an alternative, typographic style.     |
-| `.uk-button-link`      | Makes a `<button>` look like an `<a>` element. |
-
-```html
-<button class="uk-button uk-button-primary"></button>
-```
-
-```example
-<p uk-margin>
-    <button class="uk-button uk-button-default">Default</button>
-    <button class="uk-button uk-button-primary">Primary</button>
-    <button class="uk-button uk-button-secondary">Secondary</button>
-    <button class="uk-button uk-button-danger">Danger</button>
-    <button class="uk-button uk-button-text">Text</button>
-    <button class="uk-button uk-button-link">Link</button>
+<p tiadian-margin>
+    <button class="tiadian-button tiadian-button-default">Default</button>
+    <button class="tiadian-button tiadian-button-primary">Primary</button>
+    <button class="tiadian-button tiadian-button-secondary">Secondary</button>
+    <button class="tiadian-button tiadian-button-danger">Danger</button>
+    <button class="tiadian-button tiadian-button-text">Text</button>
+    <button class="tiadian-button tiadian-button-link">Link</button>
 </p>
-```
+<pre>
+<code class="language-java">
+&lt;p tiadian-margin&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default&quot;&gt;Default&lt;/button&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-primary&quot;&gt;Primary&lt;/button&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-secondary&quot;&gt;Secondary&lt;/button&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-danger&quot;&gt;Danger&lt;/button&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-text&quot;&gt;Text&lt;/button&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-link&quot;&gt;Link&lt;/button&gt;
+&lt;/p&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=58 data-line-end=59 ><a id="Size_modifiers_58"></a>Size modifiers</h2>
+<p class="has-line-data" data-line-start="60" data-line-end="61">Add the <code>.tiadian-button-small</code> or <code>.tiadian-button-large</code> class to a button to make it smaller or larger.</p>
+ <pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default tiadian-button-small"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 
-***
-
-## Size modifiers
-
-Add the `.uk-button-small` or `.uk-button-large` class to a button to make it smaller or larger.
-
-
-```html
-<button class="uk-button uk-button-default uk-button-small"></button>
-
-<button class="uk-button uk-button-default uk-button-large"></button>
-```
-
-```example
-<p uk-margin>
-    <button class="uk-button uk-button-default uk-button-small">Small button</button>
-    <button class="uk-button uk-button-primary uk-button-small">Small button</button>
-    <button class="uk-button uk-button-secondary uk-button-small">Small button</button>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default tiadian-button-large"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+</code></pre>
+<p tiadian-margin>
+    <button class="tiadian-button tiadian-button-default tiadian-button-small">Small button</button>
+    <button class="tiadian-button tiadian-button-primary tiadian-button-small">Small button</button>
+    <button class="tiadian-button tiadian-button-secondary tiadian-button-small">Small button</button>
 </p>
 
-<p uk-margin>
-    <button class="uk-button uk-button-default uk-button-large">Large button</button>
-    <button class="uk-button uk-button-primary uk-button-large">Large button</button>
-    <button class="uk-button uk-button-secondary uk-button-large">Large button</button>
+<p tiadian-margin>
+    <button class="tiadian-button tiadian-button-default tiadian-button-large">Large button</button>
+    <button class="tiadian-button tiadian-button-primary tiadian-button-large">Large button</button>
+    <button class="tiadian-button tiadian-button-secondary tiadian-button-large">Large button</button>
 </p>
-```
 
-***
+<pre>
+<code class="language-java">
+&lt;p tiadian-margin&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default tiadian-button-small&quot;&gt;Small button&lt;/button&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-primary tiadian-button-small&quot;&gt;Small button&lt;/button&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-secondary tiadian-button-small&quot;&gt;Small button&lt;/button&gt;
+&lt;/p&gt;
 
-## Width modifiers
+&lt;p tiadian-margin&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default tiadian-button-large&quot;&gt;Large button&lt;/button&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-primary tiadian-button-large&quot;&gt;Large button&lt;/button&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-secondary tiadian-button-large&quot;&gt;Large button&lt;/button&gt;
+&lt;/p&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=85 data-line-end=86 ><a id="Width_modifiers_85"></a>Width modifiers</h2>
+<p class="has-line-data" data-line-start="87" data-line-end="88">Add the <code>.tiadian-width-1-1</code> class from the <a href="width.md">Width component</a> and the button will take up full width.</p>
+<h3 class="code-line" data-line-start=89 data-line-end=90 ><a id="Example_89"></a>Example</h3>
 
-Add the `.uk-width-1-1` class from the [Width component](width.md) and the button will take up full width.
+<button class="tiadian-button tiadian-button-default tiadian-width-1-1 tiadian-margin-small-bottom">Button</button>
+<button class="tiadian-button tiadian-button-primary tiadian-width-1-1 tiadian-margin-small-bottom">Button</button>
+<button class="tiadian-button tiadian-button-secondary tiadian-width-1-1">Button</button>
+<pre>
+<code class="language-java">
+&lt;button class=&quot;tiadian-button tiadian-button-default tiadian-width-1-1 tiadian-margin-small-bottom&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;tiadian-button tiadian-button-primary tiadian-width-1-1 tiadian-margin-small-bottom&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;tiadian-button tiadian-button-secondary tiadian-width-1-1&quot;&gt;Button&lt;/button&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=99 data-line-end=100 ><a id="Group_99"></a>Group</h2>
+<p class="has-line-data" data-line-start="101" data-line-end="102">To create a button group, add the <code>.tiadian-button-group</code> class to a <code>&lt;div&gt;</code> element around the buttons. That’s it! No further markup needed.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
 
-### Example
-
-```example
-<button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">Button</button>
-<button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Button</button>
-<button class="uk-button uk-button-secondary uk-width-1-1">Button</button>
-```
-
-***
-
-## Group
-
-To create a button group, add the `.uk-button-group` class to a `<div>` element around the buttons. That's it! No further markup needed.
-
-```html
-<div class="uk-button-group">
-    <button class="uk-button uk-button-default"></button>
-    <button class="uk-button uk-button-default"></button>
-    <button class="uk-button uk-button-default"></button>
-</div>
-```
-
-```example
 <div>
-    <div class="uk-button-group">
-        <button class="uk-button uk-button-secondary">Button</button>
-        <button class="uk-button uk-button-secondary">Button</button>
-        <button class="uk-button uk-button-secondary">Button</button>
+    <div class="tiadian-button-group">
+        <button class="tiadian-button tiadian-button-secondary">Button</button>
+        <button class="tiadian-button tiadian-button-secondary">Button</button>
+        <button class="tiadian-button tiadian-button-secondary">Button</button>
     </div>
 </div>
 
-<div class="uk-margin-small">
-    <div class="uk-button-group">
-        <button class="uk-button uk-button-primary">Button</button>
-        <button class="uk-button uk-button-primary">Button</button>
-        <button class="uk-button uk-button-primary">Button</button>
+<div class="tiadian-margin-small">
+    <div class="tiadian-button-group">
+        <button class="tiadian-button tiadian-button-primary">Button</button>
+        <button class="tiadian-button tiadian-button-primary">Button</button>
+        <button class="tiadian-button tiadian-button-primary">Button</button>
     </div>
 </div>
 
 <div>
-    <div class="uk-button-group">
-        <button class="uk-button uk-button-danger">Button</button>
-        <button class="uk-button uk-button-danger">Button</button>
-        <button class="uk-button uk-button-danger">Button</button>
+    <div class="tiadian-button-group">
+        <button class="tiadian-button tiadian-button-danger">Button</button>
+        <button class="tiadian-button tiadian-button-danger">Button</button>
+        <button class="tiadian-button tiadian-button-danger">Button</button>
     </div>
 </div>
-```
+<pre>
+<code class="language-java">
+&lt;div&gt;
+    &lt;div class=&quot;tiadian-button-group&quot;&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-secondary&quot;&gt;Button&lt;/button&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-secondary&quot;&gt;Button&lt;/button&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-secondary&quot;&gt;Button&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-***
+&lt;div class=&quot;tiadian-margin-small&quot;&gt;
+    &lt;div class=&quot;tiadian-button-group&quot;&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-primary&quot;&gt;Button&lt;/button&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-primary&quot;&gt;Button&lt;/button&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-primary&quot;&gt;Button&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 
-## Button with dropdowns
-
-A button can be used to trigger a dropdown menu from the [Dropdown component](dropdown.md).
-
-```html
-<!-- A button toggling a dropdown -->
-<button class="uk-button uk-button-default" type="button"></button>
-<div uk-dropdown></div>
-```
-
-```example
-<div class="uk-inline">
-    <button class="uk-button uk-button-default" type="button">Dropdown</button>
-    <div uk-dropdown>
-        <ul class="uk-nav uk-dropdown-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
+&lt;div&gt;
+    &lt;div class=&quot;tiadian-button-group&quot;&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-danger&quot;&gt;Button&lt;/button&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-danger&quot;&gt;Button&lt;/button&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-danger&quot;&gt;Button&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=139 data-line-end=140 ><a id="Button_with_dropdowns_139"></a>Button with dropdowns</h2>
+<p class="has-line-data" data-line-start="141" data-line-end="142">A button can be used to trigger a dropdown menu from the <a href="dropdown.md">Dropdown component</a>.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-comment">&lt;!-- A button toggling a dropdown --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-dropdown</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-inline">
+    <button class="tiadian-button tiadian-button-default" type="button">Dropdown</button>
+    <div tiadian-dropdown>
+        <ul class="tiadian-nav tiadian-dropdown-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
             <li><a href="#">Item</a></li>
-            <li class="uk-nav-header">Header</li>
+            <li class="tiadian-nav-header">Header</li>
             <li><a href="#">Item</a></li>
             <li><a href="#">Item</a></li>
-            <li class="uk-nav-divider"></li>
+            <li class="tiadian-nav-divider"></li>
             <li><a href="#">Item</a></li>
         </ul>
     </div>
 </div>
-```
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-inline&quot;&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;div tiadian-dropdown&gt;
+        &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+            &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h3 class="code-line" data-line-start=168 data-line-end=169 ><a id="Button_group_with_dropdowns_168"></a>Button group with dropdowns</h3>
+<p class="has-line-data" data-line-start="170" data-line-end="171">Use button groups to split buttons into a standard action on the left and a dropdown toggle on the right. Just wrap the toggling button and the drop or dropdown inside a <code>&lt;div&gt;</code> element and add the <code>.tiadian-inline</code> class from the <a href="utility.md#inline">Utility component</a>.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-comment">&lt;!-- A button group with a dropdown --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-inline"</span>&gt;</span>
 
-***
+        <span class="hljs-comment">&lt;!-- The button toggling the dropdown --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-button tiadian-button-default"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-dropdown</span>=<span class="hljs-value">"mode: click; boundary: ! .tiadian-button-group; boundary-align: true;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
-### Button group with dropdowns
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
 
-Use button groups to split buttons into a standard action on the left and a dropdown toggle on the right. Just wrap the toggling button and the drop or dropdown inside a `<div>` element and add the `.uk-inline` class from the [Utility component](utility.md#inline).
 
-```html
-<!-- A button group with a dropdown -->
-<div class="uk-button-group">
-    <button class="uk-button uk-button-default"></button>
-    <div class="uk-inline">
-
-        <!-- The button toggling the dropdown -->
-        <button class="uk-button uk-button-default" type="button"></button>
-        <div uk-dropdown="mode: click; boundary: ! .uk-button-group; boundary-align: true;"></div>
-
-    </div>
-</div>
-```
-
-```example
-
-<div class="uk-button-group">
-    <button class="uk-button uk-button-default">Dropdown</button>
-    <div class="uk-inline">
-        <button class="uk-button uk-button-default" type="button"><span uk-icon="icon:  triangle-down"></span></button>
-        <div uk-dropdown="mode: click; boundary: ! .uk-button-group; boundary-align: true;">
-            <ul class="uk-nav uk-dropdown-nav">
-                <li class="uk-active"><a href="#">Active</a></li>
+<div class="tiadian-button-group">
+    <button class="tiadian-button tiadian-button-default">Dropdown</button>
+    <div class="tiadian-inline">
+        <button class="tiadian-button tiadian-button-default" type="button"><span tiadian-icon="icon:  triangle-down"></span></button>
+        <div tiadian-dropdown="mode: click; boundary: ! .tiadian-button-group; boundary-align: true;">
+            <ul class="tiadian-nav tiadian-dropdown-nav">
+                <li class="tiadian-active"><a href="#">Active</a></li>
                 <li><a href="#">Item</a></li>
-                <li class="uk-nav-header">Header</li>
+                <li class="tiadian-nav-header">Header</li>
                 <li><a href="#">Item</a></li>
                 <li><a href="#">Item</a></li>
-                <li class="uk-nav-divider"></li>
+                <li class="tiadian-nav-divider"></li>
                 <li><a href="#">Item</a></li>
             </ul>
         </div>
     </div>
 </div>
-```
+
+<pre>
+<code class="language-java">
+
+&lt;div class=&quot;tiadian-button-group&quot;&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default&quot;&gt;Dropdown&lt;/button&gt;
+    &lt;div class=&quot;tiadian-inline&quot;&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;&lt;span tiadian-icon=&quot;icon:  triangle-down&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;div tiadian-dropdown=&quot;mode: click; boundary: ! .tiadian-button-group; boundary-align: true;&quot;&gt;
+            &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+                &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</p>
+</div>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+</body>
+</html>
