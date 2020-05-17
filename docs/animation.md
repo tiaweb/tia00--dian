@@ -1,315 +1,195 @@
-# Animation
 
-<p class="uk-text-lead">A collection of smooth animations to use within your page.</p>
 
-## Usage
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="G3-7l_kYP77sUVyUvr21R7H8Xh_ciQyqZTOklsmecbY" />
+    
+    <title>Hello, world!</title>
+<meta name="description" content="Tiaweb  ">
+    
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="Tiaweb" /> <!-- website name -->
+	<meta property="og:site" content="https://tiaweb.github.io/tiadian /> <!-- website link -->
+	<meta property="og:title" content="Tiaweb"/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="Tiaweb Open source ." /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="https://tiaweb.github.io/tiadian" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="http://tiaweb.github.io/tiadian/doc/accordion.html" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+<link rel="shortcut icon" href="https://tiaweb.github.io/images/favicon.ico">
+	<link rel="icon" href="https://tiaweb.github.io/images/favicon.png">
+    
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
+ 
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
 
-Add one of the `.uk-animation-*` classes to any element. The animation is shown when the class is added, so usually immediately on page load. To show the animation at another point, for example when the element enters the viewport, you would add the class using JavaScript — with the [Scrollspy component](scrollspy.md) for instance. This is what happens in many of UIkit's components that make use of animations. All animations themselves are implemented with CSS, so they do not require JavaScript to play.
+    <!-- TIAWEB CSS -->
+    <link rel="stylesheet" href="https://tiaweb.gitlab.io/material/css/tiaweb.css">
+    <link rel="stylesheet" href="https://tiaweb.gitlab.io/material/css/material-icons.css">
+<style>
+	.
 
-| Class                                                   | Description                                          |
-|:--------------------------------------------------------|:-----------------------------------------------------|
-| `.uk-animation-fade`                                    | The element fades in.                                |
-| `.uk-animation-scale-up`<br> `.uk-animation-scale-down` | The element fades in and scales up or down.          |
-| `.uk-animation-slide-top`<br> `.uk-animation-slide-bottom`  `.uk-animation-slide-left`<br> `.uk-animation-slide-right` | The element fades and slides in from the top, bottom, left or right by its own height or width. |
-| `.uk-animation-slide-top-small`<br> `.uk-animation-slide-bottom-small`   `.uk-animation-slide-left-small`<br> `.uk-animation-slide-right-small` | The element fades and slides in from the top, bottom, left or right with a smaller distance which is specified by a fixed pixel value. |
-| `.uk-animation-slide-top-medium`<br> `.uk-animation-slide-bottom-medium`  `.uk-animation-slide-left-medium`<br> `.uk-animation-slide-right-medium` | The element fades and slides in from the top, bottom, left or right with a medium distance which is specified by a fixed pixel value. |
-| `.uk-animation-kenburns`                                | The element scales very slowly up without fading in. |
-| `.uk-animation-shake`                                   | The element shakes.                                  |
-| `.uk-animation-stroke`                                  | The SVG element strokes are drawn.                   |
+  .wrapper {
+  padding: 100px;
+}
 
-To toggle an animation on hover or focus, add the `.uk-animation-toggle` class to a parent element. Also add `tabindex="0"` to make the animation focusable through keyboard navigation and on touch devices.
 
-```html
-<div class="uk-animation-toggle" tabindex="0">
-    <div class="uk-animation-fade"></div>
+.tiaweb-card__media {
+	margin: 0;
+}
+.tiaweb-card__media > img {
+	max-width: 100%;
+}
+.tiaweb-card__actions {
+	display: flex;
+	box-sizing:border-box;
+	align-items: center;
+}
+.tiaweb-card__actions > .tiaweb-button--icon {
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+  </style>
+<style>
+header.custom-header {
+  background: #fff;
+}
+.tiaweb-layout__header-row span.tiaweb-layout-title {
+  color: #000;
+  text-transform: uppercase;
+}
+.custom-header .material-icons {
+  color: #000;
+}
+.custom-header a.tiaweb-navigation__link {
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+}
+.custom-header a.tiaweb-navigation__link:hover {
+  color: #0000FF;
+}
+.tiaweb-layout__drawer span.tiaweb-layout-title {
+  background: #111;
+  color: #ffb648;
+}
+.tiaweb-layout__drawer a.tiaweb-navigation__link {
+  color: #eee;
+  font-weight: 700;
+  font-size: 14px;
+}
+.tiaweb-layout__drawer a.tiaweb-navigation__link:hover {
+  color: #000;
+}
+body{
+  background-color: #efeff4;
+}
+
+.tiaweb-layout__content .p1{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #fff;
+  
+}
+
+.tiaweb-layout__content .p2{
+
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+  background-color: #000;
+}
+
+.tiaweb-layout__content .p3{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.tiaweb-layout__content .p4{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.tiaweb-layout__content .p5{
+  padding: 20px;
+  color: black;
+  font-size: 18px;
+  background-color: #fff;
+}
+  </style>
+
+    
+  </head>
+  <body>
+    <div class="tiaweb-layout tiaweb-js-layout tiaweb-layout--fixed-header">
+  <header class="custom-header tiaweb-layout__header">
+    
+    <div class="tiaweb-layout__header-row">
+                        
+<div class="tiaweb-layout-spacer"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a>  </div>
+
+	    <he1></he1>      
+    </div>
+  </header>
+  <div class="tiaweb-layout__drawer">
+	  <he2></he2>
+  </div>
+  <main class="tiaweb-layout__content">
+     
+          
+          <div class='p1'>
+            
+            
+		  <tia></tia>
+              </div>
+            
+       
+	  <he3></he3>
+     
+  </main>
 </div>
-```
-
-```example
-<div class="uk-child-width-1-2 uk-child-width-1-4@s uk-grid-match" uk-grid>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-fade">
-            <p class="uk-text-center">Fade</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-scale-up">
-            <p class="uk-text-center">Scale Up</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-scale-down">
-            <p class="uk-text-center">Scale Down</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-shake">
-            <p class="uk-text-center">Shake</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-left">
-            <p class="uk-text-center">Left</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-top">
-            <p class="uk-text-center">Top</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-bottom">
-            <p class="uk-text-center">Bottom</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-right">
-            <p class="uk-text-center">Right</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-left-small">
-            <p class="uk-text-center">Left Small</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-top-small">
-            <p class="uk-text-center">Top Small</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-bottom-small">
-            <p class="uk-text-center">Bottom Small</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-right-small">
-            <p class="uk-text-center">Right Small</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-left-medium">
-            <p class="uk-text-center">Left Medium</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-top-medium">
-            <p class="uk-text-center">Top Medium</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-bottom-medium">
-            <p class="uk-text-center">Bottom Medium</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-right-medium">
-            <p class="uk-text-center">Right Medium</p>
-        </div>
-    </div>
-</div>
-```
-
-***
-
-## Reverse modifier
-
-By default, all animations are incoming. To reverse any animation, add the `.uk-animation-reverse` class.
-
-```html
-<div class="uk-animation-fade uk-animation-reverse"></div>
-```
-
-```example
-<div class="uk-child-width-1-2 uk-child-width-1-4@s uk-grid-match" uk-grid>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-fade uk-animation-reverse">
-            <p class="uk-text-center">Fade</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-scale-up uk-animation-reverse">
-            <p class="uk-text-center">Scale Up</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-scale-down uk-animation-reverse">
-            <p class="uk-text-center">Scale Down</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-shake uk-animation-reverse">
-            <p class="uk-text-center">Shake</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-left uk-animation-reverse">
-            <p class="uk-text-center">Left</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-top uk-animation-reverse">
-            <p class="uk-text-center">Top</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-bottom uk-animation-reverse">
-            <p class="uk-text-center">Bottom</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-right uk-animation-reverse">
-            <p class="uk-text-center">Right</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-left-small uk-animation-reverse">
-            <p class="uk-text-center">Left Small</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-top-small uk-animation-reverse">
-            <p class="uk-text-center">Top Small</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-bottom-small uk-animation-reverse">
-            <p class="uk-text-center">Bottom Small</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-right-small uk-animation-reverse">
-            <p class="uk-text-center">Right Small</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-left-medium uk-animation-reverse">
-            <p class="uk-text-center">Left Medium</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-top-medium uk-animation-reverse">
-            <p class="uk-text-center">Top Medium</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-bottom-medium uk-animation-reverse">
-            <p class="uk-text-center">Bottom Medium</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-slide-right-medium uk-animation-reverse">
-            <p class="uk-text-center">Right Medium</p>
-        </div>
-    </div>
-</div>
-```
-
-***
-
-## Fast modifier
-
-To play animations at a faster speed, add the `.uk-animation-fast` class to the element.
-
-```html
-<div class="uk-animation-fade uk-animation-fast"></div>
-```
-
-
-```example
-<div class="uk-width-1-3@s">
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-fast uk-animation-fade">
-            <p class="uk-text-center">Fade</p>
-        </div>
-    </div>
-</div>
-```
-
-***
-
-## Origin modifiers
-
-By default, scaling animations originate from the center. To modify this behavior, add one of the `.uk-transform-origin-*` classes from the [Utility component](utility.md#transform-origin).
-
-```html
-<div class="uk-animation-scale-up uk-transform-origin-bottom-right"></div>
-```
-
-```example
-<div class="uk-child-width-1-3@s" uk-grid>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-scale-up uk-transform-origin-bottom-right">
-            <p class="uk-text-center">Bottom Right</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-scale-up uk-transform-origin-top-center">
-            <p class="uk-text-center">Top Center</p>
-        </div>
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <div class="uk-card uk-card-default uk-card-body uk-animation-scale-up uk-transform-origin-bottom-center">
-            <p class="uk-text-center">Bottom Center</p>
-        </div>
-    </div>
-</div>
-```
-
-***
-
-## Ken Burns
-
-To add a simple Ken Burns effect, add the `.uk-animation-kenburns` class to any image. You can also apply the `.uk-animation-reverse` or one of the `.uk-transform-origin-*` classes from the [Utility component](utility.md#transform-origin) to modify the effect.
-
-```html
-<img class="uk-animation-kenburns" src="" alt="">
-```
-
-By default the animation starts on page load. In this example we used the [Scrollspy](scrollspy.md) component, to toggle the effect when the image enters the view.
-
-```example
-<div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
-    <div>
-        <div class="uk-overflow-hidden">
-            <img src="images/dark.jpg" alt="Example image" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
-        </div>
-    </div>
-    <div>
-        <div class="uk-overflow-hidden">
-            <img src="images/dark.jpg" alt="Example image" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
-        </div>
-    </div>
-</div>
-```
-
-***
-
-## SVG Strokes
-
-The Animation component can be used to animate SVG strokes. The effect looks like the SVG strokes are drawn before your eyes. The SVG image has to be injected into the markup as an inline SVG. This can be done manually or using the [SVG component](svg.md).
-
-The following example shows how to add the inline SVG manually. Since you have to know the exact length of the stroke, UIkit requires you to set the length in the custom property `--uk-animation-stroke`. In this example the stroke length is `46`.
-
-```html
-<svg class="uk-animation-stroke" style="--uk-animation-stroke: 46;" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-    <path fill="none" stroke="#000" stroke-width="1" d=""/>
-</svg>
-```
-
-A much easier way is to use the [SVG component](svg.md) by adding `uk-svg="stroke-animation: true"` to the image element. It will calculate the stroke length and add the `--uk-animation-stroke` custom property automatically.
-
-```html
-<img src="" uk-svg="stroke-animation: true">
-```
-
-```example
-<div class="uk-child-width-1-2@m uk-text-center" uk-grid>
-    <div class="uk-animation-toggle" tabindex="0">
-        <img class="uk-animation-stroke" width="400" height="400" src="images/strokes.svg" alt="" uk-svg="stroke-animation: true">
-    </div>
-    <div class="uk-animation-toggle" tabindex="0">
-        <img class="uk-animation-stroke uk-animation-reverse" width="400" height="400" src="images/strokes.svg" alt="" uk-svg="stroke-animation: true">
-    </div>
-</div>
-```
+<script>
+	  
+fetch("https://tiaweb.github.io/tiadian/docs/pages/accordion.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("tia").innerHTML = data;
+  });
+	fetch("https://tiaweb.github.io/tiadian/docs/he1")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("he1").innerHTML = data;
+  });
+	fetch("https://tiaweb.github.io/tiadian/docs/he2")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("he2").innerHTML = data;
+  });
+	fetch("https://tiaweb.github.io/tiadian/docs/he3")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("he3").innerHTML = data;
+  });
+	</script>
+    <!-- Tiaweb JavaScript -->
+     <script src="https://tiaweb.gitlab.io/material/js/tiaweb.js"></script>
+  </body>
+</html>
