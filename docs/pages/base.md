@@ -1,172 +1,60 @@
-# Base
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
 
-<p class="uk-text-lead">This component provides the default style for all HTML elements.</p>
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
 
-## Normalize.css
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+	</head>
+	<body>
+    
+ <div class="tiadian-card tiadian-card-default tiadian-card-body">
+    <div class="tiadian-card-badge tiadian-label">V1.0</div>
+    <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
+    <p>
 
-The Base component utilizes styling of the famous [Normalize.css](http://necolas.github.io/normalize.css/) to render elements consistently across all browsers and applies its default styling like colors, margins, font-sizes and more.
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Base_0"></a>Base</h1> <p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;This component provides the default style for all HTML elements.&lt;/p&gt;</p> <h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Normalizecss_4"></a>Normalize.css</h2> <p class="has-line-data" data-line-start="6" data-line-end="7">The Base component utilizes styling of the famous <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> to render elements consistently across all browsers and applies its default styling like colors, margins, font-sizes and more.</p> <p class="has-line-data" data-line-start="8" data-line-end="9"><strong>Note</strong> <a href="form.md">Form</a>, <a href="button.md">Button</a> and <a href="table.md">Table</a> elements are not normalized or styled by default. This happens in their specific component class. TIADIAN tries to apply as little styling as possible to plain HTML elements in order to remain robust and conflict free with 3rd party CSS.</p> <hr> <h2 class="code-line" data-line-start=12 data-line-end=13 ><a id="Links_12"></a>Links</h2> <p class="has-line-data" data-line-start="14" data-line-end="15">Turn text into hypertext using the <code>&lt;a&gt;</code> element. You can also add the <code>.tiadian-link</code> class to a <code>&lt;span&gt;</code> or similar element to apply the default link styling. For additional styling options, take a look at the <a href="link.md">Link component</a>.</p> <hr> <h2 class="code-line" data-line-start=18 data-line-end=19 ><a id="Textlevel_semantics_18"></a>Text-level semantics</h2> <p class="has-line-data" data-line-start="20" data-line-end="21">The following list gives you a short overview of the most commonly used text-level semantics and how to utilize them.</p> <table class="table table-striped table-bordered"> <thead> <tr> <th style="text-align:left">Element</th> <th style="text-align:left">Description</th> </tr> </thead> <tbody> <tr> <td style="text-align:left"><code>&lt;abbr&gt;</code></td> <td style="text-align:left">Define an abbreviation using the &lt;abbr title=“Title Text”&gt;abbr element with a title&lt;/abbr&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;b&gt;</code></td> <td style="text-align:left">Create bold text with the &lt;b&gt;b element&lt;/b&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;cite&gt;</code></td> <td style="text-align:left">Define the title of a work with the &lt;cite&gt;cite element&lt;/cite&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;code&gt;</code></td> <td style="text-align:left">Define inline code snippets using the &lt;code&gt;code element&lt;/code&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;del&gt;</code></td> <td style="text-align:left">Mark document changes as deleted text using the &lt;del&gt;del element&lt;/del&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;dfn&gt;</code></td> <td style="text-align:left">Create a definition term using the &lt;dfn title=“Defines a definition term”&gt;dfn element with a title&lt;/dfn&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;em&gt;</code></td> <td style="text-align:left">Emphasize text using the &lt;em&gt;em element&lt;/em&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;i&gt;</code></td> <td style="text-align:left">Set off part of a text by using the &lt;i&gt;i element&lt;/i&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;ins&gt;</code></td> <td style="text-align:left">Mark document changes as inserted text using the &lt;ins&gt;ins element&lt;/ins&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;kbd&gt;</code></td> <td style="text-align:left">Use a &lt;kbd&gt;keybord input element&lt;/kbd&gt; to display input in the browser’s default monospace font.</td> </tr> <tr> <td style="text-align:left"><code>&lt;mark&gt;</code></td> <td style="text-align:left">Highlight text with no semantic meaning using the &lt;mark&gt;mark element&lt;/mark&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;q&gt;</code></td> <td style="text-align:left">Define inline quotations using a &lt;q&gt;q element &lt;q&gt;inside&lt;/q&gt; a q element&lt;/q&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;s&gt;</code></td> <td style="text-align:left">Define text with a strikethrough using the &lt;s&gt;s element&lt;/s&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;samp&gt;</code></td> <td style="text-align:left">Define sample output with a &lt;samp&gt;samp element&lt;/samp&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;small&gt;</code></td> <td style="text-align:left">De-emphasize text for small print using the &lt;small&gt;small element&lt;/small&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;span&gt;</code></td> <td style="text-align:left">Define an inline-container using the &lt;span&gt;span element&lt;/span&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;strong&gt;</code></td> <td style="text-align:left">Imply extra importance using the &lt;strong&gt;strong element&lt;/strong&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;sub&gt;</code></td> <td style="text-align:left">Define subscript text using the &lt;sub&gt;sub element.&lt;/sub&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;sup&gt;</code></td> <td style="text-align:left">Define superscript text using the &lt;sup&gt;sup element.&lt;/sup&gt;</td> </tr> <tr> <td style="text-align:left"><code>&lt;u&gt;</code></td> <td style="text-align:left">Define underlined text using the &lt;u&gt;u element&lt;/u&gt;.</td> </tr> <tr> <td style="text-align:left"><code>&lt;var&gt;</code></td> <td style="text-align:left">Define a variable using the &lt;var&gt;var element&lt;/var&gt;.</td> </tr> </tbody> </table> <hr> <h2 class="code-line" data-line-start=48 data-line-end=49 ><a id="Embedded_content_48"></a>Embedded content</h2> <p class="has-line-data" data-line-start="50" data-line-end="51">Images and other elements like <code>&lt;audio&gt;</code>, <code>&lt;canvas&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;svg&gt;</code> and <code>&lt;video&gt;</code> are responsive by default in TIADIAN. If the layout is narrowed, they adjust their size and keep their proportions. To prevent this behavior, add the <code>.tiadian-preserve-width</code> class from the <a href="utility.md">Utility component</a> to the element or any container.</p> <p class="has-line-data" data-line-start="52" data-line-end="53">Resize the browser window to see the responsive behavior of the image.</p> 
+<div class="tiadian-width-large"> <img src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" alt="Image"> </div> 
+<pre>
+<code class="language-java">
+&lt;div class=&quot;tiadian-width-large&quot;&gt; &lt;img src=&quot;images/photo.jpg&quot; alt=&quot;Image&quot;&gt; &lt;/div&gt; </code></pre> <hr> <h2 class="code-line" data-line-start=62 data-line-end=63 ><a id="Paragraphs_62"></a>Paragraphs</h2> <p class="has-line-data" data-line-start="64" data-line-end="65">Create a paragraph by using the <code>&lt;p&gt;</code> element.</p> <pre>
+<code class="language-java">
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt; </code></pre> <hr> <h2 class="code-line" data-line-start=72 data-line-end=73 ><a id="Headings_72"></a>Headings</h2> <p class="has-line-data" data-line-start="74" data-line-end="75">Use the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> elements to define your headings.</p> <p class="has-line-data" data-line-start="76" data-line-end="77">Add the <code>.tiadian-h1</code>, <code>.tiadian-h2</code>, <code>.tiadian-h3</code>, <code>.tiadian-h4</code>, <code>.tiadian-h5</code> or <code>.tiadian-h6</code> class to alter the size of your headings, for example have a h1 look like a h3. For additional styling options, take a look at the <a href="heading.md">Heading component</a>.</p> <pre>
+<code class="language-java">
+&lt;h1&gt;h1 Heading 1&lt;/h1&gt; &lt;h2&gt;h2 Heading 2&lt;/h2&gt; &lt;h3&gt;h3 Heading 3&lt;/h3&gt; &lt;h4&gt;h4 Heading 4&lt;/h4&gt; &lt;h5&gt;h5 Heading 5&lt;/h5&gt; &lt;h6&gt;h6 Heading 6&lt;/h6&gt; </code></pre> <hr> <h2 class="code-line" data-line-start=89 data-line-end=90 ><a id="Lists_89"></a>Lists</h2> <p class="has-line-data" data-line-start="91" data-line-end="92">Create an unordered list using the <code>&lt;ul&gt;</code> element and the <code>&lt;ol&gt;</code> element for ordered lists. The <code>&lt;li&gt;</code> element defines the list item. For additional styling options, take a look at the <a href="list.md">List component</a>.</p> <pre>
+<code class="language-java">
+&lt;ul&gt; &lt;li&gt;Item 1&lt;/li&gt; &lt;li&gt;Item 2 &lt;ul&gt; &lt;li&gt;Item 1&lt;/li&gt; &lt;li&gt;Item 2 &lt;ul&gt; &lt;li&gt;Item 1&lt;/li&gt; &lt;li&gt;Item 2&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;Item 3&lt;/li&gt; &lt;li&gt;Item 4&lt;/li&gt; &lt;/ul&gt; </code></pre> <hr> <h2 class="code-line" data-line-start=114 data-line-end=115 ><a id="Description_list_114"></a>Description list</h2> <p class="has-line-data" data-line-start="116" data-line-end="117">Create a description list using the <code>&lt;dl&gt;</code> element. Use <code>&lt;dt&gt;</code> to define the term and <code>&lt;dd&gt;</code> for the description. For additional styling options, take a look at the <a href="description-list.md">Description List component</a>.</p> <pre>
+<code class="language-java">
+&lt;dl&gt; &lt;dt&gt;Description lists&lt;/dt&gt; &lt;dd&gt;A description list defines terms and their corresponding descriptions.&lt;/dd&gt; &lt;dt&gt;This is a term&lt;/dt&gt; &lt;dd&gt;This is a description.&lt;/dd&gt; &lt;dt&gt;This is a term&lt;/dt&gt; &lt;dd&gt;This is a description.&lt;/dd&gt; &lt;/dl&gt; </code></pre> <hr> <h2 class="code-line" data-line-start=131 data-line-end=132 ><a id="Horizontal_rule_131"></a>Horizontal rule</h2> <p class="has-line-data" data-line-start="133" data-line-end="134">Create a horizontal rule by using the <code>&lt;hr&gt;</code> element. For additional styling options, take a look at the <a href="divider.md">Divider component</a>.</p> <pre>
+<code class="language-java">
+ &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt; &lt;hr&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt; </code></pre> <hr> <h2 class="code-line" data-line-start=147 data-line-end=148 ><a id="Blockquote_147"></a>Blockquote</h2> <p class="has-line-data" data-line-start="149" data-line-end="150">To quote multiple lines of content from another source within your document, use the <code>&lt;blockquote&gt;</code> element.</p> <pre>
+<code class="language-java">
+&lt;blockquote cite=&quot;#&quot;&gt; &lt;p class=&quot;tiadian-margin-small-bottom&quot;&gt;The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element.&lt;/p&gt; &lt;footer&gt;Someone famous in &lt;cite&gt;&lt;a href=&quot;#&quot;&gt;Source Title&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt; &lt;/blockquote&gt; </code></pre> <hr> <h2 class="code-line" data-line-start=160 data-line-end=161 ><a id="Preformatted_text_160"></a>Preformatted text</h2> <p class="has-line-data" data-line-start="162" data-line-end="163">For multiple lines of code, use the <code>&lt;pre&gt;</code> element. It creates a new text block that preserves spaces, tabs and line breaks. Nest a <code>&lt;code&gt;</code> element inside to define the code block.</p> <p class="has-line-data" data-line-start="164" data-line-end="165"><strong>Note</strong> Be sure to escape any angle brackets to make sure enclosed code is not interpreted as markup.</p> <pre>
+<code class="language-java">
+&lt;pre&gt;&lt;code&gt;// Code example &amp;lt;div id=&quot;myid&quot; class=&quot;myclass&quot; hidden&amp;gt; Lorem ipsum &amp;lt;strong&amp;gt;dolor&amp;lt;/strong&amp;gt; sit amet, consectetur adipiscing elit. &amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt; </code></pre>
 
-**Note** [Form](form.md), [Button](button.md) and [Table](table.md) elements are not normalized or styled by default. This happens in their specific component class. UIkit tries to apply as little styling as possible to plain HTML elements in order to remain robust and conflict free with 3rd party CSS.
-
-***
-
-## Links
-
-Turn text into hypertext using the `<a>` element. You can also add the `.uk-link` class to a `<span>` or similar element to apply the default link styling. For additional styling options, take a look at the [Link component](link.md).
-
-***
-
-## Text-level semantics
-
-The following list gives you a short overview of the most commonly used text-level semantics and how to utilize them.
-
-| Element    | Description                                                                                               |
-|:-----------|:----------------------------------------------------------------------------------------------------------|
-| `<abbr>`   | Define an abbreviation using the <abbr title="Title Text">abbr element with a title</abbr>.               |
-| `<b>`      | Create bold text with the <b>b element</b>.                                                               |
-| `<cite>`   | Define the title of a work with the <cite>cite element</cite>.                                            |
-| `<code>`   | Define inline code snippets using the <code>code element</code>.                                          |
-| `<del>`    | Mark document changes as deleted text using the <del>del element</del>.                                   |
-| `<dfn>`    | Create a definition term using the <dfn title="Defines a definition term">dfn element with a title</dfn>. |
-| `<em>`     | Emphasize text using the <em>em element</em>.                                                             |
-| `<i>`      | Set off part of a text by using the <i>i element</i>.                                                     |
-| `<ins>`    | Mark document changes as inserted text using the <ins>ins element</ins>.                                  |
-| `<kbd>`    | Use a <kbd>keybord input element</kbd> to display input in the browser's default monospace font.          |
-| `<mark>`   | Highlight text with no semantic meaning using the <mark>mark element</mark>.                              |
-| `<q>`      | Define inline quotations using a <q>q element <q>inside</q> a q element</q>.                              |
-| `<s>`      | Define text with a strikethrough using the <s>s element</s>.                                              |
-| `<samp>`   | Define sample output with a <samp>samp element</samp>.                                                    |
-| `<small>`  | De-emphasize text for small print using the <small>small element</small>.                                 |
-| `<span>`   | Define an inline-container using the <span>span element</span>.                                           |
-| `<strong>` | Imply extra importance using the <strong>strong element</strong>.                                         |
-| `<sub>`    | Define subscript text using the <sub>sub element.</sub>.                                                  |
-| `<sup>`    | Define superscript text using the <sup>sup element.</sup>                                                 |
-| `<u>`      | Define underlined text using the <u>u element</u>.                                                        |
-| `<var>`    | Define a variable using the <var>var element</var>.                                                       |
-
-***
-
-## Embedded content
-
-Images and other elements like `<audio>`, `<canvas>`, `<img>`, `<svg>` and `<video>` are responsive by default in UIkit. If the layout is narrowed, they adjust their size and keep their proportions. To prevent this behavior, add the `.uk-preserve-width` class from the [Utility component](utility.md) to the element or any container.
-
-Resize the browser window to see the responsive behavior of the image.
-
-```example
-<div class="uk-width-large">
-    <img src="images/photo.jpg" alt="Image">
+</p>
 </div>
-```
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
 
-***
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
 
-## Paragraphs
+th, td {
+  padding: 15px;
+}
+</style>
 
-Create a paragraph by using the `<p>` element.
-
-```example
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-```
-
-***
-
-## Headings
-
-Use the `<h1>` to `<h6>` elements to define your headings.
-
-Add the `.uk-h1`, `.uk-h2`, `.uk-h3`, `.uk-h4`, `.uk-h5` or `.uk-h6` class to alter the size of your headings, for example have a h1 look like a h3. For additional styling options, take a look at the [Heading component](heading.md).
-
-```example
-<h1>h1 Heading 1</h1>
-<h2>h2 Heading 2</h2>
-<h3>h3 Heading 3</h3>
-<h4>h4 Heading 4</h4>
-<h5>h5 Heading 5</h5>
-<h6>h6 Heading 6</h6>
-```
-
-***
-
-## Lists
-
-Create an unordered list using the `<ul>` element and the `<ol>` element for ordered lists. The `<li>` element defines the list item. For additional styling options, take a look at the [List component](list.md).
-
-```example
-<ul>
-    <li>Item 1</li>
-    <li>Item 2
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2
-                <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-</ul>
-```
-
-***
-
-## Description list
-
-Create a description list using the `<dl>` element. Use `<dt>` to define the term and `<dd>` for the description. For additional styling options, take a look at the [Description List component](description-list.md).
-
-```example
-<dl>
-    <dt>Description lists</dt>
-    <dd>A description list defines terms and their corresponding descriptions.</dd>
-    <dt>This is a term</dt>
-    <dd>This is a description.</dd>
-    <dt>This is a term</dt>
-    <dd>This is a description.</dd>
-</dl>
-```
-
-***
-
-## Horizontal rule
-
-Create a horizontal rule by using the `<hr>` element. For additional styling options, take a look at the [Divider component](divider.md).
-
-```example
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-<hr>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-```
-
-***
-
-## Blockquote
-
-To quote multiple lines of content from another source within your document, use the `<blockquote>` element.
-
-```example
-<blockquote cite="#">
-    <p class="uk-margin-small-bottom">The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element.</p>
-    <footer>Someone famous in <cite><a href="#">Source Title</a></cite></footer>
-</blockquote>
-```
-
-***
-
-## Preformatted text
-
-For multiple lines of code, use the `<pre>` element. It creates a new text block that preserves spaces, tabs and line breaks. Nest a `<code>` element inside to define the code block.
-
-**Note** Be sure to escape any angle brackets to make sure enclosed code is not interpreted as markup.
-
-```example
-<pre><code>// Code example
-&lt;div id="myid" class="myclass" hidden&gt;
-    Lorem ipsum &lt;strong&gt;dolor&lt;/strong&gt; sit amet, consectetur adipiscing elit.
-&lt;/div&gt;</code></pre>
-```
+</body>
+</html>
