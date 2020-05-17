@@ -1,0 +1,100 @@
+
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Article_0"></a>Article</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Create articles within your page.&lt;/p&gt;</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Usage_4"></a>Usage</h2>
+<p class="has-line-data" data-line-start="6" data-line-end="7">The article component consists of the article itself, a title and meta data.</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-article</code></td>
+<td style="text-align:left">Add this class to define the Article component. Typically you would use an <code>&lt;article&gt;</code> element for this.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-article-title</code></td>
+<td style="text-align:left">Add this class to a heading to create an article title. Typically you would use a <code>&lt;h1&gt;</code> element for this.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-article-meta</code></td>
+<td style="text-align:left">Add this class to a paragraph which contains meta data about your article.</td>
+</tr>
+</tbody>
+</table>
+
+
+<pre><code class="has-line-data" data-line-start="15" data-line-end="20" class="language-html"><span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-article"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-article-title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-article-meta"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="21" data-line-end="22">Use the <code>.tiadian-text-lead</code> class from the <a href="text.md">Text component</a> to create a leading paragraph.</p>
+
+<article class="tiadian-article">
+
+    <h1 class="tiadian-article-title"><a class="tiadian-link-reset" href="">Heading</a></h1>
+
+    <p class="tiadian-article-meta">Written by <a href="#">Super User</a> on 12 April 2012. Posted in <a href="#">Blog</a></p>
+
+    <p class="tiadian-text-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div class="tiadian-grid-small tiadian-child-width-auto" tiadian-grid>
+        <div>
+            <a class="tiadian-button tiadian-button-text" href="#">Read more</a>
+        </div>
+        <div>
+            <a class="tiadian-button tiadian-button-text" href="#">5 Comments</a>
+        </div>
+    </div>
+
+</article>
+
+<pre><code class="has-line-data" data-line-start="24" data-line-end="45" class="language-example">&lt;article class=&quot;tiadian-article&quot;&gt;
+
+    &lt;h1 class=&quot;tiadian-article-title&quot;&gt;&lt;a class=&quot;tiadian-link-reset&quot; href=&quot;&quot;&gt;Heading&lt;/a&gt;&lt;/h1&gt;
+
+    &lt;p class=&quot;tiadian-article-meta&quot;&gt;Written by &lt;a href=&quot;#&quot;&gt;Super User&lt;/a&gt; on 12 April 2012. Posted in &lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p class=&quot;tiadian-text-lead&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.&lt;/p&gt;
+
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+    &lt;div class=&quot;tiadian-grid-small tiadian-child-width-auto&quot; tiadian-grid&gt;
+        &lt;div&gt;
+            &lt;a class=&quot;tiadian-button tiadian-button-text&quot; href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;a class=&quot;tiadian-button tiadian-button-text&quot; href=&quot;#&quot;&gt;5 Comments&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/article&gt;
+</code></pre>
+
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+
+
+
+    
+ 
