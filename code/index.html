@@ -2,29 +2,51 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - clipboard to prism snippets</title>
-  <link rel='stylesheet' href='https://codepen.io/wilbo/pen/MbyvJo.css'><link rel="stylesheet" href="./style.css">
+  <title>CodePen - Highlight.js - Custom Themes</title>
+  <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/code/style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<div id="code_wrap">
+  <pre><code class="javascript">
+var var1 = "This is Awesome";
+var var2 = 12345;
+document.innerHTML("Just to show Theme Colors...");
 
-<pre class="language-javascript">
-&lt;div class=&quot;uk-inline&quot;&gt;
-    &lt;button type=&quot;button&quot;&gt;&lt;/button&gt;
-    &lt;div uk-dropdown=&quot;mode: click&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+function Vector(x, y) {
+    this.x = x || 0;
+    this.y = y || 0;
+  }
 
-<pre class="language-javascript">
-function logStuff() {
-  var stuff = "I am logging this.";
-  console.log(stuff);  
-}
-</pre>
+  Vector.prototype.add = function(vector) {
+    this.x += vector.x;
+    this.y += vector.y;
+  }
+  
+  Vector.prototype.getMagnitude = function () {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+  };
+
+  Vector.prototype.getAngle = function () {
+    return Math.atan2(this.y,this.x);
+  };
+
+  Vector.fromAngle = function (angle, magnitude) {
+    return new Vector(magnitude * Math.cos(angle), magnitude * Math.sin(angle));
+  };
+
+  function Emitter(point, velocity, spread) {
+    this.position = point; // Vector
+    this.velocity = velocity; // Vector
+    this.spread = spread || Math.PI /* /16 */; // possible angles = velocity +/- spread
+    this.drawColor = "#999"; // So we can tell them apart from Fields later
+  }
+</code></pre>
+</div>
 <!-- partial -->
-  <script src='https://prismjs.com/prism.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js'></script><script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js'></script><script  src="https://tiaweb.github.io/tiadian/code/script.js"></script>
 
 </body>
 </html>
