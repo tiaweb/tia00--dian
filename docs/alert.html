@@ -127,11 +127,7 @@ body{
     </div>
   </header>
   <div class="tiaweb-layout__drawer">
-    <span class="tiaweb-layout__title">Navi-Gator</span>
-    <nav class="tiaweb-navigation">
-      <a class="tiaweb-navigation__link" href="#">Linky 1</a>
-      <a class="tiaweb-navigation__link" href="#">Linky 2</a>
-    </nav>
+	  <he2></he2>
   </div>
   <main class="tiaweb-layout__content">
       
@@ -198,6 +194,13 @@ fetch("https://tiaweb.github.io/tiadian/docs/pages/alert")
   })
   .then(data => {
     document.querySelector("he1").innerHTML = data;
+  });
+	fetch("https://tiaweb.github.io/tiadian/docs/pages/he2")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("he2").innerHTML = data;
   });
 	</script>
     <!-- Tiaweb JavaScript -->
