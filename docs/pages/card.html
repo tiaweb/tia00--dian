@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
+
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+	</head>
+	<body>
+<div class="tiadian-card tiadian-card-default tiadian-card-body">
+    <div class="tiadian-card-badge tiadian-label">V1.0</div>
+    <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
+    <p>
+
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Card_0"></a>Card</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Create layout boxes with different styles.&lt;/p&gt;</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Usage_4"></a>Usage</h2>
+<p class="has-line-data" data-line-start="6" data-line-end="7">The Card component consists of the card itself, the card body and an optional card title. Typically, cards are arranged in grid columns from the <a href="grid.md">Grid component</a>.</p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-card</code></td>
+<td style="text-align:left">Add this class to a <code>&lt;div&gt;</code> element to define the Card component.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-body</code></td>
+<td style="text-align:left">Add this class to the card to create padding between the card and its content.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-title</code></td>
+<td style="text-align:left">Add this class to a heading to define a card title.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card tiadian-card-body"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card-title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="20" data-line-end="21">By default, a card is blank. That is why it is important to add a modifier class for styling. In our example we are using the <code>.tiadian-card-default</code> class.</p>
+
+<div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-width-1-2@m">
+    <h3 class="tiadian-card-title">Default</h3>
+    <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<pre>
+<code class="language-java">
+&lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-width-1-2@m&quot;&gt;
+    &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Default&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum &lt;a href=&quot;#&quot;&gt;dolor&lt;/a&gt; sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=31 data-line-end=32 ><a id="Style_modifiers_31"></a>Style modifiers</h2>
+<p class="has-line-data" data-line-start="33" data-line-end="34">tiadian includes a number of modifiers that can be used to add a specific style to cards.</p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-default</code></td>
+<td style="text-align:left">Add this class to create a visually styled box.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-primary</code></td>
+<td style="text-align:left">Add this class to modify the card and emphasize it with a primary color.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-secondary</code></td>
+<td style="text-align:left">Add this class to modify the card and give it a secondary background color.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card tiadian-card-default"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card tiadian-card-primary"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card tiadian-card-secondary"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-child-width-1-3@m tiadian-grid-small tiadian-grid-match" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">
+            <h3 class="tiadian-card-title">Default</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+            <h3 class="tiadian-card-title">Primary</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+            <h3 class="tiadian-card-title">Secondary</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+</div>
+
+<pre>
+<code class="language-java">
+&lt;div class=&quot;tiadian-child-width-1-3@m tiadian-grid-small tiadian-grid-match&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Default&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Primary&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Secondary&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=74 data-line-end=75 ><a id="Hover_modifier_74"></a>Hover modifier</h2>
+<p class="has-line-data" data-line-start="76" data-line-end="77">To create a hover effect on the card, add the <code>.tiadian-card-hover</code> class. This comes in handy when working with anchors and can be combined with the other card modifiers.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card tiadian-card-hover"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-child-width-1-2@s tiadian-grid-match" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-hover tiadian-card-body">
+            <h3 class="tiadian-card-title">Hover</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-hover tiadian-card-body">
+            <h3 class="tiadian-card-title">Default</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-primary tiadian-card-hover tiadian-card-body tiadian-light">
+            <h3 class="tiadian-card-title">Primary</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-secondary tiadian-card-hover tiadian-card-body tiadian-light">
+            <h3 class="tiadian-card-title">Secondary</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+</div>
+<pre>
+<code class="language-java">
+&lt;div class=&quot;tiadian-child-width-1-2@s tiadian-grid-match&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-hover tiadian-card-body&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Hover&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-hover tiadian-card-body&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Default&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-hover tiadian-card-body tiadian-light&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Primary&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-hover tiadian-card-body tiadian-light&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Secondary&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=113 data-line-end=114 ><a id="Size_modifiers_113"></a>Size modifiers</h2>
+<p class="has-line-data" data-line-start="115" data-line-end="116">You can apply different size modifiers to cards that will decrease or increase their padding.</p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-small</code></td>
+<td style="text-align:left">Add this class to apply a smaller padding.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-large</code></td>
+<td style="text-align:left">Add this class to apply a larger padding.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card tiadian-card-small tiadian-card-default"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card tiadian-card-large tiadian-card-default"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+<div class="tiadian-child-width-1-2@s" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-small tiadian-card-body">
+            <h3 class="tiadian-card-title">Small</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-large tiadian-card-body">
+            <h3 class="tiadian-card-title">Large</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+</div>
+<pre>
+<code class="language-java">
+&lt;div class=&quot;tiadian-child-width-1-2@s&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-small tiadian-card-body&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Small&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-large tiadian-card-body&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Large&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=147 data-line-end=148 ><a id="Header__footer_147"></a>Header &amp; footer</h2>
+<p class="has-line-data" data-line-start="149" data-line-end="150">You can also divide a card into header and footer — around the default body. Just add the <code>.tiadian-card-header</code> or <code>.tiadian-card-footer</code> class to a <code>&lt;div&gt;</code> element inside the card.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card-header"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card-title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card-body"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card-footer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-card tiadian-card-default tiadian-width-1-2@m">
+    <div class="tiadian-card-header">
+        <div class="tiadian-grid-small tiadian-flex-middle" tiadian-grid>
+            <div class="tiadian-width-auto">
+                <img class="tiadian-border-circle" width="40" height="40" src="http://tiaweb.github.io/tiadian/docs/images/avatar.jpg">
+            </div>
+            <div class="tiadian-width-expand">
+                <h3 class="tiadian-card-title tiadian-margin-remove-bottom">Title</h3>
+                <p class="tiadian-text-meta tiadian-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+            </div>
+        </div>
+    </div>
+    <div class="tiadian-card-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    </div>
+    <div class="tiadian-card-footer">
+        <a href="#" class="tiadian-button tiadian-button-text">Read more</a>
+    </div>
+</div>
+<pre>
+<code class="language-java">
+&lt;div class=&quot;tiadian-card tiadian-card-default tiadian-width-1-2@m&quot;&gt;
+    &lt;div class=&quot;tiadian-card-header&quot;&gt;
+        &lt;div class=&quot;tiadian-grid-small tiadian-flex-middle&quot; tiadian-grid&gt;
+            &lt;div class=&quot;tiadian-width-auto&quot;&gt;
+                &lt;img class=&quot;tiadian-border-circle&quot; width=&quot;40&quot; height=&quot;40&quot; src=&quot;images/avatar.jpg&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;tiadian-width-expand&quot;&gt;
+                &lt;h3 class=&quot;tiadian-card-title tiadian-margin-remove-bottom&quot;&gt;Title&lt;/h3&gt;
+                &lt;p class=&quot;tiadian-text-meta tiadian-margin-remove-top&quot;&gt;&lt;time datetime=&quot;2016-04-01T19:00&quot;&gt;April 01, 2016&lt;/time&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-card-body&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-card-footer&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;tiadian-button tiadian-button-text&quot;&gt;Read more&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=185 data-line-end=186 ><a id="Media_185"></a>Media</h2>
+<p class="has-line-data" data-line-start="187" data-line-end="188">To display an image inside a card without any spacing, add one of the following classes to a <code>&lt;div&gt;</code> around the <code>&lt;img&gt;</code> element. Mind that you need to modify the source order accordingly.</p>
+<div class="tiadian-overflow-auto"><table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-media-top</code></td>
+<td style="text-align:left">This class indicates that the media element is aligned to the top.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-media-bottom</code></td>
+<td style="text-align:left">This class indicates that the media element is aligned to the bottom.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-media-left</code></td>
+<td style="text-align:left">This class indicates that the media element is aligned to the left.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-card-media-right</code></td>
+<td style="text-align:left">This class indicates that the media element is aligned to the right.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card tiadian-card-default"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card-media-top"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card-body"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+<div class="tiadian-child-width-1-2@m" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default">
+            <div class="tiadian-card-media-top">
+                <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="">
+            </div>
+            <div class="tiadian-card-body">
+                <h3 class="tiadian-card-title">Media Top</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default">
+            <div class="tiadian-card-body">
+                <h3 class="tiadian-card-title">Media Bottom</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+            <div class="tiadian-card-media-bottom">
+                <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<pre>
+<code class="language-java">
+&lt;div class=&quot;tiadian-child-width-1-2@m&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default&quot;&gt;
+            &lt;div class=&quot;tiadian-card-media-top&quot;&gt;
+                &lt;img src=&quot;images/light.jpg&quot; alt=&quot;&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;tiadian-card-body&quot;&gt;
+                &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Media Top&lt;/h3&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default&quot;&gt;
+            &lt;div class=&quot;tiadian-card-body&quot;&gt;
+                &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Media Bottom&lt;/h3&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;tiadian-card-media-bottom&quot;&gt;
+                &lt;img src=&quot;images/light.jpg&quot; alt=&quot;&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h3 class="code-line" data-line-start=234 data-line-end=235 ><a id="Horizontal_alignment_234"></a>Horizontal alignment</h3>
+<p class="has-line-data" data-line-start="236" data-line-end="237">The <code>.tiadian-card-media-left</code> or the <code>.tiadian-card-media-right</code> classes are used to reset border radius or similar where necessary. They don’t create the actual layout.</p>
+<p class="has-line-data" data-line-start="238" data-line-end="239">To do that, you could for example add the <code>.tiadian-cover-container</code> class from the <a href="cover.md">Cover component</a>. Add the <code>tiadian-cover</code> attribute to the image element and use the <a href="grid.md">Grid</a> and <a href="width.md">Width</a> components to achieve the alignment. Create a <code>&lt;canvas&gt;</code> element with your image’s width and height, so that it will retain its dimensions, if the grid stacks on smaller viewports. This is just one way of creating a side by side layout.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card tiadian-card-default tiadian-child-width-1-2"</span> <span class="hljs-attribute">tiadian-grid</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card-media-left tiadian-cover-container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">tiadian-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">""</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card-body"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+<div class="tiadian-card tiadian-card-default tiadian-grid-collapse tiadian-child-width-1-2@s tiadian-margin" tiadian-grid>
+    <div class="tiadian-card-media-left tiadian-cover-container">
+        <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="" tiadian-cover>
+        <canvas width="600" height="400"></canvas>
+    </div>
+    <div>
+        <div class="tiadian-card-body">
+            <h3 class="tiadian-card-title">Media Left</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+    </div>
+</div>
+
+<div class="tiadian-card tiadian-card-default tiadian-grid-collapse tiadian-child-width-1-2@s tiadian-margin" tiadian-grid>
+    <div class="tiadian-flex-last@s tiadian-card-media-right tiadian-cover-container">
+        <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="" tiadian-cover>
+        <canvas width="600" height="400"></canvas>
+    </div>
+    <div>
+        <div class="tiadian-card-body">
+            <h3 class="tiadian-card-title">Media Right</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+    </div>
+</div>
+<pre>
+<code class="language-java">
+&lt;div class=&quot;tiadian-card tiadian-card-default tiadian-grid-collapse tiadian-child-width-1-2@s tiadian-margin&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-card-media-left tiadian-cover-container&quot;&gt;
+        &lt;img src=&quot;images/light.jpg&quot; alt=&quot;&quot; tiadian-cover&gt;
+        &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card-body&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Media Left&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-card tiadian-card-default tiadian-grid-collapse tiadian-child-width-1-2@s tiadian-margin&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-flex-last@s tiadian-card-media-right tiadian-cover-container&quot;&gt;
+        &lt;img src=&quot;images/light.jpg&quot; alt=&quot;&quot; tiadian-cover&gt;
+        &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card-body&quot;&gt;
+            &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Media Right&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=282 data-line-end=283 ><a id="Badge_282"></a>Badge</h2>
+<p class="has-line-data" data-line-start="284" data-line-end="285">To position a badge inside a card, add the <code>.tiadian-card-badge</code> class to a container element. To style the badge, you can use one of the other components, for example the <a href="label.md">Label</a>.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card tiadian-card-body"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-card-badge tiadian-label"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+<div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-width-1-2@m">
+    <div class="tiadian-card-badge tiadian-label">Badge</div>
+    <h3 class="tiadian-card-title">Title</h3>
+    <p>Lorem ipsum color sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<pre>
+<code class="language-java">
+&lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-width-1-2@m&quot;&gt;
+    &lt;div class=&quot;tiadian-card-badge tiadian-label&quot;&gt;Badge&lt;/div&gt;
+    &lt;h3 class=&quot;tiadian-card-title&quot;&gt;Title&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum color sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+</p>
+</div>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+</body>
+</html>
