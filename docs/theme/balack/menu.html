@@ -7,12 +7,30 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
 
 <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
+<link rel="stylesheet" href="./style.css">
 
  <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
  <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
 	</head>
 	<body>
-    
+    <header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">Company<span>logo</span></a></h1>
+
+		<nav>
+			<a href="#">Home</a>
+			<a href="#" class="selected">Blog</a>
+			<a href="#">Pricing</a>
+			<a href="#">About</a>
+			<a href="#">Faq</a>
+			<a href="#">Contact</a>
+		</nav>
+
+	</div>
+
+</header>
  <div class="tiadian-card tiadian-card-default tiadian-card-body">
     <div class="tiadian-card-badge tiadian-label">V1.0</div>
     <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
@@ -331,6 +349,38 @@ th, td {
   padding: 15px;
 }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+	$(document).ready(function(){
+
+		var showHeaderAt = 150;
+
+		var win = $(window),
+				body = $('body');
+
+		// Show the fixed header only on larger screen devices
+
+		if(win.width() > 400){
+
+			// When we scroll more than 150px down, we set the
+			// "fixed" class on the body element.
+
+			win.on('scroll', function(e){
+
+				if(win.scrollTop() > showHeaderAt) {
+					body.addClass('fixed');
+				}
+				else {
+					body.removeClass('fixed');
+				}
+			});
+
+		}
+
+	});
+
+</script>
 
 </body>
 </html>
