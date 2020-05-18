@@ -1,0 +1,309 @@
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
+
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+	</head>
+	<body>
+<div class="tiadian-card tiadian-card-default tiadian-card-body">
+    <div class="tiadian-card-badge tiadian-label">V1.0</div>
+    <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
+    <p>
+
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Comment_0"></a>Comment</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Includes styles for comments, for example for a blog section on your site.&lt;/p&gt;</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Usage_4"></a>Usage</h2>
+<p class="has-line-data" data-line-start="6" data-line-end="7">The Comment component consists of the comment itself, a comment header, including an avatar, a title and meta data, and a comment body.</p>
+<div class="tiadian-overflow-auto"><table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-comment</code></td>
+<td style="text-align:left">Add this class to define the Comment component.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-comment-body</code></td>
+<td style="text-align:left">Add this class to create a comment body.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-comment-header</code></td>
+<td style="text-align:left">Add this class to create a comment header.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-comment-title</code></td>
+<td style="text-align:left">Add this class to a heading to create a comment title.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-comment-meta</code></td>
+<td style="text-align:left">Add this class to create meta data about your comment, e.g. a <a href="subnav.md">subnav</a>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-comment-avatar</code></td>
+<td style="text-align:left">Add this class to an <code>&lt;img&gt;</code> element to create an avatar for the comment author.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-comment"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-comment-header"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-comment-avatar"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">""</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-comment-title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-comment-meta tiadian-subnav"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-comment-body"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
+</code></pre>
+<article class="tiadian-comment">
+    <header class="tiadian-comment-header tiadian-grid-medium tiadian-flex-middle" tiadian-grid>
+        <div class="tiadian-width-auto">
+            <img class="tiadian-comment-avatar" src="https://tiaweb.github.io/tiadian/docs/images/avatar.jpg" width="80" height="80" alt="">
+        </div>
+        <div class="tiadian-width-expand">
+            <h4 class="tiadian-comment-title tiadian-margin-remove"><a class="tiadian-link-reset" href="#">Author</a></h4>
+            <ul class="tiadian-comment-meta tiadian-subnav tiadian-subnav-divider tiadian-margin-remove-top">
+                <li><a href="#">12 days ago</a></li>
+                <li><a href="#">Reply</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="tiadian-comment-body">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+</article>
+<pre>
+<code class="language-java">
+&lt;article class=&quot;tiadian-comment&quot;&gt;
+    &lt;header class=&quot;tiadian-comment-header tiadian-grid-medium tiadian-flex-middle&quot; tiadian-grid&gt;
+        &lt;div class=&quot;tiadian-width-auto&quot;&gt;
+            &lt;img class=&quot;tiadian-comment-avatar&quot; src=&quot;images/avatar.jpg&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;tiadian-width-expand&quot;&gt;
+            &lt;h4 class=&quot;tiadian-comment-title tiadian-margin-remove&quot;&gt;&lt;a class=&quot;tiadian-link-reset&quot; href=&quot;#&quot;&gt;Author&lt;/a&gt;&lt;/h4&gt;
+            &lt;ul class=&quot;tiadian-comment-meta tiadian-subnav tiadian-subnav-divider tiadian-margin-remove-top&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;12 days ago&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Reply&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;tiadian-comment-body&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=51 data-line-end=52 ><a id="Primary_modifier_51"></a>Primary modifier</h2>
+<p class="has-line-data" data-line-start="53" data-line-end="54">To style a comment differently, for example to highlight it as the admin’s comment, just add the <code>.tiadian-comment-primary</code> class.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-comment tiadian-comment-primary"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
+</code></pre>
+<article class="tiadian-comment tiadian-comment-primary">
+    <header class="tiadian-comment-header tiadian-grid-medium tiadian-flex-middle" tiadian-grid>
+        <div class="tiadian-width-auto">
+            <img class="tiadian-comment-avatar" src="https://tiaweb.github.io/tiadian/docs/images/avatar.jpg" width="80" height="80" alt="">
+        </div>
+        <div class="tiadian-width-expand">
+            <h4 class="tiadian-comment-title tiadian-margin-remove"><a class="tiadian-link-reset" href="#">Author</a></h4>
+            <ul class="tiadian-comment-meta tiadian-subnav tiadian-subnav-divider tiadian-margin-remove-top">
+                <li><a href="#">12 days ago</a></li>
+                <li><a href="#">Reply</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="tiadian-comment-body">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+</article>
+<pre>
+<code class="language-java">
+&lt;article class=&quot;tiadian-comment tiadian-comment-primary&quot;&gt;
+    &lt;header class=&quot;tiadian-comment-header tiadian-grid-medium tiadian-flex-middle&quot; tiadian-grid&gt;
+        &lt;div class=&quot;tiadian-width-auto&quot;&gt;
+            &lt;img class=&quot;tiadian-comment-avatar&quot; src=&quot;images/avatar.jpg&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;tiadian-width-expand&quot;&gt;
+            &lt;h4 class=&quot;tiadian-comment-title tiadian-margin-remove&quot;&gt;&lt;a class=&quot;tiadian-link-reset&quot; href=&quot;#&quot;&gt;Author&lt;/a&gt;&lt;/h4&gt;
+            &lt;ul class=&quot;tiadian-comment-meta tiadian-subnav tiadian-subnav-divider tiadian-margin-remove-top&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;12 days ago&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Reply&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;tiadian-comment-body&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=81 data-line-end=82 ><a id="Lists_81"></a>Lists</h2>
+<p class="has-line-data" data-line-start="83" data-line-end="84">Add the <code>.tiadian-comment-list</code> class to a <code>&lt;ul&gt;</code> element to create a list of comments. You can nest any number of <code>&lt;ul&gt;</code> elements inside a comment list.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-comment-list"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-comment"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">article</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-comment"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">article</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre>
+
+<ul class="tiadian-comment-list">
+    <li>
+        <article class="tiadian-comment tiadian-visible-toggle" tabindex="-1">
+            <header class="tiadian-comment-header tiadian-position-relative">
+                <div class="tiadian-grid-medium tiadian-flex-middle" tiadian-grid>
+                    <div class="tiadian-width-auto">
+                        <img class="tiadian-comment-avatar" src="https://tiaweb.github.io/tiadian/docs/images/avatar.jpg" width="80" height="80" alt="">
+                    </div>
+                    <div class="tiadian-width-expand">
+                        <h4 class="tiadian-comment-title tiadian-margin-remove"><a class="tiadian-link-reset" href="#">Author</a></h4>
+                        <p class="tiadian-comment-meta tiadian-margin-remove-top"><a class="tiadian-link-reset" href="#">12 days ago</a></p>
+                    </div>
+                </div>
+                <div class="tiadian-position-top-right tiadian-position-small tiadian-hidden-hover"><a class="tiadian-link-muted" href="#">Reply</a></div>
+            </header>
+            <div class="tiadian-comment-body">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            </div>
+        </article>
+        <ul>
+            <li>
+                <article class="tiadian-comment tiadian-comment-primary tiadian-visible-toggle" tabindex="-1">
+                    <header class="tiadian-comment-header tiadian-position-relative">
+                        <div class="tiadian-grid-medium tiadian-flex-middle" tiadian-grid>
+                            <div class="tiadian-width-auto">
+                                <img class="tiadian-comment-avatar" src="https://tiaweb.github.io/tiadian/docs/images/avatar.jpg" width="80" height="80" alt="">
+                            </div>
+                            <div class="tiadian-width-expand">
+                                <h4 class="tiadian-comment-title tiadian-margin-remove"><a class="tiadian-link-reset" href="#">Author</a></h4>
+                                <p class="tiadian-comment-meta tiadian-margin-remove-top"><a class="tiadian-link-reset" href="#">12 days ago</a></p>
+                            </div>
+                        </div>
+                        <div class="tiadian-position-top-right tiadian-position-small tiadian-hidden-hover"><a class="tiadian-link-muted" href="#">Reply</a></div>
+                    </header>
+                    <div class="tiadian-comment-body">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tiadian-comment tiadian-visible-toggle" tabindex="-1">
+                    <header class="tiadian-comment-header tiadian-position-relative">
+                        <div class="tiadian-grid-medium tiadian-flex-middle" tiadian-grid>
+                            <div class="tiadian-width-auto">
+                                <img class="tiadian-comment-avatar" src="https://tiaweb.github.io/tiadian/docs/images/avatar.jpg" width="80" height="80" alt="">
+                            </div>
+                            <div class="tiadian-width-expand">
+                                <h4 class="tiadian-comment-title tiadian-margin-remove"><a class="tiadian-link-reset" href="#">Author</a></h4>
+                                <p class="tiadian-comment-meta tiadian-margin-remove-top"><a class="tiadian-link-reset" href="#">12 days ago</a></p>
+                            </div>
+                        </div>
+                        <div class="tiadian-position-top-right tiadian-position-small tiadian-hidden-hover"><a class="tiadian-link-muted" href="#">Reply</a></div>
+                    </header>
+                    <div class="tiadian-comment-body">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </li>
+</ul>
+<pre>
+<code class="language-java">
+&lt;ul class=&quot;tiadian-comment-list&quot;&gt;
+    &lt;li&gt;
+        &lt;article class=&quot;tiadian-comment tiadian-visible-toggle&quot; tabindex=&quot;-1&quot;&gt;
+            &lt;header class=&quot;tiadian-comment-header tiadian-position-relative&quot;&gt;
+                &lt;div class=&quot;tiadian-grid-medium tiadian-flex-middle&quot; tiadian-grid&gt;
+                    &lt;div class=&quot;tiadian-width-auto&quot;&gt;
+                        &lt;img class=&quot;tiadian-comment-avatar&quot; src=&quot;images/avatar.jpg&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;tiadian-width-expand&quot;&gt;
+                        &lt;h4 class=&quot;tiadian-comment-title tiadian-margin-remove&quot;&gt;&lt;a class=&quot;tiadian-link-reset&quot; href=&quot;#&quot;&gt;Author&lt;/a&gt;&lt;/h4&gt;
+                        &lt;p class=&quot;tiadian-comment-meta tiadian-margin-remove-top&quot;&gt;&lt;a class=&quot;tiadian-link-reset&quot; href=&quot;#&quot;&gt;12 days ago&lt;/a&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;tiadian-position-top-right tiadian-position-small tiadian-hidden-hover&quot;&gt;&lt;a class=&quot;tiadian-link-muted&quot; href=&quot;#&quot;&gt;Reply&lt;/a&gt;&lt;/div&gt;
+            &lt;/header&gt;
+            &lt;div class=&quot;tiadian-comment-body&quot;&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;article class=&quot;tiadian-comment tiadian-comment-primary tiadian-visible-toggle&quot; tabindex=&quot;-1&quot;&gt;
+                    &lt;header class=&quot;tiadian-comment-header tiadian-position-relative&quot;&gt;
+                        &lt;div class=&quot;tiadian-grid-medium tiadian-flex-middle&quot; tiadian-grid&gt;
+                            &lt;div class=&quot;tiadian-width-auto&quot;&gt;
+                                &lt;img class=&quot;tiadian-comment-avatar&quot; src=&quot;images/avatar.jpg&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;tiadian-width-expand&quot;&gt;
+                                &lt;h4 class=&quot;tiadian-comment-title tiadian-margin-remove&quot;&gt;&lt;a class=&quot;tiadian-link-reset&quot; href=&quot;#&quot;&gt;Author&lt;/a&gt;&lt;/h4&gt;
+                                &lt;p class=&quot;tiadian-comment-meta tiadian-margin-remove-top&quot;&gt;&lt;a class=&quot;tiadian-link-reset&quot; href=&quot;#&quot;&gt;12 days ago&lt;/a&gt;&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tiadian-position-top-right tiadian-position-small tiadian-hidden-hover&quot;&gt;&lt;a class=&quot;tiadian-link-muted&quot; href=&quot;#&quot;&gt;Reply&lt;/a&gt;&lt;/div&gt;
+                    &lt;/header&gt;
+                    &lt;div class=&quot;tiadian-comment-body&quot;&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;article class=&quot;tiadian-comment tiadian-visible-toggle&quot; tabindex=&quot;-1&quot;&gt;
+                    &lt;header class=&quot;tiadian-comment-header tiadian-position-relative&quot;&gt;
+                        &lt;div class=&quot;tiadian-grid-medium tiadian-flex-middle&quot; tiadian-grid&gt;
+                            &lt;div class=&quot;tiadian-width-auto&quot;&gt;
+                                &lt;img class=&quot;tiadian-comment-avatar&quot; src=&quot;images/avatar.jpg&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot;&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;tiadian-width-expand&quot;&gt;
+                                &lt;h4 class=&quot;tiadian-comment-title tiadian-margin-remove&quot;&gt;&lt;a class=&quot;tiadian-link-reset&quot; href=&quot;#&quot;&gt;Author&lt;/a&gt;&lt;/h4&gt;
+                                &lt;p class=&quot;tiadian-comment-meta tiadian-margin-remove-top&quot;&gt;&lt;a class=&quot;tiadian-link-reset&quot; href=&quot;#&quot;&gt;12 days ago&lt;/a&gt;&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;tiadian-position-top-right tiadian-position-small tiadian-hidden-hover&quot;&gt;&lt;a class=&quot;tiadian-link-muted&quot; href=&quot;#&quot;&gt;Reply&lt;/a&gt;&lt;/div&gt;
+                    &lt;/header&gt;
+                    &lt;div class=&quot;tiadian-comment-body&quot;&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/article&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</p>
+</div>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+</body>
+</html>
