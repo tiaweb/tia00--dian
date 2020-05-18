@@ -1,0 +1,1379 @@
+<!--DOCTYPE html-->
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
+
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+<script  src="https://tiaweb.github.io/tiadian/icons.min.js"></script>
+	</head>
+	<body>
+<div class="tiadian-card tiadian-card-default tiadian-card-body">
+    <div class="tiadian-card-badge tiadian-label">V1.0</div>
+    <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
+    <p>
+
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Filter_0"></a>Filter</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Filter or sort items in any given layout by meta data.&lt;/p&gt;</p>
+<p class="has-line-data" data-line-start="4" data-line-end="5">The Filter component is often used together with the <a href="grid.md">Grid component</a>, especially the masonry grid, but it’s not bound to it. Any layout can be filtered or sorted no matter how the items are positioned. Items fade and move with smooth transitions between the different filtering and sorting states.</p>
+<hr>
+<h2 class="code-line" data-line-start=8 data-line-end=9 ><a id="Usage_8"></a>Usage</h2>
+<p class="has-line-data" data-line-start="10" data-line-end="11">To apply this component, you need a container element with the <code>tiadian-filter=&quot;target: SELECTOR&quot;</code> attribute. Inside this container create a list of filter controls as well as the layout items you want to filter. Use the <code>target: SELECTOR</code> option to select the element containing the layout items.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-filter</span>=<span class="hljs-value">"target: .js-filter"</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Filter controls --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Layout items --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-filter"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="28" data-line-end="29">Next, we need to define the meta data for each layout item, for example which category the item belongs to. Use any HTML class or attribute to do so.</p>
+<p class="has-line-data" data-line-start="30" data-line-end="31">To apply a filter control, add the <code>tiadian-filter-control</code> attribute. To define the meta data that should be filtered, use the <code>filter: SELECTOR</code> option. The selector can be any CSS selector like a HTML class or an attribute you define for the layout items.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-filter</span>=<span class="hljs-value">"target: .js-filter"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"filter: .tag-blue"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-filter"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tag-blue"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="46" data-line-end="47">If <code>target</code> is the only option in the <code>tiadian-filter</code> attribute value, you can also use <code>tiadian-filter=&quot;SELECTOR&quot;</code>. The same applies to the filter control. If <code>filter</code> is the only option in the <code>tiadian-filter-control</code> attribute value, you can also use <code>tiadian-filter-control=&quot;SELECTOR&quot;</code>.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-filter</span>=<span class="hljs-value">".js-filter"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">".tag-blue"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-filter"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tag-blue"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div tiadian-filter="target: .js-filter">
+
+    <ul class="tiadian-subnav tiadian-subnav-pill">
+        <li tiadian-filter-control=".tag-white"><a href="#">White</a></li>
+        <li tiadian-filter-control=".tag-blue"><a href="#">Blue</a></li>
+        <li tiadian-filter-control=".tag-black"><a href="#">Black</a></li>
+    </ul>
+
+    <ul class="js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center" tiadian-grid>
+        <li class="tag-white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li class="tag-black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+    </ul>
+
+</div>
+<pre>
+<code class="language-java">
+&lt;div tiadian-filter=&quot;target: .js-filter&quot;&gt;
+
+    &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot;&gt;
+        &lt;li tiadian-filter-control=&quot;.tag-white&quot;&gt;&lt;a href=&quot;#&quot;&gt;White&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;.tag-blue&quot;&gt;&lt;a href=&quot;#&quot;&gt;Blue&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;.tag-black&quot;&gt;&lt;a href=&quot;#&quot;&gt;Black&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ul class=&quot;js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center&quot; tiadian-grid&gt;
+        &lt;li class=&quot;tag-white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;tag-black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="113" data-line-end="114">The Filter component comes unstyled, which allows you to use any of the other TIAdian components to create the filter controls and layout items. For example, the <a href="nav.md">Nav</a>, <a href="subnav.md">Subnav</a> and <a href="tab.md">Tab</a> components can be used to style the filter controls. Usually, the <a href="grid.md">Grid component</a> is used to create the item layout.</p>
+<hr>
+<h2 class="code-line" data-line-start=117 data-line-end=118 ><a id="Active_state_117"></a>Active state</h2>
+<p class="has-line-data" data-line-start="119" data-line-end="120">Add the <code>.tiadian-active</code> class to a filter control, and the filter will be applied initially.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-active"</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"[data-color='blue']"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+</code></pre>
+<div tiadian-filter="target: .js-filter">
+
+    <ul class="tiadian-subnav tiadian-subnav-pill">
+        <li class="tiadian-active" tiadian-filter-control="[data-color='white']"><a href="#">White</a></li>
+        <li tiadian-filter-control="[data-color='blue']"><a href="#">Blue</a></li>
+        <li tiadian-filter-control="[data-color='black']"><a href="#">Black</a></li>
+    </ul>
+
+    <ul class="js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center" tiadian-grid>
+        <li data-color="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-color="blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-color="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-color="black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-color="blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+    </ul>
+
+</div>
+<pre>
+<code class="language-java">
+&lt;div tiadian-filter=&quot;target: .js-filter&quot;&gt;
+
+    &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot;&gt;
+        &lt;li class=&quot;tiadian-active&quot; tiadian-filter-control=&quot;[data-color='white']&quot;&gt;&lt;a href=&quot;#&quot;&gt;White&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;[data-color='blue']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Blue&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;[data-color='black']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Black&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ul class=&quot;js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center&quot; tiadian-grid&gt;
+        &lt;li data-color=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=178 data-line-end=179 ><a id="Reset_filter_178"></a>Reset filter</h2>
+<p class="has-line-data" data-line-start="180" data-line-end="181">To reset the filter and target all items, use the <code>tiadian-filter-control</code> attribute without any specified selector.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+</code></pre>
+<div tiadian-filter="target: .js-filter">
+
+    <ul class="tiadian-subnav tiadian-subnav-pill">
+        <li class="tiadian-active" tiadian-filter-control><a href="#">All</a></li>
+        <li tiadian-filter-control="[data-color='white']"><a href="#">White</a></li>
+        <li tiadian-filter-control="[data-color='blue']"><a href="#">Blue</a></li>
+        <li tiadian-filter-control="[data-color='black']"><a href="#">Black</a></li>
+    </ul>
+
+    <ul class="js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center" tiadian-grid>
+        <li data-color="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-color="blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-color="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-color="black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-color="blue">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-color="black">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+    </ul>
+
+</div>
+<pre>
+<code class="language-java">
+&lt;div tiadian-filter=&quot;target: .js-filter&quot;&gt;
+
+    &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot;&gt;
+        &lt;li class=&quot;tiadian-active&quot; tiadian-filter-control&gt;&lt;a href=&quot;#&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;[data-color='white']&quot;&gt;&lt;a href=&quot;#&quot;&gt;White&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;[data-color='blue']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Blue&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;[data-color='black']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Black&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ul class=&quot;js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center&quot; tiadian-grid&gt;
+        &lt;li data-color=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=240 data-line-end=241 ><a id="Meta_Data_240"></a>Meta Data</h2>
+<p class="has-line-data" data-line-start="242" data-line-end="243">Items can have different meta data for filtering. You just need to define the HTML classes or <code>data</code> attributes and create the corresponding CSS selectors for the filter controls. This example uses <code>data</code> attributes for the filter instead of HTML classes.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-filter</span>=<span class="hljs-value">"target: .js-filter"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"[data-tags*='blue']"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-filter"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-tags</span>=<span class="hljs-value">"blue dark"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div tiadian-filter="target: .js-filter">
+
+    <ul class="tiadian-subnav tiadian-subnav-pill">
+        <li tiadian-filter-control="[data-tags*='white']"><a href="#">White</a></li>
+        <li tiadian-filter-control="[data-tags*='blue']"><a href="#">Blue</a></li>
+        <li tiadian-filter-control="[data-tags*='black']"><a href="#">Black</a></li>
+        <li tiadian-filter-control="[data-tags*='dark']"><a href="#">Dark Colors</a></li>
+    </ul>
+
+    <ul class="js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center" tiadian-grid>
+        <li data-tags="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="blue dark">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="black dark">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="black dark">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="blue dark">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="black dark">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="blue dark">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="white">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="blue dark">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+        </li>
+        <li data-tags="black dark">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item</div>
+        </li>
+    </ul>
+
+</div>
+<pre>
+<code class="language-java">
+&lt;div tiadian-filter=&quot;target: .js-filter&quot;&gt;
+
+    &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot;&gt;
+        &lt;li tiadian-filter-control=&quot;[data-tags*='white']&quot;&gt;&lt;a href=&quot;#&quot;&gt;White&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;[data-tags*='blue']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Blue&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;[data-tags*='black']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Black&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;[data-tags*='dark']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Dark Colors&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ul class=&quot;js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center&quot; tiadian-grid&gt;
+        &lt;li data-tags=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;blue dark&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;black dark&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;black dark&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;blue dark&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;black dark&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;blue dark&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;white&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;blue dark&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-tags=&quot;black dark&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=312 data-line-end=313 ><a id="Multiple_Filters_312"></a>Multiple Filters</h2>
+<p class="has-line-data" data-line-start="314" data-line-end="315">Define different types of meta data and add any number of controls to filter them. The filter controls are exclusive, meaning just one criteria is filtered at a time.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-filter</span>=<span class="hljs-value">"target: .js-filter"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"[data-color='blue']"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"[data-size='small']"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-filter"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-color</span>=<span class="hljs-value">"blue"</span> <span class="hljs-attribute">data-size</span>=<span class="hljs-value">"small"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div tiadian-filter="target: .js-filter">
+
+    <div class="tiadian-grid-small tiadian-grid-divider tiadian-child-width-auto" tiadian-grid>
+        <div>
+            <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+                <li class="tiadian-active" tiadian-filter-control><a href="#">All</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+                <li tiadian-filter-control="[data-color='white']"><a href="#">White</a></li>
+                <li tiadian-filter-control="[data-color='blue']"><a href="#">Blue</a></li>
+                <li tiadian-filter-control="[data-color='black']"><a href="#">Black</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+                <li tiadian-filter-control="[data-size='small']"><a href="#">Small</a></li>
+                <li tiadian-filter-control="[data-size='medium']"><a href="#">Medium</a></li>
+                <li tiadian-filter-control="[data-size='large']"><a href="#">Large</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <ul class="js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center" tiadian-grid="masonry: true">
+        <li data-color="white" data-size="large">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="small">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="white" data-size="medium">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="white" data-size="small">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="medium">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="small">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="medium">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="large">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="large">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="white" data-size="large">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="medium">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="small">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+    </ul>
+
+</div>
+<pre>
+<code class="language-java">
+&lt;div tiadian-filter=&quot;target: .js-filter&quot;&gt;
+
+    &lt;div class=&quot;tiadian-grid-small tiadian-grid-divider tiadian-child-width-auto&quot; tiadian-grid&gt;
+        &lt;div&gt;
+            &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot; tiadian-margin&gt;
+                &lt;li class=&quot;tiadian-active&quot; tiadian-filter-control&gt;&lt;a href=&quot;#&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot; tiadian-margin&gt;
+                &lt;li tiadian-filter-control=&quot;[data-color='white']&quot;&gt;&lt;a href=&quot;#&quot;&gt;White&lt;/a&gt;&lt;/li&gt;
+                &lt;li tiadian-filter-control=&quot;[data-color='blue']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Blue&lt;/a&gt;&lt;/li&gt;
+                &lt;li tiadian-filter-control=&quot;[data-color='black']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Black&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot; tiadian-margin&gt;
+                &lt;li tiadian-filter-control=&quot;[data-size='small']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+                &lt;li tiadian-filter-control=&quot;[data-size='medium']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Medium&lt;/a&gt;&lt;/li&gt;
+                &lt;li tiadian-filter-control=&quot;[data-size='large']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Large&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;ul class=&quot;js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center&quot; tiadian-grid=&quot;masonry: true&quot;&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;large&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;small&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;medium&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;small&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;medium&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;small&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;medium&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;large&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;large&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;large&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;medium&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;small&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=439 data-line-end=440 ><a id="Groups_439"></a>Groups</h2>
+<p class="has-line-data" data-line-start="441" data-line-end="442">To filter items by multiple criteria at the same time, the filter controls need to be grouped. Just add the <code>group: NAME</code> option to the <code>tiadian-filter-control</code> attribute and define group names for the meta data.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-filter</span>=<span class="hljs-value">"target: .js-filter"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"filter: [data-color='blue']; group: color"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"filter: [data-color='white']; group: color"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"filter: [data-size='small']; group: size"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"filter: [data-size='large']; group: size"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-filter"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-color</span>=<span class="hljs-value">"blue"</span> <span class="hljs-attribute">data-size</span>=<span class="hljs-value">"small"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div tiadian-filter="target: .js-filter">
+
+    <div class="tiadian-grid-small tiadian-grid-divider tiadian-child-width-auto" tiadian-grid>
+        <div>
+            <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+                <li class="tiadian-active" tiadian-filter-control><a href="#">All</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+                <li tiadian-filter-control="filter: [data-color='white']; group: data-color"><a href="#">White</a></li>
+                <li tiadian-filter-control="filter: [data-color='blue']; group: data-color"><a href="#">Blue</a></li>
+                <li tiadian-filter-control="filter: [data-color='black']; group: data-color"><a href="#">Black</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+                <li tiadian-filter-control="filter: [data-size='small']; group: size"><a href="#">Small</a></li>
+                <li tiadian-filter-control="filter: [data-size='medium']; group: size"><a href="#">Medium</a></li>
+                <li tiadian-filter-control="filter: [data-size='large']; group: size"><a href="#">Large</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <ul class="js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center" tiadian-grid="masonry: true">
+        <li data-color="white" data-size="large">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="small">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="white" data-size="medium">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="white" data-size="small">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="medium">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="small">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="medium">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="large">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="large">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="white" data-size="large">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="medium">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="small">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">Item</div>
+            </div>
+        </li>
+    </ul>
+
+</div>
+<pre>
+<code class="language-java">
+&lt;div tiadian-filter=&quot;target: .js-filter&quot;&gt;
+
+    &lt;div class=&quot;tiadian-grid-small tiadian-grid-divider tiadian-child-width-auto&quot; tiadian-grid&gt;
+        &lt;div&gt;
+            &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot; tiadian-margin&gt;
+                &lt;li class=&quot;tiadian-active&quot; tiadian-filter-control&gt;&lt;a href=&quot;#&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot; tiadian-margin&gt;
+                &lt;li tiadian-filter-control=&quot;filter: [data-color='white']; group: data-color&quot;&gt;&lt;a href=&quot;#&quot;&gt;White&lt;/a&gt;&lt;/li&gt;
+                &lt;li tiadian-filter-control=&quot;filter: [data-color='blue']; group: data-color&quot;&gt;&lt;a href=&quot;#&quot;&gt;Blue&lt;/a&gt;&lt;/li&gt;
+                &lt;li tiadian-filter-control=&quot;filter: [data-color='black']; group: data-color&quot;&gt;&lt;a href=&quot;#&quot;&gt;Black&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot; tiadian-margin&gt;
+                &lt;li tiadian-filter-control=&quot;filter: [data-size='small']; group: size&quot;&gt;&lt;a href=&quot;#&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+                &lt;li tiadian-filter-control=&quot;filter: [data-size='medium']; group: size&quot;&gt;&lt;a href=&quot;#&quot;&gt;Medium&lt;/a&gt;&lt;/li&gt;
+                &lt;li tiadian-filter-control=&quot;filter: [data-size='large']; group: size&quot;&gt;&lt;a href=&quot;#&quot;&gt;Large&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;ul class=&quot;js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center&quot; tiadian-grid=&quot;masonry: true&quot;&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;large&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;small&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;medium&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;small&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;medium&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;small&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;medium&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;large&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;large&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;large&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;medium&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;small&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;Item&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=568 data-line-end=569 ><a id="Sorting_568"></a>Sorting</h2>
+<p class="has-line-data" data-line-start="570" data-line-end="571">To sort items alphanumerically, just add the <code>sort: ATTRIBUTE</code> option to the <code>tiadian-filter-control</code> attribute and define the meta data attribute by which the items should be sorted. By default, items are sorted in ascending order. Add the <code>order: desc</code> to sort items in descending order.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-filter</span>=<span class="hljs-value">"target: .js-filter"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"sort: data-color"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">tiadian-filter-control</span>=<span class="hljs-value">"sort: data-color; order: desc"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"js-filter"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">data-color</span>=<span class="hljs-value">"blue"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div tiadian-filter="target: .js-filter">
+
+    <ul class="tiadian-subnav tiadian-subnav-pill">
+        <li class="tiadian-active" tiadian-filter-control="sort: data-date"><a href="#">Ascending</a></li>
+        <li tiadian-filter-control="sort: data-date; order: desc"><a href="#">Descending</a></li>
+    </ul>
+
+    <ul class="js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center" tiadian-grid>
+        <li data-date="2016-06-01">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">2016-06-01</div>
+        </li>
+        <li data-date="2016-12-13">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">2016-12-13</div>
+        </li>
+        <li data-date="2017-05-20">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">2017-05-20</div>
+        </li>
+        <li data-date="2017-09-17">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">2017-09-17</div>
+        </li>
+        <li data-date="2017-11-03">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">2017-11-03</div>
+        </li>
+        <li data-date="2017-12-25">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">2017-12-25</div>
+        </li>
+        <li data-date="2018-01-30">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">2018-01-30</div>
+        </li>
+        <li data-date="2018-02-01">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">2018-02-01</div>
+        </li>
+        <li data-date="2018-03-11">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">2018-03-11</div>
+        </li>
+        <li data-date="2018-06-13">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">2018-06-13</div>
+        </li>
+        <li data-date="2018-10-27">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">2018-10-27</div>
+        </li>
+        <li data-date="2018-12-02">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">2018-12-02</div>
+        </li>
+    </ul>
+
+</div>
+<pre>
+<code class="language-java">
+&lt;div tiadian-filter=&quot;target: .js-filter&quot;&gt;
+
+    &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot;&gt;
+        &lt;li class=&quot;tiadian-active&quot; tiadian-filter-control=&quot;sort: data-date&quot;&gt;&lt;a href=&quot;#&quot;&gt;Ascending&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-filter-control=&quot;sort: data-date; order: desc&quot;&gt;&lt;a href=&quot;#&quot;&gt;Descending&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ul class=&quot;js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center&quot; tiadian-grid&gt;
+        &lt;li data-date=&quot;2016-06-01&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;2016-06-01&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2016-12-13&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;2016-12-13&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2017-05-20&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;2017-05-20&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2017-09-17&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;2017-09-17&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2017-11-03&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;2017-11-03&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2017-12-25&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;2017-12-25&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2018-01-30&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;2018-01-30&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2018-02-01&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;2018-02-01&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2018-03-11&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;2018-03-11&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2018-06-13&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;2018-06-13&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2018-10-27&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;2018-10-27&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-date=&quot;2018-12-02&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;2018-12-02&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=639 data-line-end=640 ><a id="Masonry_Grid_639"></a>Masonry Grid</h2>
+<p class="has-line-data" data-line-start="641" data-line-end="642">A filter is often applied to a <a href="grid.md#masonry">Masonry</a> grid. The filter transition works perfectly with any kind of layout no matter how the items are positioned. It even works with the <a href="grid.md#parallax">Parallax</a> option from the grid.</p>
+<p class="has-line-data" data-line-start="643" data-line-end="644">Here is a comprehensive example with a masonry grid:</p>
+<div tiadian-filter="target: .js-filter">
+
+    <div class="tiadian-grid-small tiadian-flex-middle" tiadian-grid>
+        <div class="tiadian-width-expand">
+
+            <div class="tiadian-grid-small tiadian-grid-divider tiadian-child-width-auto" tiadian-grid>
+                <div>
+                    <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+                        <li class="tiadian-active" tiadian-filter-control><a href="#">All</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+                        <li tiadian-filter-control="[data-color='white']"><a href="#">White</a></li>
+                        <li tiadian-filter-control="[data-color='blue']"><a href="#">Blue</a></li>
+                        <li tiadian-filter-control="[data-color='black']"><a href="#">Black</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+                        <li tiadian-filter-control="[data-size='small']"><a href="#">Small</a></li>
+                        <li tiadian-filter-control="[data-size='medium']"><a href="#">Medium</a></li>
+                        <li tiadian-filter-control="[data-size='large']"><a href="#">Large</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="tiadian-width-auto tiadian-text-nowrap">
+
+
+            <span class="tiadian-active" tiadian-filter-control="sort: data-name"><a class="tiadian-icon-link" href="#" tiadian-icon="icon: arrow-down"></a></span>
+            <span tiadian-filter-control="sort: data-name; order: desc"><a class="tiadian-icon-link" href="#" tiadian-icon="icon: arrow-up"></a></span>
+
+        </div>
+    </div>
+
+    <ul class="js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center" tiadian-grid="masonry: true">
+        <li data-color="white" data-size="large" data-name="A">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">A</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="small" data-name="B">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">B</div>
+            </div>
+        </li>
+        <li data-color="white" data-size="medium" data-name="C">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">C</div>
+            </div>
+        </li>
+        <li data-color="white" data-size="small" data-name="D">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">D</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="medium" data-name="E">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">E</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="small" data-name="F">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">F</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="medium" data-name="G">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">G</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="large" data-name="H">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">H</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="large" data-name="I">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">I</div>
+            </div>
+        </li>
+        <li data-color="white" data-size="large" data-name="J">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                <canvas width="600" height="800"></canvas>
+                <div class="tiadian-position-center">J</div>
+            </div>
+        </li>
+        <li data-color="blue" data-size="medium" data-name="K">
+            <div class="tiadian-card tiadian-card-primary tiadian-card-body">
+                <canvas width="600" height="600"></canvas>
+                <div class="tiadian-position-center">K</div>
+            </div>
+        </li>
+        <li data-color="black" data-size="small" data-name="L">
+            <div class="tiadian-card tiadian-card-secondary tiadian-card-body">
+                <canvas width="600" height="400"></canvas>
+                <div class="tiadian-position-center">L</div>
+            </div>
+        </li>
+    </ul>
+
+</div>
+<pre>
+<code class="language-java">
+&lt;div tiadian-filter=&quot;target: .js-filter&quot;&gt;
+
+    &lt;div class=&quot;tiadian-grid-small tiadian-flex-middle&quot; tiadian-grid&gt;
+        &lt;div class=&quot;tiadian-width-expand&quot;&gt;
+
+            &lt;div class=&quot;tiadian-grid-small tiadian-grid-divider tiadian-child-width-auto&quot; tiadian-grid&gt;
+                &lt;div&gt;
+                    &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot; tiadian-margin&gt;
+                        &lt;li class=&quot;tiadian-active&quot; tiadian-filter-control&gt;&lt;a href=&quot;#&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot; tiadian-margin&gt;
+                        &lt;li tiadian-filter-control=&quot;[data-color='white']&quot;&gt;&lt;a href=&quot;#&quot;&gt;White&lt;/a&gt;&lt;/li&gt;
+                        &lt;li tiadian-filter-control=&quot;[data-color='blue']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Blue&lt;/a&gt;&lt;/li&gt;
+                        &lt;li tiadian-filter-control=&quot;[data-color='black']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Black&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;ul class=&quot;tiadian-subnav tiadian-subnav-pill&quot; tiadian-margin&gt;
+                        &lt;li tiadian-filter-control=&quot;[data-size='small']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Small&lt;/a&gt;&lt;/li&gt;
+                        &lt;li tiadian-filter-control=&quot;[data-size='medium']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Medium&lt;/a&gt;&lt;/li&gt;
+                        &lt;li tiadian-filter-control=&quot;[data-size='large']&quot;&gt;&lt;a href=&quot;#&quot;&gt;Large&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;tiadian-width-auto tiadian-text-nowrap&quot;&gt;
+
+
+            &lt;span class=&quot;tiadian-active&quot; tiadian-filter-control=&quot;sort: data-name&quot;&gt;&lt;a class=&quot;tiadian-icon-link&quot; href=&quot;#&quot; tiadian-icon=&quot;icon: arrow-down&quot;&gt;&lt;/a&gt;&lt;/span&gt;
+            &lt;span tiadian-filter-control=&quot;sort: data-name; order: desc&quot;&gt;&lt;a class=&quot;tiadian-icon-link&quot; href=&quot;#&quot; tiadian-icon=&quot;icon: arrow-up&quot;&gt;&lt;/a&gt;&lt;/span&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;ul class=&quot;js-filter tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-text-center&quot; tiadian-grid=&quot;masonry: true&quot;&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;large&quot; data-name=&quot;A&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;A&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;small&quot; data-name=&quot;B&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;B&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;medium&quot; data-name=&quot;C&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;C&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;small&quot; data-name=&quot;D&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;D&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;medium&quot; data-name=&quot;E&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;E&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;small&quot; data-name=&quot;F&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;F&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;medium&quot; data-name=&quot;G&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;G&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;large&quot; data-name=&quot;H&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;H&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;large&quot; data-name=&quot;I&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;I&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;white&quot; data-size=&quot;large&quot; data-name=&quot;J&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;J&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;blue&quot; data-size=&quot;medium&quot; data-name=&quot;K&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;K&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li data-color=&quot;black&quot; data-size=&quot;small&quot; data-name=&quot;L&quot;&gt;
+            &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;
+                &lt;canvas width=&quot;600&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;
+                &lt;div class=&quot;tiadian-position-center&quot;&gt;L&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=763 data-line-end=764 ><a id="Component_options_763"></a>Component options</h2>
+<p class="has-line-data" data-line-start="765" data-line-end="766">Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+<div class="tiadian-overflow-auto"><table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Default</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>target</code></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">‘’</td>
+<td style="text-align:left">The targeted list on which to apply the filter to.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>selActive</code></td>
+<td style="text-align:left">String, Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">A selector for the initially active filter controls.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="has-line-data" data-line-start="772" data-line-end="773"><code>target</code> is the <em>Primary</em> option and its key may be omitted, if it’s the only option in the attribute value.</p>
+<hr>
+<h2 class="code-line" data-line-start=776 data-line-end=777 ><a id="JavaScript_776"></a>JavaScript</h2>
+<p class="has-line-data" data-line-start="778" data-line-end="779">Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+<h3 class="code-line" data-line-start=780 data-line-end=781 ><a id="Initialization_780"></a>Initialization</h3>
+<pre>
+<code class="language-java">
+TIAdian.filter(element, options);
+</code></pre>
+<h3 class="code-line" data-line-start=786 data-line-end=787 ><a id="Events_786"></a>Events</h3>
+<p class="has-line-data" data-line-start="788" data-line-end="789">The following events will be triggered on elements with this component attached:</p>
+<div class="tiadian-overflow-auto"><table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>beforeFilter</code></td>
+<td style="text-align:left">Fires before the filter is applied.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>afterFilter</code></td>
+<td style="text-align:left">Fires after the filter has been applied.</td>
+</tr>
+</tbody>
+</table></div>
+</p>
+</div>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+</body>
+</html>
