@@ -1,0 +1,690 @@
+<!--DOCTYPE html-->
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
+
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+<script  src="https://tiaweb.github.io/tiadian/icons.min.js"></script>
+	</head>
+	<body>
+<div class="tiadian-card tiadian-card-default tiadian-card-body">
+    <div class="tiadian-card-badge tiadian-label">V1.0</div>
+    <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
+    <p>
+
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Dropdown_0"></a>Dropdown</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Defines different styles for a toggleable dropdown.&lt;/p&gt;</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Usage_4"></a>Usage</h2>
+<p class="has-line-data" data-line-start="6" data-line-end="7">Basically, a dropdown is a specific case of the <a href="drop.md">drop</a> that provides its own styling. Any content, like a button, can toggle a dropdown. Just add the <code>tiadian-dropdown</code> attribute to a block element following the toggle.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-dropdown</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="13" data-line-end="14">A dropdown can be enabled by hovering and clicking the toggle. Just add the <code>mode: click</code> option to the attribute to force <code>click</code> mode only. If you want to group the toggle and the dropdown, you can just add the <code>.tiadian-inline</code> class from the <a href="utility.md#inline">Utility component</a> to a container element around both.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-inline"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-dropdown</span>=<span class="hljs-value">"mode: click"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-inline">
+    <button class="tiadian-button tiadian-button-default" type="button">Hover</button>
+    <div tiadian-dropdown>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>
+</div>
+
+<div class="tiadian-inline">
+    <button class="tiadian-button tiadian-button-default" type="button">Click</button>
+    <div tiadian-dropdown="mode: click">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>
+</div>
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-inline&quot;&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;Hover&lt;/button&gt;
+    &lt;div tiadian-dropdown&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-inline&quot;&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;Click&lt;/button&gt;
+    &lt;div tiadian-dropdown=&quot;mode: click&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=36 data-line-end=37 ><a id="Nav_in_dropdown_36"></a>Nav in dropdown</h2>
+<p class="has-line-data" data-line-start="38" data-line-end="39">A dropdown can contain a nav from the <a href="nav.md">Nav component</a>. Just add the <code>.tiadian-nav</code> class and the <code>.tiadian-dropdown-nav</code> modifier to a <code>&lt;ul&gt;</code> element.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-dropdown</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-nav tiadian-dropdown-nav"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<button class="tiadian-button tiadian-button-default" type="button">Hover</button>
+<div tiadian-dropdown>
+    <ul class="tiadian-nav tiadian-dropdown-nav">
+        <li class="tiadian-active"><a href="#">Active</a></li>
+        <li><a href="#">Item</a></li>
+        <li class="tiadian-nav-header">Header</li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li class="tiadian-nav-divider"></li>
+        <li><a href="#">Item</a></li>
+    </ul>
+</div>
+<pre>
+<code class="language-java">&lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;Hover&lt;/button&gt;
+&lt;div tiadian-dropdown&gt;
+    &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+        &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=64 data-line-end=65 ><a id="Grid_in_dropdown_64"></a>Grid in dropdown</h2>
+<p class="has-line-data" data-line-start="66" data-line-end="67">You can place a grid from the <a href="grid.md">Grid component</a> inside a dropdown, which can hold a navigation or any other content. Just wrap the content with a <code>&lt;div&gt;</code> element and add the <code>tiadian-grid</code> attribute. If the grid should stack automatically, whenever the dropdown no longer fits its container, just add the <code>.tiadian-dropdown-grid</code> class.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-width-large"</span> <span class="hljs-attribute">tiadian-dropdown</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-dropdown-grid tiadian-child-width-1-2@m"</span> <span class="hljs-attribute">tiadian-grid</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="74" data-line-end="75">Use one of the classes from the <a href="width.md">Width component</a> to adjust the dropdown’s width.</p>
+<button class="tiadian-button tiadian-button-default" type="button">Hover</button>
+<div class="tiadian-width-large" tiadian-dropdown>
+    <div class="tiadian-dropdown-grid tiadian-child-width-1-2@m" tiadian-grid>
+        <div>
+            <ul class="tiadian-nav tiadian-dropdown-nav">
+                <li class="tiadian-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="tiadian-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="tiadian-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="tiadian-nav tiadian-dropdown-nav">
+                <li class="tiadian-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="tiadian-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="tiadian-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<pre>
+<code class="language-java">&lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;Hover&lt;/button&gt;
+&lt;div class=&quot;tiadian-width-large&quot; tiadian-dropdown&gt;
+    &lt;div class=&quot;tiadian-dropdown-grid tiadian-child-width-1-2@m&quot; tiadian-grid&gt;
+        &lt;div&gt;
+            &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+                &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+                &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=108 data-line-end=109 ><a id="Position_108"></a>Position</h2>
+<p class="has-line-data" data-line-start="110" data-line-end="111">Add one of the following options to the <code>tiadian-dropdown</code> attribute to adjust the dropdown’s alignment.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-dropdown</span>=<span class="hljs-value">"pos: top-left"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+<div class="tiadian-inline">
+    <button class="tiadian-button tiadian-button-default" type="button">Top Right</button>
+    <div tiadian-dropdown="pos: top-right">
+        <ul class="tiadian-nav tiadian-dropdown-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-header">Header</li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-divider"></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="tiadian-inline">
+    <button class="tiadian-button tiadian-button-default" type="button">Bottom Justify</button>
+    <div tiadian-dropdown="pos: bottom-justify">
+        <ul class="tiadian-nav tiadian-dropdown-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-header">Header</li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-divider"></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="tiadian-inline">
+    <button class="tiadian-button tiadian-button-default" type="button">Right Center</button>
+    <div tiadian-dropdown="pos: right-center">
+        <ul class="tiadian-nav tiadian-dropdown-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-header">Header</li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-divider"></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+</div>
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-inline&quot;&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;Top Right&lt;/button&gt;
+    &lt;div tiadian-dropdown=&quot;pos: top-right&quot;&gt;
+        &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+            &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-inline&quot;&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;Bottom Justify&lt;/button&gt;
+    &lt;div tiadian-dropdown=&quot;pos: bottom-justify&quot;&gt;
+        &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+            &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-inline&quot;&gt;
+    &lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;Right Center&lt;/button&gt;
+    &lt;div tiadian-dropdown=&quot;pos: right-center&quot;&gt;
+        &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+            &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="tiadian-overflow-auto"><table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Position</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>bottom-left</code></td>
+<td style="text-align:left">Aligns the dropdown to the bottom left.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>bottom-center</code></td>
+<td style="text-align:left">Aligns the dropdown to the bottom center.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>bottom-right</code></td>
+<td style="text-align:left">Aligns the dropdown to the bottom right.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>bottom-justify</code></td>
+<td style="text-align:left">Aligns the dropdown to the bottom and justifies its width to the related element.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>top-left</code></td>
+<td style="text-align:left">Aligns the dropdown to the top left.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>top-center</code></td>
+<td style="text-align:left">Aligns the dropdown to the top center.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>top-right</code></td>
+<td style="text-align:left">Aligns the dropdown to the top right.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>top-justify</code></td>
+<td style="text-align:left">Aligns the dropdown to the top and justifies its width to the related element.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>left-top</code></td>
+<td style="text-align:left">Aligns the dropdown to the left top.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>left-center</code></td>
+<td style="text-align:left">Aligns the dropdown to the left center.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>left-bottom</code></td>
+<td style="text-align:left">Aligns the dropdown to the left bottom.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>right-top</code></td>
+<td style="text-align:left">Aligns the dropdown to the right top.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>right-center</code></td>
+<td style="text-align:left">Aligns the dropdown to the right center.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>right-bottom</code></td>
+<td style="text-align:left">Aligns the dropdown to the right bottom.</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 class="code-line" data-line-start=182 data-line-end=183 ><a id="Boundary_182"></a>Boundary</h2>
+<p class="has-line-data" data-line-start="184" data-line-end="185">By default, the dropdown flips automatically when it exceeds the viewport’s edge. If you want to flip it according to a container’s boundary, just add the <code>boundary: .my-class</code> option to the <code>tiadian-dropdown</code> attribute, using a selector for the container. That way you can determine any parent element as the drop’s boundary.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"my-class"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-dropdown</span>=<span class="hljs-value">"boundary: .my-class"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="boundary tiadian-panel tiadian-placeholder tiadian-width-2-3@s">
+
+    <button class="tiadian-button tiadian-button-default tiadian-float-left" type="button">Hover</button>
+    <div tiadian-dropdown="boundary: .boundary">
+        <ul class="tiadian-nav tiadian-dropdown-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-header">Header</li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-divider"></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+
+    <button class="tiadian-button tiadian-button-default tiadian-float-right" type="button">Hover</button>
+    <div tiadian-dropdown="boundary: .boundary">
+        <ul class="tiadian-nav tiadian-dropdown-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-header">Header</li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-divider"></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+
+</div>
+<pre>
+<code class="language-java">&lt;div class=&quot;boundary tiadian-panel tiadian-placeholder tiadian-width-2-3@s&quot;&gt;
+
+    &lt;button class=&quot;tiadian-button tiadian-button-default tiadian-float-left&quot; type=&quot;button&quot;&gt;Hover&lt;/button&gt;
+    &lt;div tiadian-dropdown=&quot;boundary: .boundary&quot;&gt;
+        &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+            &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;button class=&quot;tiadian-button tiadian-button-default tiadian-float-right&quot; type=&quot;button&quot;&gt;Hover&lt;/button&gt;
+    &lt;div tiadian-dropdown=&quot;boundary: .boundary&quot;&gt;
+        &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+            &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h3 class="code-line" data-line-start=227 data-line-end=228 ><a id="Boundary_alignment_227"></a>Boundary alignment</h3>
+<p class="has-line-data" data-line-start="229" data-line-end="230">You can also align the dropdown to its boundary. To do so, add the <code>boundary-align: true</code> option to the attribute.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"my-class"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-dropdown</span>=<span class="hljs-value">"boundary: .my-class; boundary-align: true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="boundary-align tiadian-panel tiadian-placeholder">
+
+    <button class="tiadian-button tiadian-button-default tiadian-float-left" type="button">Justify</button>
+    <div tiadian-dropdown="pos: bottom-justify; boundary: .boundary-align; boundary-align: true">
+        <ul class="tiadian-nav tiadian-dropdown-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-header">Header</li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-divider"></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+
+    <button class="tiadian-button tiadian-button-default tiadian-float-right" type="button">Center</button>
+    <div tiadian-dropdown="pos: bottom-center; boundary: .boundary-align; boundary-align: true">
+        <ul class="tiadian-nav tiadian-dropdown-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-header">Header</li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li class="tiadian-nav-divider"></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+
+</div>
+<pre>
+<code class="language-java">&lt;div class=&quot;boundary-align tiadian-panel tiadian-placeholder&quot;&gt;
+
+    &lt;button class=&quot;tiadian-button tiadian-button-default tiadian-float-left&quot; type=&quot;button&quot;&gt;Justify&lt;/button&gt;
+    &lt;div tiadian-dropdown=&quot;pos: bottom-justify; boundary: .boundary-align; boundary-align: true&quot;&gt;
+        &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+            &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;button class=&quot;tiadian-button tiadian-button-default tiadian-float-right&quot; type=&quot;button&quot;&gt;Center&lt;/button&gt;
+    &lt;div tiadian-dropdown=&quot;pos: bottom-center; boundary: .boundary-align; boundary-align: true&quot;&gt;
+        &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+            &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=272 data-line-end=273 ><a id="Offset_272"></a>Offset</h2>
+<p class="has-line-data" data-line-start="274" data-line-end="275">To define a custom offset between the dropdown container and the toggle, add the <code>offset</code> option with a value for the offset, measured in pixels.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-dropdown</span>=<span class="hljs-value">"offset: 80"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<button class="tiadian-button tiadian-button-default" type="button">Hover</button>
+<div tiadian-dropdown="offset: 80">
+    <ul class="tiadian-nav tiadian-dropdown-nav">
+        <li class="tiadian-active"><a href="#">Active</a></li>
+        <li><a href="#">Item</a></li>
+        <li class="tiadian-nav-header">Header</li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li class="tiadian-nav-divider"></li>
+        <li><a href="#">Item</a></li>
+    </ul>
+</div>
+<pre>
+<code class="language-java">&lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;Hover&lt;/button&gt;
+&lt;div tiadian-dropdown=&quot;offset: 80&quot;&gt;
+    &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+        &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=297 data-line-end=298 ><a id="Animation_297"></a>Animation</h2>
+<p class="has-line-data" data-line-start="299" data-line-end="300">Apply one or more animations to the dropdown by adding the <code>animation: tiadian-animation-*</code> option with one of the classes from the <a href="animation.md">Animation component</a>. You can also determine the animation’s duration. Just add the <code>duration</code> option with your value.</p>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-dropdown</span>=<span class="hljs-value">"animation: tiadian-animation-slide-top-small; duration: 1000"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<pre>
+<code class="language-java">&lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot;&gt;Hover&lt;/button&gt;
+&lt;div tiadian-dropdown=&quot;animation: tiadian-animation-slide-top-small; duration: 1000&quot;&gt;
+    &lt;ul class=&quot;tiadian-nav tiadian-dropdown-nav&quot;&gt;
+        &lt;li class=&quot;tiadian-active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;tiadian-nav-header&quot;&gt;Header&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;tiadian-nav-divider&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=322 data-line-end=323 ><a id="Component_options_322"></a>Component options</h2>
+<p class="has-line-data" data-line-start="324" data-line-end="325">Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+<div class="tiadian-overflow-auto"><table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Default</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>toggle</code></td>
+<td style="text-align:left">String, Boolean</td>
+<td style="text-align:left"><code>- *</code></td>
+<td style="text-align:left">CSS selector for the element to be used as toggle. By default, the preceding element is used.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pos</code></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><code>bottom-left</code></td>
+<td style="text-align:left">The position of the dropdown.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>mode</code></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><code>click, hover</code></td>
+<td style="text-align:left">Comma separated list of dropdown trigger behaviour modes: <code>hover</code>, <code>click</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>delay-show</code></td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"><code>0</code></td>
+<td style="text-align:left">Delay time in milliseconds before a dropdown is displayed in hover mode.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>delay-hide</code></td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"><code>800</code></td>
+<td style="text-align:left">Delay time in milliseconds before a dropdown is hidden in hover mode.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>boundary</code></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><code>window</code></td>
+<td style="text-align:left">CSS selector of the element to maintain the drop’s visibility.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>boundary-align</code></td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left"><code>false</code></td>
+<td style="text-align:left">Align the dropdown to its boundary.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>flip</code></td>
+<td style="text-align:left">Boolean, String</td>
+<td style="text-align:left"><code>true</code></td>
+<td style="text-align:left">Automatically flip the drop. Possible values are <code>false</code>, <code>true</code>, <code>x</code> or <code>y</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>offset</code></td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"><code>0</code></td>
+<td style="text-align:left">The offset of the dropdown’s container.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>animation</code></td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"><code>false</code></td>
+<td style="text-align:left">Space separated names of animations to apply.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>duration</code></td>
+<td style="text-align:left">Number</td>
+<td style="text-align:left"><code>200</code></td>
+<td style="text-align:left">Animation duration in milliseconds.</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 class="code-line" data-line-start=341 data-line-end=342 ><a id="JavaScript_341"></a>JavaScript</h2>
+<p class="has-line-data" data-line-start="343" data-line-end="344">Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+<h3 class="code-line" data-line-start=345 data-line-end=346 ><a id="Initialization_345"></a>Initialization</h3>
+<<pre>
+<code class="language-java">TIAdian.dropdown(element, options);
+</code></pre>
+<h3 class="code-line" data-line-start=351 data-line-end=352 ><a id="Events_351"></a>Events</h3>
+<p class="has-line-data" data-line-start="353" data-line-end="354">The following events will be triggered on elements with this component attached:</p>
+<div class="tiadian-overflow-auto"><table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>toggle</code></td>
+<td style="text-align:left">Fires before an item is toggled.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>beforeshow</code></td>
+<td style="text-align:left">Fires before an item is shown. Can prevent showing by calling <code>preventDefault()</code> on the event.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>show</code></td>
+<td style="text-align:left">Fires after an item is shown.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>shown</code></td>
+<td style="text-align:left">Fires after the item’s show animation has completed.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>beforehide</code></td>
+<td style="text-align:left">Fires before an item is hidden. Can prevent hiding by calling <code>preventDefault()</code> on the event.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>hide</code></td>
+<td style="text-align:left">Fires after an item is hidden.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>hidden</code></td>
+<td style="text-align:left">Fires after an item is hidden.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>stack</code></td>
+<td style="text-align:left">Fires when the <code>drop-stack</code>class is applied.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="code-line" data-line-start=366 data-line-end=367 ><a id="Methods_366"></a>Methods</h3>
+<p class="has-line-data" data-line-start="368" data-line-end="369">The following methods are available for the component:</p>
+<h4 class="code-line" data-line-start=370 data-line-end=371 ><a id="Show_370"></a>Show</h4>
+<pre>
+<code class="language-java">TIAdian.dropdown(element).show();
+</code></pre>
+<p class="has-line-data" data-line-start="376" data-line-end="377">Shows the Dropdown.</p>
+<h4 class="code-line" data-line-start=378 data-line-end=379 ><a id="Hide_378"></a>Hide</h4>
+<pre>
+<code class="language-java">TIAdian.dropdown(element).hide(delay);
+</code></pre>
+<p class="has-line-data" data-line-start="384" data-line-end="385">Hides the Dropdown.</p>
+<div class="tiadian-overflow-auto"><table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Default</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>delay</code></td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">true</td>
+<td style="text-align:left">Delay hiding the Dropdown.</td>
+</tr>
+</tbody>
+</table></div>
+</p>
+</div>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+</body>
+</html>
