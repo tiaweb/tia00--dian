@@ -1,0 +1,908 @@
+<!--DOCTYPE html-->
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
+
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+<script  src="https://tiaweb.github.io/tiadian/icons.min.js"></script>
+	</head>
+	<body>
+<div class="tiadian-card tiadian-card-default tiadian-card-body">
+    <div class="tiadian-card-badge tiadian-label">V1.0</div>
+    <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
+    <p>
+
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Form_0"></a>Form</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Easily create nice looking forms with different styles and layouts.&lt;/p&gt;</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Usage_4"></a>Usage</h2>
+<p class="has-line-data" data-line-start="6" data-line-end="7">Add one of the following classes to form controls inside a <code>&lt;form&gt;</code> element to define them.</p>
+
+
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-input</code></td>
+<td style="text-align:left">Add this class to <code>&lt;input&gt;</code> elements.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-select</code></td>
+<td style="text-align:left">Add this class to <code>&lt;select&gt;</code> elements.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-textarea</code></td>
+<td style="text-align:left">Add this class to <code>&lt;textarea&gt;</code> elements.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-radio</code></td>
+<td style="text-align:left">Add this class to <code>&lt;input type=&quot;radio&quot;&gt;</code> elements to create radio buttons.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-checkbox</code></td>
+<td style="text-align:left">Add this class to <code>&lt;input type=&quot;checkbox&quot;&gt;</code> elements to create checkboxes.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-range</code></td>
+<td style="text-align:left">Add this class to <code>&lt;input type=&quot;range&quot;&gt;</code> elements to create range forms.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-select"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">textarea</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-textarea"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">textarea</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-radio"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"radio"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-checkbox"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"checkbox"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-range"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"range"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+</code></pre>
+<p class="has-line-data" data-line-start="30" data-line-end="31">Add the <code>.tiadian-fieldset</code> class to a <code>&lt;fieldset&gt;</code> element and the <code>.tiadian-legend</code> class to a <code>&lt;legend&gt;</code> element to define a fieldset and a form legend.</p>
+<form>
+    <fieldset class="tiadian-fieldset">
+
+        <legend class="tiadian-legend">Legend</legend>
+
+        <div class="tiadian-margin">
+            <input class="tiadian-input" type="text" placeholder="Input">
+        </div>
+
+        <div class="tiadian-margin">
+            <select class="tiadian-select">
+                <option>Option 01</option>
+                <option>Option 02</option>
+            </select>
+        </div>
+
+        <div class="tiadian-margin">
+            <textarea class="tiadian-textarea" rows="5" placeholder="Textarea"></textarea>
+        </div>
+
+        <div class="tiadian-margin tiadian-grid-small tiadian-child-width-auto tiadian-grid">
+            <label><input class="tiadian-radio" type="radio" name="radio2" checked> A</label>
+            <label><input class="tiadian-radio" type="radio" name="radio2"> B</label>
+        </div>
+
+        <div class="tiadian-margin tiadian-grid-small tiadian-child-width-auto tiadian-grid">
+            <label><input class="tiadian-checkbox" type="checkbox" checked> A</label>
+            <label><input class="tiadian-checkbox" type="checkbox"> B</label>
+        </div>
+
+        <div class="tiadian-margin">
+            <input class="tiadian-range" type="range" value="2" min="0" max="10" step="0.1">
+        </div>
+
+    </fieldset>
+</form>
+<pre>
+<code class="language-java">
+&lt;form&gt;
+    &lt;fieldset class=&quot;tiadian-fieldset&quot;&gt;
+
+        &lt;legend class=&quot;tiadian-legend&quot;&gt;Legend&lt;/legend&gt;
+
+        &lt;div class=&quot;tiadian-margin&quot;&gt;
+            &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot; placeholder=&quot;Input&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;tiadian-margin&quot;&gt;
+            &lt;select class=&quot;tiadian-select&quot;&gt;
+                &lt;option&gt;Option 01&lt;/option&gt;
+                &lt;option&gt;Option 02&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;tiadian-margin&quot;&gt;
+            &lt;textarea class=&quot;tiadian-textarea&quot; rows=&quot;5&quot; placeholder=&quot;Textarea&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;tiadian-margin tiadian-grid-small tiadian-child-width-auto tiadian-grid&quot;&gt;
+            &lt;label&gt;&lt;input class=&quot;tiadian-radio&quot; type=&quot;radio&quot; name=&quot;radio2&quot; checked&gt; A&lt;/label&gt;
+            &lt;label&gt;&lt;input class=&quot;tiadian-radio&quot; type=&quot;radio&quot; name=&quot;radio2&quot;&gt; B&lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;tiadian-margin tiadian-grid-small tiadian-child-width-auto tiadian-grid&quot;&gt;
+            &lt;label&gt;&lt;input class=&quot;tiadian-checkbox&quot; type=&quot;checkbox&quot; checked&gt; A&lt;/label&gt;
+            &lt;label&gt;&lt;input class=&quot;tiadian-checkbox&quot; type=&quot;checkbox&quot;&gt; B&lt;/label&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;tiadian-margin&quot;&gt;
+            &lt;input class=&quot;tiadian-range&quot; type=&quot;range&quot; value=&quot;2&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;0.1&quot;&gt;
+        &lt;/div&gt;
+
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=73 data-line-end=74 ><a id="States_modifiers_73"></a>States modifiers</h2>
+<p class="has-line-data" data-line-start="75" data-line-end="76">Provide the user with basic information through feedback states on form controls by using one of the following classes.</p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-danger</code></td>
+<td style="text-align:left">Add this class to notify the user that the value is not validated.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-success</code></td>
+<td style="text-align:left">Add this class to notify the user that the value is validated.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="has-line-data" data-line-start="82" data-line-end="83">Add the <code>disabled</code> attribute to a form control and it will be appear muted.</p>
+
+<div class="tiadian-margin">
+    <input class="tiadian-input tiadian-form-danger tiadian-form-width-medium" type="text" placeholder="form-danger" value="form-danger">
+</div>
+
+<div class="tiadian-margin">
+    <input class="tiadian-input tiadian-form-success tiadian-form-width-medium" type="text" placeholder="form-success" value="form-success">
+</div>
+
+<div class="tiadian-margin">
+    <input class="tiadian-input tiadian-form-width-medium" type="text" placeholder="disabled" value="disabled" disabled>
+</div>
+<pre>
+<code class="language-java">
+&lt;div class=&quot;tiadian-margin&quot;&gt;
+    &lt;input class=&quot;tiadian-input tiadian-form-danger tiadian-form-width-medium&quot; type=&quot;text&quot; placeholder=&quot;form-danger&quot; value=&quot;form-danger&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-margin&quot;&gt;
+    &lt;input class=&quot;tiadian-input tiadian-form-success tiadian-form-width-medium&quot; type=&quot;text&quot; placeholder=&quot;form-success&quot; value=&quot;form-success&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-margin&quot;&gt;
+    &lt;input class=&quot;tiadian-input tiadian-form-width-medium&quot; type=&quot;text&quot; placeholder=&quot;disabled&quot; value=&quot;disabled&quot; disabled&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=100 data-line-end=101 ><a id="Size_modifiers_100"></a>Size modifiers</h2>
+<p class="has-line-data" data-line-start="102" data-line-end="103">Add one of the classes to an <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> or <code>&lt;textarea&gt;</code> element to modify its size.</p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-large</code></td>
+<td style="text-align:left">Add this class to make the element larger.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-small</code></td>
+<td style="text-align:left">Add this class to make the element smaller.</td>
+</tr>
+</tbody>
+</table></div>
+
+<form>
+
+    <div class="tiadian-margin">
+        <input class="tiadian-input tiadian-form-width-medium tiadian-form-large" type="text" placeholder="Large">
+    </div>
+
+    <div class="tiadian-margin">
+        <input class="tiadian-input tiadian-form-width-medium" type="text" placeholder="Default">
+    </div>
+
+    <div class="tiadian-margin">
+        <input class="tiadian-input tiadian-form-width-medium tiadian-form-small" type="text" placeholder="Small">
+    </div>
+
+</form>
+<pre>
+<code class="language-java">
+&lt;form&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;input class=&quot;tiadian-input tiadian-form-width-medium tiadian-form-large&quot; type=&quot;text&quot; placeholder=&quot;Large&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;input class=&quot;tiadian-input tiadian-form-width-medium&quot; type=&quot;text&quot; placeholder=&quot;Default&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;input class=&quot;tiadian-input tiadian-form-width-medium tiadian-form-small&quot; type=&quot;text&quot; placeholder=&quot;Small&quot;&gt;
+    &lt;/div&gt;
+
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=129 data-line-end=130 ><a id="Width_modifiers_129"></a>Width modifiers</h2>
+<p class="has-line-data" data-line-start="131" data-line-end="132">Add one of the following classes to an <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> or <code>&lt;textarea&gt;</code> element to adjust its width.</p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-width-large</code></td>
+<td style="text-align:left">Applies a width of <em>500px</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-width-medium</code></td>
+<td style="text-align:left">Applies a width of <em>200px</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-width-small</code></td>
+<td style="text-align:left">Applies a width of <em>130px</em>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-width-xsmall</code></td>
+<td style="text-align:left">Applies a width of <em>40px</em>.</td>
+</tr>
+</tbody>
+</table></div>
+
+<form>
+
+    <div class="tiadian-margin">
+        <input class="tiadian-input tiadian-form-width-large" type="text" placeholder="Large">
+    </div>
+
+    <div class="tiadian-margin">
+        <input class="tiadian-input tiadian-form-width-medium" type="text" placeholder="Medium">
+    </div>
+
+    <div class="tiadian-margin">
+        <input class="tiadian-input tiadian-form-width-small" type="text" placeholder="Small">
+    </div>
+<pre>
+<code class="language-java">
+&lt;form&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;input class=&quot;tiadian-input tiadian-form-width-large&quot; type=&quot;text&quot; placeholder=&quot;Large&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;input class=&quot;tiadian-input tiadian-form-width-medium&quot; type=&quot;text&quot; placeholder=&quot;Medium&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;input class=&quot;tiadian-input tiadian-form-width-small&quot; type=&quot;text&quot; placeholder=&quot;Small&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;input class=&quot;tiadian-input tiadian-form-width-xsmall&quot; type=&quot;text&quot; placeholder=&quot;X-Small&quot;&gt;
+    &lt;/div&gt;
+
+&lt;/form&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="162" data-line-end="163">You can also apply the <code>.tiadian-width-*</code> classes from the <a href="width.md">Width component</a> to form controls.</p>
+
+<form>
+    <input class="tiadian-input tiadian-width-1-2" type="text" placeholder="tiadian-width-1-2">
+</form>
+<pre>
+<code class="language-java">
+&lt;form&gt;
+    &lt;input class=&quot;tiadian-input tiadian-width-1-2&quot; type=&quot;text&quot; placeholder=&quot;tiadian-width-1-2&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=172 data-line-end=173 ><a id="Blank_modifier_172"></a>Blank modifier</h2>
+<p class="has-line-data" data-line-start="174" data-line-end="175">Add the <code>.tiadian-form-blank</code> class to minimize the styling of form controls.</p>
+
+<form>
+    <input class="tiadian-input tiadian-form-blank tiadian-form-width-medium" type="text" placeholder="Form blank">
+</form>
+<pre>
+<code class="language-java">
+&lt;form&gt;
+    &lt;input class=&quot;tiadian-input tiadian-form-blank tiadian-form-width-medium&quot; type=&quot;text&quot; placeholder=&quot;Form blank&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=184 data-line-end=185 ><a id="Layout_184"></a>Layout</h2>
+<p class="has-line-data" data-line-start="186" data-line-end="187">Define labels and controls and apply a stacked or horizontal layout to form elements. Layout modifiers can be added to any parent element like the <code>&lt;fieldset&gt;</code> element. This makes it possible to have different form layouts for each fieldset.</p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-stacked</code></td>
+<td style="text-align:left">Add this class to display labels on top of controls.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-horizontal</code></td>
+<td style="text-align:left">Add this class to display labels and controls side by side.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-label</code></td>
+<td style="text-align:left">Add this class to define form labels.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-form-controls</code></td>
+<td style="text-align:left">Add this class to define form controls.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-stacked"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-label"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-controls"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-label"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-controls"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+</code></pre>
+
+<form class="tiadian-form-stacked">
+
+    <div class="tiadian-margin">
+        <label class="tiadian-form-label" for="form-stacked-text">Text</label>
+        <div class="tiadian-form-controls">
+            <input class="tiadian-input" id="form-stacked-text" type="text" placeholder="Some text...">
+        </div>
+    </div>
+
+    <div class="tiadian-margin">
+        <label class="tiadian-form-label" for="form-stacked-select">Select</label>
+        <div class="tiadian-form-controls">
+            <select class="tiadian-select" id="form-stacked-select">
+                <option>Option 01</option>
+                <option>Option 02</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="tiadian-margin">
+        <div class="tiadian-form-label">Radio</div>
+        <div class="tiadian-form-controls">
+            <label><input class="tiadian-radio" type="radio" name="radio1"> Option 01</label><br>
+            <label><input class="tiadian-radio" type="radio" name="radio1"> Option 02</label>
+        </div>
+    </div>
+
+</form>
+<pre>
+<code class="language-java">
+&lt;form class=&quot;tiadian-form-stacked&quot;&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;label class=&quot;tiadian-form-label&quot; for=&quot;form-stacked-text&quot;&gt;Text&lt;/label&gt;
+        &lt;div class=&quot;tiadian-form-controls&quot;&gt;
+            &lt;input class=&quot;tiadian-input&quot; id=&quot;form-stacked-text&quot; type=&quot;text&quot; placeholder=&quot;Some text...&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;label class=&quot;tiadian-form-label&quot; for=&quot;form-stacked-select&quot;&gt;Select&lt;/label&gt;
+        &lt;div class=&quot;tiadian-form-controls&quot;&gt;
+            &lt;select class=&quot;tiadian-select&quot; id=&quot;form-stacked-select&quot;&gt;
+                &lt;option&gt;Option 01&lt;/option&gt;
+                &lt;option&gt;Option 02&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;div class=&quot;tiadian-form-label&quot;&gt;Radio&lt;/div&gt;
+        &lt;div class=&quot;tiadian-form-controls&quot;&gt;
+            &lt;label&gt;&lt;input class=&quot;tiadian-radio&quot; type=&quot;radio&quot; name=&quot;radio1&quot;&gt; Option 01&lt;/label&gt;&lt;br&gt;
+            &lt;label&gt;&lt;input class=&quot;tiadian-radio&quot; type=&quot;radio&quot; name=&quot;radio1&quot;&gt; Option 02&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h3 class="code-line" data-line-start=241 data-line-end=242 ><a id="Horizontal_form_241"></a>Horizontal form</h3>
+<p class="has-line-data" data-line-start="243" data-line-end="244">Use the <code>.tiadian-form-controls-text</code> class to better align checkboxes and radio buttons when using them with text in a horizontal layout.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-horizontal"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-label"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-controls"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-label"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-controls tiadian-form-controls-text"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+</code></pre>
+
+
+<form class="tiadian-form-horizontal tiadian-margin-large">
+
+    <div class="tiadian-margin">
+        <label class="tiadian-form-label" for="form-horizontal-text">Text</label>
+        <div class="tiadian-form-controls">
+            <input class="tiadian-input" id="form-horizontal-text" type="text" placeholder="Some text...">
+        </div>
+    </div>
+
+    <div class="tiadian-margin">
+        <label class="tiadian-form-label" for="form-horizontal-select">Select</label>
+        <div class="tiadian-form-controls">
+            <select class="tiadian-select" id="form-horizontal-select">
+                <option>Option 01</option>
+                <option>Option 02</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="tiadian-margin">
+        <div class="tiadian-form-label">Radio</div>
+        <div class="tiadian-form-controls tiadian-form-controls-text">
+            <label><input class="tiadian-radio" type="radio" name="radio1"> Option 01</label><br>
+            <label><input class="tiadian-radio" type="radio" name="radio1"> Option 02</label>
+        </div>
+    </div>
+
+</form>
+<pre>
+<code class="language-java">
+&lt;form class=&quot;tiadian-form-horizontal tiadian-margin-large&quot;&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;label class=&quot;tiadian-form-label&quot; for=&quot;form-horizontal-text&quot;&gt;Text&lt;/label&gt;
+        &lt;div class=&quot;tiadian-form-controls&quot;&gt;
+            &lt;input class=&quot;tiadian-input&quot; id=&quot;form-horizontal-text&quot; type=&quot;text&quot; placeholder=&quot;Some text...&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;label class=&quot;tiadian-form-label&quot; for=&quot;form-horizontal-select&quot;&gt;Select&lt;/label&gt;
+        &lt;div class=&quot;tiadian-form-controls&quot;&gt;
+            &lt;select class=&quot;tiadian-select&quot; id=&quot;form-horizontal-select&quot;&gt;
+                &lt;option&gt;Option 01&lt;/option&gt;
+                &lt;option&gt;Option 02&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;div class=&quot;tiadian-form-label&quot;&gt;Radio&lt;/div&gt;
+        &lt;div class=&quot;tiadian-form-controls tiadian-form-controls-text&quot;&gt;
+            &lt;label&gt;&lt;input class=&quot;tiadian-radio&quot; type=&quot;radio&quot; name=&quot;radio1&quot;&gt; Option 01&lt;/label&gt;&lt;br&gt;
+            &lt;label&gt;&lt;input class=&quot;tiadian-radio&quot; type=&quot;radio&quot; name=&quot;radio1&quot;&gt; Option 02&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=291 data-line-end=292 ><a id="Form_and_icons_291"></a>Form and icons</h2>
+<p class="has-line-data" data-line-start="293" data-line-end="294">You use an icon from the <a href="icon.md">Icon component</a> inside a form. Add the <code>.tiadian-form-icon</code> class to a <code>&lt;span&gt;</code> element. Group it with an <code>&lt;input&gt;</code> element by adding the <code>.tiadian-inline</code> class from the <a href="utility.md#inline">Utility component</a> to a container element around both. The icon has to come first in the markup. By default, the icon will be placed on the left side of the form. To change the alignment, add the <code>.tiadian-form-icon-flip</code> class.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-inline"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-icon"</span> <span class="hljs-attribute">tiadian-icon</span>=<span class="hljs-value">"icon: user"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-input"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+<form class="tiadian-form-horizontal tiadian-margin-large">
+
+    <div class="tiadian-margin">
+        <label class="tiadian-form-label" for="form-horizontal-text">Text</label>
+        <div class="tiadian-form-controls">
+            <input class="tiadian-input" id="form-horizontal-text" type="text" placeholder="Some text...">
+        </div>
+    </div>
+
+    <div class="tiadian-margin">
+        <label class="tiadian-form-label" for="form-horizontal-select">Select</label>
+        <div class="tiadian-form-controls">
+            <select class="tiadian-select" id="form-horizontal-select">
+                <option>Option 01</option>
+                <option>Option 02</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="tiadian-margin">
+        <div class="tiadian-form-label">Radio</div>
+        <div class="tiadian-form-controls tiadian-form-controls-text">
+            <label><input class="tiadian-radio" type="radio" name="radio1"> Option 01</label><br>
+            <label><input class="tiadian-radio" type="radio" name="radio1"> Option 02</label>
+        </div>
+    </div>
+
+</form>
+<pre>
+<code class="language-java">
+&lt;form&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;div class=&quot;tiadian-inline&quot;&gt;
+            &lt;span class=&quot;tiadian-form-icon&quot; tiadian-icon=&quot;icon: user&quot;&gt;&lt;/span&gt;
+            &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;div class=&quot;tiadian-inline&quot;&gt;
+            &lt;span class=&quot;tiadian-form-icon tiadian-form-icon-flip&quot; tiadian-icon=&quot;icon: lock&quot;&gt;&lt;/span&gt;
+            &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h3 class="code-line" data-line-start=324 data-line-end=325 ><a id="Clickable_icons_324"></a>Clickable icons</h3>
+<p class="has-line-data" data-line-start="326" data-line-end="327">To enable an action, for example opening a modal to pick an image or link, use an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element to create the icon.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-inline"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-form-icon tiadian-form-icon-flip"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">tiadian-icon</span>=<span class="hljs-value">"icon: user"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-input"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+<form>
+
+    <div class="tiadian-margin">
+        <div class="tiadian-inline">
+            <a class="tiadian-form-icon" href="#" tiadian-icon="icon: pencil"></a>
+            <input class="tiadian-input" type="text">
+        </div>
+    </div>
+
+    <div class="tiadian-margin">
+        <div class="tiadian-inline">
+            <a class="tiadian-form-icon tiadian-form-icon-flip" href="#" tiadian-icon="icon: link"></a>
+            <input class="tiadian-input" type="text">
+        </div>
+    </div>
+
+</form>
+<pre>
+<code class="language-java">
+&lt;form&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;div class=&quot;tiadian-inline&quot;&gt;
+            &lt;a class=&quot;tiadian-form-icon&quot; href=&quot;#&quot; tiadian-icon=&quot;icon: pencil&quot;&gt;&lt;/a&gt;
+            &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;div class=&quot;tiadian-inline&quot;&gt;
+            &lt;a class=&quot;tiadian-form-icon tiadian-form-icon-flip&quot; href=&quot;#&quot; tiadian-icon=&quot;icon: link&quot;&gt;&lt;/a&gt;
+            &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=357 data-line-end=358 ><a id="Form_and_grid_357"></a>Form and grid</h2>
+<p class="has-line-data" data-line-start="359" data-line-end="360">You can also use the <a href="grid.md">Grid</a> and <a href="width.md">Width</a> components to define the layout of a form.</p>
+
+<form class="tiadian-grid-small" tiadian-grid>
+    <div class="tiadian-width-1-1">
+        <input class="tiadian-input" type="text" placeholder="100">
+    </div>
+    <div class="tiadian-width-1-2@s">
+        <input class="tiadian-input" type="text" placeholder="50">
+    </div>
+    <div class="tiadian-width-1-4@s">
+        <input class="tiadian-input" type="text" placeholder="25">
+    </div>
+    <div class="tiadian-width-1-4@s">
+        <input class="tiadian-input" type="text" placeholder="25">
+    </div>
+    <div class="tiadian-width-1-2@s">
+        <input class="tiadian-input" type="text" placeholder="50">
+    </div>
+    <div class="tiadian-width-1-2@s">
+        <input class="tiadian-input" type="text" placeholder="50">
+    </div>
+</form>
+<pre>
+<code class="language-java">
+&lt;form class=&quot;tiadian-grid-small&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-width-1-1&quot;&gt;
+        &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot; placeholder=&quot;100&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-2@s&quot;&gt;
+        &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot; placeholder=&quot;50&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-4@s&quot;&gt;
+        &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot; placeholder=&quot;25&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-4@s&quot;&gt;
+        &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot; placeholder=&quot;25&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-2@s&quot;&gt;
+        &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot; placeholder=&quot;50&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-2@s&quot;&gt;
+        &lt;input class=&quot;tiadian-input&quot; type=&quot;text&quot; placeholder=&quot;50&quot;&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=386 data-line-end=387 ><a id="Custom_controls_386"></a>Custom controls</h2>
+<p class="has-line-data" data-line-start="388" data-line-end="389">To replace a file inputs or select forms with your own HTML content, like a button or text, add the <code>tiadian-form-custom</code> attribute to a container element.</p>
+<h3 class="code-line" data-line-start=390 data-line-end=391 ><a id="File_390"></a>File</h3>
+<p class="has-line-data" data-line-start="392" data-line-end="393">Use a button or text as a file input.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-form-custom</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"file"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+<form>
+
+    <div class="tiadian-margin">
+        <div tiadian-form-custom>
+            <input type="file">
+            <button class="tiadian-button tiadian-button-default" type="button" tabindex="-1">Select</button>
+        </div>
+    </div>
+
+    <div class="tiadian-margin">
+        <span class="tiadian-text-middle">Here is a text</span>
+        <div tiadian-form-custom>
+            <input type="file">
+            <span class="tiadian-link">upload</span>
+        </div>
+    </div>
+
+    <div class="tiadian-margin" tiadian-margin>
+        <div tiadian-form-custom="target: true">
+            <input type="file">
+            <input class="tiadian-input tiadian-form-width-medium" type="text" placeholder="Select file" disabled>
+        </div>
+        <button class="tiadian-button tiadian-button-default">Submit</button>
+    </div>
+
+</form>
+<pre>
+<code class="language-java">
+&lt;form&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;div tiadian-form-custom&gt;
+            &lt;input type=&quot;file&quot;&gt;
+            &lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot; tabindex=&quot;-1&quot;&gt;Select&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;span class=&quot;tiadian-text-middle&quot;&gt;Here is a text&lt;/span&gt;
+        &lt;div tiadian-form-custom&gt;
+            &lt;input type=&quot;file&quot;&gt;
+            &lt;span class=&quot;tiadian-link&quot;&gt;upload&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot; tiadian-margin&gt;
+        &lt;div tiadian-form-custom=&quot;target: true&quot;&gt;
+            &lt;input type=&quot;file&quot;&gt;
+            &lt;input class=&quot;tiadian-input tiadian-form-width-medium&quot; type=&quot;text&quot; placeholder=&quot;Select file&quot; disabled&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;tiadian-button tiadian-button-default&quot;&gt;Submit&lt;/button&gt;
+    &lt;/div&gt;
+
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h3 class="code-line" data-line-start=432 data-line-end=433 ><a id="Select_432"></a>Select</h3>
+<p class="has-line-data" data-line-start="434" data-line-end="435">Use a button, text or a link as a select form. Just add the <code>target: SELECTOR</code> option to the <code>tiadian-form-custom</code> attribute to select where the option value should be displayed. <code>target: true</code> will select the adjacent element in the markup.</p>
+<pre>
+<code class="language-java">
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">tiadian-form-custom</span>=<span class="hljs-value">"target: true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">select</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">option</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+
+<form>
+
+    <div class="tiadian-margin">
+        <div tiadian-form-custom="target: true">
+            <select>
+                <option value="1">Option 01</option>
+                <option value="2">Option 02</option>
+                <option value="3">Option 03</option>
+                <option value="4">Option 04</option>
+            </select>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="tiadian-margin">
+        <div tiadian-form-custom="target: > * > span:last-child">
+            <select>
+                <option value="1">Option 01</option>
+                <option value="2">Option 02</option>
+                <option value="3">Option 03</option>
+                <option value="4">Option 04</option>
+            </select>
+            <span class="tiadian-link">
+                <span tiadian-icon="icon: pencil"></span>
+                <span></span>
+            </span>
+        </div>
+    </div>
+
+    <div class="tiadian-margin">
+        <div tiadian-form-custom="target: > * > span:first-child">
+            <select>
+                <option value="">Please select...</option>
+                <option value="1">Option 01</option>
+                <option value="2">Option 02</option>
+                <option value="3">Option 03</option>
+                <option value="4">Option 04</option>
+            </select>
+            <button class="tiadian-button tiadian-button-default" type="button" tabindex="-1">
+                <span></span>
+                <span tiadian-icon="icon: chevron-down"></span>
+            </button>
+        </div>
+    </div>
+
+</form>
+<pre>
+<code class="language-java">
+&lt;form&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;div tiadian-form-custom=&quot;target: true&quot;&gt;
+            &lt;select&gt;
+                &lt;option value=&quot;1&quot;&gt;Option 01&lt;/option&gt;
+                &lt;option value=&quot;2&quot;&gt;Option 02&lt;/option&gt;
+                &lt;option value=&quot;3&quot;&gt;Option 03&lt;/option&gt;
+                &lt;option value=&quot;4&quot;&gt;Option 04&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;span&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;div tiadian-form-custom=&quot;target: &gt; * &gt; span:last-child&quot;&gt;
+            &lt;select&gt;
+                &lt;option value=&quot;1&quot;&gt;Option 01&lt;/option&gt;
+                &lt;option value=&quot;2&quot;&gt;Option 02&lt;/option&gt;
+                &lt;option value=&quot;3&quot;&gt;Option 03&lt;/option&gt;
+                &lt;option value=&quot;4&quot;&gt;Option 04&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;span class=&quot;tiadian-link&quot;&gt;
+                &lt;span tiadian-icon=&quot;icon: pencil&quot;&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;tiadian-margin&quot;&gt;
+        &lt;div tiadian-form-custom=&quot;target: &gt; * &gt; span:first-child&quot;&gt;
+            &lt;select&gt;
+                &lt;option value=&quot;&quot;&gt;Please select...&lt;/option&gt;
+                &lt;option value=&quot;1&quot;&gt;Option 01&lt;/option&gt;
+                &lt;option value=&quot;2&quot;&gt;Option 02&lt;/option&gt;
+                &lt;option value=&quot;3&quot;&gt;Option 03&lt;/option&gt;
+                &lt;option value=&quot;4&quot;&gt;Option 04&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;button class=&quot;tiadian-button tiadian-button-default&quot; type=&quot;button&quot; tabindex=&quot;-1&quot;&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span tiadian-icon=&quot;icon: chevron-down&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/form&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=497 data-line-end=498 ><a id="Component_option_497"></a>Component option</h2>
+<p class="has-line-data" data-line-start="499" data-line-end="500">You can add this option to the <code>tiadian-form-custom</code> attribute. <a href="javascript.md#component-configuration">Learn more</a></p>
+<div class="tiadian-overflow-auto">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Default</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>target</code></td>
+<td style="text-align:left">CSS selector, Boolean</td>
+<td style="text-align:left">false</td>
+<td style="text-align:left">Value display target.</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 class="code-line" data-line-start=507 data-line-end=508 ><a id="JavaScript_507"></a>JavaScript</h2>
+<p class="has-line-data" data-line-start="509" data-line-end="510">Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+<h3 class="code-line" data-line-start=511 data-line-end=512 ><a id="Initialization_511"></a>Initialization</h3>
+<pre>
+<code class="language-java">
+TIAdian.formCustom(element, options);
+</code></pre>
+</p>
+</div>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+</body>
+</html>
