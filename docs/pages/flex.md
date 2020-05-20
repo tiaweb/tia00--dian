@@ -1,233 +1,452 @@
-# Flex
+<!--DOCTYPE html-->
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
 
-<p class="uk-text-lead">Utilize the power of flexbox to create a wide range of layouts.</p>
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
 
-The Flex component has an essential role in building layouts in UIkit. A lot of components, for example the [Grid](grid.md) as well as horizontal navigations, like the [Navbar](navbar.md), [Subnav](subnav.md), [Breadcrumb](breadcrumb.md), [Pagination](pagination.md), [Tab](tab.md) and [Dotnav](dotnav.md) are built with flexbox and can be used together with the utility classes from this component.
+ <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+<script  src="https://tiaweb.github.io/tiadian/icons.min.js"></script>
+	</head>
+	<body>
+<div class="tiadian-card tiadian-card-default tiadian-card-body">
+    <div class="tiadian-card-badge tiadian-label">V1.0</div>
+    <h3 class="tiadian-card-title"><a class="navbar-brand logo-image" href="https://tiaweb.github.io/tiadian/index.html"><img src="https://tiaweb.github.io/images/logo.svg" alt="alternative"></a></h3>
+    <p>
 
-***
-
-## Usage
-
-To apply the flexbox layout model, use one of the following classes. By default, all flex items are aligned to the left, as wide as their content and matched in height.
-
-| Class             | Description                                                  |
-|:------------------|:-------------------------------------------------------------|
-| `.uk-flex`        | Create the flex container and behave like a block element.   |
-| `.uk-flex-inline` | Create the flex container and behave like an inline element. |
-
-```html
-<div class="uk-flex">
-    <div></div>
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Flex_0"></a>Flex</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">&lt;p class=“tiadian-text-lead”&gt;Utilize the power of flexbox to create a wide range of layouts.&lt;/p&gt;</p>
+<p class="has-line-data" data-line-start="4" data-line-end="5">The Flex component has an essential role in building layouts in TIAdian. A lot of components, for example the <a href="grid.md">Grid</a> as well as horizontal navigations, like the <a href="navbar.md">Navbar</a>, <a href="subnav.md">Subnav</a>, <a href="breadcrumb.md">Breadcrumb</a>, <a href="pagination.md">Pagination</a>, <a href="tab.md">Tab</a> and <a href="dotnav.md">Dotnav</a> are built with flexbox and can be used together with the utility classes from this component.</p>
+<hr>
+<h2 class="code-line" data-line-start=8 data-line-end=9 ><a id="Usage_8"></a>Usage</h2>
+<p class="has-line-data" data-line-start="10" data-line-end="11">To apply the flexbox layout model, use one of the following classes. By default, all flex items are aligned to the left, as wide as their content and matched in height.</p>
+<div class="tiadian-overflow-auto"><table class="tiadian-overflow-auto">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex</code></td>
+<td style="text-align:left">Create the flex container and behave like a block element.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-inline</code></td>
+<td style="text-align:left">Create the flex container and behave like an inline element.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java">class</span>=<span class="hljs-value">"tiadian-flex"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-flex">
+    <div class="tiadian-card tiadian-card-default tiadian-card-body">Item 1</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 2</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 3</div>
 </div>
-```
-
-```example
-<div class="uk-flex">
-    <div class="uk-card uk-card-default uk-card-body">Item 1</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 2</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 3</div>
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-flex&quot;&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left&quot;&gt;Item 2&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left&quot;&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=33 data-line-end=34 ><a id="Horizontal_alignment_33"></a>Horizontal alignment</h2>
+<p class="has-line-data" data-line-start="35" data-line-end="36">These classes define the horizontal alignment of flex items and distribute the space between them. Add one or more of them to the flex container in order to configure the alignments of the flex items. By default, flex items are aligned to the left as does the <code>.tiadian-flex-left</code> class.</p>
+<div class="tiadian-overflow-auto"><table class="tiadian-overflow-auto">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-left</code></td>
+<td style="text-align:left">Add this class to align flex items to the left.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-center</code></td>
+<td style="text-align:left">Add this class to center flex items along the main axis.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-right</code></td>
+<td style="text-align:left">Add this class to align flex items to the right.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-between</code></td>
+<td style="text-align:left">Add this class to distribute items evenly, with equal space between the items along the main axis.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-around</code></td>
+<td style="text-align:left">Add this class to distribute items evenly with equal space on both sides of each item.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-flex tiadian-flex-center"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-flex tiadian-flex-center">
+    <div class="tiadian-card tiadian-card-default tiadian-card-body">Item 1</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 2</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 3</div>
 </div>
-```
-
-***
-
-## Horizontal alignment
-
-These classes define the horizontal alignment of flex items and distribute the space between them. Add one or more of them to the flex container in order to configure the alignments of the flex items. By default, flex items are aligned to the left as does the `.uk-flex-left` class.
-
-| Class              | Description                                                                                        |
-|:-------------------|:---------------------------------------------------------------------------------------------------|
-| `.uk-flex-left`    | Add this class to align flex items to the left.                                                    |
-| `.uk-flex-center`  | Add this class to center flex items along the main axis.                                           |
-| `.uk-flex-right`   | Add this class to align flex items to the right.                                                   |
-| `.uk-flex-between` | Add this class to distribute items evenly, with equal space between the items along the main axis. |
-| `.uk-flex-around`  | Add this class to distribute items evenly with equal space on both sides of each item.             |
-
-```html
-<div class="uk-flex uk-flex-center">
-    <div></div>
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-flex tiadian-flex-center&quot;&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left&quot;&gt;Item 2&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left&quot;&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h3 class="code-line" data-line-start=61 data-line-end=62 ><a id="Responsive_61"></a>Responsive</h3>
+<p class="has-line-data" data-line-start="63" data-line-end="64">TIAdian provides a number of responsive flex classes for horizontal alignment. Basically, they work just like the usual flex alignment classes, except that they have suffixes that represent the breakpoint from which they come to effect.</p>
+<div class="tiadian-overflow-auto"><table class="tiadian-overflow-auto">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-left@s</code>&lt;br&gt; <code>.tiadian-flex-center@s</code>&lt;br&gt; <code>.tiadian-flex-right@s</code>&lt;br&gt; <code>.tiadian-flex-between@s</code>&lt;br&gt; <code>.tiadian-flex-around@s</code></td>
+<td style="text-align:left">Only affects device widths of <em>640px</em> and higher.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-left@m</code>&lt;br&gt; <code>.tiadian-flex-center@m</code>&lt;br&gt; <code>.tiadian-flex-right@m</code>&lt;br&gt; <code>.tiadian-flex-between@m</code>&lt;br&gt; <code>.tiadian-flex-around@m</code></td>
+<td style="text-align:left">Only affects device widths of <em>960px</em> and higher.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-left@l</code>&lt;br&gt; <code>.tiadian-flex-center@l</code>&lt;br&gt; <code>.tiadian-flex-right@l</code>&lt;br&gt; <code>.tiadian-flex-between@l</code>&lt;br&gt; <code>.tiadian-flex-around@l</code></td>
+<td style="text-align:left">Only affects device widths of <em>1200px</em> and higher.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-left@xl</code>&lt;br&gt; <code>.tiadian-flex-center@xl</code>&lt;br&gt; <code>.tiadian-flex-right@xl</code>&lt;br&gt; <code>.tiadian-flex-between@xl</code>&lt;br&gt; <code>.tiadian-flex-around@xl</code></td>
+<td style="text-align:left">Only affects device widths of <em>1600px</em> and higher.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-flex tiadian-flex-center@m tiadian-flex-right@l"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-flex tiadian-flex-center@m tiadian-flex-right@l">
+    <div class="tiadian-card tiadian-card-default tiadian-card-body">Item 1</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 2</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 3</div>
 </div>
-```
-
-```example
-<div class="uk-flex uk-flex-center">
-    <div class="uk-card uk-card-default uk-card-body">Item 1</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 2</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 3</div>
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-flex tiadian-flex-center@m tiadian-flex-right@l&quot;&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left&quot;&gt;Item 2&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left&quot;&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=88 data-line-end=89 ><a id="Vertical_alignment_88"></a>Vertical alignment</h2>
+<p class="has-line-data" data-line-start="90" data-line-end="91">These classes define the vertical alignment of flex items. By default, flex items fill the height of their container as does the <code>.tiadian-flex-stretch</code> class.</p>
+<div class="tiadian-overflow-auto"><table class="tiadian-overflow-auto">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-stretch</code></td>
+<td style="text-align:left">Add this class to expand flex items to fill the height of their parent.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-top</code></td>
+<td style="text-align:left">Add this class to align flex items to the top.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-middle</code></td>
+<td style="text-align:left">Add this class to center flex items along the cross axis.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-bottom</code></td>
+<td style="text-align:left">Add this class to align flex items to the bottom.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-flex tiadian-flex-middle"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre><div class="tiadian-flex tiadian-flex-middle tiadian-text-center">
+    <div class="tiadian-card tiadian-card-default tiadian-card-body">Item 1</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 2<br>...</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 3<br>...<br>...</div>
 </div>
-```
-
-***
-
-### Responsive
-
-UIkit provides a number of responsive flex classes for horizontal alignment. Basically, they work just like the usual flex alignment classes, except that they have suffixes that represent the breakpoint from which they come to effect.
-
-| Class | Description |
-|:------|:------------|
-| `.uk-flex-left@s`<br> `.uk-flex-center@s`<br> `.uk-flex-right@s`<br> `.uk-flex-between@s`<br> `.uk-flex-around@s` | Only affects device widths of _640px_ and higher. |
-| `.uk-flex-left@m`<br> `.uk-flex-center@m`<br> `.uk-flex-right@m`<br> `.uk-flex-between@m`<br> `.uk-flex-around@m` | Only affects device widths of _960px_ and higher. |
-| `.uk-flex-left@l`<br> `.uk-flex-center@l`<br> `.uk-flex-right@l`<br> `.uk-flex-between@l`<br> `.uk-flex-around@l` | Only affects device widths of _1200px_ and higher. |
-| `.uk-flex-left@xl`<br> `.uk-flex-center@xl`<br> `.uk-flex-right@xl`<br> `.uk-flex-between@xl`<br> `.uk-flex-around@xl` | Only affects device widths of _1600px_ and higher. |
-
-```html
-<div class="uk-flex uk-flex-center@m uk-flex-right@l">
-    <div></div>
+<div class="tiadian-flex tiadian-flex-middle tiadian-text-center">
+    <div class="tiadian-card tiadian-card-default tiadian-card-body">Item 1</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 2<br>...</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 3<br>...<br>...</div>
 </div>
-```
-
-```example
-<div class="uk-flex uk-flex-center@m uk-flex-right@l">
-    <div class="uk-card uk-card-default uk-card-body">Item 1</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 2</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 3</div>
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-flex tiadian-flex-middle tiadian-text-center&quot;&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left&quot;&gt;Item 2&lt;br&gt;...&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left&quot;&gt;Item 3&lt;br&gt;...&lt;br&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=114 data-line-end=115 ><a id="Direction_modifiers_114"></a>Direction modifiers</h2>
+<p class="has-line-data" data-line-start="116" data-line-end="117">These classes define the axis that flex items are placed on and their direction. By default, items run horizontally from left to right as does the <code>.tiadian-flex-row</code> class.</p>
+<div class="tiadian-overflow-auto"><table class="tiadian-overflow-auto">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-row</code></td>
+<td style="text-align:left">Add this class to lay out flex items as horizontal rows.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-row-reverse</code></td>
+<td style="text-align:left">Add this class to lay out flex items from right to left.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-column</code></td>
+<td style="text-align:left">Add this class to lay out flex items as vertical columns.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-column-reverse</code></td>
+<td style="text-align:left">Add this class to lay out flex items from bottom to top.</td>
+</tr>
+</tbody>
+</table><div>
+ <pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-flex tiadian-flex-column"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-flex tiadian-flex-column tiadian-width-1-3">
+    <div class="tiadian-card tiadian-card-default tiadian-card-body">Item 1</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-top">Item 2</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-top">Item 3</div>
 </div>
-```
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-flex tiadian-flex-column tiadian-width-1-3&quot;&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-top&quot;&gt;Item 2&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-top&quot;&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=139 data-line-end=140 ><a id="Wrap_modifiers_139"></a>Wrap modifiers</h2>
+<p class="has-line-data" data-line-start="141" data-line-end="142">By default, flex items are fit into one line and run from left to right. Add one of these classes to modify the behavior of wrapping flex items.</p>
+<div class="tiadian-overflow-auto"><table class="tiadian-overflow-auto">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-wrap</code></td>
+<td style="text-align:left">Add this class to make flex items wrap into another line when they no longer fit their container.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-wrap-reverse</code></td>
+<td style="text-align:left">Add this class to change the items’ direction so that they run from right to left.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-nowrap</code></td>
+<td style="text-align:left">Add this class to force the flex items into one line. This is the default behavior.</td>
+</tr>
+</tbody>
+</table>
+<p class="has-line-data" data-line-start="149" data-line-end="150">The following classes modify the alignment of wrapping flex items.</p>
+<table class="tiadian-overflow-auto">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-wrap-stretch</code></td>
+<td style="text-align:left">Add this class, so that item lines stretch to take up the remaining space</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-wrap-between</code></td>
+<td style="text-align:left">Add this class to distribute item lines evenly, with the first row at the top and last row at the bottom of the container.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-wrap-around</code></td>
+<td style="text-align:left">Add this class to distribute lines evenly with equal space at the top and bottom of each row.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-wrap-top</code></td>
+<td style="text-align:left">Add this class to align multiline flex items to the top.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-wrap-middle</code></td>
+<td style="text-align:left">Add this class to vertically center multirow flex items.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-wrap-bottom</code></td>
+<td style="text-align:left">Add this class to align multiline flex items to the bottom.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-flex tiadian-flex-wrap tiadian-flex-wrap-around"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
 
-***
-
-## Vertical alignment
-
-These classes define the vertical alignment of flex items. By default, flex items fill the height of their container as does the `.uk-flex-stretch` class.
-
-
-| Class              | Description                                                             |
-|:-------------------|:------------------------------------------------------------------------|
-| `.uk-flex-stretch` | Add this class to expand flex items to fill the height of their parent. |
-| `.uk-flex-top`     | Add this class to align flex items to the top.                          |
-| `.uk-flex-middle`  | Add this class to center flex items along the cross axis.               |
-| `.uk-flex-bottom`  | Add this class to align flex items to the bottom.                       |
-
-```html
-<div class="uk-flex uk-flex-middle"></div>
-```
-
-```example
-<div class="uk-flex uk-flex-middle uk-text-center">
-    <div class="uk-card uk-card-default uk-card-body">Item 1</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 2<br>...</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 3<br>...<br>...</div>
+<div class="tiadian-flex tiadian-flex-wrap tiadian-flex-wrap-around tiadian-background-muted tiadian-height-medium">
+    <div class="tiadian-width-1-3 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small">Item 1</div>
+    <div class="tiadian-width-1-2 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small tiadian-margin-left">Item 2</div>
+    <div class="tiadian-width-1-3 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small">Item 3</div>
+    <div class="tiadian-width-1-3 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small tiadian-margin-left">Item 4</div>
+    <div class="tiadian-width-1-2 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small">Item 5</div>
+    <div class="tiadian-width-1-3 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small tiadian-margin-left">Item 6</div>
 </div>
-```
-
-***
-
-## Direction modifiers
-
-These classes define the axis that flex items are placed on and their direction. By default, items run horizontally from left to right as does the `.uk-flex-row` class.
-
-| Class                     | Description                                               |
-|:--------------------------|:----------------------------------------------------------|
-| `.uk-flex-row`            | Add this class to lay out flex items as horizontal rows.  |
-| `.uk-flex-row-reverse`    | Add this class to lay out flex items from right to left.  |
-| `.uk-flex-column`         | Add this class to lay out flex items as vertical columns. |
-| `.uk-flex-column-reverse` | Add this class to lay out flex items from bottom to top.  |
-
-```html
-<div class="uk-flex uk-flex-column"></div>
-```
-
-```example
-<div class="uk-flex uk-flex-column uk-width-1-3">
-    <div class="uk-card uk-card-default uk-card-body">Item 1</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-top">Item 2</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-top">Item 3</div>
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-flex tiadian-flex-wrap tiadian-flex-wrap-around tiadian-background-muted tiadian-height-medium&quot;&gt;
+    &lt;div class=&quot;tiadian-width-1-3 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-2 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small tiadian-margin-left&quot;&gt;Item 2&lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-3 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small&quot;&gt;Item 3&lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-3 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small tiadian-margin-left&quot;&gt;Item 4&lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-2 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small&quot;&gt;Item 5&lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-3 tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small tiadian-margin-left&quot;&gt;Item 6&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=177 data-line-end=178 ><a id="Item_order_177"></a>Item order</h2>
+<p class="has-line-data" data-line-start="179" data-line-end="180">By default, flex items are laid out according to the source order. To display a certain item as the first or last one, just add one of these classes.</p>
+<div class="tiadian-overflow-auto"><table class="tiadian-overflow-auto">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-first</code></td>
+<td style="text-align:left">Displays the item as the first one.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-last</code></td>
+<td style="text-align:left">Displays the item as the last one.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-first@s</code>&lt;br&gt; <code>.tiadian-flex-last@s</code></td>
+<td style="text-align:left">Affects device widths of <em>640px</em> and higher.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-first@m</code>&lt;br&gt; <code>.tiadian-flex-last@m</code></td>
+<td style="text-align:left">Affects device widths of <em>960px</em> and higher.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-first@l</code>&lt;br&gt; <code>.tiadian-flex-last@l</code></td>
+<td style="text-align:left">Affects device widths of <em>1200px</em> and higher.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-first@xl</code>&lt;br&gt; <code>.tiadian-flex-last@xl</code></td>
+<td style="text-align:left">Affects device widths of <em>1600px</em> and higher.</td>
+</tr>
+</tbody>
+</table></div>
+<pre>
+<code class="language-java"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-flex"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"tiadian-flex-first"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<div class="tiadian-flex">
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-flex-last tiadian-margin-left">Item 1</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-flex-first">Item 2</div>
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left">Item 3</div>
 </div>
-```
-
-***
-
-## Wrap modifiers
-
-By default, flex items are fit into one line and run from left to right. Add one of these classes to modify the behavior of wrapping flex items.
-
-| Class                   | Description                                                                                       |
-|:------------------------|:--------------------------------------------------------------------------------------------------|
-| `.uk-flex-wrap`         | Add this class to make flex items wrap into another line when they no longer fit their container. |
-| `.uk-flex-wrap-reverse` | Add this class to change the items' direction so that they run from right to left.                |
-| `.uk-flex-nowrap`       | Add this class to force the flex items into one line. This is the default behavior.               |
-
-The following classes modify the alignment of wrapping flex items.
-
-| Class                   | Description                                                                                                                |
-|:------------------------|:---------------------------------------------------------------------------------------------------------------------------|
-| `.uk-flex-wrap-stretch` | Add this class, so that item lines stretch to take up the remaining space                                                  |
-| `.uk-flex-wrap-between` | Add this class to distribute item lines evenly, with the first row at the top and last row at the bottom of the container. |
-| `.uk-flex-wrap-around`  | Add this class to distribute lines evenly with equal space at the top and bottom of each row.                              |
-| `.uk-flex-wrap-top`     | Add this class to align multiline flex items to the top.                                                                   |
-| `.uk-flex-wrap-middle`  | Add this class to vertically center multirow flex items.                                                                   |
-| `.uk-flex-wrap-bottom`  | Add this class to align multiline flex items to the bottom.                                                                |
-
-```html
-<div class="uk-flex uk-flex-wrap uk-flex-wrap-around"></div>
-```
-
-```example
-<div class="uk-flex uk-flex-wrap uk-flex-wrap-around uk-background-muted uk-height-medium">
-    <div class="uk-width-1-3 uk-card uk-card-default uk-card-body uk-card-small">Item 1</div>
-    <div class="uk-width-1-2 uk-card uk-card-default uk-card-body uk-card-small uk-margin-left">Item 2</div>
-    <div class="uk-width-1-3 uk-card uk-card-default uk-card-body uk-card-small">Item 3</div>
-    <div class="uk-width-1-3 uk-card uk-card-default uk-card-body uk-card-small uk-margin-left">Item 4</div>
-    <div class="uk-width-1-2 uk-card uk-card-default uk-card-body uk-card-small">Item 5</div>
-    <div class="uk-width-1-3 uk-card uk-card-default uk-card-body uk-card-small uk-margin-left">Item 6</div>
-</div>
-```
-
-***
-
-## Item order
-
-By default, flex items are laid out according to the source order. To display a certain item as the first or last one, just add one of these classes.
-
-| Class                                      | Description                                   |
-|:-------------------------------------------|:----------------------------------------------|
-| `.uk-flex-first`                           | Displays the item as the first one.           |
-| `.uk-flex-last`                            | Displays the item as the last one.            |
-| `.uk-flex-first@s`<br> `.uk-flex-last@s`   | Affects device widths of _640px_ and higher.  |
-| `.uk-flex-first@m`<br> `.uk-flex-last@m`   | Affects device widths of _960px_ and higher.  |
-| `.uk-flex-first@l`<br> `.uk-flex-last@l`   | Affects device widths of _1200px_ and higher. |
-| `.uk-flex-first@xl`<br> `.uk-flex-last@xl` | Affects device widths of _1600px_ and higher. |
-
-```html
-<div class="uk-flex">
-  <div></div>
-  <div class="uk-flex-first"></div>
-</div>
-```
-
-```example
-<div class="uk-flex">
-    <div class="uk-card uk-card-default uk-card-body uk-flex-last uk-margin-left">Item 1</div>
-    <div class="uk-card uk-card-default uk-card-body uk-flex-first">Item 2</div>
-    <div class="uk-card uk-card-default uk-card-body uk-margin-left">Item 3</div>
-</div>
-```
-
-***
-
-## Item dimensions
-
-To determine how much space a flex item should take up, add one of the following classes to the item. By default, items determine their size by their content, but are allowed to shrink.
-
-| Class           | Description                                            |
-|:----------------|:-------------------------------------------------------|
-| `.uk-flex-none` | The box's size is determined by its content.           |
-| `.uk-flex-auto` | The space is allocated considering the item's content. |
-| `.uk-flex-1`    | The space is allocated solely based on flex.           |
-
-***
-
-## Flex and grid
-
-The Flex component can be combined with a grid from the [Grid component](grid.md).
-
-```example
-<div class="uk-flex-middle" uk-grid>
-    <div class="uk-width-2-3@m">
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-flex&quot;&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-flex-last tiadian-margin-left&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-flex-first&quot;&gt;Item 2&lt;/div&gt;
+    &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-left&quot;&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=207 data-line-end=208 ><a id="Item_dimensions_207"></a>Item dimensions</h2>
+<p class="has-line-data" data-line-start="209" data-line-end="210">To determine how much space a flex item should take up, add one of the following classes to the item. By default, items determine their size by their content, but are allowed to shrink.</p>
+<div class="tiadian-overflow-auto"><table class="tiadian-overflow-auto">
+<thead>
+<tr>
+<th style="text-align:left">Class</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-none</code></td>
+<td style="text-align:left">The box’s size is determined by its content.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-auto</code></td>
+<td style="text-align:left">The space is allocated considering the item’s content.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.tiadian-flex-1</code></td>
+<td style="text-align:left">The space is allocated solely based on flex.</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h2 class="code-line" data-line-start=219 data-line-end=220 ><a id="Flex_and_grid_219"></a>Flex and grid</h2>
+<p class="has-line-data" data-line-start="221" data-line-end="222">The Flex component can be combined with a grid from the <a href="grid.md">Grid component</a>.</p>
+<div class="tiadian-flex-middle" tiadian-grid>
+    <div class="tiadian-width-2-3@m">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
     </div>
-    <div class="uk-width-1-3@m uk-flex-first">
-        <img src="images/light.jpg" alt="Image">
+    <div class="tiadian-width-1-3@m tiadian-flex-first">
+        <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="Image">
     </div>
 </div>
-```
+<pre>
+<code class="language-java">&lt;div class=&quot;tiadian-flex-middle&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-width-2-3@m&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-3@m tiadian-flex-first&quot;&gt;
+        &lt;img src=&quot;images/light.jpg&quot; alt=&quot;Image&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</p>
+</div>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+</body>
+</html>
