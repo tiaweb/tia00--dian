@@ -136,7 +136,7 @@ It's also possible to load only the image of the active slide and lazy load the 
 | `!.uk-slideshow-items > :first-child` | Looks for the next parent element with the `.uk-slideshow-item` class and selects the first child. |
 
 ```html
-<ul class="uk-slideshow-items">
+<ul class="uk-slideshow-items tes1">
     <li>
         <img data-src="" width="" height="" alt="" uk-img="target: !ul > :last-child, !* +*">
     </li>
@@ -152,7 +152,7 @@ It's also possible to load only the image of the active slide and lazy load the 
 </ul>
 ```
 
-```example
+
 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
 
     <ul class="uk-slideshow-items">
