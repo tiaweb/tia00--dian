@@ -1,0 +1,562 @@
+
+    <h1 id="lightbox">Lightbox</h1>
+    <p class="tiadian-text-lead">Create a responsive lightbox gallery with images and videos.</p>
+    <p>The lightbox component is fully responsive and supports touch and swipe navigation, as well as mouse drag for desktops. When swiping between slides the animation literally sticks at your fingertip or mouse cursor. Clicking fast on the previous and next navigation, will make animations even accelerate to keep up with your pace. All animations are hardware accelerated for a smoother performance.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>tiadian-lightbox</code> attribute to a container to turn all anchors inside that container into lightbox links.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-lightbox&gt;
+    &lt;a href="image.jpg"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-lightbox&gt;
+    &lt;a class="tiadian-button tiadian-button-default" href="images/photo.jpg"&gt;Open Lightbox&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="alt-attribute">Alt Attribute</h2>
+    <p>To add an <code>alt</code> attribute to the image in the lightbox, set the <code>data-alt</code> attribute on an anchor.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-lightbox&gt;
+    &lt;a href="image.jpg" data-alt="Image"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-lightbox&gt;
+    &lt;a class="tiadian-button tiadian-button-default" href="images/photo.jpg" data-alt="Image"&gt;Open Lightbox&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="caption">Caption</h2>
+    <p>To display a caption at the bottom of the lightbox, set the <code>data-caption</code> attribute on an anchor.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-lightbox&gt;
+    &lt;a href="image.jpg" data-caption="Caption"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-lightbox&gt;
+    &lt;a class="tiadian-button tiadian-button-default" href="images/photo.jpg" data-caption="Caption"&gt;Open Lightbox&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="animations">Animations</h2>
+    <p>By default, the Lightbox gallery uses a slide animation. You can set the <code>animation</code> option to use a different one. Possible values are <code>slide</code>, <code>fade</code> and <code>scale</code>.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-lightbox="animation: fade"&gt;
+    &lt;a href="image.jpg"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-h3"&gt;Slide&lt;/div&gt;
+&lt;div class="tiadian-child-width-1-3@m" tiadian-grid tiadian-lightbox="animation: slide"&gt;
+    &lt;div&gt;
+        &lt;a class="tiadian-inline" href="images/photo.jpg" data-caption="Caption 1"&gt;
+            &lt;img src="images/photo.jpg" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a class="tiadian-inline" href="images/dark.jpg" data-caption="Caption 2"&gt;
+            &lt;img src="images/dark.jpg" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a class="tiadian-inline" href="images/light.jpg" data-caption="Caption 3"&gt;
+            &lt;img src="images/light.jpg" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="tiadian-h3"&gt;Fade&lt;/div&gt;
+&lt;div class="tiadian-child-width-1-3@m" tiadian-grid tiadian-lightbox="animation: fade"&gt;
+    &lt;div&gt;
+        &lt;a class="tiadian-inline" href="images/photo.jpg" data-caption="Caption 1"&gt;
+            &lt;img src="images/photo.jpg" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a class="tiadian-inline" href="images/dark.jpg" data-caption="Caption 2"&gt;
+            &lt;img src="images/dark.jpg" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a class="tiadian-inline" href="images/light.jpg" data-caption="Caption 3"&gt;
+            &lt;img src="images/light.jpg" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="tiadian-h3"&gt;Scale&lt;/div&gt;
+&lt;div class="tiadian-child-width-1-3@m" tiadian-grid tiadian-lightbox="animation: scale"&gt;
+    &lt;div&gt;
+        &lt;a class="tiadian-inline" href="images/photo.jpg" data-caption="Caption 1"&gt;
+            &lt;img src="images/photo.jpg" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a class="tiadian-inline" href="images/dark.jpg" data-caption="Caption 2"&gt;
+            &lt;img src="images/dark.jpg" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a class="tiadian-inline" href="images/light.jpg" data-caption="Caption 3"&gt;
+            &lt;img src="images/light.jpg" alt=""&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="content-sources">Content sources</h2>
+    <p>A lightbox is not restricted to images. Other media, like videos, can be displayed as well. The video will pause whenever it's not visible and resume once it becomes visible again. To display a poster image for a video, set the <code>data-poster</code> attribute.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-lightbox&gt;
+    &lt;a class="tiadian-button" href="video.mp4" data-poster="image.jpg"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-button" href="https://www.youtube.com/watch?v=c2pz2mlSfXA"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-button" href="https://vimeo.com/1084537"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-button" href="https://www.google.com/maps"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-lightbox&gt;
+    &lt;a class="tiadian-button tiadian-button-default" href="images/photo.jpg" data-caption="Image"&gt;Image&lt;/a&gt;
+    &lt;a class="tiadian-button tiadian-button-default" href="https://yootheme.com/site/images/media/yootheme-pro.mp4" data-caption="Video"&gt;Video&lt;/a&gt;
+    &lt;a class="tiadian-button tiadian-button-default" href="https://www.youtube.com/watch?v=c2pz2mlSfXA" data-caption="YouTube"&gt;YouTube&lt;/a&gt;
+    &lt;a class="tiadian-button tiadian-button-default" href="https://vimeo.com/1084537" data-caption="Vimeo"&gt;Vimeo&lt;/a&gt;
+    &lt;a class="tiadian-button tiadian-button-default" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4740.819266853735!2d9.99008871708242!3d53.550454675412404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f9d24afe84a0263!2sRathaus!5e0!3m2!1sde!2sde!4v1499675200938" data-caption="Google Maps" data-type="iframe"&gt;Google Maps&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> Use <code>youtube-nocookie.com</code> within the YouTube link and the lightbox will use the domain to embed the YouTube video.</p>
+    <hr />
+    <h3 id="manual-content-type">Manual content type</h3>
+    <p>The Lightbox uses the <code>href</code> attribute to figure out the type of the linked content. If no filename extension is defined in the path, just add the <code>data-type</code> attribute to the <code>&lt;a&gt;</code> tag.</p>
+    <p>
+      <strong>Hint</strong> YouTube and Vimeo Urls will be handled automatically.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>data-type="image"</code>
+          </td>
+          <td style="text-align: left;">The content type is an image.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>data-type="video"</code>
+          </td>
+          <td style="text-align: left;">The content type is a video.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>data-type="iframe"</code>
+          </td>
+          <td style="text-align: left;">The content type is a regular website.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="custom-attributes">Custom Attributes</h2>
+    <p>You can add custom attributes to lightbox content items by using the <code>data-attrs</code> attribute. The attributes are passed like the usual component options, e.g. <code>data-attrs="width: 1280; height: 720;"</code></p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-lightbox&gt;
+    &lt;a class="tiadian-button" href="https://www.youtube.com/watch?v=c2pz2mlSfXA" data-attrs="width: 1280; height: 720;"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-lightbox&gt;
+    &lt;a class="tiadian-button tiadian-button-default" href="https://www.youtube.com/watch?v=c2pz2mlSfXA" data-caption="YouTube" data-attrs="width: 1280; height: 720;"&gt;YouTube&lt;/a&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <h3 id="lightbox-1">Lightbox</h3>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>animation</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>slide</code>
+          </td>
+          <td style="text-align: left;">Lightbox animation mode: <code>slide</code>, <code>fade</code> or <code>scale</code>.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>autoplay</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">Lightbox autoplays. (Delay in milliseconds)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>autoplay-interval</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">The delay between switching slides in autoplay mode.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>pause-on-hover</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">false</td>
+          <td style="text-align: left;">Pause autoplay mode on hover.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>video-autoplay</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">false</td>
+          <td style="text-align: left;">Lightbox videos autoplay.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>index</code>
+          </td>
+          <td style="text-align: left;">String, Integer</td>
+          <td style="text-align: left;">0</td>
+          <td style="text-align: left;">Lightbox item to show. 0 based index.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>toggle</code>
+          </td>
+          <td style="text-align: left;">CSS selector</td>
+          <td style="text-align: left;">
+            <code>a</code>
+          </td>
+          <td style="text-align: left;">Toggle selector - opens the Lightbox Panel upon click.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">// To apply lightbox to a group of links
+TIAdian.lightbox(element, options);
+
+// To dynamically initialize the lightbox panel
+TIAdian.lightboxPanel(panelOptions);
+</code>
+    </pre>
+    <h3 id="methods">Methods</h3>
+    <p>The following methods are available for the component:</p>
+    <h4 id="show">Show</h4>
+    <pre>
+      <code class="language-js">TIAdian.lightbox(element).show(index);
+</code>
+    </pre>
+    <p>Shows the Lightbox's Panel and item.</p>
+    <h4 id="hide">Hide</h4>
+    <pre>
+      <code class="language-js">TIAdian.lightbox(element).hide();
+</code>
+    </pre>
+    <p>Hides the Lightbox's Panel.</p>
+    <h3 id="lightbox-panel-options">Lightbox Panel Options</h3>
+    <p>If you only want to use the lightbox panel directly through the JS API, you can set the following options.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>animation</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>slide</code>
+          </td>
+          <td style="text-align: left;">Lightbox animation mode: <code>slide</code>, <code>fade</code> or <code>scale</code>.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>autoplay</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Lightbox autoplays.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>autoplay-interval</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>7000</code>
+          </td>
+          <td style="text-align: left;">The delay between switching slides in autoplay mode.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>pause-on-hover</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Pause autoplay mode on hover.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>video-autoplay</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Lightbox videos autoplay.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>index</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">The initial item to show. (zero based)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>velocity</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>2</code>
+          </td>
+          <td style="text-align: left;">The animation velocity (pixel/ms).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>preload</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>1</code>
+          </td>
+          <td style="text-align: left;">The number of items to preload. (left and right of the currently active item)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>items</code>
+          </td>
+          <td style="text-align: left;">Array</td>
+          <td style="text-align: left;">
+            <code>[]</code>
+          </td>
+          <td style="text-align: left;">An array of items to display, e.g. <code>[{source: 'images/size1.jpg', caption: '900x600'}]</code></td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>template</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">Default markup</td>
+          <td style="text-align: left;">The template string.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>delay-controls</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>3000</code>
+          </td>
+          <td style="text-align: left;">Delay time before controls fade out in ms.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>container</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>body</code>
+          </td>
+          <td style="text-align: left;">Define a target container via a selector to specify where the Lightbox should be appended in the DOM.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeshow</code>
+          </td>
+          <td style="text-align: left;">Fires before the Lightbox is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforehide</code>
+          </td>
+          <td style="text-align: left;">Fires before the Lightbox is hidden.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>show</code>
+          </td>
+          <td style="text-align: left;">Fires after the Lightbox is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>shown</code>
+          </td>
+          <td style="text-align: left;">Fires after the Lightbox's show animation has completed.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hide</code>
+          </td>
+          <td style="text-align: left;">Fires after the Lightbox's hide animation has started.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hidden</code>
+          </td>
+          <td style="text-align: left;">Fires after the Lightbox is hidden.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemload</code>
+          </td>
+          <td style="text-align: left;">Fires when an item loads.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeitemshow</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemshow</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemshown</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's show animation has completed.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeitemhide</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is hidden.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemhide</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's hide animation has started.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemhidden</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's hide animation has completed.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="methods-1">Methods</h3>
+    <p>The following methods are available for the component:</p>
+    <h4 id="show-1">Show</h4>
+    <pre>
+      <code class="language-js">TIAdian.lightboxPanel(element).show(index);
+</code>
+    </pre>
+    <p>Shows the Lightbox Panel and item.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Type</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>index</code>
+          </td>
+          <td style="text-align: left;">String, Integer</td>
+          <td style="text-align: left;">0</td>
+          <td style="text-align: left;">Lightbox item to show. 0 based index.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4 id="hide-1">Hide</h4>
+    <pre>
+      <code class="language-js">TIAdian.lightboxPanel(element).hide();
+</code>
+    </pre>
+    <p>Hides the Lightbox Panel.</p>
+    <h4 id="startautoplay">startAutoplay</h4>
+    <pre>
+      <code class="language-js">TIAdian.lightboxPanel(element).startAutoplay();
+</code>
+    </pre>
+    <p>Starts the Lightbox's autoplay.</p>
+    <h4 id="stopautoplay">stopAutoplay</h4>
+    <pre>
+      <code class="language-js">TIAdian.lightboxPanel(element).stopAutoplay();
+</code>
+    </pre>
+    <p>Stops the Lightbox's autoplay.</p>
