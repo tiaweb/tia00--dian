@@ -1,0 +1,426 @@
+
+    <h1 id="off-canvas">Off-canvas</h1>
+    <p class="tiadian-text-lead">Create an off-canvas sidebar that slides in and out of the page, which is perfect for creating mobile navigations.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>tiadian-offcanvas</code> attribute to a parent <code>&lt;div&gt;</code> element and use the following classes.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-offcanvas-bar</code>
+          </td>
+          <td style="text-align: left;">Add this class to a child <code>&lt;div&gt;</code> element.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-offcanvas-close</code>
+          </td>
+          <td style="text-align: left;">Add this class and the <code>tiadian-close</code> attribute to an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element to create a close button and enable its functionality.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>You can use any element to toggle an off-canvas sidebar. To enable the necessary JavaScript, add the <code>tiadian-toggle</code> attribute. An <code>&lt;a&gt;</code> element needs to be linked to the id of the off-canvas container. If you are using another element, like a button, just add the <code>tiadian-toggle="target: #ID"</code> attribute to target the id of the off-canvas container.</p>
+    <pre>
+      <code class="language-html">&lt;body&gt;
+
+    &lt;!-- This is a button toggling the off-canvas --&gt;
+    &lt;button tiadian-toggle="target: #my-id" type="button"&gt;&lt;/button&gt;
+
+    &lt;!-- This is an anchor toggling the off-canvas --&gt;
+    &lt;a href="#my-id" tiadian-toggle&gt;&lt;/a&gt;
+
+    &lt;!-- This is the off-canvas --&gt;
+    &lt;div id="my-id" tiadian-offcanvas&gt;
+        &lt;div class="tiadian-offcanvas-bar"&gt;
+
+            &lt;button class="tiadian-offcanvas-close" type="button" tiadian-close&gt;&lt;/button&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-usage"&gt;Open&lt;/button&gt;
+
+&lt;a href="#offcanvas-usage" tiadian-toggle&gt;Open&lt;/a&gt;
+
+&lt;div id="offcanvas-usage" tiadian-offcanvas&gt;
+    &lt;div class="tiadian-offcanvas-bar"&gt;
+
+        &lt;button class="tiadian-offcanvas-close" type="button" tiadian-close&gt;&lt;/button&gt;
+
+        &lt;h3&gt;Title&lt;/h3&gt;
+
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="overlay">Overlay</h3>
+    <p>To add an overlay, blanking out the page, add the <code>overlay: true</code> parameter to the <code>tiadian-offcanvas</code> attribute.</p>
+    <pre>
+      <code class="language-html">&lt;div id="my-id" tiadian-offcanvas="overlay: true"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #offcanvas-overlay"&gt;Open&lt;/button&gt;
+
+&lt;div id="offcanvas-overlay" tiadian-offcanvas="overlay: true"&gt;
+    &lt;div class="tiadian-offcanvas-bar"&gt;
+
+        &lt;button class="tiadian-offcanvas-close" type="button" tiadian-close&gt;&lt;/button&gt;
+
+
+        &lt;h3&gt;Title&lt;/h3&gt;
+
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="flip-modifier">Flip modifier</h2>
+    <p>Add the <code>flip: true</code> parameter to the <code>tiadian-offcanvas</code> attribute to adjust its alignment, so that it slides in from the right.</p>
+    <pre>
+      <code class="language-html">&lt;div id="my-id" tiadian-offcanvas="flip: true"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #offcanvas-flip"&gt;Open&lt;/button&gt;
+
+&lt;div id="offcanvas-flip" tiadian-offcanvas="flip: true; overlay: true"&gt;
+    &lt;div class="tiadian-offcanvas-bar"&gt;
+
+        &lt;button class="tiadian-offcanvas-close" type="button" tiadian-close&gt;&lt;/button&gt;
+
+        &lt;h3&gt;Title&lt;/h3&gt;
+
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="animation-modes">Animation modes</h2>
+    <p>By default, the off-canvas slides in. But you can actually choose between different animation modes for the off-canvas' entrance. Just add one of the following attributes.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Parameter</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>mode: slide</code>
+          </td>
+          <td style="text-align: left;">The off-canvas slides out and overlays the content. This is the default mode.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>mode: push</code>
+          </td>
+          <td style="text-align: left;">The off-canvas slides out and pushes the site.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>mode: reveal</code>
+          </td>
+          <td style="text-align: left;">The off-canvas slides out and reveals its content while pushing the site.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>mode: none</code>
+          </td>
+          <td style="text-align: left;">The off-canvas appears and overlays the content without an animation.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;div id="my-id" tiadian-offcanvas="mode: push"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-slide"&gt;Slide&lt;/button&gt;
+
+&lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-push"&gt;Push&lt;/button&gt;
+
+&lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-reveal"&gt;Reveal&lt;/button&gt;
+
+&lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-none"&gt;None&lt;/button&gt;
+
+&lt;div id="offcanvas-slide" tiadian-offcanvas="overlay: true"&gt;
+    &lt;div class="tiadian-offcanvas-bar"&gt;
+
+        &lt;button class="tiadian-offcanvas-close" type="button" tiadian-close&gt;&lt;/button&gt;
+
+        &lt;h3&gt;Title&lt;/h3&gt;
+
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="offcanvas-push" tiadian-offcanvas="mode: push; overlay: true"&gt;
+    &lt;div class="tiadian-offcanvas-bar"&gt;
+
+        &lt;button class="tiadian-offcanvas-close" type="button" tiadian-close&gt;&lt;/button&gt;
+
+        &lt;h3&gt;Title&lt;/h3&gt;
+
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="offcanvas-reveal" tiadian-offcanvas="mode: reveal; overlay: true"&gt;
+    &lt;div class="tiadian-offcanvas-bar"&gt;
+
+        &lt;button class="tiadian-offcanvas-close" type="button" tiadian-close&gt;&lt;/button&gt;
+
+        &lt;h3&gt;Title&lt;/h3&gt;
+
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="offcanvas-none" tiadian-offcanvas="mode: none; overlay: true"&gt;
+    &lt;div class="tiadian-offcanvas-bar"&gt;
+
+        &lt;button class="tiadian-offcanvas-close" type="button" tiadian-close&gt;&lt;/button&gt;
+
+        &lt;h3&gt;Title&lt;/h3&gt;
+
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="nav-in-off-canvas">Nav in Off-canvas</h2>
+    <p>You can use the <a href="nav.md">Nav component</a> inside an off-canvas to create a mobile navigation.</p>
+    <pre>
+      <code class="language-html">&lt;div id="my-id" tiadian-offcanvas&gt;
+    &lt;div class="tiadian-offcanvas-bar"&gt;
+        &lt;ul class="tiadian-nav tiadian-nav-default"&gt;...&lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-nav-primary"&gt;Primary Nav&lt;/button&gt;
+
+&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #offcanvas-nav"&gt;Default Nav&lt;/button&gt;
+
+&lt;div id="offcanvas-nav-primary" tiadian-offcanvas="overlay: true"&gt;
+    &lt;div class="tiadian-offcanvas-bar tiadian-flex tiadian-flex-column"&gt;
+
+        &lt;ul class="tiadian-nav tiadian-nav-primary tiadian-nav-center tiadian-margin-auto-vertical"&gt;
+            &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="tiadian-parent"&gt;
+                &lt;a href="#"&gt;Parent&lt;/a&gt;
+                &lt;ul class="tiadian-nav-sub"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class="tiadian-nav-header"&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt; Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-icon="icon: thumbnails"&gt;&lt;/span&gt; Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="tiadian-nav-divider"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-icon="icon: trash"&gt;&lt;/span&gt; Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="offcanvas-nav" tiadian-offcanvas="overlay: true"&gt;
+    &lt;div class="tiadian-offcanvas-bar"&gt;
+
+        &lt;ul class="tiadian-nav tiadian-nav-default"&gt;
+            &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="tiadian-parent"&gt;
+                &lt;a href="#"&gt;Parent&lt;/a&gt;
+                &lt;ul class="tiadian-nav-sub"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li class="tiadian-nav-header"&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt; Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-icon="icon: thumbnails"&gt;&lt;/span&gt; Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="tiadian-nav-divider"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-icon="icon: trash"&gt;&lt;/span&gt; Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>mode</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>slide</code>
+          </td>
+          <td style="text-align: left;">Off-canvas animation mode: <code>slide</code>, <code>reveal</code>, <code>push</code> or <code>none</code>.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>flip</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Flip off-canvas to the right side.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>overlay</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Display the off-canvas together with an overlay.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>esc-close</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Close the off-canvas when the <em>Esc</em> key is pressed.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>bg-close</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Close the off-canvas when the background is clicked.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>container</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Define a target container via a selector to specify where the off-canvas should be appended in the DOM. Setting it to <code>false</code> will prevent this behavior.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <code>mode</code> is the <em>Primary</em> option and its key may be omitted, if it's the only option in the attribute value.</p>
+    <pre>
+      <code class="language-html">&lt;span tiadian-offcanvas="push"&gt;&lt;/span&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.offcanvas(element, options);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeshow</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>show</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>shown</code>
+          </td>
+          <td style="text-align: left;">Fires after the item's show animation has completed.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforehide</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is hidden.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hide</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's hide animation has started.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hidden</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is hidden.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="methods">Methods</h3>
+    <p>The following methods are available for the component:</p>
+    <h4 id="show">Show</h4>
+    <pre>
+      <code class="language-js">TIAdian.offcanvas(element).show();
+</code>
+    </pre>
+    <p>Shows the Offcanvas.</p>
+    <h4 id="hide">Hide</h4>
+    <pre>
+      <code class="language-js">TIAdian.offcanvas(element).hide();
+</code>
+    </pre>
+    <p>Hides the Offcanvas.</p>
+  
