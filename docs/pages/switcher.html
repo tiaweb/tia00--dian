@@ -1,0 +1,476 @@
+
+    <h1 id="switcher">Switcher</h1>
+    <p class="tiadian-text-lead">Dynamically transition through different content panes.</p>
+    <h2 id="usage">Usage</h2>
+    <p>The Switcher component consists of a number of toggles and their related content items. Add the <code>tiadian-switcher</code> attribute to a list element which contains the toggles. Add the <code>.tiadian-switcher</code> class to the element containing the content items.</p>
+    <p>By default, the element with the <code>.tiadian-switcher</code> class has to succeed the toggle directly in order for the switcher to function. If you need it to be nested in another element, for example when using a grid, add the <code>connect: SELECTOR</code> option to the <code>tiadian-switcher</code> attribute and select the element containing the items for switching.</p>
+    <p>Typically, the switcher toggles are styled through other components, some of which will be shown here.</p>
+    <pre>
+      <code class="language-html">&lt;!-- This is the nav containing the toggling elements --&gt;
+&lt;ul tiadian-switcher&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- This is the container of the content items --&gt;
+&lt;ul class="tiadian-switcher"&gt;
+    &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <p>In this example we are using the <a href="subnav.md">Subnav component</a>.</p>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="tiadian-switcher tiadian-margin"&gt;
+    &lt;li&gt;Hello!&lt;/li&gt;
+    &lt;li&gt;Hello again!&lt;/li&gt;
+    &lt;li&gt;Bazinga!&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="navigation-controls">Navigation controls</h2>
+    <p>In some cases you want to switch to another content section from within the active content. This is possible using the <code>tiadian-switcher-item</code> attribute. To target the items, you need to set the attribute to the number of the respective content item.</p>
+    <p>Setting the attribute to <code>next</code> and <code>previous</code> will switch to the adjacent items.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-switcher tiadian-margin"&gt;
+    &lt;li&gt;&lt;a href="#" tiadian-switcher-item="0"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" tiadian-switcher-item="1"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" tiadian-switcher-item="next"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" tiadian-switcher-item="previous"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="tiadian-switcher tiadian-margin"&gt;
+    &lt;li&gt;Hello! &lt;a href="#" tiadian-switcher-item="2"&gt;Switch to item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Hello again! &lt;a href="#" tiadian-switcher-item="next"&gt;Next item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Bazinga! &lt;a href="#" tiadian-switcher-item="previous"&gt;Previous item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="connect-multiple-containers">Connect multiple containers</h2>
+    <p>It is also possible to connect multiple content containers. Just add the <code>connect</code> parameter to the <code>tiadian-switcher</code> attribute and use a selector that applies to all items.</p>
+    <pre>
+      <code class="language-html">&lt;!-- This is the nav containing the toggling elements --&gt;
+&lt;ul tiadian-switcher="connect: .my-class"&gt;...&lt;/ul&gt;
+
+&lt;!-- These are the containers of the content items --&gt;
+&lt;ul class="tiadian-switcher my-class"&gt;...&lt;/ul&gt;
+
+&lt;ul class="tiadian-switcher my-class"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher="connect: .switcher-container"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Container 1&lt;/h4&gt;
+
+&lt;ul class="tiadian-switcher switcher-container tiadian-margin"&gt;
+    &lt;li&gt;Hello!&lt;/li&gt;
+    &lt;li&gt;Hello again!&lt;/li&gt;
+    &lt;li&gt;Bazinga!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Container 2&lt;/h4&gt;
+
+&lt;ul class="tiadian-switcher switcher-container tiadian-margin"&gt;
+    &lt;li&gt;Hello! The first item.&lt;/li&gt;
+    &lt;li&gt;Hello again! The second item.&lt;/li&gt;
+    &lt;li&gt;Bazinga! The third item.&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="animations">Animations</h2>
+    <p>You can apply all animations from the <a href="animation">Animation component</a> to switcher items. To do so, add the <code>animation</code> parameter with the relevant class to the <code>tiadian-switcher</code> attribute.</p>
+    <pre>
+      <code class="language-html">&lt;ul tiadian-switcher="animation: tiadian-animation-fade"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher="animation: tiadian-animation-fade"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="tiadian-switcher tiadian-margin"&gt;
+    &lt;li&gt;Hello!&lt;/li&gt;
+    &lt;li&gt;Hello again!&lt;/li&gt;
+    &lt;li&gt;Bazinga!&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="multiple-animations">Multiple animations</h3>
+    <p>You can also apply multiple animations from the <a href="animation">Animation component</a>. That way you can add different in and out animations.</p>
+    <pre>
+      <code class="language-html">&lt;ul tiadian-switcher="animation: tiadian-animation-slide-left-medium, tiadian-animation-slide-right-medium"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher="animation: tiadian-animation-slide-left-medium, tiadian-animation-slide-right-medium"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="tiadian-switcher tiadian-margin"&gt;
+    &lt;li&gt;Hello!&lt;/li&gt;
+    &lt;li&gt;Hello again!&lt;/li&gt;
+    &lt;li&gt;Bazinga!&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="switcher-and-subnav">Switcher and subnav</h2>
+    <p>The switcher is easily applied to the <a href="subnav">Subnav component</a>.</p>
+    <pre>
+      <code class="language-html">&lt;!-- This is the subnav containing the toggling elements --&gt;
+&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher&gt;...&lt;/ul&gt;
+
+&lt;!-- This is the container of the content items --&gt;
+&lt;ul class="tiadian-switcher"&gt;&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="tiadian-switcher tiadian-margin"&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/li&gt;
+    &lt;li&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/li&gt;
+    &lt;li&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="switcher-and-tab">Switcher and tab</h2>
+    <p>As an exception to the rule, add the <code>tiadian-tab</code> attribute instead of <code>tiadian-switcher</code> to the tabbed navigation to combine the switcher with the <a href="tab">Tab component</a>.</p>
+    <pre>
+      <code class="language-html">&lt;!-- This is the subnav containing the toggling elements --&gt;
+&lt;ul tiadian-tab&gt;...&lt;/ul&gt;
+
+&lt;!-- This is the container of the content items --&gt;
+&lt;ul class="tiadian-switcher"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul tiadian-tab&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="tiadian-switcher tiadian-margin"&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/li&gt;
+    &lt;li&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/li&gt;
+    &lt;li&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="vertical-tabs">Vertical tabs</h3>
+    <p>Use the <a href="grid">Grid</a> and <a href="width">Width</a> components to display content correctly with a vertical tabbed navigation.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-grid&gt;
+    &lt;div class="tiadian-width-auto"&gt;
+        &lt;ul class="tiadian-tab-left" tiadian-tab="connect: #my-id"&gt;...&lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tiadian-width-expand"&gt;
+        &lt;ul id="my-id" class="tiadian-switcher"&gt;...&lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div tiadian-grid&gt;
+            &lt;div class="tiadian-width-auto@m"&gt;
+                &lt;ul class="tiadian-tab-left" tiadian-tab="connect: #component-tab-left; animation: tiadian-animation-fade"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-width-expand@m"&gt;
+                &lt;ul id="component-tab-left" class="tiadian-switcher"&gt;
+                    &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/li&gt;
+                    &lt;li&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/li&gt;
+                    &lt;li&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div tiadian-grid&gt;
+            &lt;div class="tiadian-width-auto@m tiadian-flex-last@m"&gt;
+                &lt;ul class="tiadian-tab-right" tiadian-tab="connect: #component-tab-right; animation: tiadian-animation-fade"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-width-expand@m"&gt;
+                &lt;ul id="component-tab-right" class="tiadian-switcher"&gt;
+                    &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/li&gt;
+                    &lt;li&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/li&gt;
+                    &lt;li&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="switcher-and-button">Switcher and button</h2>
+    <p>The switcher can also be applied to buttons or button groups from the <a href="button">Button component</a>. Just add the switcher attribute to a block around a group of buttons or to the element with the <code>.tiadian-button-group</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;!-- This is a switcher using a number of buttons --&gt;
+&lt;div tiadian-switcher="toggle: &gt; *"&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button"&gt;&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button"&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;ul class="tiadian-switcher"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-switcher="animation: tiadian-animation-fade; toggle: &gt; *"&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button"&gt;Item&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button"&gt;Item&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button"&gt;Item&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;ul class="tiadian-switcher tiadian-margin"&gt;
+    &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/li&gt;
+    &lt;li&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/li&gt;
+    &lt;li&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> Since this example does not wrap the buttons into list items the clickable elements which trigger the content switching has to be changed by using the <code>toggle</code> option.</p>
+    <hr />
+    <h2 id="switcher-and-nav">Switcher and nav</h2>
+    <p>To apply the switcher to the <a href="nav">Nav component</a>, add the <code>tiadian-switcher</code> attribute to the nav <code>&lt;ul&gt;</code> element. Use the <a href="grid">Grid</a> and <a href="width">Width</a> components to arrange nav and content in a grid layout.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-grid&gt;
+    &lt;div class="tiadian-width-small"&gt;
+        &lt;ul class="tiadian-nav tiadian-nav-default" tiadian-switcher="connect: #my-id"&gt;...&lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="tiadian-width-expand"&gt;
+        &lt;ul id="my-id" class="tiadian-switcher"&gt;...&lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-grid&gt;
+    &lt;div class="tiadian-width-small@m"&gt;
+
+        &lt;ul class="tiadian-nav tiadian-nav-default" tiadian-switcher="connect: #component-nav; animation: tiadian-animation-fade"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+    &lt;div class="tiadian-width-expand@m"&gt;
+
+        &lt;ul id="component-nav" class="tiadian-switcher"&gt;
+            &lt;li&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/li&gt;
+            &lt;li&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/li&gt;
+            &lt;li&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>connect</code>
+          </td>
+          <td style="text-align: left;">CSS selector</td>
+          <td style="text-align: left;">
+            <code>~.tiadian-switcher</code>
+          </td>
+          <td style="text-align: left;">Related items container. By default succeeding elements with class 'tiadian-switcher'.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>toggle</code>
+          </td>
+          <td style="text-align: left;">CSS selector</td>
+          <td style="text-align: left;">
+            <code>&gt; * &gt; :first-child</code>
+          </td>
+          <td style="text-align: left;">Select the clickable elements which trigger content switching.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>active</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">Active index on init. Providing a negative number indicates a position starting from the end of the set.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>animation</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">The space separated names of animations to use. Comma separate for animation out.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>duration</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>200</code>
+          </td>
+          <td style="text-align: left;">The animation duration.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>swiping</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Use swiping.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <code>connect</code> is the <em>Primary</em> option and its key may be omitted, if it's the only option in the attribute value.</p>
+    <pre>
+      <code class="language-html">&lt;span tiadian-switcher=".switcher-container"&gt;&lt;/span&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.switcher(element, options);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on the connected items of the elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeshow</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is shown. Can prevent showing by calling <code>preventDefault()</code> on the event.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>show</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>shown</code>
+          </td>
+          <td style="text-align: left;">Fires after the item's show animation has completed.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforehide</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is hidden. Can prevent hiding by calling <code>preventDefault()</code> on the event.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hide</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's hide animation has started.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hidden</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is hidden.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="methods">Methods</h3>
+    <p>The following methods are available for the component:</p>
+    <h4 id="show">Show</h4>
+    <pre>
+      <code class="language-js">TIAdian.switcher(element).show(index);
+</code>
+    </pre>
+    <p>Shows the Switcher item with given index.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Type</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>index</code>
+          </td>
+          <td style="text-align: left;">String, Integer, Node</td>
+          <td style="text-align: left;">0</td>
+          <td style="text-align: left;">Switcher item to show. 0 based index.</td>
+        </tr>
+      </tbody>
+    </table>
+  
