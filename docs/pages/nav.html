@@ -1,0 +1,502 @@
+
+    <h1 id="nav">Nav</h1>
+    <p class="tiadian-text-lead">Defines different styles for list navigations.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, use the following classes.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-nav</code>
+          </td>
+          <td style="text-align: left;">Add this class to a <code>&lt;ul&gt;</code> element to define the Nav component. Use <code>&lt;a&gt;</code> elements as nav items within the list.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-active</code>
+          </td>
+          <td style="text-align: left;">Add this class to a list item to apply an active state to a menu item.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-nav"&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-width-1-2@s tiadian-width-2-5@m"&gt;
+    &lt;ul class="tiadian-nav tiadian-nav-default"&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> By default, the nav has no styling. That's why it is important to add a modifier class. In our example we are using the <code>.tiadian-nav-default</code> class.</p>
+    <hr />
+    <h2 id="nested-navs">Nested navs</h2>
+    <p>Add the <code>.tiadian-parent</code> class to an item to turn it into a parent. Add the <code>.tiadian-nav-sub</code> class to a <code>&lt;ul&gt;</code> element inside the item to create the subnav.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-nav"&gt;
+    &lt;li class="tiadian-parent"&gt;
+        &lt;a href=""&gt;&lt;/a&gt;
+        &lt;ul class="tiadian-nav-sub"&gt;
+            &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=""&gt;&lt;/a&gt;
+                &lt;ul&gt;...&lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-width-1-2@s tiadian-width-2-5@m"&gt;
+    &lt;ul class="tiadian-nav tiadian-nav-default"&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="tiadian-parent"&gt;
+            &lt;a href="#"&gt;Parent&lt;/a&gt;
+            &lt;ul class="tiadian-nav-sub"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Sub item&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="accordion">Accordion</h2>
+    <p>By default, child menu items are always visible. To apply an accordion effect, just add the <code>tiadian-nav</code> attribute to the main <code>&lt;ul&gt;</code>. Add the <code>.tiadian-nav-parent-icon</code> class to apply icons, indicating parent items.</p>
+    <p>
+      <strong>Note</strong> The attribute automatically sets the <code>.tiadian-nav</code> class, so you don't have to apply it manually.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-nav-parent-icon" tiadian-nav&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-width-1-2@s tiadian-width-2-5@m"&gt;
+    &lt;ul class="tiadian-nav-default tiadian-nav-parent-icon" tiadian-nav&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="tiadian-parent"&gt;
+            &lt;a href="#"&gt;Parent&lt;/a&gt;
+            &lt;ul class="tiadian-nav-sub"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Sub item&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-parent"&gt;
+            &lt;a href="#"&gt;Parent&lt;/a&gt;
+            &lt;ul class="tiadian-nav-sub"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="multiple-open-subnavs">Multiple open subnavs</h3>
+    <p>When clicking on a parent item, an open one will close, allowing only one open nested list at a time. To allow multiple open subnavs, just add the <code>multiple: true</code> option to the attribute.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-nav-parent-icon" tiadian-nav="multiple: true"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-width-1-2@s tiadian-width-2-5@m"&gt;
+    &lt;ul class="tiadian-nav-default tiadian-nav-parent-icon" tiadian-nav="multiple: true"&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="tiadian-parent"&gt;
+            &lt;a href="#"&gt;Parent&lt;/a&gt;
+            &lt;ul class="tiadian-nav-sub"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Sub item&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-parent"&gt;
+            &lt;a href="#"&gt;Parent&lt;/a&gt;
+            &lt;ul class="tiadian-nav-sub"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="header-divider">Header &amp; divider</h2>
+    <p>Add one of the following classes to a list item to create a header or a divider between items.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Element</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-nav-header</code>
+          </td>
+          <td style="text-align: left;">Add this class to a <code>&lt;li&gt;</code> element to create a header.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-nav-divider</code>
+          </td>
+          <td style="text-align: left;">Add this class to a <code>&lt;li&gt;</code> element to create a divider separating nav items.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;li class="tiadian-nav-header"&gt;&lt;/li&gt;
+
+&lt;li class="tiadian-nav-divider"&gt;&lt;/li&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-width-1-2@s tiadian-width-2-5@m"&gt;
+    &lt;ul class="tiadian-nav tiadian-nav-default"&gt;
+        &lt;li class="tiadian-nav-header"&gt;Header&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="tiadian-nav-divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="default-modifier">Default modifier</h2>
+    <p>Add the <code>.tiadian-nav-default</code> class to give the nav its default style. You can place the nav inside cards or anywhere else in your content.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-nav tiadian-nav-default"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-width-1-2@s"&gt;
+    &lt;ul class="tiadian-nav-default tiadian-nav-parent-icon" tiadian-nav&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="tiadian-parent"&gt;
+            &lt;a href="#"&gt;Parent&lt;/a&gt;
+            &lt;ul class="tiadian-nav-sub"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-parent"&gt;
+            &lt;a href="#"&gt;Parent&lt;/a&gt;
+            &lt;ul class="tiadian-nav-sub"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-nav-header"&gt;Header&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt; Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-icon="icon: thumbnails"&gt;&lt;/span&gt; Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="tiadian-nav-divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-icon="icon: trash"&gt;&lt;/span&gt; Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="primary-modifier">Primary modifier</h2>
+    <p>Add the <code>.tiadian-nav-primary</code> class to give the nav a more distinct styling, for example when placing it inside a modal.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-nav tiadian-nav-primary"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-width-1-2@s"&gt;
+    &lt;ul class="tiadian-nav-primary tiadian-nav-parent-icon" tiadian-nav&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="tiadian-parent"&gt;
+            &lt;a href="#"&gt;Parent&lt;/a&gt;
+            &lt;ul class="tiadian-nav-sub"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-parent"&gt;
+            &lt;a href="#"&gt;Parent&lt;/a&gt;
+            &lt;ul class="tiadian-nav-sub"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Sub item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="center-modifier">Center modifier</h2>
+    <p>Add the <code>.tiadian-nav-center</code> class to center nav items. This can be combined with the default and primary style modifiers.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-nav tiadian-nav-default tiadian-nav-center"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-width-1-2@s"&gt;
+    &lt;ul class="tiadian-nav-default tiadian-nav-center tiadian-nav-parent-icon" tiadian-nav&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="nav-in-dropdown">Nav in Dropdown</h2>
+    <p>Add the <code>.tiadian-dropdown-nav</code> class to place a nav inside a default dropdown from the <a href="dropdown.md">Dropdown component</a>.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-dropdown&gt;
+    &lt;ul class="tiadian-nav tiadian-dropdown-nav"&gt;...&lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button"&gt;Hover&lt;/button&gt;
+&lt;div tiadian-dropdown&gt;
+    &lt;ul class="tiadian-nav tiadian-dropdown-nav"&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="tiadian-nav-header"&gt;Header&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="tiadian-nav-divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="nav-in-navbar">Nav in Navbar</h2>
+    <p>Add the <code>.tiadian-navbar-dropdown-nav</code> class to place the nav inside a navbar dropdown from the <a href="navbar.md">Navbar component</a>.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-navbar-dropdown"&gt;
+    &lt;ul class="tiadian-nav tiadian-navbar-dropdown-nav"&gt;...&lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;nav class="tiadian-navbar-container" tiadian-navbar&gt;
+    &lt;div class="tiadian-navbar-left"&gt;
+
+        &lt;ul class="tiadian-navbar-nav"&gt;
+            &lt;li&gt;
+                &lt;a href="#"&gt;Parent&lt;/a&gt;
+                &lt;div class="tiadian-navbar-dropdown"&gt;
+                    &lt;ul class="tiadian-nav tiadian-navbar-dropdown-nav"&gt;
+                        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="tiadian-nav-header"&gt;Header&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="tiadian-nav-divider"&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/nav&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="nav-in-off-canvas">Nav in Off-canvas</h2>
+    <p>A nav can be used inside an off-canvas from the <a href="offcanvas.md">Off-canvas component</a>. No modifier class needs to be added.</p>
+    <pre>
+      <code class="language-example">&lt;a href="#offcanvas-slide" class="tiadian-button tiadian-button-default" tiadian-toggle&gt;Open&lt;/a&gt;
+
+&lt;div id="offcanvas-slide" tiadian-offcanvas&gt;
+    &lt;div class="tiadian-offcanvas-bar"&gt;
+
+        &lt;ul class="tiadian-nav tiadian-nav-default"&gt;
+            &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="tiadian-nav-header"&gt;Header&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="tiadian-nav-divider"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>targets</code>
+          </td>
+          <td style="text-align: left;">CSS selector</td>
+          <td style="text-align: left;">
+            <code>&gt; .tiadian-parent</code>
+          </td>
+          <td style="text-align: left;">The element(s) to toggle.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>toggle</code>
+          </td>
+          <td style="text-align: left;">CSS selector</td>
+          <td style="text-align: left;">
+            <code>&gt; a</code>
+          </td>
+          <td style="text-align: left;">The toggle element(s).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>content</code>
+          </td>
+          <td style="text-align: left;">CSS selector</td>
+          <td style="text-align: left;">
+            <code>&gt; ul</code>
+          </td>
+          <td style="text-align: left;">The content element(s).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>collapsible</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Allow all items to be closed.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>multiple</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Allow multiple open items.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>transition</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>ease</code>
+          </td>
+          <td style="text-align: left;">The transition to use.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>animation</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">The space separated names of animations to use. Comma separate for animation out.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>duration</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>200</code>
+          </td>
+          <td style="text-align: left;">The animation duration in milliseconds.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.nav(element, options);
+</code>
+    </pre>
+    <h3 id="methods">Methods</h3>
+    <p>The following methods are available for the component:</p>
+    <h4 id="toggle">Toggle</h4>
+    <pre>
+      <code class="language-js">TIAdian.nav(element).toggle(index, animate);
+</code>
+    </pre>
+    <p>Toggles the content pane.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Type</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>index</code>
+          </td>
+          <td style="text-align: left;">String, Integer, Node</td>
+          <td style="text-align: left;">0</td>
+          <td style="text-align: left;">Nav pane to toggle. 0 based index.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>animate</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">true</td>
+          <td style="text-align: left;">Suppress opening animation by passing false.</td>
+        </tr>
+      </tbody>
+    </table>
+ 
