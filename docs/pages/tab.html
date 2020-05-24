@@ -1,0 +1,346 @@
+
+    <h1 id="tab">Tab</h1>
+    <p class="tiadian-text-lead">Create a tabbed navigation with different styles.</p>
+    <h2 id="usage">Usage</h2>
+    <p>The tab component consists of clickable tabs, that are aligned side by side in a list. Its JavaScript functionality extends the <a href="switcher.md">Switcher component</a> and is necessary to dynamically transition through different contents using the tabbed navigation.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class/Attribute</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>tiadian-tab</code>
+          </td>
+          <td style="text-align: left;">Add this attribute to a <code>&lt;ul&gt;</code> element to define the Tab component. Use <code>&lt;a&gt;</code> elements as tab items within the list.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-active</code>
+          </td>
+          <td style="text-align: left;">Add this class to a list item to apply an active state.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-disabled</code>
+          </td>
+          <td style="text-align: left;">Add this class to a list item to apply a disabled state. Also remove the <code>href</code> attribute from the anchor to make it inaccessible through keyboard navigation.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;ul tiadian-tab&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-disabled"&gt;&lt;a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul tiadian-tab&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Left&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-disabled"&gt;&lt;a&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="bottom-modifier">Bottom modifier</h2>
+    <p>Add the <code>.tiadian-tab-bottom</code> class to flip tab items to the bottom.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-tab-bottom" tiadian-tab&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-tab-bottom" tiadian-tab&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Left&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="leftright-modifiers">Left/Right modifiers</h2>
+    <p>Add the <code>.tiadian-tab-left</code> or <code>.tiadian-tab-right</code> class to align tabs vertically to the left or right side. To save space, the alignment automatically switches back to horizontal when the viewport width goes below 960px.</p>
+    <p>When using the vertical alignment, you will usually create a grid to apply the layout as seen in the <a href="switcher.md#vertical-tabs">Switcher example</a>.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-tab-left" tiadian-tab&gt;...&lt;/ul&gt;
+
+&lt;ul class="tiadian-tab-right" tiadian-tab&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;ul class="tiadian-tab-left" tiadian-tab&gt;
+            &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Left&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;ul class="tiadian-tab-right" tiadian-tab&gt;
+            &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Right&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="responsive">Responsive</h3>
+    <p>To change the default breakpoint between the vertical and horizontal alignment, just apply the <code>media</code> option to the attribute with the appropriate viewport width. Add a number in pixel, for example <code>media: 640</code>, or a breakpoint, for example <code>media: @m</code>.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-tab-left" tiadian-tab="media: @s"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="alignment">Alignment</h2>
+    <p>You can combine tabs with the <a href="flex.md">Flex component</a> or the <a href="width.md">Width component</a> to modify the alignment of the navigations.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-flex-right" tiadian-tab&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-margin-medium-top"&gt;
+    &lt;ul class="tiadian-flex-center" tiadian-tab&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Center&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+    &lt;ul class="tiadian-flex-right" tiadian-tab&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Right&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+    &lt;ul class="tiadian-child-width-expand" tiadian-tab&gt;
+        &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Justify&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="tabs-and-dropdown">Tabs and Dropdown</h2>
+    <p>Tabs can be used to trigger a dropdown menu from the <a href="dropdown.md">Dropdown component</a>.</p>
+    <pre>
+      <code class="language-html">&lt;ul tiadian-tab&gt;
+    &lt;li&gt;
+
+        &lt;!-- This is the menu item toggling the dropdown --&gt;
+        &lt;a href=""&gt;&lt;/a&gt;
+
+        &lt;!-- This is the dropdown --&gt;
+        &lt;div tiadian-dropdown="mode: click"&gt;
+            &lt;ul class="tiadian-nav tiadian-dropdown-nav"&gt;...&lt;/ul&gt;
+        &lt;/div&gt;
+
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul tiadian-tab&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;More &lt;span class="tiadian-margin-small-left" tiadian-icon="icon: triangle-down"&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;div tiadian-dropdown="mode: click"&gt;
+            &lt;ul class="tiadian-nav tiadian-dropdown-nav"&gt;
+                &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="tiadian-nav-header"&gt;Header&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="tiadian-nav-divider"&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>connect</code>
+          </td>
+          <td style="text-align: left;">CSS selector</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Related item's container. By default, this is the next element with the 'tiadian-switcher' class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>toggle</code>
+          </td>
+          <td style="text-align: left;">CSS selector</td>
+          <td style="text-align: left;">
+            <code>&gt; *</code>
+          </td>
+          <td style="text-align: left;">The toggle selector, which triggers content switching on click.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>active</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">Active index on init. Providing a negative number indicates a position starting from the end of the set.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>animation</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">The space separated names of animations to use. Comma separate for animation out.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>duration</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>200</code>
+          </td>
+          <td style="text-align: left;">The animation duration.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>swiping</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Use swiping.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>media</code>
+          </td>
+          <td style="text-align: left;">Integer, String</td>
+          <td style="text-align: left;">
+            <code>960</code>
+          </td>
+          <td style="text-align: left;">When to switch to horizontal mode - a width as integer (e.g. 640) or a breakpoint (e.g. @s, @m, @l, @xl) or any valid media query (e.g. (min-width: 900px)).</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.tab(element, options);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on the connected items of the elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeshow</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is shown. Can prevent showing by calling <code>preventDefault()</code> on the event.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>show</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>shown</code>
+          </td>
+          <td style="text-align: left;">Fires after the item's show animation has completed.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforehide</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is hidden. Can prevent hiding by calling <code>preventDefault()</code> on the event.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hide</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's hide animation has started.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hidden</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is hidden.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="methods">Methods</h3>
+    <p>The following methods are available for the component:</p>
+    <h4 id="show">Show</h4>
+    <pre>
+      <code class="language-js">TIAdian.tab(element).show(index);
+</code>
+    </pre>
+    <p>Shows the Tab item with given index.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Type</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>index</code>
+          </td>
+          <td style="text-align: left;">String, Integer, Node</td>
+          <td style="text-align: left;">0</td>
+          <td style="text-align: left;">Tab item to show. 0 based index.</td>
+        </tr>
+      </tbody>
+    </table>
+ 
