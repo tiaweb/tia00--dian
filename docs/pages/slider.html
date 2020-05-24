@@ -1,0 +1,1124 @@
+
+    <h1 id="slider">Slider</h1>
+    <p class="tiadian-text-lead">Create a responsive carousel slider.</p>
+    <p>The Slider component is fully responsive and supports touch and swipe navigation as well as mouse drag for desktops. It even accelerates to keep up with your pace when you click through previous and next navigation. All animations are hardware accelerated for a smoother performance.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>tiadian-slider</code> attribute to a container element and create a list of slides with the <code>.tiadian-slider-items</code> class. Add an image or any other content to each item.</p>
+    <p>To define the widths of the slider items, use the <a href="width.md">Width component</a>. Either apply the <code>.tiadian-child-width-*</code> classes to define the width of all slider items or apply individual widths for each list item using the <code>.tiadian-width-*</code> classes. If no specific width is set, each item's width depends on the dimensions of the content itself.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider&gt;
+    &lt;ul class="tiadian-slider-items tiadian-child-width-1-3@s tiadian-child-width-1-4@"&gt;
+        &lt;li&gt;
+            &lt;img src="" alt=""&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slider&gt;
+
+    &lt;ul class="tiadian-slider-items tiadian-child-width-1-2 tiadian-child-width-1-3@s tiadian-child-width-1-4@m"&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider1.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;1&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider2.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;2&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider3.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;3&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider4.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;4&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider5.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;5&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider1.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;6&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider2.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;7&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider3.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;8&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider4.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;9&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider5.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;10&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> To lazy load images in the slides, take a look at the <a href="image.md#target">Image component</a>.</p>
+    <hr />
+    <h2 id="container">Container</h2>
+    <p>The <code>.tiadian-slider-container</code> class is responsible for the clipping of the slider items. By default, the <code>tiadian-slider</code> attribute applies this class to the same element. Alternatively, you can add this class manually to any element within the slider. That way, you can control which container clips the slider items.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider&gt;
+
+    &lt;div class="tiadian-slider-container"&gt;
+        &lt;ul class="tiadian-slider-items tiadian-child-width-1-4"&gt;
+            &lt;li&gt;
+                &lt;img src="" alt=""&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="gap">Gap</h2>
+    <p>To apply a gap to the slider items, use the <a href="grid.md">Grid component</a> and add the <code>.tiadian-grid</code> class to the slider. The elements will then be spaced according to the grid gap. You can use the modifiers like <code>.tiadian-grid-small</code> to change the gap.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider&gt;
+    &lt;ul class="tiadian-slider-items tiadian-child-width-1-2@s tiadian-child-width-1-3@m tiadian-grid"&gt;
+        &lt;li&gt;
+            &lt;img src="" alt=""&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slider&gt;
+
+    &lt;ul class="tiadian-slider-items tiadian-child-width-1-2 tiadian-child-width-1-3@m tiadian-grid"&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/slider1.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;1&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/slider2.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;2&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/slider3.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;3&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/slider4.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;4&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/slider5.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;5&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/slider1.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;6&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/slider2.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;7&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/slider3.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;8&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/slider4.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;9&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/slider5.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;10&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="center">Center</h2>
+    <p>By default, items of the slider always are aligned to the left. To center the list items, just add <code>center: true</code> to the attribute.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider="center: true"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slider="center: true"&gt;
+
+    &lt;ul class="tiadian-slider-items tiadian-grid"&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/photo.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;1&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/dark.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;2&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/light.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;3&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/photo2.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;4&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/photo3.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;5&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> In this example, we add the <code>.tiadian-width-3-4</code> class to each item, which makes the slider look very similar to a slideshow.</p>
+    <hr />
+    <h2 id="autoplay">Autoplay</h2>
+    <p>To activate autoplay, just add the <code>autoplay: true</code> option to the attribute. You can also set the interval in milliseconds between switching slides using <code>autoplay-interval: 6000</code>. To pause autoplay when hovering the slider, use <code>pause-on-hover: true</code>.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider="autoplay: true"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="infinite-scrolling">Infinite Scrolling</h2>
+    <p>By default, infinite scrolling is enabled. To disable this behavior, just add the <code>finite: true</code> option to the attribute.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider="finite: true"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="slide-sets">Slide Sets</h2>
+    <p>To loop through a set of slides instead of single items, just add <code>sets: true</code> to the attribute.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider="sets: true"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slider="sets: true"&gt;
+
+    &lt;ul class="tiadian-slider-items tiadian-child-width-1-2 tiadian-child-width-1-3@m"&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider1.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;1&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider2.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;2&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider3.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;3&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider4.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;4&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider5.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;5&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider1.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;6&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider2.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;7&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider3.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;8&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider4.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;9&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider5.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;10&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="navigation">Navigation</h2>
+    <p>To navigate through your slides, just use the <code>tiadian-slider-item</code> attribute. To target the slides, set the attribute of every nav item to the index number of the respective slider item. The elements with the <code>tiadian-slider-item</code> attribute need to be inside the <code>tiadian-slider</code> container. Setting the attribute to <code>next</code> and <code>previous</code> will switch to the adjacent slides.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider&gt;
+
+    &lt;ul class="tiadian-slider-items"&gt;...&lt;/ul&gt;
+
+    &lt;a href="#" tiadian-slider-item="previous"&gt;...&lt;/a&gt;
+    &lt;a href="#" tiadian-slider-item="next"&gt;...&lt;/a&gt;
+
+    &lt;ul&gt;
+        &lt;li tiadian-slider-item="0"&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-slider-item="1"&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-slider-item="2"&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>The flexibility of the Slideshow component allows you to use any of the other TIAdian components to navigate through items. For example the <a href="slidenav.md">Slidenav</a>, <a href="dotnav.md">Dotnav</a> and <a href="thumbnav.md">Thumbnav</a> components can be used to style the slideshow navigations.</p>
+    <p>If there is no item specific content in the navigation items, you can also add the <code>.tiadian-slideshow-nav</code> class instead of adding navigation items manually. It will generate its items automatically using <code>&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;</code> as markup. This is a useful shortcut when using the <a href="dotnav.md">Dotnav</a>.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider&gt;
+
+    &lt;ul class="tiadian-slider-items"&gt;...&lt;/ul&gt;
+
+    &lt;ul class="tiadian-slider-nav tiadian-dotnav"&gt;&lt;/ul&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-slider&gt;
+
+    &lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1"&gt;
+
+        &lt;ul class="tiadian-slider-items tiadian-child-width-1-2 tiadian-child-width-1-3@s tiadian-child-width-1-4@m"&gt;
+            &lt;li&gt;
+                &lt;img src="images/slider1.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;1&lt;/h1&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/slider2.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;2&lt;/h1&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/slider3.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;3&lt;/h1&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/slider4.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;4&lt;/h1&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/slider5.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;5&lt;/h1&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/slider1.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;6&lt;/h1&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/slider2.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;7&lt;/h1&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/slider3.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;8&lt;/h1&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/slider4.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;9&lt;/h1&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/slider5.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;10&lt;/h1&gt;&lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+        &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+
+    &lt;/div&gt;
+
+    &lt;ul class="tiadian-slider-nav tiadian-dotnav tiadian-flex-center tiadian-margin"&gt;&lt;/ul&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> For better visibility of overlaying navigations, add the <code>.tiadian-light</code> or <code>.tiadian-dark</code> class from the <a href="inverse.md">Inverse component</a>.</p>
+    <hr />
+    <h2 id="navigation-outside">Navigation outside</h2>
+    <p>To place a navigation outside of a slider, add the <code>.tiadian-position-center-left-out</code> and the <code>.tiadian-position-center-right-out</code> class from the <a href="position.md">Position component</a> to the <code>previous</code> and <code>next</code> navigation. Make sure the <code>.tiadian-slider-container</code> class, which is responsible for the clipping of the slider items, doesn't clip the navigation, too.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider&gt;
+
+    &lt;div class="tiadian-position-relative"&gt;
+
+        &lt;div class="tiadian-slider-container"&gt;
+            &lt;ul class="tiadian-slider-items"&gt;...&lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;a class="tiadian-position-center-left-out" href="#" tiadian-slider-item="previous"&gt;...&lt;/a&gt;
+        &lt;a class="tiadian-position-center-right-out" href="#" tiadian-slider-item="next"&gt;...&lt;/a&gt;
+
+    &lt;/div&gt;
+
+    &lt;ul class="tiadian-slider-nav tiadian-dotnav"&gt;&lt;/ul&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-slider&gt;
+
+    &lt;div class="tiadian-position-relative"&gt;
+
+        &lt;div class="tiadian-slider-container tiadian-light"&gt;
+            &lt;ul class="tiadian-slider-items tiadian-child-width-1-2 tiadian-child-width-1-3@s tiadian-child-width-1-4@m"&gt;
+                &lt;li&gt;
+                    &lt;img src="images/slider1.jpg" alt=""&gt;
+                    &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;1&lt;/h1&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/slider2.jpg" alt=""&gt;
+                    &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;2&lt;/h1&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/slider3.jpg" alt=""&gt;
+                    &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;3&lt;/h1&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/slider4.jpg" alt=""&gt;
+                    &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;4&lt;/h1&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/slider5.jpg" alt=""&gt;
+                    &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;5&lt;/h1&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/slider1.jpg" alt=""&gt;
+                    &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;6&lt;/h1&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/slider2.jpg" alt=""&gt;
+                    &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;7&lt;/h1&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/slider3.jpg" alt=""&gt;
+                    &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;8&lt;/h1&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/slider4.jpg" alt=""&gt;
+                    &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;9&lt;/h1&gt;&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/slider5.jpg" alt=""&gt;
+                    &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;10&lt;/h1&gt;&lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class="tiadian-hidden@s tiadian-light"&gt;
+            &lt;a class="tiadian-position-center-left tiadian-position-small" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-center-right tiadian-position-small" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class="tiadian-visible@s"&gt;
+            &lt;a class="tiadian-position-center-left-out tiadian-position-small" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-center-right-out tiadian-position-small" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;ul class="tiadian-slider-nav tiadian-dotnav tiadian-flex-center tiadian-margin"&gt;&lt;/ul&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="viewport-height">Viewport height</h2>
+    <p>Adding the <code>tiadian-height-viewport</code> attribute from the <a href="height.md#viewport-height">Height component</a> to the list of slider items will stretch the height of the <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements to fill the whole viewport height. Since the width and height now aren't defined by the item's content anymore, you have to use absolute positioning for the content.</p>
+    <p>Use the <a href="cover.md">Cover component</a> so that images cover the whole item area and are clipped. The <code>.tiadian-grid-match</code> class from the <a href="grid.md#match-height">Grid component</a> matches the height of the direct child of each item. This is useful in this example, since the child element now applies the same width and height as the list item.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider&gt;
+    &lt;ul class="tiadian-slider-items tiadian-child-width-1-3@m tiadian-grid-match" tiadian-height-viewport="min-height: 300"&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-cover-container"&gt;
+                &lt;img src="" alt="" tiadian-cover&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slider="center: true"&gt;
+
+    &lt;ul class="tiadian-slider-items tiadian-grid tiadian-grid-match" tiadian-height-viewport="offset-top: true; offset-bottom: 30"&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-cover-container"&gt;
+                &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;1&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-cover-container"&gt;
+                &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;2&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-cover-container"&gt;
+                &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;3&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-cover-container"&gt;
+                &lt;img src="images/photo2.jpg" alt="" tiadian-cover&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;4&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-cover-container"&gt;
+                &lt;img src="images/photo3.jpg" alt="" tiadian-cover&gt;
+                &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;5&lt;/h1&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> This example is set to 70% of the viewport height.</p>
+    <hr />
+    <h2 id="content">Content</h2>
+    <p>The slider is not restricted to images. Any content can be used like text, videos, images with text overlays or ken burns effect. Here is an example using the <a href="card.md">Card component</a>.</p>
+    <pre>
+      <code class="language-example">&lt;div tiadian-slider="center: true"&gt;
+
+    &lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1"&gt;
+
+        &lt;ul class="tiadian-slider-items tiadian-child-width-1-2@s tiadian-grid"&gt;
+            &lt;li&gt;
+                &lt;div class="tiadian-card tiadian-card-default"&gt;
+                    &lt;div class="tiadian-card-media-top"&gt;
+                        &lt;img src="images/photo.jpg" alt=""&gt;
+                    &lt;/div&gt;
+                    &lt;div class="tiadian-card-body"&gt;
+                        &lt;h3 class="tiadian-card-title"&gt;Headline&lt;/h3&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;div class="tiadian-card tiadian-card-default"&gt;
+                    &lt;div class="tiadian-card-media-top"&gt;
+                        &lt;img src="images/dark.jpg" alt=""&gt;
+                    &lt;/div&gt;
+                    &lt;div class="tiadian-card-body"&gt;
+                        &lt;h3 class="tiadian-card-title"&gt;Headline&lt;/h3&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;div class="tiadian-card tiadian-card-default"&gt;
+                    &lt;div class="tiadian-card-media-top"&gt;
+                        &lt;img src="images/light.jpg" alt=""&gt;
+                    &lt;/div&gt;
+                    &lt;div class="tiadian-card-body"&gt;
+                        &lt;h3 class="tiadian-card-title"&gt;Headline&lt;/h3&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;div class="tiadian-card tiadian-card-default"&gt;
+                    &lt;div class="tiadian-card-media-top"&gt;
+                        &lt;img src="images/photo2.jpg" alt=""&gt;
+                    &lt;/div&gt;
+                    &lt;div class="tiadian-card-body"&gt;
+                        &lt;h3 class="tiadian-card-title"&gt;Headline&lt;/h3&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;div class="tiadian-card tiadian-card-default"&gt;
+                    &lt;div class="tiadian-card-media-top"&gt;
+                        &lt;img src="images/photo3.jpg" alt=""&gt;
+                    &lt;/div&gt;
+                    &lt;div class="tiadian-card-body"&gt;
+                        &lt;h3 class="tiadian-card-title"&gt;Headline&lt;/h3&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+        &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+
+    &lt;/div&gt;
+
+    &lt;ul class="tiadian-slider-nav tiadian-dotnav tiadian-flex-center tiadian-margin"&gt;&lt;/ul&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> Since the slider effect needs a clipping container, box shadows of content items are also clipped. To get the best visual result, it's recommended to use the <code>tiadian-slider="center: true"</code> mode if your content items have a box shadow.</p>
+    <hr />
+    <h2 id="content-overlays">Content overlays</h2>
+    <p>Add content overlays using the <a href="position.md">Position component</a>. It allows you to place the content anywhere inside the slide.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider&gt;
+    &lt;ul class="tiadian-slider-items"&gt;
+        &lt;li&gt;
+            &lt;img src="" alt=""&gt;
+            &lt;div class="tiadian-position-center"&gt;
+
+                &lt;!-- The content goes here --&gt;
+
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> To adapt your content for better visibility on each image, add the <code>.tiadian-light</code> or <code>.tiadian-dark</code> class from the <a href="inverse.md">Inverse component</a> or use the <a href="overlay.md">Overlay</a> to add any style to the overlay box.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slider&gt;
+
+    &lt;ul class="tiadian-slider-items tiadian-child-width-1-2 tiadian-child-width-1-3@s tiadian-child-width-1-4@m"&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider1.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;1&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider2.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;2&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider3.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;3&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider4.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;4&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider5.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;5&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider1.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;6&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider2.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;7&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider3.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;8&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider4.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;9&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/slider5.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1&gt;10&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="content-parallax">Content parallax</h2>
+    <p>Add the <code>tiadian-slider-parallax</code> attribute to any element inside the slides to animate it together with the slider animation. Add an option with the desired animation values for each CSS property you want to animate. Define at least one start and end value. It can be done by passing two values separated by a comma.</p>
+    <p>This functionality is inherited from the <a href="parallax.md">Parallax component</a>, and it allows to animate CSS properties depending on the scroll position of the slider animation. Take a look at the <a href="parallax.md#animated-properties">possible properties</a> that can be animated.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider&gt;
+    &lt;ul class="tiadian-slider-items"&gt;
+        &lt;li&gt;
+            &lt;img src="" alt=""&gt;
+            &lt;div class="tiadian-position-center"&gt;
+
+                &lt;div tiadian-slider-parallax="x: 100,-100"&gt;
+
+                    &lt;!-- The content goes here --&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>In the example above, the content will start at <code>100</code> and animate half way to <code>0</code> while the slide moves in. When the slide starts again to move out, the content will continue to animate to <code>-100</code>. This works because the start and end values have the same distance. For different distances, three values are needed: <em>Start</em> (Slide animates in), <em>Middle</em> (Slide is centered), <em>End</em> (Slide animates out).</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider-parallax="x: 300,0,-100"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <p>The next example defines different in and out animations. The content slides in by moving from <code>100</code> to <code>0</code> and fades out from <code>1</code> to <code>0</code>.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider-parallax="x: 100,0,0; opacity: 1,1,0"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slider&gt;
+
+    &lt;ul class="tiadian-slider-items tiadian-grid"&gt;
+        &lt;li class="tiadian-width-4-5"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/photo.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-text-center"&gt;
+                    &lt;h2 tiadian-slider-parallax="x: 100,-100"&gt;Heading&lt;/h2&gt;
+                    &lt;p tiadian-slider-parallax="x: 200,-200"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-4-5"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/dark.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-text-center"&gt;
+                    &lt;h2 tiadian-slider-parallax="x: 100,-100"&gt;Heading&lt;/h2&gt;
+                    &lt;p tiadian-slider-parallax="x: 200,-200"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-4-5"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/light.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-text-center"&gt;
+                    &lt;h2 tiadian-slider-parallax="x: 100,-100"&gt;Heading&lt;/h2&gt;
+                    &lt;p tiadian-slider-parallax="x: 200,-200"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-4-5"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/photo2.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-text-center"&gt;
+                    &lt;h2 tiadian-slider-parallax="x: 100,-100"&gt;Heading&lt;/h2&gt;
+                    &lt;p tiadian-slider-parallax="x: 200,-200"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-4-5"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/photo3.jpg" alt=""&gt;
+                &lt;div class="tiadian-position-center tiadian-text-center"&gt;
+                    &lt;h2 tiadian-slider-parallax="x: 100,-100"&gt;Heading&lt;/h2&gt;
+                    &lt;p tiadian-slider-parallax="x: 200,-200"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="content-transitions">Content transitions</h2>
+    <p>Add <code>clsActivated: tiadian-transition-active</code> to the attribute to trigger transition classes from the <a href="transition.md">Transition component</a> automatically inside slides. Contrary to the parallax effect, transitions are not attached to the slider animation and start playing independently after the slider animation.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider="clsActivated: tiadian-transition-active"&gt;
+    &lt;ul class="tiadian-slider-items"&gt;
+        &lt;li&gt;
+            &lt;img src="" alt=""&gt;
+            &lt;div class="tiadian-position-bottom"&gt;
+
+                &lt;div class="tiadian-transition-slide-bottom"&gt;
+
+                    &lt;!-- The content goes here --&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>Together with the <a href="overlay.md">Overlay component</a>, content transitions are used to build a classic caption for the slider.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slider="clsActivated: tiadian-transition-active; center: true"&gt;
+
+    &lt;ul class="tiadian-slider-items tiadian-grid"&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/photo.jpg" alt=""&gt;
+                &lt;div class="tiadian-overlay tiadian-overlay-primary tiadian-position-bottom tiadian-text-center tiadian-transition-slide-bottom"&gt;
+                    &lt;h3 class="tiadian-margin-remove"&gt;Bottom&lt;/h3&gt;
+                    &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/dark.jpg" alt=""&gt;
+                &lt;div class="tiadian-overlay tiadian-overlay-primary tiadian-position-bottom tiadian-text-center tiadian-transition-slide-bottom"&gt;
+                    &lt;h3 class="tiadian-margin-remove"&gt;Bottom&lt;/h3&gt;
+                    &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/light.jpg" alt=""&gt;
+                &lt;div class="tiadian-overlay tiadian-overlay-primary tiadian-position-bottom tiadian-text-center tiadian-transition-slide-bottom"&gt;
+                    &lt;h3 class="tiadian-margin-remove"&gt;Bottom&lt;/h3&gt;
+                    &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/photo2.jpg" alt=""&gt;
+                &lt;div class="tiadian-overlay tiadian-overlay-primary tiadian-position-bottom tiadian-text-center tiadian-transition-slide-bottom"&gt;
+                    &lt;h3 class="tiadian-margin-remove"&gt;Bottom&lt;/h3&gt;
+                    &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-width-3-4"&gt;
+            &lt;div class="tiadian-panel"&gt;
+                &lt;img src="images/photo3.jpg" alt=""&gt;
+                &lt;div class="tiadian-overlay tiadian-overlay-primary tiadian-position-bottom tiadian-text-center tiadian-transition-slide-bottom"&gt;
+                    &lt;h3 class="tiadian-margin-remove"&gt;Bottom&lt;/h3&gt;
+                    &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slider-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slider-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="toggle-on-hover">Toggle on hover</h3>
+    <p>To toggle transitions on hover, use the <code>.tiadian-transition-toggle</code> class from the <a href="transition.md">Transition component</a> and <code>tabindex="0"</code>. This will trigger the transition when the element is hovered or focused.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slider&gt;
+    &lt;ul class="tiadian-slider-items"&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="" alt=""&gt;
+            &lt;div class="tiadian-position-bottom"&gt;
+
+                &lt;div class="tiadian-transition-slide-bottom"&gt;
+
+                    &lt;!-- The content goes here --&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-slider&gt;
+
+    &lt;ul class="tiadian-slider-items tiadian-child-width-1-2 tiadian-child-width-1-3@s tiadian-child-width-1-4@m tiadian-light"&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="images/slider1.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1 class="tiadian-transition-slide-bottom-small"&gt;1&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="images/slider2.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1 class="tiadian-transition-slide-bottom-small"&gt;2&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="images/slider3.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1 class="tiadian-transition-slide-bottom-small"&gt;3&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="images/slider4.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1 class="tiadian-transition-slide-bottom-small"&gt;4&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="images/slider5.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1 class="tiadian-transition-slide-bottom-small"&gt;5&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="images/slider1.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1 class="tiadian-transition-slide-bottom-small"&gt;6&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="images/slider2.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1 class="tiadian-transition-slide-bottom-small"&gt;7&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="images/slider3.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1 class="tiadian-transition-slide-bottom-small"&gt;8&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="images/slider4.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1 class="tiadian-transition-slide-bottom-small"&gt;9&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class="tiadian-transition-toggle" tabindex="0"&gt;
+            &lt;img src="images/slider5.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center tiadian-panel"&gt;&lt;h1 class="tiadian-transition-slide-bottom-small"&gt;10&lt;/h1&gt;&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ul class="tiadian-slider-nav tiadian-dotnav tiadian-flex-center tiadian-margin"&gt;&lt;/ul&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <h3 id="slider-1">Slider</h3>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>autoplay</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Slider autoplays.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>autoplay-interval</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>7000</code>
+          </td>
+          <td style="text-align: left;">The delay between switching slides in autoplay mode.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>center</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Center the active slide.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>draggable</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Enable pointer dragging.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>easing</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>ease</code>
+          </td>
+          <td style="text-align: left;">The animation easing (CSS timing functions or cubic-bezier).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>finite</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Disable infinite sliding.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>index</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">Slider item to show. 0 based index.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>pause-on-hover</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Pause autoplay mode on hover.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>sets</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Slide in sets.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>velocity</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>1</code>
+          </td>
+          <td style="text-align: left;">The animation velocity (pixel/ms).</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.slider(element, options);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeitemshow</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemshow</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemshown</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's show animation has completed.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeitemhide</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is hidden.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemhide</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's hide animation has started.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemhidden</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's hide animation has completed.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="methods">Methods</h3>
+    <p>The following methods are available for the component:</p>
+    <h4 id="show">Show</h4>
+    <pre>
+      <code class="language-js">TIAdian.slider(element).show(index);
+</code>
+    </pre>
+    <p>Shows the slider item.</p>
+    <h4 id="startautoplay">startAutoplay</h4>
+    <pre>
+      <code class="language-js">TIAdian.slider(element).startAutoplay();
+</code>
+    </pre>
+    <p>Starts the slider autoplay.</p>
+    <h4 id="stopautoplay">stopAutoplay</h4>
+    <pre>
+      <code class="language-js">TIAdian.slider(element).stopAutoplay();
+</code>
+    </pre>
+    <p>Stops the slider autoplay.</p>
+  
