@@ -1,0 +1,96 @@
+
+
+        <h1 id="transition">Transition</h1>
+<p class="tiadian-text-lead">Create smooth transitions between two states when hovering an element.</p>
+<h2 id="usage">Usage</h2>
+<p>To toggle a transition on hover or focus, add the <code>.tiadian-transition-toggle</code> class to a parent element. Also add <code>tabindex=&quot;0&quot;</code> to make the animation focusable through keyboard navigation and on touch devices. Add one of the <code>.tiadian-transition-*</code> classes to any child element to apply the actual effect.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Class</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>.tiadian-transition-fade</code></td>
+<td style="text-align: left;">Lets the element fade in</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-transition-scale-up</code><br> <code>.tiadian-transition-scale-down</code></td>
+<td style="text-align: left;">The element scales up or down.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-transition-slide-top</code><br> <code>.tiadian-transition-slide-bottom</code><br> <code>.tiadian-transition-slide-left</code><br> <code>.tiadian-transition-slide-right</code></td>
+<td style="text-align: left;"> Lets the element slide in from the top</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-transition-slide-top-small</code><br> <code>.tiadian-transition-slide-bottom-small</code><br>  <code>.tiadian-transition-slide-left-small</code><br> <code>.tiadian-transition-slide-right-small</code></td>
+<td style="text-align: left;"> The element slides in from the top, bottom, left or right with a smaller distance.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-transition-slide-top-medium</code><br> <code>.tiadian-transition-slide-bottom-medium</code><br>  <code>.tiadian-transition-slide-left-medium</code><br> <code>.tiadian-transition-slide-right-medium</code></td>
+<td style="text-align: left;"> The element slides in from the top, bottom, left or right with a medium distance.</td>
+</tr>
+</tbody>
+</table>
+<p>This component is mostly used in combination with the <a href="overlay.md">Overlay component</a> as elements are transitioned from invisible to visible state. To place the overlay on top of another element, like an image, use the <a href="position.md">Position component</a>.</p>
+<pre><code class="language-html">&lt;div class=&quot;tiadian-transition-toggle&quot; tabindex=&quot;0&quot;&gt;
+    &lt;div class=&quot;tiadian-transition-fade&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-2 tiadian-child-width-1-3@s tiadian-grid-match tiadian-grid-small&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-text-center&quot;&gt;
+        &lt;div class=&quot;tiadian-inline-clip tiadian-transition-toggle&quot; tabindex=&quot;0&quot;&gt;
+            &lt;img src=&quot;images/dark.jpg&quot; alt=&quot;&quot;&gt;
+            &lt;div class=&quot;tiadian-transition-fade tiadian-position-cover tiadian-position-small tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-center tiadian-flex-middle&quot;&gt;
+                &lt;p class=&quot;tiadian-h4 tiadian-margin-remove&quot;&gt;Fade&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;tiadian-margin-small-top&quot;&gt;Fade&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-text-center&quot;&gt;
+        &lt;div class=&quot;tiadian-inline-clip tiadian-transition-toggle&quot; tabindex=&quot;0&quot;&gt;
+            &lt;img src=&quot;images/dark.jpg&quot; alt=&quot;&quot;&gt;
+            &lt;div class=&quot;tiadian-transition-slide-bottom tiadian-position-bottom tiadian-overlay tiadian-overlay-default&quot;&gt;
+                &lt;p class=&quot;tiadian-h4 tiadian-margin-remove&quot;&gt;Bottom&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;tiadian-margin-small-top&quot;&gt;Bottom&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-text-center&quot;&gt;
+        &lt;div class=&quot;tiadian-inline-clip tiadian-transition-toggle tiadian-light&quot; tabindex=&quot;0&quot;&gt;
+            &lt;img src=&quot;images/dark.jpg&quot; alt=&quot;&quot;&gt;
+            &lt;div class=&quot;tiadian-position-center&quot;&gt;
+                &lt;span class=&quot;tiadian-transition-fade&quot; tiadian-icon=&quot;icon: plus; ratio: 2&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;tiadian-margin-small-top&quot;&gt;Icon&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-text-center&quot;&gt;
+        &lt;div class=&quot;tiadian-inline-clip tiadian-transition-toggle&quot; tabindex=&quot;0&quot;&gt;
+            &lt;img src=&quot;images/dark.jpg&quot; alt=&quot;&quot;&gt;
+            &lt;img class=&quot;tiadian-transition-scale-up tiadian-position-cover&quot; src=&quot;images/light.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;tiadian-margin-small-top&quot;&gt;2 Images&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-text-center&quot;&gt;
+        &lt;div class=&quot;tiadian-inline-clip tiadian-transition-toggle&quot; tabindex=&quot;0&quot;&gt;
+            &lt;img class=&quot;tiadian-transition-scale-up tiadian-transition-opaque&quot; src=&quot;images/dark.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;tiadian-margin-small-top&quot;&gt;Scale Up Image&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-text-center&quot;&gt;
+        &lt;div class=&quot;tiadian-inline-clip tiadian-transition-toggle tiadian-light&quot; tabindex=&quot;0&quot;&gt;
+            &lt;img src=&quot;images/dark.jpg&quot; alt=&quot;&quot;&gt;
+            &lt;div class=&quot;tiadian-position-center&quot;&gt;
+                &lt;div class=&quot;tiadian-transition-slide-top-small&quot;&gt;&lt;h4 class=&quot;tiadian-margin-remove&quot;&gt;Headline&lt;/h4&gt;&lt;/div&gt;
+                &lt;div class=&quot;tiadian-transition-slide-bottom-small&quot;&gt;&lt;h4 class=&quot;tiadian-margin-remove&quot;&gt;Subheadline&lt;/h4&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;tiadian-margin-small-top&quot;&gt;Small Top + Bottom&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+    
