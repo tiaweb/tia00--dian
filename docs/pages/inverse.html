@@ -1,0 +1,41 @@
+
+
+  </head>
+  <body>
+    <h1 id="inverse">Inverse</h1>
+    <p class="tiadian-text-lead">Inverse the style of any component for light or dark backgrounds.</p>
+    <h2 id="usage">Usage</h2>
+    <p>Add the <code>.tiadian-light</code> class to improve the visibility of objects on dark backgrounds in a light style. When using a dark style, add the <code>.tiadian-dark</code> class to elements on a light background.</p>
+    <p>
+      <strong>Note</strong> Only one class will come to effect, depending on the style you are using. For example, when using a style with a light background, you can only apply the <code>.tiadian-light</code> class to optimize content on dark backgrounds, as text will already be displayed in a dark color on light backgrounds — and vice versa.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-light"&gt;&lt;/div&gt;
+
+&lt;div class="tiadian-dark"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-light tiadian-background-secondary tiadian-padding"&gt;
+            &lt;h3&gt;Light&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+            &lt;button class="tiadian-button tiadian-button-default"&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-dark tiadian-background-muted tiadian-padding"&gt;
+            &lt;h3&gt;Dark&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+            &lt;button class="tiadian-button tiadian-button-default"&gt;Button&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> Some modifiers from the <a href="section.md">Section</a>, <a href="card.md">Card</a>, <a href="tile.md">Tile</a>, <a href="overlay.md">Overlay</a> and <a href="offcanvas.md">Off-canvas</a> component are extending the inverse style automatically, so you don't have to add any class.</p>
+    <hr />
+    <h2 id="customize-using-less">Customize using Less</h2>
+    <p>The Inverse component includes additional styles to implement the flexible inverse behaviour. If your project does not make use of these styles, you can leave <a href="less.md#disable-inverse-component">disable the Inverse component</a> when compiling Less.</p>
+ 
