@@ -1,0 +1,207 @@
+
+
+        <h1 id="height">Height</h1>
+<p class="tiadian-text-lead">Define the height of elements depending on the viewport or match the heights of different elements.</p>
+<p>TIAdian's Height component offers three options to set heights: using simple fixed height utility classes, depending on the viewport or by matching the heights of different elements.</p>
+<hr />
+<h2 id="usage">Usage</h2>
+<p>TIAdian provides a number of useful classes to alter an element's height.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Class</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>.tiadian-height-1-1</code></td>
+<td style="text-align: left;">This class applies a height of 100%. This only works if the parent element has a set height.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-height-small</code><br> <code>.tiadian-height-max-small</code></td>
+<td style="text-align: left;">These classes apply a height or max-height of <em>150px</em>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-height-medium</code><br> <code>.tiadian-height-max-medium</code></td>
+<td style="text-align: left;">These classes apply a height or max-height of <em>300px</em>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-height-large</code><br> <code>.tiadian-height-max-large</code></td>
+<td style="text-align: left;">These classes apply a height or max-height of <em>450px</em>.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&lt;div class=&quot;tiadian-height-small&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-3@s&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-height-small tiadian-card tiadian-card-default tiadian-card-body tiadian-flex tiadian-flex-center tiadian-flex-middle&quot;&gt;Small&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-height-medium tiadian-card tiadian-card-default tiadian-card-body tiadian-flex tiadian-flex-center tiadian-flex-middle&quot;&gt;Medium&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-height-large tiadian-card tiadian-card-default tiadian-card-body tiadian-flex tiadian-flex-center tiadian-flex-middle&quot;&gt;Large&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="viewport-height">Viewport height</h2>
+<p>Add the <code>tiadian-height-viewport</code> attribute to create a container that fills the height of the entire viewport. You can change the height behavior by adding the <code>offset-top</code>, <code>offset-bottom</code> or <code>expand</code> option to the attribute. <a href="javascript.md#component-configuration">Learn more</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>offset-top</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>false</code></td>
+<td style="text-align: left;">Subtracts the element's top offset from its height.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>offset-bottom</code></td>
+<td style="text-align: left;">Boolean, Number, Pixel</td>
+<td style="text-align: left;"><code>false</code></td>
+<td style="text-align: left;">Subtracts the height (true) of the sibling that immediately follows the element, the given percentage (Number), Pixel (px) value from element's own height or the given element's height.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>expand</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>false</code></td>
+<td style="text-align: left;">Expands the element's height to make a short page fill the viewport.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>min-height</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><code>0</code></td>
+<td style="text-align: left;">Sets a minimum height. Useful if all children are positioned absolute.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&lt;div tiadian-height-viewport&gt;&lt;/div&gt;
+
+&lt;div tiadian-height-viewport=&quot;offset-top: true&quot;&gt;&lt;/div&gt;
+
+&lt;div tiadian-height-viewport=&quot;offset-bottom: 20&quot;&gt;&lt;/div&gt;
+
+&lt;div tiadian-height-viewport=&quot;expand: true&quot;&gt;&lt;/div&gt;
+
+&lt;div tiadian-height-viewport=&quot;min-height: 300&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>You can view examples in the tests for <a href="../assets/TIAdian/tests/height-viewport.html">Height Viewport</a> and <a href="../assets/TIAdian/tests/height-expand.html">Height Expand</a>.</p>
+<hr />
+<h2 id="match-height">Match height</h2>
+<p>To expand all children of a container to the same height regardless of their content, for example inside a grid, add the <code>tiadian-height-match</code> attribute. You can change the height matching behavior by setting the <code>target</code> or <code>row</code> option to the attribute. <a href="javascript.md#component-configuration">Learn more</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>target</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;"><code>&gt; *</code></td>
+<td style="text-align: left;">Elements that should match.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>row</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">By default only items in the same row will be matched. For example, once grid columns extend to a width of 100%, their heights will no longer be matched. This makes sense, for example, if they stack vertically in narrower viewports.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&lt;div tiadian-height-match&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><code>target</code> is the <em>Primary</em> option, and its key may be omitted if it's the only option in the attribute value.</p>
+<pre><code class="language-html">&lt;span tiadian-height-match=&quot;.my-class&quot;&gt;&lt;/span&gt;
+</code></pre>
+<hr />
+<h3 id="match-cards">Match cards</h3>
+<p>You can also target and match specific elements inside the container, like cards. Just add the <code>target: SELECTOR</code> option to the attribute.</p>
+<pre><code class="language-html">&lt;div tiadian-grid tiadian-height-match=&quot;target: SELECTOR&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-2@s&quot; tiadian-grid tiadian-height-match=&quot;target: &gt; div &gt; .tiadian-card&quot;&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Lorem Ipsum&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Lorem Ipsum&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h3 id="match-all">Match all</h3>
+<p>If your grid wraps into multiple rows, only grid columns within the same row are matched. To match grid columns across all rows, just add the <code>row: false</code> option to the attribute.</p>
+<pre><code class="language-html">&lt;div tiadian-grid tiadian-height-match=&quot;row: false&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-2@s&quot; tiadian-grid tiadian-height-match=&quot;target: &gt; div &gt; .tiadian-card; row: false&quot;&gt;
+    &lt;div class=&quot;tiadian-first-column&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Lorem Ipsum&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-grid-margin tiadian-first-column&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-grid-margin&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Lorem Ipsum&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="component-options">Component options</h2>
+<p>The table below lists the available settings of the <code>tiadian-height-match</code> attribute. <a href="javascript.md#component-configuration">Learn more</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>target</code></td>
+<td style="text-align: left;">CSS selector</td>
+<td style="text-align: left;"><code>&gt; *</code></td>
+<td style="text-align: left;">Elements that should match. By default, direct children will match.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>row</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;"><code>true</code></td>
+<td style="text-align: left;">If your targets wrap into multiple rows, only grid columns within the same row are matched.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="javascript">JavaScript</h2>
+<p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+<h3 id="initialization">Initialization</h3>
+<pre><code class="language-js">TIAdian.heightMatch(element, options);
+</code></pre>
+
+   
