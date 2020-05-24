@@ -1,0 +1,547 @@
+
+    <h1 id="table">Table</h1>
+    <p class="tiadian-text-lead">Easily create nice looking tables, which come in different styles.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>.tiadian-table</code> class to a <code>&lt;table&gt;</code> element.</p>
+    <pre>
+      <code class="language-html">&lt;table class="tiadian-table"&gt;
+    &lt;caption&gt;&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;table class="tiadian-table"&gt;
+    &lt;caption&gt;Table Caption&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Footer&lt;/td&gt;
+            &lt;td&gt;Table Footer&lt;/td&gt;
+            &lt;td&gt;Table Footer&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="divider-modifier">Divider modifier</h2>
+    <p>Add the <code>.tiadian-table-divider</code> class to display a divider between table rows.</p>
+    <pre>
+      <code class="language-html">&lt;table class="tiadian-table tiadian-table-divider"&gt;...&lt;/table&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;table class="tiadian-table tiadian-table-divider"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="striped-modifier">Striped modifier</h2>
+    <p>Add zebra-striping to a table by adding the <code>.tiadian-table-striped</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;table class="tiadian-table tiadian-table-striped"&gt;...&lt;/table&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;table class="tiadian-table tiadian-table-striped"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="hover-modifier">Hover modifier</h2>
+    <p>Add the <code>.tiadian-table-hover</code> class to display a hover state on table rows.</p>
+    <pre>
+      <code class="language-html">&lt;table class="tiadian-table tiadian-table-hover"&gt;...&lt;/table&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;table class="tiadian-table tiadian-table-hover tiadian-table-divider"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="size-modifiers">Size modifiers</h2>
+    <p>Add the <code>.tiadian-table-small</code> or <code>.tiadian-table-large</code> class to a table to make it smaller or larger.</p>
+    <pre>
+      <code class="language-html">&lt;table class="tiadian-table tiadian-table-small"&gt;...&lt;/table&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;table class="tiadian-table tiadian-table-small tiadian-table-divider"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="justify-modifier">Justify modifier</h2>
+    <p>To remove the outer padding of the first and last column so that they are flush with the table, add the <code>.tiadian-table-justify</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;table class="tiadian-table tiadian-table-justify"&gt;...&lt;/table&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;table class="tiadian-table tiadian-table-justify tiadian-table-divider"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class="tiadian-width-small"&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/td&gt;
+            &lt;td&gt;&lt;button class="tiadian-button tiadian-button-default" type="button"&gt;Button&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/td&gt;
+            &lt;td&gt;&lt;button class="tiadian-button tiadian-button-default" type="button"&gt;Button&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="alignment-modifier">Alignment modifier</h2>
+    <p>To vertically center table content, just add the <code>.tiadian-table-middle</code> class. You can also apply the class to <code>&lt;tr&gt;</code> or <code>&lt;td&gt;</code> elements for a more specific selection.</p>
+    <pre>
+      <code class="language-html">&lt;table class="tiadian-table tiadian-table-middle"&gt;...&lt;/table&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;table class="tiadian-table tiadian-table-middle tiadian-table-divider"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class="tiadian-width-small"&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/td&gt;
+            &lt;td&gt;&lt;button class="tiadian-button tiadian-button-default" type="button"&gt;Button&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/td&gt;
+            &lt;td&gt;&lt;button class="tiadian-button tiadian-button-default" type="button"&gt;Button&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="responsive-table">Responsive table</h2>
+    <p>If your table happens to be wider than its container element or would eventually get too big on a specific viewport width, just  wrap it inside a <code>&lt;div&gt;</code> element and add the <code>.tiadian-overflow-auto</code> class from the <a href="utility.md#overflow">Utility component</a>. This creates a container that provides a horizontal scrollbar whenever the elements inside it are wider than the container itself.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-overflow-auto"&gt;
+    &lt;table class="tiadian-table"&gt;...&lt;/table&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-overflow-auto"&gt;
+    &lt;table class="tiadian-table tiadian-table-small tiadian-table-divider"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+                &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+                &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="stack-on-small-viewports">Stack on small viewports</h3>
+    <p>If you want table columns to stack on small screens, add the <code>.tiadian-table-responsive</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;table class="tiadian-table tiadian-table-responsive"&gt;...&lt;/table&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;table class="tiadian-table tiadian-table-responsive tiadian-table-divider"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+            &lt;th&gt;Table Heading&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> Resize the browser window to see the columns stack.</p>
+    <hr />
+    <h2 id="column-width-modifier">Column width modifier</h2>
+    <p>To modify the column width or content, you can use one of the following classes. You just need to add this class to one of the column cells. It's recommended on the header cell.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-table-shrink</code>
+          </td>
+          <td style="text-align: left;">Add this class to a <code>&lt;th&gt;</code> or <code>&lt;td&gt;</code> element to reduce the column width to fit its content.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-table-expand</code>
+          </td>
+          <td style="text-align: left;">Add this class to a <code>&lt;th&gt;</code> or <code>&lt;td&gt;</code> element to expand the column width to fill the remaining space and apply a min-width.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-width-*</code>
+          </td>
+          <td style="text-align: left;">Add one of these classes from the <a href="width.md">Width component</a> to a <code>&lt;th&gt;</code> or <code>&lt;td&gt;</code> element to modify the column width.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;th class="tiadian-table-shrink"&gt;&lt;/th&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;table class="tiadian-table tiadian-table-divider"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class="tiadian-table-shrink"&gt;Shrink&lt;/th&gt;
+            &lt;th class="tiadian-table-expand"&gt;Expand&lt;/th&gt;
+            &lt;th class="tiadian-width-small"&gt;Width Small&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+            &lt;td&gt;Table Data&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="utilities">Utilities</h2>
+    <p>To optimize the display of table cells and their specific content, you can add one of the following classes.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>.tiadian-table-link</code>
+          </td>
+          <td>To link an entire cell, add this class to a <code>&lt;th&gt;</code>or <code>&lt;td&gt;</code> element and insert an <code>&lt;a&gt;</code>element. Add the <code>.tiadian-link-reset</code>class from the <a href="link.md">Link component</a> to reset the default link styling.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.tiadian-preserve-width</code>
+          </td>
+          <td>Since images are responsive by default in TIAdian., using an image inside a table cell with the <code>.tiadian-table-shrink</code> class would reduce the image width to 0. To prevent this behavior, add the <code>.tiadian-preserve-width</code> class from the <a href="base.md">Base component</a> to the <code>&lt;img&gt;</code> element.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.tiadian-text-truncate</code>
+          </td>
+          <td>When applying a fixed width to a table cell, you might want to add this class from the <a href="text.md">Text component</a> to the <code>&lt;td&gt;</code> element to truncate the text.</td>
+        </tr>
+        <tr>
+          <td>
+            <code>.tiadian-text-nowrap</code>
+          </td>
+          <td>Add this class from the <a href="text.md">Text component</a> to keep text from wrapping, for example when using the <code>.tiadian-table-shrink</code> class.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;!-- Table link --&gt;
+&lt;td class="tiadian-table-link"&gt;
+    &lt;a class="tiadian-link-reset" href=""&gt;&lt;/a&gt;
+&lt;/td&gt;
+
+&lt;!-- Preserve width --&gt;
+&lt;td&gt;
+    &lt;img class="tiadian-preserve-width"&gt;
+&lt;/td&gt;
+
+&lt;!-- Text truncate --&gt;
+&lt;td class="tiadian-text-truncate"&gt;&lt;/td&gt;
+
+&lt;!-- Text nowrap --&gt;
+&lt;td class="tiadian-text-nowrap"&gt;&lt;/td&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-overflow-auto"&gt;
+    &lt;table class="tiadian-table tiadian-table-hover tiadian-table-middle tiadian-table-divider"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th class="tiadian-table-shrink"&gt;&lt;/th&gt;
+                &lt;th class="tiadian-table-shrink"&gt;Preserve&lt;/th&gt;
+                &lt;th class="tiadian-table-expand"&gt;Expand + Link&lt;/th&gt;
+                &lt;th class="tiadian-width-small"&gt;Truncate&lt;/th&gt;
+                &lt;th class="tiadian-table-shrink tiadian-text-nowrap"&gt;Shrink + Nowrap&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;input class="tiadian-checkbox" type="checkbox"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;img class="tiadian-preserve-width tiadian-border-circle" src="images/avatar.jpg" width="40" alt=""&gt;&lt;/td&gt;
+                &lt;td class="tiadian-table-link"&gt;
+                    &lt;a class="tiadian-link-reset" href=""&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class="tiadian-text-truncate"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.&lt;/td&gt;
+                &lt;td class="tiadian-text-nowrap"&gt;Lorem ipsum dolor&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;input class="tiadian-checkbox" type="checkbox"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;img class="tiadian-preserve-width tiadian-border-circle" src="images/avatar.jpg" width="40" alt=""&gt;&lt;/td&gt;
+                &lt;td class="tiadian-table-link"&gt;
+                    &lt;a class="tiadian-link-reset" href=""&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class="tiadian-text-truncate"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.&lt;/td&gt;
+                &lt;td class="tiadian-text-nowrap"&gt;Lorem ipsum dolor&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;input class="tiadian-checkbox" type="checkbox"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;img class="tiadian-preserve-width tiadian-border-circle" src="images/avatar.jpg" width="40" alt=""&gt;&lt;/td&gt;
+                &lt;td class="tiadian-table-link"&gt;
+                    &lt;a class="tiadian-link-reset" href=""&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class="tiadian-text-truncate"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.&lt;/td&gt;
+                &lt;td class="tiadian-text-nowrap"&gt;Lorem ipsum dolor&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;input class="tiadian-checkbox" type="checkbox"&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;img class="tiadian-preserve-width tiadian-border-circle" src="images/avatar.jpg" width="40" alt=""&gt;&lt;/td&gt;
+                &lt;td class="tiadian-table-link"&gt;
+                    &lt;a class="tiadian-link-reset" href=""&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.&lt;/a&gt;
+                &lt;/td&gt;
+                &lt;td class="tiadian-text-truncate"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.&lt;/td&gt;
+                &lt;td class="tiadian-text-nowrap"&gt;Lorem ipsum dolor&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+ 
