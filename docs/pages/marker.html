@@ -1,0 +1,33 @@
+
+    <h1 id="marker">Marker</h1>
+    <p id="toptext" class="tiadian-text-lead">Create a marker icon that can be displayed on top of images.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>tiadian-marker</code> attribute to any element. You can use the <a href="position.md">Position component</a> to place the marker on top of an image. Also add the <code>.tiadian-transform-center</code> classes from the <a href="utility.md#transform">Utility component</a> to center the marker itself to its upper left corner.</p>
+    <pre>
+      <code class="language-html">&lt;a href="" tiadian-marker&gt;&lt;/a&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> Add the <code>.tiadian-light</code> or <code>.tiadian-dark</code> class, so that elements will be optimized for better visibility on dark or light images.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-inline tiadian-dark"&gt;
+            &lt;img src="images/light.jpg" alt=""&gt;
+            &lt;a class="tiadian-position-absolute tiadian-transform-center" style="left: 20%; top: 30%" href="#" tiadian-marker&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-absolute tiadian-transform-center" style="left: 60%; top: 40%" href="#" tiadian-marker&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-absolute tiadian-transform-center" style="left: 80%; top: 70%" href="#" tiadian-marker&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-inline tiadian-light"&gt;
+            &lt;img src="images/dark.jpg" alt=""&gt;
+            &lt;a class="tiadian-position-absolute tiadian-transform-center" style="left: 20%; top: 30%" href="#" tiadian-marker&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-absolute tiadian-transform-center" style="left: 60%; top: 40%" href="#" tiadian-marker&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-absolute tiadian-transform-center" style="left: 80%; top: 70%" href="#" tiadian-marker&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+ 
