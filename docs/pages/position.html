@@ -1,0 +1,415 @@
+
+    <h1 id="position">Position</h1>
+    <p class="tiadian-text-lead">A collection of utility classes to position content.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add one of the <code>.tiadian-position-*</code> classes to a block element. When using this component to place content on top of an image, add the <code>.tiadian-inline</code> class from the <a href="utility.md#inline">Utility component</a> to a container element around the image and the element to create a position context.</p>
+    <p>
+      <strong>Note</strong> This is often used to position an overlay from the <a href="overlay.md">Overlay component</a>. Use the <code>.tiadian-light</code> or <code>.tiadian-dark</code> class from the <a href="inverse.md">Inverse component</a> to apply a light or dark color for better visibility.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-top</code>
+          </td>
+          <td style="text-align: left;">Positions the element at the top.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-left</code>
+          </td>
+          <td style="text-align: left;">Positions the element at the left.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-right</code>
+          </td>
+          <td style="text-align: left;">Positions the element at the right.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-bottom</code>
+          </td>
+          <td style="text-align: left;">Positions the element at the bottom.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-inline"&gt;
+
+    &lt;!-- Place any content, like an image, here --&gt;
+
+    &lt;div class="tiadian-position-center"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-inline tiadian-margin"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-top tiadian-overlay tiadian-overlay-default tiadian-text-center"&gt;Top&lt;/div&gt;
+    &lt;div class="tiadian-position-bottom tiadian-overlay tiadian-overlay-default tiadian-text-center"&gt;Bottom&lt;/div&gt;
+    &lt;div class="tiadian-position-left tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-middle"&gt;Left&lt;/div&gt;
+    &lt;div class="tiadian-position-right tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-middle"&gt;Right&lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="x-and-y-directions">X and Y directions</h3>
+    <p>You can also apply more specific positions that won't spread over one side of the parent container by adding one of the following classes.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-top-left</code>
+          </td>
+          <td style="text-align: left;">Positions the element at the top left.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-top-center</code>
+          </td>
+          <td style="text-align: left;">Positions the element at the top center.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-top-right</code>
+          </td>
+          <td style="text-align: left;">Positions the element at the top right.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-center</code>
+          </td>
+          <td style="text-align: left;">Positions the element vertically centered in the middle.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-center-left</code>
+          </td>
+          <td style="text-align: left;">Positions the element vertically centered on the left.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-center-right</code>
+          </td>
+          <td style="text-align: left;">Positions the element vertically centered on the right.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-bottom-left</code>
+          </td>
+          <td style="text-align: left;">Positions the element at the bottom left.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-bottom-center</code>
+          </td>
+          <td style="text-align: left;">Positions the element at the bottom center.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-bottom-right</code>
+          </td>
+          <td style="text-align: left;">Positions the element at the bottom right.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-position-top-right"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-inline"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-top-left tiadian-overlay tiadian-overlay-default"&gt;Top Left&lt;/div&gt;
+    &lt;div class="tiadian-position-top-center tiadian-overlay tiadian-overlay-default"&gt;Top Center&lt;/div&gt;
+    &lt;div class="tiadian-position-top-right tiadian-overlay tiadian-overlay-default"&gt;Top Right&lt;/div&gt;
+    &lt;div class="tiadian-position-center-left tiadian-overlay tiadian-overlay-default"&gt;Center Left&lt;/div&gt;
+    &lt;div class="tiadian-position-center tiadian-overlay tiadian-overlay-default"&gt;Center&lt;/div&gt;
+    &lt;div class="tiadian-position-center-right tiadian-overlay tiadian-overlay-default"&gt;Center Right&lt;/div&gt;
+    &lt;div class="tiadian-position-bottom-left tiadian-overlay tiadian-overlay-default"&gt;Bottom Left&lt;/div&gt;
+    &lt;div class="tiadian-position-bottom-center tiadian-overlay tiadian-overlay-default"&gt;Bottom Center&lt;/div&gt;
+    &lt;div class="tiadian-position-bottom-right tiadian-overlay tiadian-overlay-default"&gt;Bottom Right&lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="cover">Cover</h3>
+    <p>If you want a position element to cover its container, just add the <code>.tiadian-position-cover</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-position-cover"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-inline"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-cover tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-center tiadian-flex-middle"&gt;Cover&lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="outside">Outside</h3>
+    <p>There are two classes to center elements outside on the left and right of the parent container. This is useful to position the <a href="slidenav.md">Slidenav component</a> outside of an <a href="slideshow.md">Slideshow</a> or <a href="slider.md">Slider</a> component.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-center-left-out</code>
+          </td>
+          <td style="text-align: left;">Positions the element vertically centered outside on the left.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-center-right-out</code>
+          </td>
+          <td style="text-align: left;">Positions the element vertically centered outside on the right.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <strong>Note</strong> Once the outside positioned element sticks out of the viewport to the right, it will cause a horizontal scrollbar. Use the <a href="visibility.md">Visibility component</a> to hide the outside positioned element on a smaller viewports and show an inside positioned element instead.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-position-center-left-out"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-inline"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-center-left-out tiadian-overlay tiadian-overlay-primary tiadian-visible@s"&gt;Out&lt;/div&gt;
+    &lt;div class="tiadian-position-center-right-out tiadian-overlay tiadian-overlay-primary tiadian-visible@s"&gt;Out&lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="small-modifier">Small modifier</h2>
+    <p>To apply a small margin to positioned elements, add the <code>.tiadian-position-small</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-position-small tiadian-position-center"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-inline tiadian-margin"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-small tiadian-position-top-left tiadian-overlay tiadian-overlay-default"&gt;Top Left&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-top-center tiadian-overlay tiadian-overlay-default"&gt;Top Center&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-top-right tiadian-overlay tiadian-overlay-default"&gt;Top Right&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-center-left tiadian-overlay tiadian-overlay-default"&gt;Center Left&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-center tiadian-overlay tiadian-overlay-default"&gt;Center&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-center-right tiadian-overlay tiadian-overlay-default"&gt;Center Right&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-bottom-left tiadian-overlay tiadian-overlay-default"&gt;Bottom Left&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-bottom-center tiadian-overlay tiadian-overlay-default"&gt;Bottom Center&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-bottom-right tiadian-overlay tiadian-overlay-default"&gt;Bottom Right&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="tiadian-inline tiadian-margin"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-small tiadian-position-top tiadian-overlay tiadian-overlay-default tiadian-text-center"&gt;Top&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-bottom tiadian-overlay tiadian-overlay-default tiadian-text-center"&gt;Bottom&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-left tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-middle"&gt;Left&lt;/div&gt;
+    &lt;div class="tiadian-position-small tiadian-position-right tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-middle"&gt;Right&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="tiadian-inline tiadian-margin"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-small tiadian-position-cover tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-center tiadian-flex-middle"&gt;Cover&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="tiadian-margin tiadian-text-center"&gt;
+    &lt;div class="tiadian-inline-block tiadian-width-large"&gt;
+
+        &lt;img src="images/photo.jpg" alt=""&gt;
+
+        &lt;div class="tiadian-position-small tiadian-position-center-left-out tiadian-overlay tiadian-overlay-primary tiadian-visible@s"&gt;Out&lt;/div&gt;
+        &lt;div class="tiadian-position-small tiadian-position-center-right-out tiadian-overlay tiadian-overlay-primary tiadian-visible@s"&gt;Out&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="medium-modifier">Medium modifier</h2>
+    <p>To apply a medium margin to positioned elements, add the <code>.tiadian-position-medium</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-position-medium tiadian-position-center"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-inline tiadian-margin"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-medium tiadian-position-top-left tiadian-overlay tiadian-overlay-default"&gt;Top Left&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-top-center tiadian-overlay tiadian-overlay-default"&gt;Top Center&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-top-right tiadian-overlay tiadian-overlay-default"&gt;Top Right&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-center-left tiadian-overlay tiadian-overlay-default"&gt;Center Left&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-center tiadian-overlay tiadian-overlay-default"&gt;Center&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-center-right tiadian-overlay tiadian-overlay-default"&gt;Center Right&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-bottom-left tiadian-overlay tiadian-overlay-default"&gt;Bottom Left&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-bottom-center tiadian-overlay tiadian-overlay-default"&gt;Bottom Center&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-bottom-right tiadian-overlay tiadian-overlay-default"&gt;Bottom Right&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="tiadian-inline tiadian-margin"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-medium tiadian-position-top tiadian-overlay tiadian-overlay-default tiadian-text-center"&gt;Top&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-bottom tiadian-overlay tiadian-overlay-default tiadian-text-center"&gt;Bottom&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-left tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-middle"&gt;Left&lt;/div&gt;
+    &lt;div class="tiadian-position-medium tiadian-position-right tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-middle"&gt;Right&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="tiadian-inline tiadian-margin"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-medium tiadian-position-cover tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-center tiadian-flex-middle"&gt;Cover&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="tiadian-margin tiadian-text-center"&gt;
+    &lt;div class="tiadian-inline-block tiadian-width-large"&gt;
+
+        &lt;img src="images/photo.jpg" alt=""&gt;
+
+        &lt;div class="tiadian-position-medium tiadian-position-center-left-out tiadian-overlay tiadian-overlay-primary tiadian-visible@s"&gt;Out&lt;/div&gt;
+        &lt;div class="tiadian-position-medium tiadian-position-center-right-out tiadian-overlay tiadian-overlay-primary tiadian-visible@s"&gt;Out&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="large-modifier">Large modifier</h2>
+    <p>To apply a large margin to positioned elements, add the <code>.tiadian-position-large</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-position-large tiadian-position-center"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-inline tiadian-margin"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-large tiadian-position-top-left tiadian-overlay tiadian-overlay-default"&gt;Top Left&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-top-center tiadian-overlay tiadian-overlay-default"&gt;Top Center&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-top-right tiadian-overlay tiadian-overlay-default"&gt;Top Right&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-center-left tiadian-overlay tiadian-overlay-default"&gt;Center Left&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-center tiadian-overlay tiadian-overlay-default"&gt;Center&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-center-right tiadian-overlay tiadian-overlay-default"&gt;Center Right&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-bottom-left tiadian-overlay tiadian-overlay-default"&gt;Bottom Left&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-bottom-center tiadian-overlay tiadian-overlay-default"&gt;Bottom Center&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-bottom-right tiadian-overlay tiadian-overlay-default"&gt;Bottom Right&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="tiadian-inline tiadian-margin"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-large tiadian-position-top tiadian-overlay tiadian-overlay-default tiadian-text-center"&gt;Top&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-bottom tiadian-overlay tiadian-overlay-default tiadian-text-center"&gt;Bottom&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-left tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-middle"&gt;Left&lt;/div&gt;
+    &lt;div class="tiadian-position-large tiadian-position-right tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-middle"&gt;Right&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="tiadian-inline tiadian-margin"&gt;
+
+    &lt;img src="images/photo.jpg" alt=""&gt;
+
+    &lt;div class="tiadian-position-large tiadian-position-cover tiadian-overlay tiadian-overlay-default tiadian-flex tiadian-flex-center tiadian-flex-middle"&gt;Cover&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="tiadian-margin tiadian-text-center"&gt;
+    &lt;div class="tiadian-inline-block tiadian-width-large"&gt;
+
+        &lt;img src="images/photo.jpg" alt=""&gt;
+
+        &lt;div class="tiadian-position-large tiadian-position-center-left-out tiadian-overlay tiadian-overlay-primary tiadian-visible@s"&gt;Out&lt;/div&gt;
+        &lt;div class="tiadian-position-large tiadian-position-center-right-out tiadian-overlay tiadian-overlay-primary tiadian-visible@s"&gt;Out&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="utility-classes">Utility classes</h2>
+    <p>This component features a number of general position utility classes:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-relative</code>
+          </td>
+          <td style="text-align: left;">Add this class to apply relative positioning.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-absolute</code>
+          </td>
+          <td style="text-align: left;">Add this class to apply absolute positioning.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-fixed</code>
+          </td>
+          <td style="text-align: left;">Add this class to apply fixed positioning.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-position-z-index</code>
+          </td>
+          <td style="text-align: left;">Add this class to apply a z-index of 1.</td>
+        </tr>
+      </tbody>
+    </table>
+ 
