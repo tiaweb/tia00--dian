@@ -1,213 +1,345 @@
-# Scrollspy
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+      <link rel="stylesheet" href="https://tiaweb.github.io/tiadian/style.css">
+ <script  src="https://tiaweb.github.io/tiadian/script.js"></script>
+<link rel="stylesheet" href="https://tiaweb.github.io/tiadian/theme.css">
+    <title>cover.less</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
 
-<p class="uk-text-lead">Trigger events and animations while scrolling your page.</p>
-
-## Usage
-
-The Scrollspy component listens to page scrolling and trigger events based on the scroll position. For example, if you scroll down a page, and an element appears in the viewport for the first time, you can trigger a smooth animation to fade in the element. Just add the `uk-scrollspy` attribute which takes the following options.
-
-Typically, classes from the [Animation component](animation.md) are used together with the Scrollspy component.
-
-```html
-<div uk-scrollspy="cls:uk-animation-fade"></div>
-```
-
-```example
-<div class="uk-child-width-1-2@m uk-grid-match" uk-grid>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-            <h3 class="uk-card-title">Left</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
-            <h3 class="uk-card-title">Right</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-</div>
-```
-
-This example uses the `repeat: true` option. Scroll up and down to see the triggered animations. The layout is made with the [Card component](card.md).
-
-***
-
-## Groups
-
-You can also group scrollspy elements, so you won't have to apply the attribute to each of them. Just add the `uk-scrollspy="target: SELECTOR"` attribute to a container element, targeting the selector of the items you want to animate inside the container. When using a delay, it will be applied cumulatively to the items that scroll into view.
-
-```html
-<div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
-    <div></div>
-    <div></div>
-</div>
-```
-
-```example
-<div class="uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title">Fade</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title">Fade</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title">Fade</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title">Fade</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title">Fade</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title">Fade</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-</div>
-```
-
-***
-
-## Set `cls` option per target
-
-You can also give each target a separate `cls` option. Just add the `uk-scrollspy-class="CLASS"` attribute to a target element. It will override the `cls` option set on the component.
-
-```html
-<div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
-    <div uk-scrollspy-class="uk-animation-slide-top"></div>
-    <div uk-scrollspy-class="uk-animation-slide-bottom"></div>
-</div>
-```
-
-```example
-<div class="uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true">
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title">Bottom</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body" uk-scrollspy-class="uk-animation-slide-top">
-            <h3 class="uk-card-title">Top</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title">Bottom</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </div>
-</div>
-```
-
-***
-
-## Component options
-
-Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. [Learn more](javascript.md#component-configuration)
-
-| Option        | Value   | Default               | Description                                                                                                   |
-|:--------------|:--------|:----------------------|:--------------------------------------------------------------------------------------------------------------|
-| `cls`         | String  | ``                    | Class to toggle when the element enters/leaves viewport.   |
-| `hidden`      | Boolean | `true`                | Hides the element while out of view.                       |
-| `offset-top`  | Number  | `0`                   | Top offset before triggering in view.                      |
-| `offset-left` | Number  | `0`                   | Left offset before triggering in view.                     |
-| `repeat`      | Boolean | `false`               | Applies the `cls` class every time the element is in view. |
-| `delay`       | Number  | `0`                   | Delay time in ms.                                          |
-
-`cls` is the _Primary_ option and its key may be omitted, if it's the only option in the attribute value.
-
-```html
-<span uk-scrollspy="my-class"></span>
-```
-
-***
-
-## JavaScript
-
-Learn more about [JavaScript components](javascript.md#programmatic-use).
-
-### Initialization
-
-```js
-UIkit.scrollspy(element, options);
-```
-
-### Events
-
-The following events will be triggered on elements with this component attached:
-
-| Name      | Description                                     |
-|:----------|:------------------------------------------------|
-| `inview`  | Fires after an item moves into the viewport.    |
-| `outview` | Fires after an item moves into out of viewport. |
-
-***
-
-## Scrollspy nav
-
-To automatically update the active menu item depending on the scroll position of your site, add the `uk-scrollspy-nav` attribute to any navigation. Each menu item must link to the ID of its corresponding part of the site.
-
-```html
-<ul class="uk-nav uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true">
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-</ul>
-```
-
-For an example of the scrollspy nav, just check out the fixed nav on the right side of this page or take a look at the test. Any of the following options can be applied to the `uk-scrollspy-nav` attribute. Separate multiple options with a semicolon.
-
-***
-
-### Scrollspy nav options
-
-Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. [Learn more](javascript.md#component-configuration)
-
-| Option     | Value   | Default                    | Description                                                                                           |
-|:-----------|:--------|:---------------------------|:------------------------------------------------------------------------------------------------------|
-| `cls`      | String  | `uk-active`                | Class to add to the active links.                                                                     |
-| `closest`  | String  | `uk-scrollspy-init-inview` | Target to apply the class to.                                                                         |
-| `scroll`   | Boolean | `false`                    | Adds the [Scroll component](scroll.md) to its links.                                                  |
-| `overflow` | Boolean | `true`                     | If overflow is set to true, the first or last item will stay active if above or below the navigation. |
-| `offset`   | Number  | `0`                        | Pixel offset added to scroll top.                                                                     |
-
-***
-
-### Scrollspy nav JavaScript
-
-Learn more about [JavaScript components](javascript.md#programmatic-use).
-
-### Scrollspy nav initialization
-
-```js
-UIkit.scrollspyNav(element, options);
-```
-
-### Scrollspy nav events
-
-The following events will be triggered on elements with this component attached:
-
-| Name     | Description                         |
-|:---------|:------------------------------------|
-| `active` | Fires after an item becomes active. |
+        </style>
+  </head>
+  <body>
+    <h1 id="scrollspy">Scrollspy</h1>
+    <p class="tiadian-text-lead">Trigger events and animations while scrolling your page.</p>
+    <h2 id="usage">Usage</h2>
+    <p>The Scrollspy component listens to page scrolling and trigger events based on the scroll position. For example, if you scroll down a page, and an element appears in the viewport for the first time, you can trigger a smooth animation to fade in the element. Just add the <code>tiadian-scrollspy</code> attribute which takes the following options.</p>
+    <p>Typically, classes from the <a href="animation.md">Animation component</a> are used together with the Scrollspy component.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-scrollspy="cls:tiadian-animation-fade"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@m tiadian-grid-match" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body" tiadian-scrollspy="cls: tiadian-animation-slide-left; repeat: true"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Left&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body" tiadian-scrollspy="cls: tiadian-animation-slide-right; repeat: true"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Right&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>This example uses the <code>repeat: true</code> option. Scroll up and down to see the triggered animations. The layout is made with the <a href="card.md">Card component</a>.</p>
+    <hr />
+    <h2 id="groups">Groups</h2>
+    <p>You can also group scrollspy elements, so you won't have to apply the attribute to each of them. Just add the <code>tiadian-scrollspy="target: SELECTOR"</code> attribute to a container element, targeting the selector of the items you want to animate inside the container. When using a delay, it will be applied cumulatively to the items that scroll into view.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-scrollspy="target: &gt; div; cls: tiadian-animation-fade; delay: 500"&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-3@m" tiadian-grid tiadian-scrollspy="cls: tiadian-animation-fade; target: .tiadian-card; delay: 500; repeat: true"&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Fade&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Fade&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Fade&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Fade&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Fade&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Fade&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="set-cls-option-per-target">Set <code>cls</code> option per target</h2>
+    <p>You can also give each target a separate <code>cls</code> option. Just add the <code>tiadian-scrollspy-class="CLASS"</code> attribute to a target element. It will override the <code>cls</code> option set on the component.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-scrollspy="target: &gt; div; cls: tiadian-animation-fade; delay: 500"&gt;
+    &lt;div tiadian-scrollspy-class="tiadian-animation-slide-top"&gt;&lt;/div&gt;
+    &lt;div tiadian-scrollspy-class="tiadian-animation-slide-bottom"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-3@m" tiadian-grid tiadian-scrollspy="cls: tiadian-animation-slide-bottom; target: .tiadian-card; delay: 300; repeat: true"&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Bottom&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body" tiadian-scrollspy-class="tiadian-animation-slide-top"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Top&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;h3 class="tiadian-card-title"&gt;Bottom&lt;/h3&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">``</td>
+          <td style="text-align: left;">Class to toggle when the element enters/leaves viewport.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hidden</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Hides the element while out of view.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>offset-top</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">Top offset before triggering in view.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>offset-left</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">Left offset before triggering in view.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>repeat</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Applies the <code>cls</code> class every time the element is in view.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>delay</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">Delay time in ms.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <code>cls</code> is the <em>Primary</em> option and its key may be omitted, if it's the only option in the attribute value.</p>
+    <pre>
+      <code class="language-html">&lt;span tiadian-scrollspy="my-class"&gt;&lt;/span&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.scrollspy(element, options);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>inview</code>
+          </td>
+          <td style="text-align: left;">Fires after an item moves into the viewport.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>outview</code>
+          </td>
+          <td style="text-align: left;">Fires after an item moves into out of viewport.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="scrollspy-nav">Scrollspy nav</h2>
+    <p>To automatically update the active menu item depending on the scroll position of your site, add the <code>tiadian-scrollspy-nav</code> attribute to any navigation. Each menu item must link to the ID of its corresponding part of the site.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-nav tiadian-nav-default" tiadian-scrollspy-nav="closest: li; scroll: true"&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <p>For an example of the scrollspy nav, just check out the fixed nav on the right side of this page or take a look at the test. Any of the following options can be applied to the <code>tiadian-scrollspy-nav</code> attribute. Separate multiple options with a semicolon.</p>
+    <hr />
+    <h3 id="scrollspy-nav-options">Scrollspy nav options</h3>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-active</code>
+          </td>
+          <td style="text-align: left;">Class to add to the active links.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>closest</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-scrollspy-init-inview</code>
+          </td>
+          <td style="text-align: left;">Target to apply the class to.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>scroll</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Adds the <a href="scroll.md">Scroll component</a> to its links.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>overflow</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">If overflow is set to true, the first or last item will stay active if above or below the navigation.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>offset</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">Pixel offset added to scroll top.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h3 id="scrollspy-nav-javascript">Scrollspy nav JavaScript</h3>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="scrollspy-nav-initialization">Scrollspy nav initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.scrollspyNav(element, options);
+</code>
+    </pre>
+    <h3 id="scrollspy-nav-events">Scrollspy nav events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>active</code>
+          </td>
+          <td style="text-align: left;">Fires after an item becomes active.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
