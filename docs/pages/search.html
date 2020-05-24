@@ -1,0 +1,296 @@
+
+    <h1 id="search">Search</h1>
+    <p class="tiadian-text-lead">Easily create a nice looking search.</p>
+    <h2 id="usage">Usage</h2>
+    <p>The Search component consists of a search form and the search input itself.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class/Attribute</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-search</code>
+          </td>
+          <td style="text-align: left;">Add this class to a container element to define the Search component.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-search-input</code>
+          </td>
+          <td style="text-align: left;">Add this class to an <code>&lt;input&gt;</code> element to create the search field.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;form class="tiadian-search"&gt;
+    &lt;input class="tiadian-search-input" type="search" placeholder=""&gt;
+&lt;/form&gt;
+</code>
+    </pre>
+    <p>By default, the search has no additional styling. In this example we are using the <code>.tiadian-search-default</code> modifier.</p>
+    <pre>
+      <code class="language-example">&lt;form class="tiadian-search tiadian-search-default"&gt;
+    &lt;input class="tiadian-search-input" type="search" placeholder="Search..."&gt;
+&lt;/form&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="search-icon">Search icon</h2>
+    <p>To create a search icon, add the <code>tiadian-search-icon</code> attribute to a <code>&lt;span&gt;</code> element. To change the alignment, add the <code>.tiadian-search-icon-flip</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;form class="tiadian-search tiadian-search-default"&gt;
+    &lt;span tiadian-search-icon&gt;&lt;/span&gt;
+    &lt;input class="tiadian-search-input" type="search" placeholder=""&gt;
+&lt;/form&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-margin"&gt;
+    &lt;form class="tiadian-search tiadian-search-default"&gt;
+        &lt;span tiadian-search-icon&gt;&lt;/span&gt;
+        &lt;input class="tiadian-search-input" type="search" placeholder="Search..."&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+
+&lt;div class="tiadian-margin"&gt;
+    &lt;form class="tiadian-search tiadian-search-default"&gt;
+        &lt;span class="tiadian-search-icon-flip" tiadian-search-icon&gt;&lt;/span&gt;
+        &lt;input class="tiadian-search-input" type="search" placeholder="Search..."&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="clickable">Clickable</h3>
+    <p>To enable an action, use an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element to create the icon.</p>
+    <pre>
+      <code class="language-html">&lt;form class="tiadian-search tiadian-search-default"&gt;
+    &lt;a href="" tiadian-search-icon&gt;&lt;/a&gt;
+    &lt;input class="tiadian-search-input" type="search" placeholder=""&gt;
+&lt;/form&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-margin"&gt;
+    &lt;form class="tiadian-search tiadian-search-default"&gt;
+        &lt;a href="" tiadian-search-icon&gt;&lt;/a&gt;
+        &lt;input class="tiadian-search-input" type="search" placeholder="Search..."&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+
+&lt;div class="tiadian-margin"&gt;
+    &lt;form class="tiadian-search tiadian-search-default"&gt;
+        &lt;a href="" class="tiadian-search-icon-flip" tiadian-search-icon&gt;&lt;/a&gt;
+        &lt;input class="tiadian-search-input" type="search" placeholder="Search..."&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="default-modifier">Default modifier</h2>
+    <p>To apply the default search styling, add the <code>.tiadian-search-default</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;form class="tiadian-search tiadian-search-default"&gt;...&lt;/form&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;form class="tiadian-search tiadian-search-default"&gt;
+    &lt;span tiadian-search-icon&gt;&lt;/span&gt;
+    &lt;input class="tiadian-search-input" type="search" placeholder="Search..."&gt;
+&lt;/form&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="large-modifier">Large modifier</h2>
+    <p>To increase the size of the search, for example when creating an overlay search, add the <code>.tiadian-search-large</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;form class="tiadian-search tiadian-search-large"&gt;...&lt;/form&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;form class="tiadian-search tiadian-search-large"&gt;
+    &lt;span tiadian-search-icon&gt;&lt;/span&gt;
+    &lt;input class="tiadian-search-input" type="search" placeholder="Search..."&gt;
+&lt;/form&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="navbar-modifier">Navbar modifier</h2>
+    <p>A search can be used inside a navbar from the <a href="navbar.md">Navbar component</a>. Just add the <code>.tiadian-search-navbar</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;form class="tiadian-search tiadian-search-navbar"&gt;...&lt;/form&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;nav class="tiadian-navbar-container" tiadian-navbar&gt;
+    &lt;div class="tiadian-navbar-left"&gt;
+
+        &lt;div class="tiadian-navbar-item"&gt;
+            &lt;form class="tiadian-search tiadian-search-navbar"&gt;
+                &lt;span tiadian-search-icon&gt;&lt;/span&gt;
+                &lt;input class="tiadian-search-input" type="search" placeholder="Search..."&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/nav&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="toggle">Toggle</h2>
+    <p>To apply a hover state to the search icon when using an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element, add the <code>.tiadian-search-toggle</code> class. To create the search icon itself, add the <code>tiadian-search-icon</code> attribute.</p>
+    <pre>
+      <code class="language-html">&lt;a class="tiadian-search-toggle" href="" tiadian-search-icon&gt;&lt;/a&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;a class="tiadian-search-toggle" href="" tiadian-search-icon&gt;&lt;/a&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="search-in-navbar">Search in navbar</h2>
+    <p>The search icon can be used as a toggle to open the search inside a navbar – as an overlay, drop or dropdown – or outside in a modal. Just add the <code>.tiadian-navbar-toggle</code> class to the icon.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-navbar-container" tiadian-navbar&gt;
+    &lt;div class="tiadian-navbar-left"&gt;
+        &lt;a class="tiadian-navbar-toggle" tiadian-search-icon tiadian-toggle href=""&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <h3 id="overlay">Overlay</h3>
+    <pre>
+      <code class="language-example">&lt;nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar&gt;
+
+    &lt;div class="nav-overlay tiadian-navbar-left"&gt;
+
+        &lt;a class="tiadian-navbar-item tiadian-logo" href="#"&gt;Logo&lt;/a&gt;
+
+        &lt;ul class="tiadian-navbar-nav"&gt;
+            &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="nav-overlay tiadian-navbar-right"&gt;
+
+        &lt;a class="tiadian-navbar-toggle" tiadian-search-icon tiadian-toggle="target: .nav-overlay; animation: tiadian-animation-fade" href="#"&gt;&lt;/a&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="nav-overlay tiadian-navbar-left tiadian-flex-1" hidden&gt;
+
+        &lt;div class="tiadian-navbar-item tiadian-width-expand"&gt;
+            &lt;form class="tiadian-search tiadian-search-navbar tiadian-width-1-1"&gt;
+                &lt;input class="tiadian-search-input" type="search" placeholder="Search..." autofocus&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+
+        &lt;a class="tiadian-navbar-toggle" tiadian-close tiadian-toggle="target: .nav-overlay; animation: tiadian-animation-fade" href="#"&gt;&lt;/a&gt;
+
+    &lt;/div&gt;
+
+&lt;/nav&gt;
+</code>
+    </pre>
+    <h3 id="drop">Drop</h3>
+    <pre>
+      <code class="language-example">&lt;nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar&gt;
+    &lt;div class="tiadian-navbar-left"&gt;
+
+        &lt;a class="tiadian-navbar-item tiadian-logo" href="#"&gt;Logo&lt;/a&gt;
+
+        &lt;ul class="tiadian-navbar-nav"&gt;
+            &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+    &lt;div class="tiadian-navbar-right"&gt;
+
+        &lt;div&gt;
+            &lt;a class="tiadian-navbar-toggle" tiadian-search-icon href="#"&gt;&lt;/a&gt;
+            &lt;div class="tiadian-drop" tiadian-drop="mode: click; pos: left-center; offset: 0"&gt;
+                &lt;form class="tiadian-search tiadian-search-navbar tiadian-width-1-1"&gt;
+                    &lt;input class="tiadian-search-input" type="search" placeholder="Search..." autofocus&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/nav&gt;
+</code>
+    </pre>
+    <h3 id="dropdown">Dropdown</h3>
+    <pre>
+      <code class="language-example">&lt;nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar&gt;
+    &lt;div class="tiadian-navbar-left"&gt;
+
+        &lt;a class="tiadian-navbar-item tiadian-logo" href="#"&gt;Logo&lt;/a&gt;
+
+        &lt;ul class="tiadian-navbar-nav"&gt;
+            &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+    &lt;div class="tiadian-navbar-right"&gt;
+
+        &lt;div&gt;
+            &lt;a class="tiadian-navbar-toggle" href="#" tiadian-search-icon&gt;&lt;/a&gt;
+            &lt;div class="tiadian-navbar-dropdown" tiadian-drop="mode: click; cls-drop: tiadian-navbar-dropdown; boundary: !nav"&gt;
+
+                &lt;div class="tiadian-grid-small tiadian-flex-middle" tiadian-grid&gt;
+                    &lt;div class="tiadian-width-expand"&gt;
+                        &lt;form class="tiadian-search tiadian-search-navbar tiadian-width-1-1"&gt;
+                            &lt;input class="tiadian-search-input" type="search" placeholder="Search..." autofocus&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                    &lt;div class="tiadian-width-auto"&gt;
+                        &lt;a class="tiadian-navbar-dropdown-close" href="#" tiadian-close&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/nav&gt;
+</code>
+    </pre>
+    <h3 id="modal">Modal</h3>
+    <pre>
+      <code class="language-example">&lt;nav class="tiadian-navbar tiadian-navbar-container tiadian-margin"&gt;
+    &lt;div class="tiadian-navbar-left"&gt;
+
+        &lt;a class="tiadian-navbar-item tiadian-logo" href="#"&gt;Logo&lt;/a&gt;
+
+        &lt;ul class="tiadian-navbar-nav"&gt;
+            &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+    &lt;div class="tiadian-navbar-right"&gt;
+
+        &lt;a class="tiadian-navbar-toggle" href="#modal-full" tiadian-search-icon tiadian-toggle&gt;&lt;/a&gt;
+
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;div id="modal-full" class="tiadian-modal-full tiadian-modal" tiadian-modal&gt;
+    &lt;div class="tiadian-modal-dialog tiadian-flex tiadian-flex-center tiadian-flex-middle" tiadian-height-viewport&gt;
+        &lt;button class="tiadian-modal-close-full" type="button" tiadian-close&gt;&lt;/button&gt;
+        &lt;form class="tiadian-search tiadian-search-large"&gt;
+            &lt;input class="tiadian-search-input tiadian-text-center" type="search" placeholder="Search..." autofocus&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+  
