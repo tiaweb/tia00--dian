@@ -1,0 +1,266 @@
+
+    <h1 id="sticky">Sticky</h1>
+    <p class="tiadian-text-lead">Make elements remain at the top of the viewport, like a sticky navigation.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To create an element that remains at the top of the viewport when scrolling down the site, add the <code>tiadian-sticky</code> attribute to that element.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-sticky&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="bottom: #offset"&gt;Stick to the top&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> Example elements on this page are only sticky until you scroll down to the next heading and disappear afterwards. This was done so as not to clutter your screen with all variations of sticky containers.</p>
+    <hr />
+    <h2 id="offset">Offset</h2>
+    <p>You can position the element below the viewport edge. Add the <code>offset</code> attribute and the distance in pixels.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-sticky="offset: 100"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="offset: 100; bottom: #top"&gt;Stick 100px below the top&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="top">Top</h2>
+    <p>To apply the sticky behavior with a delay, add the <code>top</code> attribute, which can be defined either by a number representing the offset in pixels, but also viewport height or a CSS selector.</p>
+    <pre>
+      <code class="language-html">&lt;!-- Sticks after 100px of scrolling --&gt;
+&lt;div tiadian-sticky="top: 100"&gt;&lt;/div&gt;
+
+&lt;!-- Sticks after 100vh --&gt;
+&lt;div tiadian-sticky="top: 100vh"&gt;&lt;/div&gt;
+
+&lt;!-- Sticks to the top of the container --&gt;
+&lt;div id="my-id"&gt;
+    &lt;div tiadian-sticky="top: #my-id"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="top: 200; bottom: #animation"&gt;Stick to the top but only after 200px scrolling&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div id="container-1" class="tiadian-background-muted tiadian-height-medium" style="margin-bottom: 200px;"&gt;
+            &lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="top: #container-1; bottom: #animation"&gt;Stick to the top but below the box&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="animation">Animation</h2>
+    <p>Add an animation from the <a href="animation.md">Animation component</a> in order to have the sticky element reappear smoothly.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-sticky="animation: tiadian-animation-slide-top"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="margin-bottom: 200px; z-index: 980;" tiadian-sticky="top: 100; animation: tiadian-animation-slide-top; bottom: #sticky-on-scroll-up"&gt;Animation Slide Top&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="sticky-on-scroll-up">Sticky on scroll up</h2>
+    <p>You can make the sticky element show only when scrolling up to save space. Together with an animation, this makes for a very smooth experience.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-sticky="show-on-up: true"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="margin-bottom: 200px; z-index: 980;" tiadian-sticky="show-on-up: true; animation: tiadian-animation-slide-top; bottom: #bottom"&gt;Slide in on scroll up&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="bottom">Bottom</h2>
+    <p>Bind the sticky behavior to a specific element, so that it disappears after scrolling past that point of the page.</p>
+    <pre>
+      <code class="language-html">&lt;!-- Sticks until the bottom of its parent container --&gt;
+&lt;div&gt;
+    &lt;div tiadian-sticky="bottom: true"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Sticks until the second container --&gt;
+&lt;div tiadian-sticky="bottom: #my-id"&gt;&lt;/div&gt;
+&lt;div id="my-id"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-background-muted tiadian-height-medium"&gt;
+            &lt;div class="tiadian-height-medium tiadian-background-muted"&gt;
+                &lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="bottom: true"&gt;Stick until the bottom of its parent container&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div&gt;
+            &lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="bottom: #container-2"&gt;Stick until the next headline&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id="container-2"&gt;Some Headline&lt;/h3&gt;
+
+</code>
+    </pre>
+    <hr />
+    <h2 id="responsive">Responsive</h2>
+    <p>It's possible to disable the sticky behavior for different devices widths by applying the <code>media</code> option to the attribute and adding the appropriate viewport width. Add a number in pixel, for example <code>media: 640</code>, or a breakpoint, for example <code>media: @m</code>. The element will be sticky from the specified viewport width and upwards, but not below.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-sticky="media: 640"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>top</code>
+          </td>
+          <td style="text-align: left;">Number, viewport height, CSS selector</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">The top offset from where the element should be stick.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>bottom</code>
+          </td>
+          <td style="text-align: left;">Boolean, CSS selector</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">The bottom offset until the element should stick. If <code>bottom</code> is an element, its bottom offset will be used. (true: parent element, prefixed with '!' a parent selector)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>offset</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">The offset the Sticky should be fixed to.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>animation</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">The animation to use when the element becomes sticky.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-active</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-active</code>
+          </td>
+          <td style="text-align: left;">The active class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-inactive</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>''</code>
+          </td>
+          <td style="text-align: left;">The inactive class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>width-element</code>
+          </td>
+          <td style="text-align: left;">CSS selector</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">The element the Sticky should get its width from in active mode.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>show-on-up</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Only show sticky element when scrolling up.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>media</code>
+          </td>
+          <td style="text-align: left;">Integer, String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Condition for the active status - a width as integer (e.g. 640) or a breakpoint (e.g. @s, @m, @l, @xl) or any valid media query (e.g. (min-width: 900px)).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>target-offset</code>
+          </td>
+          <td style="text-align: left;">Boolean, Number</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Initially make sure that the Sticky is not over a targeted element via location hash.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.sticky(element, options);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>active</code>
+          </td>
+          <td style="text-align: left;">Fires after the element becomes sticky.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>inactive</code>
+          </td>
+          <td style="text-align: left;">Fires after the element is no longer sticky.</td>
+        </tr>
+      </tbody>
+    </table>
+ 
