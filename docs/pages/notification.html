@@ -1,0 +1,300 @@
+
+    <h1 id="notification">Notification</h1>
+    <p class="tiadian-text-lead">Create toggleable notifications that fade out automatically.</p>
+    <h2 id="usage">Usage</h2>
+    <p>The notification will not fade out but remain visible when you hover the message until you stop hovering. You can also close the notification by clicking it. To show notifications, the component provides a simple JavaScript API. The following code snippet gets you started.</p>
+    <h3 id="javascript">JavaScript</h3>
+    <pre>
+      <code class="language-js">TIAdian.notification({
+    message: 'my-message!',
+    status: 'primary',
+    pos: 'top-right',
+    timeout: 5000
+});
+
+// Shortcuts
+TIAdian.notification('My message');
+TIAdian.notification('My message', status);
+TIAdian.notification('My message', { /* options */ });
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="demo tiadian-button tiadian-button-default" type="button" onclick="TIAdian.notification({message: 'Notification message'})"&gt;Click me&lt;/button&gt;
+
+</code>
+    </pre>
+    <hr />
+    <h2 id="html-message">HTML message</h2>
+    <p>You can use HTML inside your notification message, like an icon from the Icon component.</p>
+    <pre>
+      <code class="language-js">TIAdian.notification("&lt;span tiadian-icon='icon: check'&gt;&lt;/span&gt; Message");
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default demo" type="button" onclick="TIAdian.notification({message: '&lt;span tiadian-icon=\'icon: check\'&gt;&lt;/span&gt; Message with an icon'})"&gt;With icon&lt;/button&gt;
+
+</code>
+    </pre>
+    <hr />
+    <h2 id="position">Position</h2>
+    <p>Add one of the following parameters to adjust the notification's position to different corners.</p>
+    <pre>
+      <code class="language-js">TIAdian.notification("...", {pos: 'top-right'})
+</code>
+    </pre>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Position</th>
+          <th style="text-align: left;">Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>top-left</code>
+          </td>
+          <td style="text-align: left;">
+            <code>TIAdian.notification("...", {pos: 'top-left'})</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>top-center</code>
+          </td>
+          <td style="text-align: left;">
+            <code>TIAdian.notification("...", {pos: 'top-center'})</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>top-right</code>
+          </td>
+          <td style="text-align: left;">
+            <code>TIAdian.notification("...", {pos: 'top-right'})</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>bottom-left</code>
+          </td>
+          <td style="text-align: left;">
+            <code>TIAdian.notification("...", {pos: 'bottom-left'})</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>bottom-center</code>
+          </td>
+          <td style="text-align: left;">
+            <code>TIAdian.notification("...", {pos: 'bottom-center'})</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>bottom-right</code>
+          </td>
+          <td style="text-align: left;">
+            <code>TIAdian.notification("...", {pos: 'bottom-right'})</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-example">&lt;p tiadian-margin&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button" onclick="TIAdian.notification({message: 'Top Left...', pos: 'top-left'})"&gt;Top Left&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button" onclick="TIAdian.notification({message: 'Top Center...', pos: 'top-center'})"&gt;Top Center&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button" onclick="TIAdian.notification({message: 'Top Right...', pos: 'top-right'})"&gt;Top Right&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button" onclick="TIAdian.notification({message: 'Bottom Left...', pos: 'bottom-left'})"&gt;Bottom Left&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button" onclick="TIAdian.notification({message: 'Bottom Center...', pos: 'bottom-center'})"&gt;Bottom Center&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button" onclick="TIAdian.notification({message: 'Bottom Right...', pos: 'bottom-right'})"&gt;Bottom Right&lt;/button&gt;
+&lt;/p&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="style">Style</h2>
+    <p>A notification can be styled by adding a status to the message to indicate a primary, success, warning or a danger status.</p>
+    <pre>
+      <code class="language-js">TIAdian.notification("...", {status: 'primary'})
+</code>
+    </pre>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Style</th>
+          <th style="text-align: left;">Code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>primary</code>
+          </td>
+          <td style="text-align: left;">
+            <code>TIAdian.notification("...", {status:'primary'})</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>success</code>
+          </td>
+          <td style="text-align: left;">
+            <code>TIAdian.notification("...", {status:'success'})</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>warning</code>
+          </td>
+          <td style="text-align: left;">
+            <code>TIAdian.notification("...", {status:'warning'})</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>danger</code>
+          </td>
+          <td style="text-align: left;">
+            <code>TIAdian.notification("...", {status:'danger'})</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-example">&lt;p tiadian-margin&gt;
+    &lt;button class="tiadian-button tiadian-button-default demo" type="button" onclick="TIAdian.notification({message: 'Primary message...', status: 'primary'})"&gt;Primary&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default demo" type="button" onclick="TIAdian.notification({message: 'Success message...', status: 'success'})"&gt;Success&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default demo" type="button" onclick="TIAdian.notification({message: 'Warning message...', status: 'warning'})"&gt;Warning&lt;/button&gt;
+    &lt;button class="tiadian-button tiadian-button-default demo" type="button" onclick="TIAdian.notification({message: 'Danger message...', status: 'danger'})"&gt;Danger&lt;/button&gt;
+&lt;/p&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="close-all">Close all</h2>
+    <p>You can close all open notifications by calling <code>TIAdian.notification.closeAll()</code>.</p>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default close" onclick="TIAdian.notification.closeAll()"&gt;Close All&lt;/button&gt;
+
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>message</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Notification message to show.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>status</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">Notification status color.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>timeout</code>
+          </td>
+          <td style="text-align: left;">Integer</td>
+          <td style="text-align: left;">
+            <code>5000</code>
+          </td>
+          <td style="text-align: left;">Visibility duration until a notification disappears.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>group</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">Useful, if you want to close all notifications in a specific group.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>pos</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>top-center</code>
+          </td>
+          <td style="text-align: left;">Display corner.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript-1">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <p>This is a <code>Functional Component</code> and may omit the element argument.</p>
+    <pre>
+      <code class="language-js">TIAdian.notification(options);
+TIAdian.notification(message, status);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>close</code>
+          </td>
+          <td>Fires after the notification has been closed.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="methods">Methods</h3>
+    <p>The following methods are available for the component:</p>
+    <h4 id="close">Close</h4>
+    <pre>
+      <code class="language-js">TIAdian.notification(element).close(immediate);
+</code>
+    </pre>
+    <p>Closes the notification.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Type</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>immediate</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">true</td>
+          <td style="text-align: left;">Transition the notification out.</td>
+        </tr>
+      </tbody>
+    </table>
