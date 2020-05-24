@@ -1,0 +1,89 @@
+
+    <h1 id="video">Video</h1>
+    <p class="tiadian-text-lead">Start playing videos as they are shown or enter the viewport.</p>
+    <p>The Video component offers two advanced functions for videos. First, it allows you to pause a video whenever it's hidden with CSS and resume playing once it becomes visible again. In addition, the video can pause when it's outside the viewport and start playing when entering it.</p>
+    <p>Secondly, it allows you to mute YouTube and Vimeo videos, which is often needed if they are used as the background of a section.</p>
+    <p>For example, the <a href="slideshow.md#videos">Slideshow</a>, <a href="lightbox.md#content-sources">Lightbox</a> and <a href="cover.md#video">Cover</a> components inherit and make use of both functions.</p>
+    <hr />
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>tiadian-video</code> attribute to a <code>&lt;video&gt;</code> element. The video will be paused whenever it's hidden with CSS and resume once it becomes visible again.</p>
+    <pre>
+      <code class="language-html">&lt;video tiadian-video&gt;&lt;/video&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default tiadian-margin" type="button" tiadian-toggle="target: +"&gt;Toggle HTML5 Video&lt;/button&gt;
+
+&lt;video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" controls playsinline hidden tiadian-video&gt;&lt;/video&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="autoplay-inview">Autoplay inview</h2>
+    <p>To play a video when it enters the viewport and pause it again when it leaves the viewport, just add the <code>tiadian-video="autoplay: inview"</code> attribute to a <code>&lt;video&gt;</code> element.</p>
+    <pre>
+      <code class="language-html">&lt;video tiadian-video="autoplay: inview"&gt;&lt;/video&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" loop muted playsinline tiadian-video="autoplay: inview"&gt;&lt;/video&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="automute-youtube-or-vimeo">Automute YouTube or Vimeo</h2>
+    <p>To mute YouTube or Vimeo videos by default, add the <code>tiadian-video="automute: true"</code> attribute to the <code>&lt;iframe&gt;</code> element.</p>
+    <pre>
+      <code class="language-html">&lt;iframe src="" width="" height="" frameborder="0" tiadian-video="automute: true"&gt;&lt;/iframe&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default tiadian-margin-bottom" type="button" tiadian-toggle="target: +"&gt;Toggle YouTube Video&lt;/button&gt;
+
+&lt;iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=0&amp;amp;showinfo=0&amp;amp;rel=0&amp;amp;modestbranding=1&amp;amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen tiadian-responsive tiadian-video="automute: true"&gt;&lt;/iframe&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>The table below lists the available settings of the <code>tiadian-video</code> attribute. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>autoplay</code>
+          </td>
+          <td style="text-align: left;">Boolean, String</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">The video automatically plays/pauses as it's visible/hidden on the page. A value of <code>inview</code> will delay loading the video and play/pause the video as it enters/leaves the viewport.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>automute</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Automatically mute YouTube or Vimeo videos.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <code>autoplay</code> is the <em>Primary</em> option, and its key may be omitted if it's the only option in the attribute value.</p>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.video(element, options);
+</code>
+    </pre>
+
