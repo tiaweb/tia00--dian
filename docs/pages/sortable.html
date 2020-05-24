@@ -1,0 +1,361 @@
+
+    <h1 id="sortable">Sortable</h1>
+    <p class="tiadian-text-lead">Create sortable grids and lists to rearrange the order of its elements.</p>
+    <p>Drag and drop an element to a new location within the sortable grid, while the other items adjust to fit. This is great, if you want to sort items like gallery or menu items, for example.</p>
+    <hr />
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>tiadian-sortable</code> attribute to a container and create child elements.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-sortable&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-1-4@s tiadian-text-center" tiadian-sortable="handle: .tiadian-card" tiadian-grid&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;Item 1&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;Item 2&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;Item 3&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;Item 4&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;Item 5&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;Item 6&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;Item 7&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;Item 8&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="handle">Handle</h2>
+    <p>By default, the entire sortable element can be used for drag and drop sorting. To create a handle which will be used instead, just add the <code>handle: SELECTOR</code> option to the attribute and add the handle class to the element that you want to use as a handle.</p>
+    <pre>
+      <code class="language-html">&lt;ul tiadian-sortable="handle: .tiadian-sortable-handle"&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-sortable-handle"&gt;&lt;/div&gt;
+        ...
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-1-4@s tiadian-text-center" tiadian-sortable="handle: .tiadian-sortable-handle" tiadian-grid&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;span class="tiadian-sortable-handle tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt;Item 1
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;span class="tiadian-sortable-handle tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt;Item 2
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;span class="tiadian-sortable-handle tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt;Item 3
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;span class="tiadian-sortable-handle tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt;Item 4
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;span class="tiadian-sortable-handle tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt;Item 5
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;span class="tiadian-sortable-handle tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt;Item 6
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;span class="tiadian-sortable-handle tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt;Item 7
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class="tiadian-card tiadian-card-default tiadian-card-body"&gt;
+            &lt;span class="tiadian-sortable-handle tiadian-margin-small-right" tiadian-icon="icon: table"&gt;&lt;/span&gt;Item 8
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="group">Group</h2>
+    <p>To be able to sort items from one list to another, you can group them by adding the <code>group: GROUP-NAME</code> option to the <code>tiadian-sortable</code> attribute on each list.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-sortable="group: my-group"&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div tiadian-sortable="group: my-group"&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-3@s" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;h4&gt;Group 1&lt;/h4&gt;
+        &lt;div tiadian-sortable="group: sortable-group"&gt;
+            &lt;div class="tiadian-margin"&gt;
+                &lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small"&gt;Item 1&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-margin"&gt;
+                &lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small"&gt;Item 2&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-margin"&gt;
+                &lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small"&gt;Item 3&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-margin"&gt;
+                &lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small"&gt;Item 4&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;h4&gt;Group 2&lt;/h4&gt;
+        &lt;div tiadian-sortable="group: sortable-group"&gt;
+            &lt;div class="tiadian-margin"&gt;
+                &lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small"&gt;Item 1&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-margin"&gt;
+                &lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small"&gt;Item 2&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-margin"&gt;
+                &lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small"&gt;Item 3&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-margin"&gt;
+                &lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-card-small"&gt;Item 4&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;h4&gt;Empty Group&lt;/h4&gt;
+        &lt;div tiadian-sortable="group: sortable-group"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="custom-class">Custom class</h2>
+    <p>You can also apply one or more custom classes to items when they are being dragged. To do so, add the <code>cls-custom: MY-CLASS</code> option to the attribute.</p>
+    <pre>
+      <code class="language-html">&lt;ul tiadian-sortable="cls-custom: my-class"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> In this example, we are using a nav from the <a href="nav.md">Nav component</a>. When dragging an item it will get a box-shadow and background.</p>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-nav tiadian-nav-default tiadian-width-medium" tiadian-sortable="cls-custom: tiadian-box-shadow-small tiadian-flex tiadian-flex-middle tiadian-background"&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>group</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>''</code>
+          </td>
+          <td style="text-align: left;">The group</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>animation</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>150</code>
+          </td>
+          <td style="text-align: left;">The animation duration.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>threshold</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>5</code>
+          </td>
+          <td style="text-align: left;">Mouse move threshold before dragging starts.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-item</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-sortable-item</code>
+          </td>
+          <td style="text-align: left;">The item class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-placeholder</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-sortable-placeholder</code>
+          </td>
+          <td style="text-align: left;">The placeholder class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-drag</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-sortable-drag</code>
+          </td>
+          <td style="text-align: left;">The ghost class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-drag-state</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-drag</code>
+          </td>
+          <td style="text-align: left;">The body's dragging class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-base</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-sortable</code>
+          </td>
+          <td style="text-align: left;">The list's class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-no-drag</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-sortable-nodrag</code>
+          </td>
+          <td style="text-align: left;">Disable dragging on elements with this class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-empty</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-sortable-empty</code>
+          </td>
+          <td style="text-align: left;">The empty list class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-custom</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>''</code>
+          </td>
+          <td style="text-align: left;">The ghost's custom class.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>handle</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">The handle selector.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.sortable(element, options);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>start</code>
+          </td>
+          <td style="text-align: left;">Fires after dragging starts.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>stop</code>
+          </td>
+          <td style="text-align: left;">Fires after dragging stops.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>moved</code>
+          </td>
+          <td style="text-align: left;">Fires after an element has been moved.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>added</code>
+          </td>
+          <td style="text-align: left;">Fires after an element has been added.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>removed</code>
+          </td>
+          <td style="text-align: left;">Fires after an element has been removed.</td>
+        </tr>
+      </tbody>
+    </table>
+ 
