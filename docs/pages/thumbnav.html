@@ -1,0 +1,101 @@
+
+    <h1 id="thumbnav">Thumbnav</h1>
+    <p class="tiadian-text-lead">Create a flexible thumbnail navigation.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To create a navigation with thumbnails, use the following classes. This component is built with Flexbox. So to align a thumbnav, you can use <a href="flex.md">Flex component</a>.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-thumbnav</code>
+          </td>
+          <td style="text-align: left;">Add this class to a <code>&lt;ul&gt;</code> element to define the Thumbnav component. Nest your thumbnail images inside <code>&lt;a&gt;</code> elements within the list.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-active</code>
+          </td>
+          <td style="text-align: left;">Add this class to a list item to apply an active state.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-thumbnav"&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href=""&gt;&lt;img src="" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;img src="" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> For a better layout, if items should wrap into the next row, add the <code>tiadian-margin</code> attribute from the <a href="margin.md">Margin component</a>.</p>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-thumbnav" tiadian-margin&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;&lt;img src="images/photo.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/dark.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/light.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="vertical-alignment">Vertical alignment</h2>
+    <p>The thumbnav can also be displayed vertically. Just add the <code>.tiadian-thumbnav-vertical</code> modifier.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-thumbnav tiadian-thumbnav-vertical"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-thumbnav tiadian-thumbnav-vertical" tiadian-margin&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;&lt;img src="images/photo.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/dark.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="images/light.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="position-as-overlay">Position as overlay</h2>
+    <p>To position the thumbnav on top of an element or the <a href="slideshow.md">Slideshow component</a> for example, add one of the <code>.tiadian-position-*</code> classes from the <a href="position.md">Position component</a> to a <code>div</code> element wrapping the thumbnav. To create a position context on the container, add the <code>.tiadian-position-relative</code> class.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-position-relative"&gt;
+
+    &lt;!-- The element which is wrapped goes here --&gt;
+
+    &lt;div class="tiadian-position-bottom-center tiadian-position-small"&gt;
+        &lt;ul class="tiadian-thumbnav"&gt;...&lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative" tiadian-slideshow="animation: fade"&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class="tiadian-position-bottom-center tiadian-position-small"&gt;
+        &lt;ul class="tiadian-thumbnav"&gt;
+            &lt;li tiadian-slideshow-item="0"&gt;&lt;a href="#"&gt;&lt;img src="images/photo.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li tiadian-slideshow-item="1"&gt;&lt;a href="#"&gt;&lt;img src="images/dark.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li tiadian-slideshow-item="2"&gt;&lt;a href="#"&gt;&lt;img src="images/light.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+ 
