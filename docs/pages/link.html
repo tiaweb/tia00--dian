@@ -1,0 +1,67 @@
+
+    <h1 id="link">Link</h1>
+    <p class="tiadian-text-lead">Define different styles to integrate links into specific content.</p>
+    <h2 id="muted-modifier">Muted modifier</h2>
+    <p>The <a href="base.md">Base component</a> determines the default link color. If you want the link to a apply a muted style instead, just add the <code>.tiadian-link-muted</code> class to the anchor element. You can also add the class to a parent element and it will be applied to all <code>&lt;a&gt;</code> elements inside it.</p>
+    <pre>
+      <code class="language-html">&lt;a class="tiadian-link-muted" href="#"&gt;&lt;/a&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;a class="tiadian-link-muted" href="#"&gt;Link&lt;/a&gt;
+
+&lt;p class="tiadian-link-muted"&gt;Lorem ipsum &lt;a href="#"&gt;dolor sit&lt;/a&gt; amet, consectetur adipiscing elit, sed do &lt;a href="#"&gt;eiusmod&lt;/a&gt; tempor incididunt ut &lt;a href="#"&gt;labore et&lt;/a&gt; dolore magna aliqua.&lt;/p&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="text-modifier">Text modifier</h2>
+    <p>To make a link appear like body text and apply a hover effect, add the <code>.tiadian-link-text</code> class to the anchor element. You can also add the class to a parent element and it will be applied to all <code>&lt;a&gt;</code> elements inside it. This is useful for link lists in the page footer.</p>
+    <pre>
+      <code class="language-html">&lt;a class="tiadian-link-text" href="#"&gt;&lt;/a&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-list tiadian-link-text"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="heading-modifier">Heading modifier</h2>
+    <p>To style a link inside a heading element, add the <code>.tiadian-link-heading</code> class to the anchor element.</p>
+    <pre>
+      <code class="language-html">&lt;h3&gt;&lt;a class="tiadian-link-heading" href="#"&gt;&lt;/a&gt;&lt;/h3&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;h3&gt;&lt;a class="tiadian-link-heading" href="#"&gt;Heading&lt;/a&gt;&lt;/h3&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="reset-modifier">Reset modifier</h2>
+    <p>To reset a link's color, so that it inherits the color from its parent, add the <code>.tiadian-link-reset</code> class. There won't be any hover effect at all. This is useful for links inside heading elements. You can also add the class to a parent element and it will be applied to all <code>&lt;a&gt;</code> elements inside it.</p>
+    <pre>
+      <code class="language-example">&lt;a class="tiadian-link-reset" href="#"&gt;Link&lt;/a&gt;
+
+&lt;h3&gt;&lt;a class="tiadian-link-reset" href="#"&gt;Heading&lt;/a&gt;&lt;/h3&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="toggle">Toggle</h2>
+    <p>To use an anchor as parent element and apply the link style on one of its child elements, just add the <code>.tiadian-link-toggle</code> class to the parent element and one of the <code>.tiadian-link-*</code> classes to the child element. For instance, you can link the whole card and still have the hover effect on the heading.</p>
+    <pre>
+      <code class="language-html">&lt;a class="tiadian-link-toggle" href="#"&gt;
+    &lt;span class="tiadian-link-heading"&gt;&lt;/span&gt;
+&lt;/a&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;a href class="tiadian-display-block tiadian-card tiadian-card-body tiadian-card-default tiadian-link-toggle tiadian-width-medium"&gt;
+    &lt;h3 class="tiadian-card-title"&gt;&lt;span class="tiadian-link-heading"&gt;Heading&lt;/span&gt;&lt;/h3&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+&lt;/a&gt;
+</code>
+    </pre>
+  
