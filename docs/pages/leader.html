@@ -1,0 +1,93 @@
+
+  
+    <h1 id="leader">Leader</h1>
+    <p class="tiadian-text-lead">Create dot leaders for pricing menus or tables of contents.</p>
+    <p>A leader, also known as a dot leader or a tab leader, is a repeating pattern used to visually connect content across horizontal spaces. It is most commonly used for restaurant menus, between the meals and prices, and for tables of contents, between titles and page numbers.</p>
+    <hr />
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>tiadian-leader</code> attribute to the element on the left. A line of characters, by default dots, will then fill the remaining space between the item and its adjacent element.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-leader&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-grid-small" tiadian-grid&gt;
+    &lt;div class="tiadian-width-expand" tiadian-leader&gt;Lorem ipsum dolor sit amet&lt;/div&gt;
+    &lt;div&gt;$20.90&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="fill-character">Fill character</h2>
+    <p>To change the dot to any custom character, just add the <code>fill: STRING</code> option to the attribute.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-leader="fill: -"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-grid-small" tiadian-grid&gt;
+    &lt;div class="tiadian-width-expand" tiadian-leader="fill: -"&gt;Lorem ipsum dolor sit amet&lt;/div&gt;
+    &lt;div&gt;$20.90&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> The default fill character can be set through CSS or a LESS variable.</p>
+    <pre>
+      <code class="language-css">.tiadian-leader-fill-content::before { content: '.'; }
+:root { --tiadian-leader-fill-content: '.'; }
+</code>
+    </pre>
+    <pre>
+      <code class="language-less">@leader-fill-content: '.';
+</code>
+    </pre>
+    <hr />
+    <h2 id="responsive">Responsive</h2>
+    <p>It's possible to disable the leader for different device widths by applying the <code>media</code> option to the attribute and adding the appropriate viewport width. Add a number in pixels, for example <code>media: 640</code>, or a breakpoint, for example <code>media: @m</code>. The leader will be shown from the specified viewport width and upwards, but not below.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-leader="media: @m"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>The table below lists the available settings of the <code>tiadian-leader</code> attribute. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>fill</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">``</td>
+          <td style="text-align: left;">Optional fill character.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>media</code>
+          </td>
+          <td style="text-align: left;">Integer, String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Condition for the space filling - a width as integer (e.g. 640) or a breakpoint (e.g. @s, @m, @l, @xl) or any valid media query (e.g. (min-width: 900px)).</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.leader(element, options);
+</code>
+    </pre>
+  
