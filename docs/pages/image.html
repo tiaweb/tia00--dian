@@ -1,0 +1,277 @@
+
+    <h1 id="image">Image</h1>
+    <p class="tiadian-text-lead">Speed up page loading times and decrease traffic by only loading images as they enter the viewport.</p>
+    <p>The Image component improves page speed significantly by following these methods:</p>
+    <ul>
+      <li>Only images which are initially in the viewport are loaded.</li>
+      <li>Other images are lazy loaded as they enter the viewport when scrolling.</li>
+      <li>An empty placeholder image is generated instantly to prevent content jumping while images are being loaded or not yet in the viewport.</li>
+      <li>Optionally, the placeholder image can have any kind of background or preload animation.</li>
+    </ul>
+    <p>The Image components supports the <code>img</code> element and the CSS <code>background-image</code> property. The <code>srcset</code> attribute for images is supported as well creating the optimal images for different device widths and high resolution (retina) displays. The Image component even makes it possible to use <code>srcset</code> for the CSS <code>background-image</code> property.</p>
+    <hr />
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>tiadian-img</code> attribute to an <code>&lt;img&gt;</code> element and add the <code>data-</code> prefix to the <code>src</code> attribute so that it reads <code>data-src</code>.</p>
+    <pre>
+      <code class="language-html">&lt;img data-src="" width="" height="" alt="" tiadian-img&gt;
+</code>
+    </pre>
+    <p>The <code>width</code> and <code>height</code> attributes are required so an empty placeholder can be generated in the exact same size as the image. Alternatively, use <code>data-width</code> and <code>data-height</code> if you don't want to set the explicit attributes.</p>
+    <pre>
+      <code class="language-example">&lt;img data-src="images/light.jpg" width="1800" height="1200" alt="" tiadian-img&gt;
+</code>
+    </pre>
+    <h3 id="inline-svg">Inline SVG</h3>
+    <p>To lazy load SVG images which are injected as inline SVG using the <a href="svg.md">SVG component</a>, make sure to apply the <code>data-src</code> option in the component attribute and not as data attribute.</p>
+    <pre>
+      <code class="language-html">&lt;img width="" height="" alt="" tiadian-img="data-src:" tiadian-svg&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="srcset">Srcset</h2>
+    <p>To use the <code>srcset</code> attribute, just prefix it as <code>data-srcset</code>.</p>
+    <pre>
+      <code class="language-html">&lt;img data-src="" data-srcset="" sizes="" width="" height="" alt="" tiadian-img&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;img data-src="https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=650&amp;h=433&amp;q=80"
+     data-srcset="https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=650&amp;h=433&amp;q=80 650w,
+                  https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=1300&amp;h=866&amp;q=80 1300w"
+     sizes="(min-width: 650px) 650px, 100vw" width="650" height="433" alt="" tiadian-img&gt;
+
+</code>
+    </pre>
+    <hr />
+    <h2 id="background-image">Background image</h2>
+    <p>To use this component with the CSS <code>background-image</code> property, add it to a <code>&lt;div&gt;</code> or any other element.</p>
+    <pre>
+      <code class="language-html">&lt;div data-src="" tiadian-img&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-height-medium tiadian-flex tiadian-flex-center tiadian-flex-middle tiadian-background-cover tiadian-light" data-src="images/photo.jpg" tiadian-img&gt;
+  &lt;h1&gt;Background Image&lt;/h1&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="background-image-with-srcset">Background image with Srcset</h3>
+    <p>The Image component allows you to use <code>srcset</code> for background images. Just add the <code>data-srcset</code> attribute. If you need the <code>sizes</code> attribute, prefix it as <code>data-sizes</code>.</p>
+    <pre>
+      <code class="language-html">&lt;div data-src="" data-srcset="" data-sizes="" tiadian-img&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-height-medium tiadian-flex tiadian-flex-center tiadian-flex-middle tiadian-background-cover tiadian-light"
+     data-src="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&amp;w=650&amp;h=433&amp;q=80"
+     data-srcset="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&amp;w=650&amp;h=433&amp;q=80 650w,
+                  https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&amp;w=1300&amp;h=866&amp;q=80 1300w"
+     data-sizes="(min-width: 650px) 650px, 100vw" tiadian-img&gt;
+    &lt;h1&gt;Background Image&lt;/h1&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="target">Target</h2>
+    <p>Usually, the image starts loading when it enters the viewport. To start loading images based on the viewport visibility of another element, use the <code>target</code> option. This is very useful to lazy load images in the <a href="slideshow.md">Slideshow</a> and <a href="slider.md">Slider</a> components.</p>
+    <pre>
+      <code class="language-html">&lt;img data-src="" width="" height="" alt="" tiadian-img="target: .my-class"&gt;
+</code>
+    </pre>
+    <p>The following example loads all images in the slides as soon as the slideshow enters the viewport. It uses <code>!.tiadian-slideshow-items</code> as a target selector. The <code>!</code> looks up the DOM to find the next parent element with the <code>.tiadian-slideshow-items</code> class.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img data-src="images/photo.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !.tiadian-slideshow-items"&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img data-src="images/dark.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !.tiadian-slideshow-items"&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img data-src="images/light.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !.tiadian-slideshow-items"&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="load-previous-and-next">Load previous and next</h3>
+    <p>It's also possible to load only the image of the active slide and lazy load the images of the other slides. Just target the previous and next slides for each image by using the <code>target: !* -*, !* +*</code> option. There are two exceptions where you have to select the first and the last slides.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Selector</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>!* -*</code>
+          </td>
+          <td style="text-align: left;">Looks for the direct parent (<code>!*</code>) and selects the preceding element (<code>-*</code>).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>!* +*</code>
+          </td>
+          <td style="text-align: left;">Looks for the direct parent (<code>!*</code>) and selects the succeeding element (<code>+*</code>).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>!.tiadian-slideshow-items &gt; :last-child</code>
+          </td>
+          <td style="text-align: left;">Looks for the next parent element with the <code>.tiadian-slideshow-item</code> class and selects the last child.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>!.tiadian-slideshow-items &gt; :first-child</code>
+          </td>
+          <td style="text-align: left;">Looks for the next parent element with the <code>.tiadian-slideshow-item</code> class and selects the first child.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-slideshow-items"&gt;
+    &lt;li&gt;
+        &lt;img data-src="" width="" height="" alt="" tiadian-img="target: !ul &gt; :last-child, !* +*"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img data-src="" width="" height="" alt="" tiadian-img="target: !* -*, !* +*"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img data-src="" width="" height="" alt="" tiadian-img="target: !* -*, !* +*"&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img data-src="" width="" height="" alt="" tiadian-img="target: !* -*, !ul &gt; :first-child"&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img data-src="images/photo.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !ul &gt; :last-child, !* +*"&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img data-src="images/dark.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !* -*, !* +*"&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img data-src="images/light.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !* -*, !ul &gt; :first-child"&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="custom-placeholder">Custom placeholder</h2>
+    <p>By default, the placeholder image is transparent. Use the <code>img[data-src][src*='data:image']</code> selector to add a custom background or preload animation.</p>
+    <pre>
+      <code class="language-css">img[data-src][src*='data:image'] { background: rgba(0,0,0,0.1); }
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>dataSrc</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">''</td>
+          <td style="text-align: left;">The image's <code>src</code> attribute.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>dataSrcset</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">false</td>
+          <td style="text-align: left;">The image's <code>srcset</code> attribute.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>sizes</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">false</td>
+          <td style="text-align: left;">The image's <code>sizes</code> attribute.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>width</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">false</td>
+          <td style="text-align: left;">The image's <code>width</code> attribute. It will be used to determine the placeholder's width and the position of the image in the document.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>height</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">false</td>
+          <td style="text-align: left;">The image's <code>height</code> attribute. It will be used to determine the placeholder's height and the position of the image in the document.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>offsetTop</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">'50vh'</td>
+          <td style="text-align: left;">The offset increases the viewport's bounding box vertically before computing an intersection with the image.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>offsetLeft</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">0</td>
+          <td style="text-align: left;">The offset increases the viewport's bounding box horizontally before computing an intersection with the image.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>target</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">false</td>
+          <td style="text-align: left;">A list of targets who's bounding boxes will be used to compute an intersection with the image. Defaults to the image itself.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <code>dataSrc</code> is the <em>Primary</em> option and its key may be omitted, if it's the only option in the attribute value.</p>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.img(element, options);
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> The Image component keeps records of already loaded images in the Session Storage. That's how it tries to determine if an image is already cached. A cached image is loaded immediately, without the lazy loading mechanism to prevent any rendering flashes. Prior to testing the Image component, make sure to clear these records from your browser's Session Storage.</p>
+ 
