@@ -1,0 +1,306 @@
+
+    <h1 id="toggle">Toggle</h1>
+    <p class="tiadian-text-lead">Hide, switch or change the appearance of different contents through a toggle.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, just add the <code>tiadian-toggle="target: #ID"</code> attribute to a <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element. You can use any selector with the toggle attribute.</p>
+    <p>The toggle can be used to add or remove a class or attribute from the item. By default, it adds the <code>hidden</code> attribute to hide the element.</p>
+    <pre>
+      <code class="language-html">&lt;button tiadian-toggle="target: #my-id" type="button"&gt;&lt;/button&gt;
+&lt;p id="my-id"&gt;&lt;/p&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-usage"&gt;Toggle&lt;/button&gt;
+    &lt;p id="toggle-usage"&gt;What's up?&lt;/p&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="multiple-items">Multiple items</h2>
+    <p>You can also toggle multiple items at the same time. Just add the <code>target: SELECTOR</code> option to the <code>tiadian-toggle</code> attribute and use a selector that applies to all items.</p>
+    <pre>
+      <code class="language-html">&lt;button type="button" tiadian-toggle="target: .my-class"&gt;&lt;/button&gt;
+&lt;p class="my-class"&gt;&lt;/p&gt;
+&lt;p class="my-class"&gt;&lt;/p&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: .toggle"&gt;Toggle&lt;/button&gt;
+&lt;p class="toggle"&gt;Hello!&lt;/p&gt;
+&lt;p class="toggle" hidden&gt;Bazinga!&lt;/p&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> In this example we added the <code>hidden</code> attribute to one of the items, so that only the other item will be shown. The toggle will switch visible states between both elements.</p>
+    <hr />
+    <h2 id="custom-class">Custom class</h2>
+    <p>If you don't want to toggle the <code>hidden</code> attribute, you can also toggle a custom class. Just add the <code>cls: CLASS</code> option to the <code>tiadian-toggle</code> attribute. In this example we used the <code>.tiadian-card-primary</code> class to switch between different card styles.</p>
+    <pre>
+      <code class="language-html">&lt;button type="button" tiadian-toggle="target: #my-id; cls: tiadian-card-primary"&gt;&lt;/button&gt;
+&lt;p id="my-id" class="tiadian-card tiadian-card-default"&gt;&lt;/p&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-custom; cls: tiadian-card-primary"&gt;Toggle&lt;/button&gt;
+&lt;div id="toggle-custom" class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small"&gt;Custom class&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="animations">Animations</h2>
+    <p>The Toggle component allows you to add animations to items when toggling between them. Just add one of the <code>.tiadian-animation-*</code> classes from the <a href="animation.md">Animation component</a> to the animation parameter. The class will be applied to the in as well as the out animation. If you prefer a different out animation, just add another class.</p>
+    <pre>
+      <code class="language-html">&lt;button type="button" tiadian-toggle="target: #my-id; animation: tiadian-animation-fade"&gt;&lt;/button&gt;
+&lt;p id="my-id"&gt;&lt;/p&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button href="#toggle-animation" class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-animation; animation: tiadian-animation-fade"&gt;Toggle&lt;/button&gt;
+&lt;div id="toggle-animation" class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small"&gt;Animation&lt;/div&gt;
+</code>
+    </pre>
+    <h3 id="multiple-animations">Multiple animations</h3>
+    <p>You can also apply multiple animations from the <a href="animation">Animation component</a>. That way you can add different in and out animations.</p>
+    <pre>
+      <code class="language-html">&lt;button type="button" tiadian-toggle="target: #my-id; animation: tiadian-animation-slide-left, tiadian-animation-slide-bottom"&gt;&lt;/button&gt;
+&lt;p id="my-id"&gt;&lt;/p&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-animation-multiple; animation:  tiadian-animation-slide-left, tiadian-animation-slide-bottom"&gt;Toggle&lt;/button&gt;
+&lt;div id="toggle-animation-multiple" class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small"&gt;Animation&lt;/div&gt;
+</code>
+    </pre>
+    <h3 id="queued-animations">Queued animations</h3>
+    <p>When toggling multiple items with an animation, you might want to wait until the first animation has run through before animating the second item in. To do so, just add the <code>queued: true</code> option to the <code>tiadian-toggle</code> attribute.</p>
+    <pre>
+      <code class="language-html">&lt;button type="button" tiadian-toggle="target: .my-class; animation: tiadian-animation-fade; queued: true"&gt;&lt;/button&gt;
+&lt;p class="my-class"&gt;&lt;/p&gt;
+&lt;p class="my-class"&gt;&lt;/p&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: .toggle-animation-queued; animation: tiadian-animation-fade; queued: true; duration: 300"&gt;Toggle&lt;/button&gt;
+&lt;p class="toggle-animation-queued tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small"&gt;Animation&lt;/p&gt;
+&lt;p class="toggle-animation-queued tiadian-card tiadian-card-primary tiadian-card-body tiadian-margin-small" hidden&gt;Animation&lt;/p&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="modes">Modes</h2>
+    <p>A toggle can be triggered in different ways. Just add the <code>mode</code> option to the <code>tiadian-toggle</code> attribute and apply one of these values.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>hover</code>
+          </td>
+          <td style="text-align: left;">The toggle will be triggered on hover.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>click</code>
+          </td>
+          <td style="text-align: left;">The toggle will be triggered on click. This is the default value.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>click, hover</code>
+          </td>
+          <td style="text-align: left;">The toggle will be triggered on click and hover.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>media</code>
+          </td>
+          <td style="text-align: left;">The toggling behavior depends on the viewport width. <a href="#media">More information</a>.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;button type="button" tiadian-toggle="target: #my-id; mode: hover"&gt;&lt;/button&gt;
+&lt;p id="my-id"&gt;&lt;/p&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-hover; mode: hover"&gt;hover&lt;/button&gt;
+&lt;p id="toggle-hover"&gt;What's up?&lt;/p&gt;
+</code>
+    </pre>
+    <h3 id="media">Media</h3>
+    <p>When using the <code>media</code> mode, the <code>media</code> option with one of possible values has to be added as well. For example, add a number in pixels, e.g. <code>640</code>, or a breakpoint, e.g. <code>@s</code>, <code>@m</code>, <code>@l</code> or <code>@xl</code>. Without the <code>target</code> option, the toggle applies the toggled state to itself. This means it will switch between the different states that are defined in the <code>cls</code> option depending on the viewport width that it is displayed on.</p>
+    <pre>
+      <code class="language-html">&lt;!-- The primary modifier will only be applied on large screens --&gt;
+
+&lt;div class="tiadian-card tiadian-card-default" tiadian-toggle="cls: tiadian-card-primary; mode: media; media: @l"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-width-medium" tiadian-toggle="cls: tiadian-card-primary; mode: media; media: @l"&gt;
+    Primary on large screens
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> The initial toggle state depends on the <code>cls</code> option. It is either the first given class in the space separated list or if set to <code>false</code>, the <code>hidden</code> attribute. If more than one class is given, the other classes are simply being toggled on state change.</p>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>target</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">CSS selector of the element(s) to toggle.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>mode</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>click</code>
+          </td>
+          <td style="text-align: left;">Comma separated list of trigger behaviour modes. (<code>hover</code>, <code>click</code>, <code>media</code>)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">The class that is being toggled. Defaults to the <code>hidden</code> attribute.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>media</code>
+          </td>
+          <td style="text-align: left;">Integer, String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">In media mode, the breakpoint that triggers the toggle - a width as integer (e.g. 640) or a breakpoint (e.g. @s, @m, @l, @xl) or any valid media query (e.g. (min-width: 900px)).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>animation</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Space separated names of <a href="animation.md">animations</a> to use, comma separated for out animation.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>duration</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>200</code>
+          </td>
+          <td style="text-align: left;">Animation duration in milliseconds.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>queued</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Toggle the targets successively.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <code>target</code> is the <em>Primary</em> option and its key may be omitted, if it's the only option in the attribute value.</p>
+    <pre>
+      <code class="language-html">&lt;span tiadian-toggle=".my-class"&gt;&lt;/span&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.toggle(element, options);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeshow</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is shown. Can prevent showing by calling <code>preventDefault()</code> on the event.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>show</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>shown</code>
+          </td>
+          <td style="text-align: left;">Fires after the item's show animation has completed.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforehide</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is hidden. Can prevent hiding by calling <code>preventDefault()</code> on the event.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hide</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's hide animation has started.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hidden</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is hidden.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="methods">Methods</h3>
+    <p>The following methods are available for the component:</p>
+    <h4 id="toggle-1">Toggle</h4>
+    <pre>
+      <code class="language-js">TIAdian.toggle(element).toggle();
+</code>
+    </pre>
+    <p>Toggles the Toggle's target.</p>
+
