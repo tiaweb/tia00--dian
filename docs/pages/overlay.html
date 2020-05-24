@@ -1,0 +1,149 @@
+
+    <h1 id="overlay">Overlay</h1>
+    <p class="tiadian-text-lead">Create an image overlay, which comes in different styles.</p>
+    <h2 id="usage">Usage</h2>
+    <p>Add the <code>.tiadian-overlay</code> class to an element following an image to create the overlay panel. To create a position context, add the <code>.tiadian-inline</code> class from the <a href="utility.md#inline">Utility component</a> to a container element around both. Finally, add one of the <code>.tiadian-position-*</code> classes from the <a href="position.md">Position component</a> to align the overlay.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-inline"&gt;
+    &lt;img src="" alt=""&gt;
+    &lt;div class="tiadian-overlay tiadian-position-bottom"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> Add the <code>.tiadian-light</code> or <code>.tiadian-dark</code> class, so that elements will be optimized for better visibility on dark or light images.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-inline"&gt;
+    &lt;img src="images/photo.jpg" alt=""&gt;
+    &lt;div class="tiadian-overlay tiadian-light tiadian-position-bottom"&gt;
+        &lt;p&gt;Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="style-modifiers">Style modifiers</h2>
+    <p>By default, the overlay has padding, but no additional styling. Add one of these modifier classes to add a background color to the overlay.</p>
+    <h3 id="default">Default</h3>
+    <p>For a simple background color, add the <code>.tiadian-overlay-default</code> class.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@m" tiadian-grid&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-inline"&gt;
+            &lt;img src="images/photo.jpg" alt=""&gt;
+            &lt;div class="tiadian-overlay tiadian-overlay-default tiadian-position-bottom"&gt;
+                &lt;p&gt;Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-inline"&gt;
+            &lt;img src="images/photo.jpg" alt=""&gt;
+            &lt;div class="tiadian-overlay-default tiadian-position-cover"&gt;&lt;/div&gt;
+            &lt;div class="tiadian-overlay tiadian-position-bottom tiadian-dark"&gt;
+                &lt;p&gt;Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="primary">Primary</h3>
+    <p>For a prominent background color, add the <code>.tiadian-overlay-primary</code> class.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@m" tiadian-grid&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-inline"&gt;
+            &lt;img src="images/photo.jpg" alt=""&gt;
+            &lt;div class="tiadian-overlay tiadian-overlay-primary tiadian-position-bottom"&gt;
+                &lt;p&gt;Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-inline"&gt;
+            &lt;img src="images/photo.jpg" alt=""&gt;
+            &lt;div class="tiadian-overlay-primary tiadian-position-cover"&gt;&lt;/div&gt;
+            &lt;div class="tiadian-overlay tiadian-position-bottom tiadian-light"&gt;
+                &lt;p&gt;Default Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="overlay-icon">Overlay icon</h2>
+    <p>To display an overlay icon, add the <code>tiadian-overlay-icon</code> attribute to a <code>&lt;span&gt;</code> element inside the overlay.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-position-center"&gt;
+    &lt;span tiadian-overlay-icon&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@m" tiadian-grid&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-inline tiadian-light"&gt;
+            &lt;img src="images/dark.jpg" alt=""&gt;
+            &lt;div class="tiadian-position-center"&gt;
+                &lt;span tiadian-overlay-icon&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-inline tiadian-dark"&gt;
+            &lt;img src="images/photo.jpg" alt=""&gt;
+            &lt;div class="tiadian-overlay-default tiadian-position-cover"&gt;
+                &lt;div class="tiadian-position-center"&gt;
+                    &lt;span tiadian-overlay-icon&gt;&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="position">Position</h2>
+    <p>Add one of the <code>.tiadian-position-*</code> classes from the <a href="position.md">Position component</a> to align the overlay.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-overlay tiadian-position-top"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@m" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-inline"&gt;
+            &lt;img src="images/photo.jpg" alt=""&gt;
+            &lt;div class="tiadian-overlay tiadian-overlay-default tiadian-position-top"&gt;
+                &lt;p&gt;Top&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-inline"&gt;
+            &lt;img src="images/photo.jpg" alt=""&gt;
+            &lt;div class="tiadian-overlay tiadian-overlay-default tiadian-position-center"&gt;
+                &lt;p&gt;Center&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>f</p>
+  
