@@ -1,0 +1,450 @@
+
+    <h1 id="parallax">Parallax</h1>
+    <p class="tiadian-text-lead">Animate CSS properties depending on the scroll position of the document.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>tiadian-parallax</code> attribute to any element. Add an option with the desired animation target value for each CSS property you want to animate.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-parallax="bgy: -200"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-height-large tiadian-background-cover tiadian-light tiadian-flex" tiadian-parallax="bgy: -200" style="background-image: url('images/dark.jpg');"&gt;
+
+    &lt;h1 class="tiadian-width-1-2@m tiadian-text-center tiadian-margin-auto tiadian-margin-auto-vertical"&gt;Headline&lt;/h1&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="animated-properties">Animated properties</h2>
+    <p>You can use the following options to animate a number of CSS property.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Description</th>
+          <th>Default Unit</th>
+          <th style="text-align: left;">Default Start</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>x</code>
+          </td>
+          <td style="text-align: left;">Animate translateX.</td>
+          <td>
+            <code>px</code>
+          </td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>y</code>
+          </td>
+          <td style="text-align: left;">Animate translateY.</td>
+          <td>
+            <code>px</code>
+          </td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>bgy</code>
+          </td>
+          <td style="text-align: left;">Animate background Y position.</td>
+          <td>
+            <code>px</code>
+          </td>
+          <td style="text-align: left;">
+            <em>Current</em>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>bgx</code>
+          </td>
+          <td style="text-align: left;">Animate background X position.</td>
+          <td>
+            <code>px</code>
+          </td>
+          <td style="text-align: left;">
+            <em>Current</em>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>rotate</code>
+          </td>
+          <td style="text-align: left;">Animate rotation clockwise.</td>
+          <td>
+            <code>deg</code>
+          </td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>scale</code>
+          </td>
+          <td style="text-align: left;">Animate scaling.</td>
+          <td></td>
+          <td style="text-align: left;">
+            <code>1</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>color</code>
+          </td>
+          <td style="text-align: left;">Animate color</td>
+          <td></td>
+          <td style="text-align: left;">
+            <em>Current</em>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>background-color</code>
+          </td>
+          <td style="text-align: left;">Animate background-color</td>
+          <td></td>
+          <td style="text-align: left;">
+            <em>Current</em>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>border-color</code>
+          </td>
+          <td style="text-align: left;">Animate border color</td>
+          <td></td>
+          <td style="text-align: left;">
+            <em>Current</em>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>opacity</code>
+          </td>
+          <td style="text-align: left;">Animate the opacity.</td>
+          <td></td>
+          <td style="text-align: left;">
+            <em>Current</em>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>blur</code>
+          </td>
+          <td style="text-align: left;">Animate the blur filter.</td>
+          <td>
+            <code>px</code>
+          </td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>hue</code>
+          </td>
+          <td style="text-align: left;">Animate the hue rotation filter.</td>
+          <td>
+            <code>deg</code>
+          </td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>grayscale</code>
+          </td>
+          <td style="text-align: left;">Animate the grayscale filter.</td>
+          <td>
+            <code>%</code>
+          </td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>invert</code>
+          </td>
+          <td style="text-align: left;">Animate the invert filter.</td>
+          <td>
+            <code>%</code>
+          </td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>saturate</code>
+          </td>
+          <td style="text-align: left;">Animate the saturate filter.</td>
+          <td>
+            <code>%</code>
+          </td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>sepia</code>
+          </td>
+          <td style="text-align: left;">Animate the sepia filter.</td>
+          <td>
+            <code>%</code>
+          </td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>stroke</code>
+          </td>
+          <td style="text-align: left;">Animate strokes within SVG images.</td>
+          <td></td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The value can define any allowed unit type, e.g. <code>x: 20vw</code>. For some options, the unit of a value can be left out. It will be mapped to the default unit. For example, <code>x: 200</code> is the same as <code>x: 200px</code>.</p>
+    <hr />
+    <h2 id="start-and-end-values">Start and end values</h2>
+    <p>Options are always animated from their default start value to the target value set in the option. However, you can also define a start value yourself. This is done by passing two values separated by comma.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-parallax="opacity: 0,1"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-height-large tiadian-background-cover tiadian-overflow-hidden tiadian-light tiadian-flex tiadian-flex-top" style="background-image: url('images/dark.jpg');"&gt;
+    &lt;div class="tiadian-width-1-2@m tiadian-text-center tiadian-margin-auto tiadian-margin-auto-vertical"&gt;
+        &lt;h1 tiadian-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;"&gt;Headline&lt;/h1&gt;
+        &lt;p tiadian-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <h3 id="multiple-steps">Multiple steps</h3>
+    <p>Define multiple steps for a property by using a comma separated list of values.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-parallax="x: 0,50,150"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-height-large tiadian-background-cover tiadian-overflow-hidden tiadian-light tiadian-flex tiadian-flex-top" style="background-image: url('images/dark.jpg');"&gt;
+    &lt;div class="tiadian-width-1-2@m tiadian-text-center tiadian-margin-auto tiadian-margin-auto-vertical"&gt;
+        &lt;h1 tiadian-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;"&gt;Headline&lt;/h1&gt;
+        &lt;p tiadian-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="viewport-position">Viewport position</h2>
+    <p>Using the <code>viewport</code> option you can adjust the animation duration. The value defines how far inside the viewport the target element is scrolled until the animation is completed. With the value <code>1</code> or <code>false</code>, the animation lasts as long as the element is in the viewport (default behavior). Setting it to <code>0.5</code>, for example, animates the property until the scroll position reaches the middle of the target element.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-parallax="viewport: 0.5"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-height-large tiadian-background-cover tiadian-light tiadian-flex tiadian-flex-top" style="background-image: url('images/dark.jpg');"&gt;
+
+    &lt;h1 class="tiadian-width-1-2@m tiadian-text-center tiadian-margin-auto tiadian-margin-auto-vertical" tiadian-parallax="opacity: 0,1; y: 100,0; viewport: 0.5"&gt;Headline&lt;/h1&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="nesting">Nesting</h2>
+    <p>Different parallax animations can easily be nested.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-parallax="bgx: -50"&gt;
+    &lt;div tiadian-parallax="x: -100, 100"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-height-large tiadian-background-cover tiadian-light tiadian-flex tiadian-flex-top" tiadian-parallax="bgy: -200" style="background-image: url('images/dark.jpg');"&gt;
+
+    &lt;h1 class="tiadian-width-1-2@m tiadian-text-center tiadian-margin-auto tiadian-margin-auto-vertical" tiadian-parallax="y: 100,0"&gt;Headline&lt;/h1&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="target">Target</h2>
+    <p>Usually, the animation lasts as long as the element itself is in the viewport. To start and stop the animation based on the viewport visibility of another element, use the <code>target</code> option. This can be helpful when using nested animations.</p>
+    <pre>
+      <code class="language-html">&lt;div id="target"&gt;
+    &lt;div tiadian-parallax="target: #target"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div id="test-target" class="tiadian-height-large tiadian-background-cover tiadian-light tiadian-flex tiadian-flex-top" tiadian-parallax="bgy: -200" style="background-image: url('images/dark.jpg');"&gt;
+
+    &lt;h1 class="tiadian-width-1-2@m tiadian-text-center tiadian-margin-auto tiadian-margin-auto-vertical" tiadian-parallax="target: #test-target; y: 100,0"&gt;Headline&lt;/h1&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="easing">Easing</h2>
+    <p>To adjust the easing of the animation, add the <code>easing</code> option. <code>0</code> transitions at an even speed. A positive value starts off quickly slowing down until complete while a negative value starts off slowly increasing the speed until complete.</p>
+    <pre>
+      <code class="language-example">&lt;div id="test-easing" class="tiadian-height-large tiadian-background-cover tiadian-overflow-hidden tiadian-light tiadian-flex" style="background-image: url('images/dark.jpg');"&gt;
+     &lt;div class="tiadian-grid tiadian-margin-auto tiadian-margin-auto-vertical tiadian-flex-inline"&gt;
+        &lt;div&gt;&lt;div class="tiadian-card tiadian-card-default tiadian-padding-small" tiadian-parallax="y: 200; easing: -2"&gt;-2&lt;/div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;div class="tiadian-card tiadian-card-default tiadian-padding-small" tiadian-parallax="y: 200; easing: -1"&gt;-1&lt;/div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;div class="tiadian-card tiadian-card-default tiadian-padding-small" tiadian-parallax="y: 200; easing: -0.5"&gt;-0.5&lt;/div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;div class="tiadian-card tiadian-card-default tiadian-padding-small" tiadian-parallax="y: 200; easing: 0"&gt;0&lt;/div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;div class="tiadian-card tiadian-card-default tiadian-padding-small" tiadian-parallax="y: 200; easing: 0.5"&gt;0.5&lt;/div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;div class="tiadian-card tiadian-card-default tiadian-padding-small" tiadian-parallax="y: 200; easing: 1"&gt;1&lt;/div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;div class="tiadian-card tiadian-card-default tiadian-padding-small" tiadian-parallax="y: 200; easing: 2"&gt;2&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="colors">Colors</h2>
+    <p>Transition from one color to another, for example for borders, backgrounds or text colors. Define colors using <code>rgb()</code> definitions, color keywords or hex values.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-parallax="border-color: #00f,#f00"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div id="test-color" class="test-color tiadian-height-large tiadian-overflow-hidden tiadian-flex tiadian-flex-top" tiadian-parallax="background-color: yellow,white; border-color: #00f,#f00; viewport: 0.5" style="border: 10px solid #000;"&gt;
+
+    &lt;h1 class="tiadian-width-1-2@m tiadian-text-center tiadian-margin-auto tiadian-margin-auto-vertical" tiadian-parallax="target: #test-target; color: #0f0; viewport: 0.5"&gt;Headline&lt;/h1&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="filters">Filters</h2>
+    <p>CSS filters are an easy way to add graphical effects to any element on your page. While they are still an experimental feature for <a href="https://caniuse.com/filter">some browsers</a>, you can safely use them as long as your usability does not suffer. Using the Parallax component, you can dynamically change the amount of a filter on your element.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-parallax="blur: 10; sepia: 100;"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div id="test-filter" class="tiadian-height-large tiadian-background-cover tiadian-overflow-hidden tiadian-flex tiadian-flex-top" tiadian-parallax="sepia: 100;" style="background-image: url('images/light.jpg');"&gt;
+
+    &lt;h1 class="tiadian-width-1-2@m tiadian-text-center tiadian-margin-auto tiadian-margin-auto-vertical" tiadian-parallax="target: #test-filter; blur: 0,10;"&gt;Headline&lt;/h1&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="svg-strokes">SVG Strokes</h2>
+    <p>The Parallax component can be used to animate SVG strokes. The effect looks like the SVG strokes are drawn before your eyes. The SVG image has to be injected into the markup as an inline SVG. This can be done manually or by using the <a href="svg.md">SVG component</a>. Since the SVG component injects the SVG after the image element, the <code>tiadian-parallax</code> attribute has to be added to a parent element.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-parallax="stroke: 45"&gt;
+    &lt;img src="" alt="" tiadian-svg&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-text-center" tiadian-parallax="stroke: 100%; viewport: 0.7"&gt;
+    &lt;img src="images/strokes.svg" alt="" tiadian-svg&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> It's recommended to use percent unit <code>%</code>, so you don't have to know the exact length of the strokes.</p>
+    <hr />
+    <h2 id="svg-images">SVG Images</h2>
+    <p>The Parallax component can be applied to the elements of inline SVG images, like <code>rect</code>, <code>circle</code> and <code>path</code>.</p>
+    <pre>
+      <code class="language-html">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
+    &lt;rect x="0" y="0" width="10" height="10" tiadian-parallax="rotate: 360"/&gt;
+&lt;/svg&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="responsive">Responsive</h2>
+    <p>It's recommended to use <code>vw</code> or <code>vh</code> as length units instead of pixels. The parallax will adapt depending on the viewport.</p>
+    <p>The parallax can also be applied to certain viewports only. Add the <code>media</code> option with one of possible values. For example, add a number in pixel, e.g. <code>640</code>, or a breakpoint, e.g. <code>@s</code>, <code>@m</code>, <code>@l</code> or <code>@xl</code>. The parallax will be shown for the specified viewport width and larger.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-parallax="media: @m"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>easing</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>1</code>
+          </td>
+          <td style="text-align: left;">Animation easing during scrolling</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>target</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Element dimension reference for animation duration.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>viewport</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>1</code>
+          </td>
+          <td style="text-align: left;">Animation range depending on the viewport.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>media</code>
+          </td>
+          <td style="text-align: left;">Integer, String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Condition for the active status - a width as integer (e.g. 640) or a breakpoint (e.g. @s, @m, @l, @xl) or any valid media query (e.g. (min-width: 900px)).</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.parallax(element, options);
+</code>
+    </pre>
+  
