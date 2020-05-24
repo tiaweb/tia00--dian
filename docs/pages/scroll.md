@@ -1,91 +1,101 @@
-# Scroll
 
-<p class="uk-text-lead">Scroll smoothly when jumping to different sections on a page.</p>
 
-## Usage
-
-Simply add the `uk-scroll` attribute to any page-internal link that contains a URL fragment to add the smooth scrolling behavior.
-
-```html
-<a href="#my-id" uk-scroll></a>
-```
-
-```example
-<a class="uk-button uk-button-primary" href="#target" uk-scroll>Scroll down</a>
-```
-
-***
-
-## Callback after scroll
-
-To receive a callback when scrolling has completed, you can listen to the `scrolled` event on the link element that triggered the scrolling.
-
-```html
-<a id="js-scroll-trigger" href="#my-id" uk-scroll></a>
-```
-
-```js
-UIkit.util.on('#js-scroll-trigger', 'scrolled', function () {
+        <h1 id="scroll">Scroll</h1>
+<p class="tiadian-text-lead">Scroll smoothly when jumping to different sections on a page.</p>
+<h2 id="usage">Usage</h2>
+<p>Simply add the <code>tiadian-scroll</code> attribute to any page-internal link that contains a URL fragment to add the smooth scrolling behavior.</p>
+<pre><code class="language-html">&lt;a href=&quot;#my-id&quot; tiadian-scroll&gt;&lt;/a&gt;
+</code></pre>
+<pre><code class="language-example">&lt;a class=&quot;tiadian-button tiadian-button-primary&quot; href=&quot;#target&quot; tiadian-scroll&gt;Scroll down&lt;/a&gt;
+</code></pre>
+<hr />
+<h2 id="callback-after-scroll">Callback after scroll</h2>
+<p>To receive a callback when scrolling has completed, you can listen to the <code>scrolled</code> event on the link element that triggered the scrolling.</p>
+<pre><code class="language-html">&lt;a id=&quot;js-scroll-trigger&quot; href=&quot;#my-id&quot; tiadian-scroll&gt;&lt;/a&gt;
+</code></pre>
+<pre><code class="language-js">TIAdian.util.on('#js-scroll-trigger', 'scrolled', function () {
     alert('Done.');
 });
-```
+</code></pre>
+<pre><code class="language-example">&lt;a id=&quot;js-scroll-trigger&quot; class=&quot;tiadian-button tiadian-button-primary&quot; href=&quot;#target&quot; tiadian-scroll&gt;Down with callback&lt;/a&gt;
 
-```example
-<a id="js-scroll-trigger" class="uk-button uk-button-primary" href="#target" uk-scroll>Down with callback</a>
-
-<script>
-    UIkit.util.on('#js-scroll-trigger', 'scrolled', function () {
+&lt;script&gt;
+    TIAdian.util.on('#js-scroll-trigger', 'scrolled', function () {
         alert('Done.');
     });
-</script>
-```
-
-***
-
-## Component options
-
-Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. [Learn more](javascript.md#component-configuration)
-
-| Option     | Value  | Default | Description                         |
-|:-----------|:-------|:--------|:------------------------------------|
-| `offset`   | Number | `0`     | Pixel offset added to scroll top.   |
-
-## JavaScript
-
-Learn more about [JavaScript components](javascript.md#programmatic-use).
-
-### Initialization
-
-```js
-UIkit.scroll(element, options);
-```
-
+&lt;/script&gt;
+</code></pre>
+<hr />
+<h2 id="component-options">Component options</h2>
+<p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>offset</code></td>
+<td style="text-align: left;">Number</td>
+<td style="text-align: left;"><code>0</code></td>
+<td style="text-align: left;">Pixel offset added to scroll top.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="javascript">JavaScript</h2>
+<p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+<h3 id="initialization">Initialization</h3>
+<pre><code class="language-js">TIAdian.scroll(element, options);
+</code></pre>
 <div style="height: 2000px;"></div>
+<p><a id="target" class="tiadian-button tiadian-button-primary" href="#top" tiadian-scroll>Scroll up</a></p>
+<h3 id="events">Events</h3>
+<p>The following events will be triggered on elements with this component attached:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>beforescroll</code></td>
+<td style="text-align: left;">Fires before scroll begins. Can prevent scrolling by calling <code>preventDefault()</code> on the event.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>scrolled</code></td>
+<td style="text-align: left;">Fires after scrolling is finished.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods">Methods</h3>
+<p>The following methods are available for the component:</p>
+<h4 id="scrollto">ScrollTo</h4>
+<pre><code class="language-js">TIAdian.scroll(element).scrollTo(el);
+</code></pre>
+<p>Scroll to the given element.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>el</code></td>
+<td style="text-align: left;">Node, Selector</td>
+<td style="text-align: left;">undefined</td>
+<td style="text-align: left;">The element to scroll to.</td>
+</tr>
+</tbody>
+</table>
 
-<a id="target" class="uk-button uk-button-primary" href="#top" uk-scroll>Scroll up</a>
-
-### Events
-
-The following events will be triggered on elements with this component attached:
-
-| Name           | Description                                                             |
-|:---------------|:------------------------------------------------------------------------|
-| `beforescroll` | Fires before scroll begins. Can prevent scrolling by calling `preventDefault()` on the event. |
-| `scrolled`     | Fires after scrolling is finished.                                      |
-
-
-### Methods
-
-The following methods are available for the component:
-
-#### ScrollTo
-
-```js
-UIkit.scroll(element).scrollTo(el);
-```
-
-Scroll to the given element.
-
-| Name | Type           | Default   | Description               |
-|:-----|:---------------|:----------|:--------------------------|
-| `el` | Node, Selector | undefined | The element to scroll to. |
+ 
