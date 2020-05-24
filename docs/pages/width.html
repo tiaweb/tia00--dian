@@ -1,0 +1,338 @@
+
+
+        <h1 id="width">Width</h1>
+<p class="tiadian-text-lead">Define the width of elements for different viewport sizes.</p>
+<p>TIAdian's Width component is often used in combination with <a href="grid.md">grids</a> to split content into responsive columns. You can apply fractions, automatic width or expand units to fill the remaining space and combine these modes.</p>
+<hr />
+<h2 id="usage">Usage</h2>
+<p>Add one of the <code>.tiadian-width-*</code> classes to an element to determine its size. Typically, you would use a grid from the <a href="grid.md">Grid component</a> and its child elements to create the units.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Class</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-1-1</code></td>
+<td style="text-align: left;">Fills 100% of the available width.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-1-2</code></td>
+<td style="text-align: left;">The element takes up halves of its parent container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-1-3</code> to <code>.tiadian-width-2-3</code></td>
+<td style="text-align: left;">The element takes up thirds of its parent container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-1-4</code> to <code>.tiadian-width-3-4</code></td>
+<td style="text-align: left;">The element takes up fourths of its parent container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-1-5</code> to <code>.tiadian-width-4-5</code></td>
+<td style="text-align: left;">The element takes up fifths of its parent container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-1-6</code> to <code>.tiadian-width-5-6</code></td>
+<td style="text-align: left;">The element takes up sixths of its parent container.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong> We remove redundancy into each set of unit classes, so that for instance instead of .tiadian-width-3-6 you should use .tiadian-width-1-2.</p>
+<pre><code class="language-html">&lt;div tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-width-1-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-text-center&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-width-1-3&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-3&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-3&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-text-center&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-width-1-2&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-2&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-text-center&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-width-1-4&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-4&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-3-4&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;3-4&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="auto-expand">Auto &amp; expand</h2>
+<p>The Width component provides additional modifiers to give you more flexibility in the distribution of items.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Class</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-auto</code></td>
+<td style="text-align: left;">The item expands only to the width of its own content.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-expand</code></td>
+<td style="text-align: left;">The item expands to fill up the remaining space of the grid container.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&lt;div tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-width-auto&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-expand&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-text-center&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-width-auto&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Auto&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-expand&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Expand&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="equal-child-widths">Equal child widths</h2>
+<p>To create a grid whose child elements' widths are evenly split, you don't have to apply the same class to each list item within the grid. Just add one of the <code>.tiadian-child-width-*</code> classes to the grid itself.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Class</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>.tiadian-child-width-1-2</code></td>
+<td style="text-align: left;">All elements take up half of their parent container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-child-width-1-3</code></td>
+<td style="text-align: left;">All elements take up a third of their parent container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-child-width-1-4</code></td>
+<td style="text-align: left;">All elements take up a fourth of their parent container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-child-width-1-5</code></td>
+<td style="text-align: left;">All elements take up a fifth of their parent container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-child-width-1-6</code></td>
+<td style="text-align: left;">All elements take up a sixth of their parent container.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-child-width-auto</code></td>
+<td style="text-align: left;">Divides the grid into equal units depending on the content size.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-child-width-expand</code></td>
+<td style="text-align: left;">Divides the grid into equal units depending on the available space.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&lt;div class=&quot;tiadian-child-width-1-4&quot; tiadian-grid&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-4 tiadian-grid-small tiadian-text-center&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Items that use width classes with fractions will break into a new row, if they no longer fit their container's width. When using one of the <em>expand</em> classes, however, the space will be evenly distributed among items that always stay in the same row.</p>
+<pre><code class="language-html">&lt;div class=&quot;tiadian-child-width-expand&quot; tiadian-grid&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-expand tiadian-grid-small tiadian-text-center&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="fixed-width">Fixed width</h2>
+<p>In addition to the calculated width classes, you can also add one of the following classes, which apply fixed widths.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Class</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-small</code></td>
+<td style="text-align: left;">Applies a fixed width of <em>150px</em>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-medium</code></td>
+<td style="text-align: left;">Applies a fixed width of <em>300px</em>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-large</code></td>
+<td style="text-align: left;">Applies a fixed width of <em>450px</em>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-xlarge</code></td>
+<td style="text-align: left;">Applies a fixed width of <em>600px</em>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-xxlarge</code></td>
+<td style="text-align: left;">Applies a fixed width of <em>750px</em>.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&lt;div class=&quot;tiadian-width-medium&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-width-small tiadian-margin&quot;&gt;&lt;div class=&quot;tiadian-card tiadian-card-small tiadian-card-default tiadian-card-body&quot;&gt;Small&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;tiadian-width-medium tiadian-margin&quot;&gt;&lt;div class=&quot;tiadian-card tiadian-card-small tiadian-card-default tiadian-card-body&quot;&gt;Medium&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;tiadian-width-large tiadian-margin&quot;&gt;&lt;div class=&quot;tiadian-card tiadian-card-small tiadian-card-default tiadian-card-body&quot;&gt;Large&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;tiadian-width-xlarge tiadian-margin&quot;&gt;&lt;div class=&quot;tiadian-card tiadian-card-small tiadian-card-default tiadian-card-body&quot;&gt;X-Large&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;tiadian-width-xxlarge tiadian-margin&quot;&gt;&lt;div class=&quot;tiadian-card tiadian-card-small tiadian-card-default tiadian-card-body&quot;&gt;2X-Large&lt;/div&gt;&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="mixing-widths">Mixing widths</h2>
+<p>You can also combine <code>.tiadian-child-width-*</code> classes with <code>.tiadian-width-*</code> classes for individual items. That way it is possible, for example, to create a grid with one item that has a specific width and all other items expanding to fill the remaining space.</p>
+<pre><code class="language-html">&lt;div class=&quot;tiadian-child-width-expand&quot; tiadian-grid&gt;
+    &lt;div&gt;&lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-3&quot;&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;/div&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-expand tiadian-grid-small tiadian-text-center&quot; tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Expand&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-3&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Expand&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Expand&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="responsive-width">Responsive width</h2>
+<p>TIAdian provides a number of responsive widths classes. Basically they work just like the usual width classes, except that they have suffixes that represent the breakpoint from which they come to effect. These classes can be combined with the <a href="visibility.md">Visibility component</a>. This is great to adjust your layout and content for different device sizes.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Class</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-*</code><br> <code>.tiadian-child-width-*</code></td>
+<td style="text-align: left;">Affects all device widths, grid columns stay side by side.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-*@s</code><br> <code>.tiadian-child-width-*@s</code></td>
+<td style="text-align: left;">Affects device widths of <em>640px</em> and larger. Grid columns will stack on smaller sizes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-*@m</code><br> <code>.tiadian-child-width-*@m</code></td>
+<td style="text-align: left;">Affects device widths of <em>960px</em> and larger. Grid columns will stack on smaller sizes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-*@l</code><br> <code>.tiadian-child-width-*@l</code></td>
+<td style="text-align: left;">Affects device widths of <em>1200px</em> and larger. Grid columns will stack on smaller sizes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>.tiadian-width-*@xl</code><br> <code>.tiadian-child-width-*@xl</code></td>
+<td style="text-align: left;">Affects device widths of <em>1600px</em> and larger. Grid columns will stack on smaller sizes.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-example">&lt;div class=&quot;tiadian-grid-match tiadian-grid-small tiadian-text-center&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-width-1-2@m&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-2@m&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-4@m&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-4@m&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-4@m&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-4@m&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-5@m tiadian-hidden@l&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-secondary tiadian-card-body&quot;&gt;1-5@m&lt;br&gt;hidden@l&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-5@m tiadian-width-1-3@l&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-5@m&lt;br&gt;1-3@l&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-3-5@m tiadian-width-2-3@l&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;3-5@m&lt;br&gt;2-3@l&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tiadian-grid-match tiadian-grid-small tiadian-text-center&quot; tiadian-grid&gt;
+    &lt;div class=&quot;tiadian-width-auto@m tiadian-visible@l&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-primary tiadian-card-body&quot;&gt;auto@m&lt;br&gt;visible@l&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-1-3@m&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;1-3@m&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tiadian-width-expand@m&quot;&gt;
+        &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;expand@m&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+   
+            
