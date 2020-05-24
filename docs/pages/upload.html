@@ -1,0 +1,442 @@
+
+    <h1 id="upload">Upload</h1>
+    <p class="tiadian-text-lead">Upload files through a file input form element or a placeholder area.</p>
+    <h2 id="usage">Usage</h2>
+    <p>This JavaScript component utilizes the latest XMLHttpRequest Level 2 specification and provides the ability of uploading files via Ajax including tracking of the upload progress. The component provides two ways of uploading files: <code>select</code> and <code>drop</code>. While the <code>select</code> request can only be applied to <code>&lt;input type="file"&gt;</code> elements, you can basically use any element with <code>drop</code>, which enables you to simply drag and drop files from your desktop into the specified element to upload them. Note that this component does not handle your file uploads on the server.</p>
+    <hr />
+    <h2 id="select">Select</h2>
+    <p>In this example we are using a simple button which opens up the file select window.</p>
+    <pre>
+      <code class="language-example">&lt;div class="js-upload" tiadian-form-custom&gt;
+    &lt;input type="file" multiple&gt;
+    &lt;button class="tiadian-button tiadian-button-default" type="button" tabindex="-1"&gt;Select&lt;/button&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="drop-area">Drop area</h2>
+    <p>This example shows how to realize a drop area with the option to select the file from a file window.</p>
+    <pre>
+      <code class="language-example">&lt;div class="js-upload tiadian-placeholder tiadian-text-center"&gt;
+    &lt;span tiadian-icon="icon: cloud-upload"&gt;&lt;/span&gt;
+    &lt;span class="tiadian-text-middle"&gt;Attach binaries by dropping them here or&lt;/span&gt;
+    &lt;div tiadian-form-custom&gt;
+        &lt;input type="file" multiple&gt;
+        &lt;span class="tiadian-link"&gt;selecting one&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;progress id="js-progressbar" class="tiadian-progress" value="0" max="100" hidden&gt;&lt;/progress&gt;
+
+&lt;script&gt;
+
+    var bar = document.getElementById('js-progressbar');
+
+    TIAdian.upload('.js-upload', {
+
+        url: '',
+        multiple: true,
+
+        beforeSend: function () {
+            console.log('beforeSend', arguments);
+        },
+        beforeAll: function () {
+            console.log('beforeAll', arguments);
+        },
+        load: function () {
+            console.log('load', arguments);
+        },
+        error: function () {
+            console.log('error', arguments);
+        },
+        complete: function () {
+            console.log('complete', arguments);
+        },
+
+        loadStart: function (e) {
+            console.log('loadStart', arguments);
+
+            bar.removeAttribute('hidden');
+            bar.max = e.total;
+            bar.value = e.loaded;
+        },
+
+        progress: function (e) {
+            console.log('progress', arguments);
+
+            bar.max = e.total;
+            bar.value = e.loaded;
+        },
+
+        loadEnd: function (e) {
+            console.log('loadEnd', arguments);
+
+            bar.max = e.total;
+            bar.value = e.loaded;
+        },
+
+        completeAll: function () {
+            console.log('completeAll', arguments);
+
+            setTimeout(function () {
+                bar.setAttribute('hidden', 'hidden');
+            }, 1000);
+
+            alert('Upload Completed');
+        }
+
+    });
+
+&lt;/script&gt;
+
+</code>
+    </pre>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>To create <code>select</code> and <code>drop</code> upload listeners, you need to instantiate each upload class with the target element and options, which define callbacks and useful settings.</p>
+    <pre>
+      <code class="language-html">&lt;script&gt;
+
+    var bar = document.getElementById('js-progressbar');
+
+    TIAdian.upload('.js-upload', {
+
+        url: '',
+        multiple: true,
+
+        beforeSend: function (environment) {
+            console.log('beforeSend', arguments);
+            
+            // The environment object can still be modified here. 
+            // var {data, method, headers, xhr, responseType} = environment;
+            
+        },
+        beforeAll: function () {
+            console.log('beforeAll', arguments);
+        },
+        load: function () {
+            console.log('load', arguments);
+        },
+        error: function () {
+            console.log('error', arguments);
+        },
+        complete: function () {
+            console.log('complete', arguments);
+        },
+
+        loadStart: function (e) {
+            console.log('loadStart', arguments);
+
+            bar.removeAttribute('hidden');
+            bar.max = e.total;
+            bar.value = e.loaded;
+        },
+
+        progress: function (e) {
+            console.log('progress', arguments);
+
+            bar.max = e.total;
+            bar.value = e.loaded;
+        },
+
+        loadEnd: function (e) {
+            console.log('loadEnd', arguments);
+
+            bar.max = e.total;
+            bar.value = e.loaded;
+        },
+
+        completeAll: function () {
+            console.log('completeAll', arguments);
+
+            setTimeout(function () {
+                bar.setAttribute('hidden', 'hidden');
+            }, 1000);
+
+            alert('Upload Completed');
+        }
+
+    });
+
+&lt;/script&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>url</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>''</code>
+          </td>
+          <td style="text-align: left;">The request url.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>multiple</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Allow multiple files to be uploaded.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>name</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>files[]</code>
+          </td>
+          <td style="text-align: left;">The name parameter.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>type</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>POST</code>
+          </td>
+          <td style="text-align: left;">The request type.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>params</code>
+          </td>
+          <td style="text-align: left;">Object</td>
+          <td style="text-align: left;">
+            <code>{}</code>
+          </td>
+          <td style="text-align: left;">Additional parameters.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>allow</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">File name filter. (eg. *.png)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>mime</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">File MIME type filter. (eg. image/*)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>concurrent</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>1</code>
+          </td>
+          <td style="text-align: left;">Number of files that will be uploaded simultaneously.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>type</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">``</td>
+          <td style="text-align: left;">The expected <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType">response type</a></td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>method</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>POST</code>
+          </td>
+          <td style="text-align: left;">The request method</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>msg-invalid-mime</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>Invalid File Type: %s</code>
+          </td>
+          <td style="text-align: left;">Invalid MIME type message.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>msg-invalid-name</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>Invalid File Name: %s</code>
+          </td>
+          <td style="text-align: left;">Invalid name message.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>cls-dragover</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>tiadian-dragover</code>
+          </td>
+          <td style="text-align: left;">File name filter.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>abort</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">The abort callback.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>before-all</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">The beforeAll callback.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>before-send</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">The beforeSend callback.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>complete</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">The complete callback.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>complete-all</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">The completeAll callback.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>error</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">The error callback.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>load</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">The load callback.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>load-end</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">The loadEnd callback.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>load-start</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">The loadStart callback.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>progress</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>null</code>
+          </td>
+          <td style="text-align: left;">The progress callback.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>fail</code>
+          </td>
+          <td style="text-align: left;">Function</td>
+          <td style="text-align: left;">
+            <code>alert</code>
+          </td>
+          <td style="text-align: left;">The fail callback. If name or MIME type are invalid.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript-1">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.upload(element, options);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <code>upload</code>
+          </td>
+          <td>Fires before files are being uploaded.</td>
+        </tr>
+      </tbody>
+    </table>
