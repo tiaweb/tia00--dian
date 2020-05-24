@@ -1,0 +1,280 @@
+
+    <h1 id="visibility">Visibility</h1>
+    <p class="tiadian-text-lead">Use responsive visibility classes to display or hide elements on different devices.</p>
+    <h2 id="usage">Usage</h2>
+    <p>Add one of these classes to hide an element.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-hidden</code>
+          </td>
+          <td style="text-align: left;">Hides the element on any device. This is more of a legacy class. The recommended way to do this, is to use the <code>hidden</code> attribute.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-invisible</code>
+          </td>
+          <td style="text-align: left;">Hides the element without removing it from the document flow.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;div hidden&gt;&lt;/div&gt;
+
+&lt;div class="tiadian-invisible"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="responsive">Responsive</h2>
+    <p>This component provides responsive classes to hide or display elements on different viewports.</p>
+    <h3 id="hidden">Hidden</h3>
+    <p>Add one of the <code>.tiadian-hidden-*</code> classes to hide the element from screens larger than a specified width.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>tiadian-hidden@s</code>
+          </td>
+          <td style="text-align: left;">Only affects device widths of <em>640px</em> and larger.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>tiadian-hidden@m</code>
+          </td>
+          <td style="text-align: left;">Only affects device widths of <em>960px</em> and larger.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>tiadian-hidden@l</code>
+          </td>
+          <td style="text-align: left;">Only affects device widths of <em>1200px</em> and larger.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>tiadian-hidden@xl</code>
+          </td>
+          <td style="text-align: left;">Only affects device widths of <em>1600px</em> and larger.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;!-- Hidden on tablets and larger --&gt;
+&lt;div class="tiadian-hidden@m"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> In this example the green elements are hidden on screens that are larger than the defined breakpoint. Resize your browser window to see the effect.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-1-4@s tiadian-text-center" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-panel"&gt;
+            &lt;div class="tiadian-alert tiadian-margin-remove tiadian-alert-success"&gt;✔ Small&lt;/div&gt;
+            &lt;div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden@s"&gt;Small&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-panel"&gt;
+            &lt;div class="tiadian-alert tiadian-margin-remove tiadian-alert-success"&gt;✔ Medium&lt;/div&gt;
+            &lt;div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden@m"&gt;Medium&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-panel"&gt;
+            &lt;div class="tiadian-alert tiadian-margin-remove tiadian-alert-success"&gt;✔ Large&lt;/div&gt;
+            &lt;div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden@l"&gt;Large&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-panel"&gt;
+            &lt;div class="tiadian-alert tiadian-margin-remove tiadian-alert-success"&gt;✔ X-Large&lt;/div&gt;
+            &lt;div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden@xl"&gt;X-Large&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="visible">Visible</h3>
+    <p>Use <code>.tiadian-visible-*</code> classes to show the element for screens larger than the specified width.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>tiadian-visible@s</code>
+          </td>
+          <td style="text-align: left;">Only affects device widths of <em>640px</em> and larger.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>tiadian-visible@m</code>
+          </td>
+          <td style="text-align: left;">Only affects device widths of <em>960px</em> and larger.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>tiadian-visible@l</code>
+          </td>
+          <td style="text-align: left;">Only affects device widths of <em>1200px</em> and larger.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>tiadian-visible@xl</code>
+          </td>
+          <td style="text-align: left;">Only affects device widths of <em>1600px</em> and larger.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;!-- Visible on tablets and larger --&gt;
+&lt;div class="tiadian-visible@m"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> In this example the green elements are displayed on screens that are larger than the defined breakpoint. Resize your browser window to see the effect.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-1-4@s tiadian-text-center" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-panel"&gt;
+            &lt;div class="tiadian-alert tiadian-margin-remove"&gt;Small&lt;/div&gt;
+            &lt;div class="tiadian-alert tiadian-alert-success tiadian-position-cover tiadian-margin-remove tiadian-visible@s"&gt;✔ Small&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-panel"&gt;
+            &lt;div class="tiadian-alert tiadian-margin-remove"&gt;Medium&lt;/div&gt;
+            &lt;div class="tiadian-alert tiadian-alert-success tiadian-position-cover tiadian-margin-remove tiadian-visible@m"&gt;✔ Medium&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-panel"&gt;
+            &lt;div class="tiadian-alert tiadian-margin-remove"&gt;Large&lt;/div&gt;
+            &lt;div class="tiadian-alert tiadian-alert-success tiadian-position-cover tiadian-margin-remove tiadian-visible@l"&gt;✔ Large&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-panel"&gt;
+            &lt;div class="tiadian-alert tiadian-margin-remove"&gt;X-Large&lt;/div&gt;
+            &lt;div class="tiadian-alert tiadian-alert-success tiadian-position-cover tiadian-margin-remove tiadian-visible@xl"&gt;✔ X-Large&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="toggle">Toggle</h2>
+    <p>To display elements on hover or focus only, add the <code>.tiadian-visible-toggle</code> class to a parent element and one of the following classes to any child elements which should be hidden.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-hidden-hover</code>
+          </td>
+          <td style="text-align: left;">The element is removed from the document flow when hidden.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-invisible-hover</code>
+          </td>
+          <td style="text-align: left;">The element is not removed from the document flow when hidden.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The child elements will be displayed when the parent element is hovered or focused. Add <code>tabindex="0"</code> to the parent element to allow it to receive focus through keyboard navigation and on touch devices.</p>
+    <p>If there are <code>a</code> or <code>button</code> elements within the hidden child element, they are already focusable through keyboard navigation and will make the child element appear. Therefore, add <code>tabindex="-1"</code> so the parent element is still focusable on touch devices.</p>
+    <pre>
+      <code class="language-html">&lt;div class="tiadian-visible-toggle" tabindex="0"&gt;
+    &lt;div class="tiadian-hidden-hover"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
+    &lt;div class="tiadian-visible-toggle" tabindex="-1"&gt;
+
+        &lt;h4&gt;Hidden when not hovered&lt;/h4&gt;
+
+        &lt;div tiadian-grid&gt;
+            &lt;div class="tiadian-width-expand"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/div&gt;
+            &lt;div class="tiadian-width-auto"&gt;
+                &lt;ul class="tiadian-hidden-hover tiadian-iconnav"&gt;
+                    &lt;li&gt;&lt;a href="#" tiadian-icon="icon: pencil"&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" tiadian-icon="icon: copy"&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" tiadian-icon="icon: trash"&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div class="tiadian-visible-toggle" tabindex="-1"&gt;
+
+        &lt;h4&gt;Invisible when not hovered&lt;/h4&gt;
+
+        &lt;div tiadian-grid&gt;
+            &lt;div class="tiadian-width-expand"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/div&gt;
+            &lt;div class="tiadian-width-auto"&gt;
+                &lt;ul class="tiadian-invisible-hover tiadian-iconnav"&gt;
+                    &lt;li&gt;&lt;a href="#" tiadian-icon="icon: pencil"&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" tiadian-icon="icon: copy"&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" tiadian-icon="icon: trash"&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="touch">Touch</h2>
+    <p>Add the <code>.tiadian-hidden-touch</code> class to hide elements on touch devices and the <code>.tiadian-hidden-notouch</code> to hide elements on devices without a touch screen.</p>
+    <pre>
+      <code class="language-html">&lt;!-- Hidden on touch devices --&gt;
+&lt;div class="tiadian-hidden-touch"&gt;&lt;/div&gt;
+
+&lt;!-- Hidden on no-touch devices --&gt;
+&lt;div class="tiadian-hidden-notouch"&gt;&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-auto@s tiadian-text-center" tiadian-grid&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-panel"&gt;
+            &lt;div class="tiadian-alert tiadian-margin-remove tiadian-alert-success"&gt;✔ Hidden Touch&lt;/div&gt;
+            &lt;div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden-touch"&gt;Hidden Touch&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="tiadian-panel"&gt;
+            &lt;div class="tiadian-alert tiadian-margin-remove tiadian-alert-success"&gt;✔ Hidden No-Touch&lt;/div&gt;
+            &lt;div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden-notouch"&gt;Hidden No-Touch&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+  
