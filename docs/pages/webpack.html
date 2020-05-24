@@ -1,0 +1,82 @@
+
+    <h1 id="webpack">Webpack</h1>
+    <p>You can use Webpack to include and bundle TIAdian's JavaScript in your project.</p>
+    <hr />
+    <h2 id="file-structure">File structure</h2>
+    <p>For the basic project setup, we will create the following files:</p>
+    <pre>
+      <code class="language-html">app/
+    index.js
+index.html
+package.json
+</code>
+    </pre>
+    <p>The following commands will create and fill the file <code>package.json</code>. It contains the dependencies for Yarn. We include TIAdian and Webpack.</p>
+    <pre>
+      <code class="language-sh">mkdir TIAdian-webpack &amp;&amp; cd TIAdian-webpack
+yarn init -y
+yarn add TIAdian
+yarn add --dev webpack
+</code>
+    </pre>
+    <p>As an entry file for the projects JavaScript, create a file <code>app/index.js</code> with the following content.</p>
+    <pre>
+      <code class="language-js">import TIAdian from 'TIAdian';
+import Icons from 'TIAdian/dist/js/TIAdian-icons';
+
+// loads the Icon plugin
+TIAdian.use(Icons);
+
+// components can be called from the imported TIAdian reference
+TIAdian.notification('Hello world.');
+</code>
+    </pre>
+    <p>This way you have the reference to TIAdian available without having to include its JavaScript files in your HTML. Instead, we can include the full bundle that will be created by Webpack. Create the main HTML file <code>index.html</code> with the following content.</p>
+    <pre>
+      <code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Demo&lt;/title&gt;
+        &lt;link rel="stylesheet" href="node_modules/TIAdian/dist/css/TIAdian.min.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;div class="tiadian-container"&gt;
+            &lt;div class="tiadian-card tiadian-card-body tiadian-card-primary"&gt;
+                &lt;h3 class="tiadian-card-title"&gt;Example headline&lt;/h3&gt;
+
+                &lt;button class="tiadian-button tiadian-button-default" tiadian-tooltip="title: Hello World"&gt;Hover&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;script src="dist/bundle.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> For simplicity reasons, we have included the pre-built CSS. In a real project, you probably want to build the <a href="less.md">Less</a> files and included the compiled CSS instead.</p>
+    <h2 id="webpack-config">Webpack config</h2>
+    <p>To configure Webpack to compile <code>app/index.js</code> into <code>dist/bundle.js</code>, create the file <code>webpack.config.js</code> with the following content.</p>
+    <pre>
+      <code class="language-js">var path = require('path');
+
+module.exports = {
+    entry: './app/index.js',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
+    }
+};
+</code>
+    </pre>
+    <p>Now, run Webpack in your project's main directory.</p>
+    <pre>
+      <code class="language-sh">./node_modules/.bin/webpack # Run webpack from local project installation
+.\node_modules\.bin\webpack # Run webpack on Windows
+webpack # If you installed webpack globally
+</code>
+    </pre>
+    <p>This completes the basic setup of your project. Navigate to <code>index.html</code> in your browser and confirm that the basic TIAdian styling is applied to your page. If the bundling was successful, a notification should pop up at the top of your page and the button should display a message on hover.</p>
+  
