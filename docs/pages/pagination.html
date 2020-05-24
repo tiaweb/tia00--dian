@@ -1,0 +1,108 @@
+
+    <h1 id="pagination">Pagination</h1>
+    <p class="tiadian-text-lead">Easily create a nice looking pagination to navigate through pages.</p>
+    <h2 id="usage">Usage</h2>
+    <p>The Pagination component consists of button-like styled links, that are aligned side by side in a horizontal list.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-pagination</code>
+          </td>
+          <td style="text-align: left;">Add this class to a <code>&lt;ul&gt;</code> element to define the Pagination component. Use <code>&lt;a&gt;</code> elements as pagination items within the list.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-active</code>
+          </td>
+          <td style="text-align: left;">Add this class to a list item to apply an active state and use a <code>&lt;span&gt;</code> instead of an <code>&lt;a&gt;</code> element.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-disabled</code>
+          </td>
+          <td style="text-align: left;">Add this class to a list item to apply a disabled state and use a <code>&lt;span&gt;</code> instead of an <code>&lt;a&gt;</code> element.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-pagination"&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-active"&gt;&lt;span&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="tiadian-disabled"&gt;&lt;span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-pagination" tiadian-margin&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;span tiadian-pagination-previous&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-disabled"&gt;&lt;span&gt;...&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-active"&gt;&lt;span&gt;7&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;8&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;9&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;10&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-disabled"&gt;&lt;span&gt;...&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;20&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;span tiadian-pagination-next&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="alignment">Alignment</h2>
+    <p>The pagination component utilizes flexbox, so navigations can easily be aligned with the <a href="flex.md">Flex component</a>.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-pagination tiadian-flex-center"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-pagination tiadian-flex-center" tiadian-margin&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;span tiadian-pagination-previous&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-disabled"&gt;&lt;span&gt;...&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-active"&gt;&lt;span&gt;7&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;8&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;span tiadian-pagination-next&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class="tiadian-pagination tiadian-flex-right tiadian-margin-medium-top" tiadian-margin&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;span tiadian-pagination-previous&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-disabled"&gt;&lt;span&gt;...&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-active"&gt;&lt;span&gt;7&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;8&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;span tiadian-pagination-next&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="previous-and-next">Previous and next</h2>
+    <p>To apply a previous and next button, add the <code>tiadian-pagination-previous</code> or <code>tiadian-pagination-next</code> attribute to a <code>&lt;span&gt;</code> element inside a pagination item.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-pagination"&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;span tiadian-pagination-previous&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;span tiadian-pagination-next&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-pagination"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-pagination-previous&gt;&lt;/span&gt; Previous&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="tiadian-margin-auto-left"&gt;&lt;a href="#"&gt;Next &lt;span class="tiadian-margin-small-left" tiadian-pagination-next&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+  
