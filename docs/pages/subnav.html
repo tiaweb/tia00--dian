@@ -1,0 +1,111 @@
+
+    <h1 id="subnav">Subnav</h1>
+    <p class="tiadian-text-lead">Defines different styles for a sub navigation.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, use the following classes. To align a subnav, for example to horizontally center it, you can use the <a href="flex.md">Flex component</a>.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-subnav</code>
+          </td>
+          <td style="text-align: left;">Add this class to a <code>&lt;ul&gt;</code> element to define the Subnav component. Use <code>&lt;a&gt;</code> elements as nav items within the list.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-active</code>
+          </td>
+          <td style="text-align: left;">Add this class to a list item to apply an active state.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>To add list items without a link, use a <code>&lt;span&gt;</code> element instead of an <code>&lt;a&gt;</code>. Alternatively, disable an <code>&lt;a&gt;</code> element by adding the <code>.tiadian-disabled</code> class to the <code>&lt;li&gt;</code> element and remove the <code>href</code> attribute from the anchor to make it inaccessible through keyboard navigation.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-subnav"&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-subnav" tiadian-margin&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Disabled&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> For a better layout, if items should wrap into the next row, add the <code>tiadian-margin</code> attribute from the <a href="margin.md">Margin component</a>.</p>
+    <hr />
+    <h2 id="divider-modifier">Divider modifier</h2>
+    <p>Add the <code>.tiadian-subnav-divider</code> class to separate menu items with lines.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-subnav tiadian-subnav-divider"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-divider" tiadian-margin&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="pill-modifier">Pill modifier</h2>
+    <p>Add the <code>.tiadian-subnav-pill</code> class to highlight the active menu item with a background.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-subnav tiadian-subnav-pill"&gt;...&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="subnav-with-dropdown">Subnav with Dropdown</h2>
+    <p>You can also use a dropdown from the <a href="dropdown.md">Dropdown component</a> with a subnav.</p>
+    <pre>
+      <code class="language-html">&lt;ul class="tiadian-subnav"&gt;
+    &lt;li&gt;
+        &lt;a href=""&gt;&lt;/a&gt;
+        &lt;div tiadian-dropdown="mode: click;"&gt;&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin&gt;
+    &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;More &lt;span tiadian-icon="icon:  triangle-down"&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;div tiadian-dropdown="mode: click;"&gt;
+            &lt;ul class="tiadian-nav tiadian-dropdown-nav"&gt;
+                &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="tiadian-nav-header"&gt;Header&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="tiadian-nav-divider"&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+
