@@ -1,0 +1,112 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>change.log</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+
+        </style>
+  </head>
+  <body>
+    <h1 id="heading">Heading</h1>
+    <p class="tiadian-text-lead">Define different styles for headings.</p>
+    <p>Combine this component with the <a href="text.md">Text component</a> to style your headings.</p>
+    <h2 id="size-modifiers">Size modifiers</h2>
+    <p>Add one of the following classes to modify the size and style of headings. Usually, these classes would be used on heading elements but they work also with any other element like a <code>div</code> element. Note that these classes extend the heading classes from the <a href="base.md#headings">Base component</a> upward, and the smallest modifier picks up the size after <code>h1</code> element.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Class</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-heading-small</code>
+          </td>
+          <td style="text-align: left;">Add this class to apply a small-sized heading.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-heading-medium</code>
+          </td>
+          <td style="text-align: left;">Add this class to apply a medium-sized heading.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-heading-large</code>
+          </td>
+          <td style="text-align: left;">Add this class to apply a large-sized heading.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-heading-xlarge</code>
+          </td>
+          <td style="text-align: left;">Add this class to apply a xlarge-sized heading.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>.tiadian-heading-2xlarge</code>
+          </td>
+          <td style="text-align: left;">Add this class to apply a 2xlarge-sized heading.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;h1 class="tiadian-heading-medium"&gt;&lt;/h1&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;h1 class="tiadian-heading-small"&gt;Small&lt;/h1&gt;
+&lt;h1 class="tiadian-heading-medium"&gt;Medium&lt;/h1&gt;
+&lt;h1 class="tiadian-heading-large"&gt;Large&lt;/h1&gt;
+&lt;h1 class="tiadian-heading-xlarge"&gt;X-Large&lt;/h1&gt;
+&lt;h1 class="tiadian-heading-2xlarge"&gt;2X-Large&lt;/h1&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="divider-modifier">Divider modifier</h2>
+    <p>To apply a divider to a heading, add the <code>.tiadian-heading-divider</code> class. You can combine it with any size modifier.</p>
+    <pre>
+      <code class="language-html">&lt;h1 class="tiadian-heading-divider"&gt;&lt;/h1&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;h1 class="tiadian-heading-divider"&gt;Heading Divider&lt;/h1&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="bullet-modifier">Bullet modifier</h2>
+    <p>To apply a bullet to a heading, add the <code>.tiadian-heading-bullet</code> class. You can combine it with any size modifier, and it works well with text alignment.</p>
+    <pre>
+      <code class="language-html">&lt;h1 class="tiadian-heading-bullet"&gt;&lt;/h1&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;h1 class="tiadian-heading-bullet"&gt;Heading Bullet&lt;/h1&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="line-modifier">Line modifier</h2>
+    <p>To apply a vertically centered line to a heading, add the <code>.tiadian-heading-line</code> class and place a <code>&lt;span&gt;</code> element inside the heading element. You can combine it with any size modifier, and it works well with text alignment.</p>
+    <pre>
+      <code class="language-html">&lt;h1 class="tiadian-heading-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;/h1&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;h1 class="tiadian-heading-line"&gt;&lt;span&gt;Heading Line&lt;/span&gt;&lt;/h1&gt;
+
+&lt;h1 class="tiadian-heading-line tiadian-text-center"&gt;&lt;span&gt;Heading Line&lt;/span&gt;&lt;/h1&gt;
+
+&lt;h1 class="tiadian-heading-line tiadian-text-right"&gt;&lt;span&gt;Heading Line&lt;/span&gt;&lt;/h1&gt;
+</code>
+    </pre>
+  </body>
+</html>
