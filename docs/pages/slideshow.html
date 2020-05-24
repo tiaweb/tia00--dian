@@ -1,0 +1,914 @@
+
+    <h1 id="slideshow">Slideshow</h1>
+    <p class="tiadian-text-lead">Create a responsive slideshow with images and videos.</p>
+    <p>The Slideshow component is fully responsive and supports touch and swipe navigation as well as mouse drag for desktops. When swiping between slides, the animation literally sticks at your fingertips or mouse cursor. It even accelerates to keep up with your pace when you click through previous and next navigation. All animations are hardware accelerated for a smoother performance.</p>
+    <h2 id="usage">Usage</h2>
+    <p>To apply this component, add the <code>tiadian-slideshow</code> attribute to a container element and create a list of slides with the <code>.tiadian-slideshow-items</code> class.</p>
+    <p>Add an image in the background of each slide using the <code>tiadian-cover</code> attribute from the <a href="cover.md">Cover component</a>.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow&gt;
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> To lazy load images in the slides, take a look at the <a href="image.md#target">Image component</a>.</p>
+    <hr />
+    <h2 id="animations">Animations</h2>
+    <p>By default, the slideshow uses a <code>slide</code> animation. You can set the <code>animation</code> option to use a different animation. Possible values are as follows:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Animation</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>slide</code>
+          </td>
+          <td style="text-align: left;">Slides slide in side by side.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>fade</code>
+          </td>
+          <td style="text-align: left;">Slides fade in.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>scale</code>
+          </td>
+          <td style="text-align: left;">Slides are scaled up and fade out.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>pull</code>
+          </td>
+          <td style="text-align: left;">Slides are pulled from the deck.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>push</code>
+          </td>
+          <td style="text-align: left;">Slides are pushed to the deck.</td>
+        </tr>
+      </tbody>
+    </table>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow="animation: fade"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-child-width-1-2@m" tiadian-grid&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-h3"&gt;Slide&lt;/div&gt;
+
+        &lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow&gt;
+
+            &lt;ul class="tiadian-slideshow-items"&gt;
+                &lt;li&gt;
+                    &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-h3"&gt;Fade&lt;/div&gt;
+
+        &lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="animation: fade"&gt;
+
+            &lt;ul class="tiadian-slideshow-items"&gt;
+                &lt;li&gt;
+                    &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-h3"&gt;Scale&lt;/div&gt;
+
+        &lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="animation: scale"&gt;
+
+            &lt;ul class="tiadian-slideshow-items"&gt;
+                &lt;li&gt;
+                    &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-h3"&gt;Pull&lt;/div&gt;
+
+        &lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="animation: pull"&gt;
+
+            &lt;ul class="tiadian-slideshow-items"&gt;
+                &lt;li&gt;
+                    &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;div&gt;
+
+        &lt;div class="tiadian-h3"&gt;Push&lt;/div&gt;
+
+        &lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="animation: push"&gt;
+
+            &lt;ul class="tiadian-slideshow-items"&gt;
+                &lt;li&gt;
+                    &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+            &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="autoplay">Autoplay</h2>
+    <p>To activate autoplay, just add the <code>autoplay: true</code> option to the attribute. You can also set the interval in milliseconds between switching slides using <code>autoplay-interval: 6000</code>. To pause autoplay when hovering the slideshow, use <code>pause-on-hover: true</code>.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow="autoplay: true"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="infinite-scrolling">Infinite Scrolling</h2>
+    <p>By default, infinite scrolling is enabled. To disable this behavior, just add the <code>finite: true</code> option to the attribute.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow="finite: true"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="ratio">Ratio</h2>
+    <p>The slideshow always takes up the full width of its parent container. The height adapts according to the defined ratio. To change the default ratio of 16:9, just add the <code>ratio</code> option to the attribute. It's recommended to use the same ratio as the background images. For example, just use their width and height, like <code>1600:1200</code>.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow="ratio: 7:3"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="ratio: 7:3; animation: push"&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="minmax-height">Min/Max height</h2>
+    <p>By default, the slideshow height adopts to the defined ratio. A minimum or maximum height can be set using the <code>min-height</code> and <code>max-height</code> options.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow="min-height: 300; max-height: 600"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="min-height: 300; max-height: 600; animation: push"&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="viewport-height">Viewport height</h2>
+    <p>Adding the <code>tiadian-height-viewport</code> attribute from the <a href="height.md#viewport-height">Height component</a> to the list of slideshow items will stretch the height to fill the whole viewport. You can set the <code>min-height</code> option to define a minimum height.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow="ratio: false"&gt;
+    &lt;ul class="tiadian-slideshow-items" tiadian-height-viewport="min-height: 300"&gt;...&lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="ratio: false"&gt;
+
+    &lt;ul class="tiadian-slideshow-items" tiadian-height-viewport="offset-top: true; offset-bottom: 30"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> This example is set to 70% of the viewport height.</p>
+    <hr />
+    <h2 id="navigation">Navigation</h2>
+    <p>To navigate through your slides, just use the <code>tiadian-slideshow-item</code> attribute. To target the slides, set the attribute of every nav item to the index number of the respective slideshow item. The elements with the <code>tiadian-slideshow-item</code> attribute need to be inside the <code>tiadian-slideshow</code> container. Setting the attribute to <code>next</code> and <code>previous</code> will switch to the adjacent slides.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;...&lt;/ul&gt;
+
+    &lt;a href="#" tiadian-slideshow-item="previous"&gt;...&lt;/a&gt;
+    &lt;a href="#" tiadian-slideshow-item="next"&gt;...&lt;/a&gt;
+
+    &lt;ul&gt;
+        &lt;li tiadian-slideshow-item="0"&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-slideshow-item="1"&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+        &lt;li tiadian-slideshow-item="2"&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>The flexibility of the Slideshow component allows you to use any of the other TIAdian components to navigate through items. For example the <a href="slidenav.md">Slidenav</a>, <a href="dotnav.md">Dotnav</a> and <a href="thumbnav.md">Thumbnav</a> components can be used to style the slideshow navigations.</p>
+    <p>If there is no item specific content in the navigation items, you can also add the <code>.tiadian-slideshow-nav</code> class instead of adding navigation items manually. It will generate its items automatically using <code>&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;</code> as markup. This is a useful shortcut when using the <a href="dotnav.md">Dotnav</a>.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;...&lt;/ul&gt;
+
+    &lt;ul class="tiadian-slideshow-nav tiadian-dotnav"&gt;&lt;/ul&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div tiadian-slideshow="animation: push"&gt;
+
+    &lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1"&gt;
+
+        &lt;ul class="tiadian-slideshow-items"&gt;
+            &lt;li&gt;
+                &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+        &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+    &lt;/div&gt;
+
+    &lt;ul class="tiadian-slideshow-nav tiadian-dotnav tiadian-flex-center tiadian-margin"&gt;&lt;/ul&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> For better visibility of overlaying navigations, add the <code>.tiadian-light</code> or <code>.tiadian-dark</code> class from the <a href="inverse.md">Inverse component</a>.</p>
+    <hr />
+    <h2 id="videos">Videos</h2>
+    <p>The slideshow is not restricted to images. Other media, like videos, can be positioned in the background of each slide using the <code>tiadian-cover</code> attribute from the <a href="cover.md">Cover component</a>. Videos are muted, and play automatically. The video will pause whenever it's not visible, and resume once it becomes visible again.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow&gt;
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;video src="" autoplay loop muted playsinline tiadian-cover&gt;&lt;/video&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;iframe src="" frameborder="0" tiadian-cover&gt;&lt;/iframe&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="animation: push"&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" autoplay loop muted playsinline tiadian-cover&gt;&lt;/video&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=1&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;rel=0&amp;amp;loop=1&amp;amp;modestbranding=1&amp;amp;wmode=transparent&amp;amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen tiadian-cover&gt;&lt;/iframe&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="ken-burns-effect">Ken Burns effect</h2>
+    <p>To add a simple Ken Burns effect, wrap the image with a <code>div</code> and add the <code>.tiadian-position-cover</code> and <code>.tiadian-animation-kenburns</code> classes. You can also apply the <code>.tiadian-animation-reverse</code> or one of the <code>.tiadian-transform-origin-*</code> classes from the <a href="utility.md#transform-origin">Utility component</a> to modify the effect.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow&gt;
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-position-cover tiadian-animation-kenburns tiadian-animation-reverse tiadian-transform-origin-center-left"&gt;
+                &lt;img src="" alt="" tiadian-cover&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="animation: push"&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-position-cover tiadian-animation-kenburns tiadian-animation-reverse tiadian-transform-origin-center-left"&gt;
+                &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-position-cover tiadian-animation-kenburns tiadian-animation-reverse tiadian-transform-origin-top-right"&gt;
+                &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-position-cover tiadian-animation-kenburns tiadian-animation-reverse tiadian-transform-origin-bottom-left"&gt;
+                &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="content-overlays">Content overlays</h2>
+    <p>Add content overlays using the <a href="position.md">Position component</a>. It allows you to place the content anywhere inside the slide.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow&gt;
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-position-center tiadian-position-small"&gt;
+
+                &lt;!-- The content goes here --&gt;
+
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>
+      <strong>Note</strong> To adapt your content for better visibility on each image, add the <code>.tiadian-light</code> or <code>.tiadian-dark</code> class from the <a href="inverse.md">Inverse component</a> or use the <a href="overlay.md">Overlay</a> to add any style to the overlay box.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle" tabindex="-1" tiadian-slideshow="animation: push"&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-position-center tiadian-position-small tiadian-text-center tiadian-light"&gt;
+                &lt;h2 class="tiadian-margin-remove"&gt;Center&lt;/h2&gt;
+                &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-position-bottom tiadian-position-medium tiadian-text-center tiadian-light"&gt;
+                &lt;h3 class="tiadian-margin-remove"&gt;Bottom&lt;/h3&gt;
+                &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-overlay tiadian-overlay-primary tiadian-position-bottom tiadian-text-center"&gt;
+                &lt;h3 class="tiadian-margin-remove"&gt;Overlay Bottom&lt;/h3&gt;
+                &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-overlay tiadian-overlay-default tiadian-position-bottom-right tiadian-position-small"&gt;
+                &lt;h3 class="tiadian-margin-remove"&gt;Overlay Bottom Right&lt;/h3&gt;
+                &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class="tiadian-light"&gt;
+        &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+        &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="content-parallax">Content parallax</h2>
+    <p>Add the <code>tiadian-slideshow-parallax</code> attribute to any element inside the slides to animate it together with the slideshow animation. Add an option with the desired animation values for each CSS property you want to animate. Define at least one start and end value. It can be done by passing two values separated by a comma.</p>
+    <p>This functionality is inherited from the <a href="parallax.md">Parallax component</a>, and it allows to animate CSS properties depending on the scroll position of the slideshow animation. Take a look at the <a href="parallax.md#animated-properties">possible properties</a> that can be animated.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow&gt;
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-position-center tiadian-position-small"&gt;
+
+                &lt;div tiadian-slideshow-parallax="x: 100,-100"&gt;
+
+                    &lt;!-- The content goes here --&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>In the example above, the content will start at <code>100</code> and animate half way to <code>0</code> while the slide moves in. When the slide starts again to move out, the content will continue to animate to <code>-100</code>. This works because the start and end values have the same distance. For different distances, three values are needed: <em>Start</em> (Slide animates in), <em>Middle</em> (Slide is centered), <em>End</em> (Slide animates out).</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow-parallax="x: 300,0,-100"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <p>The next example defines different in and out animations. The content slides in by moving from <code>100</code> to <code>0</code> and fades out from <code>1</code> to <code>0</code>.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow-parallax="x: 100,0,0; opacity: 1,1,0"&gt;...&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="animation: push"&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-position-center tiadian-position-small tiadian-text-center"&gt;
+                &lt;h2 tiadian-slideshow-parallax="x: 100,-100"&gt;Heading&lt;/h2&gt;
+                &lt;p tiadian-slideshow-parallax="x: 200,-200"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-position-center tiadian-position-small tiadian-text-center"&gt;
+                &lt;h2 tiadian-slideshow-parallax="x: 100,-100"&gt;Heading&lt;/h2&gt;
+                &lt;p tiadian-slideshow-parallax="x: 200,-200"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-position-center tiadian-position-small tiadian-text-center"&gt;
+                &lt;h2 tiadian-slideshow-parallax="y: -50,0,0; opacity: 1,1,0"&gt;Heading&lt;/h2&gt;
+                &lt;p tiadian-slideshow-parallax="y: 50,0,0; opacity: 1,1,0"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h3 id="advanced-effects">Advanced effects</h3>
+    <p>The parallax attribute can be used to add additional effects to the slideshow animations. In the following example the <code>push</code> animation is extended by dimming out and scaling down the image when it's sliding out.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow="animation: push"&gt;
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-position-cover" tiadian-slideshow-parallax="scale: 1.2,1.2,1"&gt;
+                &lt;img src="" alt="" tiadian-cover&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-position-cover" tiadian-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"&gt;&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="animation: push"&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-position-cover" tiadian-slideshow-parallax="scale: 1.2,1.2,1"&gt;
+                &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-position-cover" tiadian-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"&gt;&lt;/div&gt;
+            &lt;div class="tiadian-position-center tiadian-position-medium tiadian-text-center"&gt;
+                &lt;div tiadian-slideshow-parallax="scale: 1,1,0.8"&gt;
+                    &lt;h2 tiadian-slideshow-parallax="x: 200,0,0"&gt;Heading&lt;/h2&gt;
+                    &lt;p tiadian-slideshow-parallax="x: 400,0,0;"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-position-cover" tiadian-slideshow-parallax="scale: 1.2,1.2,1"&gt;
+                &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-position-cover" tiadian-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"&gt;&lt;/div&gt;
+            &lt;div class="tiadian-position-center tiadian-position-medium tiadian-text-center"&gt;
+                &lt;div tiadian-slideshow-parallax="scale: 1,1,0.8"&gt;
+                    &lt;h2 tiadian-slideshow-parallax="x: 200,0,0"&gt;Heading&lt;/h2&gt;
+                    &lt;p tiadian-slideshow-parallax="x: 400,0,0;"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;div class="tiadian-position-cover" tiadian-slideshow-parallax="scale: 1.2,1.2,1"&gt;
+                &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+            &lt;/div&gt;
+            &lt;div class="tiadian-position-cover" tiadian-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"&gt;&lt;/div&gt;
+            &lt;div class="tiadian-position-center tiadian-position-medium tiadian-text-center"&gt;
+                &lt;div tiadian-slideshow-parallax="scale: 1,1,0.8"&gt;
+                    &lt;h2 tiadian-slideshow-parallax="x: 200,0,0"&gt;Heading&lt;/h2&gt;
+                    &lt;p tiadian-slideshow-parallax="x: 400,0,0;"&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <h2 id="content-transitions">Content transitions</h2>
+    <p>Transition classes from the <a href="transition.md">Transition component</a> are triggered automatically inside slides. Contrary to the parallax effect, transitions are not attached to the slideshow animation and start playing independently after the slideshow animation.</p>
+    <pre>
+      <code class="language-html">&lt;div tiadian-slideshow&gt;
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-position-bottom tiadian-position-small"&gt;
+
+                &lt;div class="tiadian-transition-slide-bottom"&gt;
+
+                    &lt;!-- The content goes here --&gt;
+
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+    </pre>
+    <p>Together with the <a href="overlay.md">Overlay component</a>, content transitions are used to build a classic caption for the slideshow.</p>
+    <pre>
+      <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow="animation: fade"&gt;
+
+    &lt;ul class="tiadian-slideshow-items"&gt;
+        &lt;li&gt;
+            &lt;img src="images/photo.jpg" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-overlay tiadian-overlay-primary tiadian-position-bottom tiadian-text-center tiadian-transition-slide-bottom"&gt;
+                &lt;h3 class="tiadian-margin-remove"&gt;Bottom&lt;/h3&gt;
+                &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/dark.jpg" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-overlay tiadian-overlay-primary tiadian-position-bottom tiadian-text-center tiadian-transition-slide-bottom"&gt;
+                &lt;h3 class="tiadian-margin-remove"&gt;Bottom&lt;/h3&gt;
+                &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/light.jpg" alt="" tiadian-cover&gt;
+            &lt;div class="tiadian-overlay tiadian-overlay-primary tiadian-position-right tiadian-text-center tiadian-transition-slide-right tiadian-width-medium"&gt;
+                &lt;h3 class="tiadian-margin-remove"&gt;Left&lt;/h3&gt;
+                &lt;p class="tiadian-margin-remove"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"&gt;&lt;/a&gt;
+    &lt;a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+</code>
+    </pre>
+    <hr />
+    <h2 id="component-options">Component options</h2>
+    <p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="javascript.md#component-configuration">Learn more</a></p>
+    <h3 id="slideshow-1">Slideshow</h3>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Option</th>
+          <th style="text-align: left;">Value</th>
+          <th style="text-align: left;">Default</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>animation</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>slide</code>
+          </td>
+          <td style="text-align: left;">Slideshow animation mode: <code>slide</code>, <code>fade</code>, <code>scale</code>, <code>pull</code> or <code>push</code>.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>autoplay</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Slideshow autoplays.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>autoplay-interval</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>7000</code>
+          </td>
+          <td style="text-align: left;">The delay between switching slides in autoplay mode.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>draggable</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Enable pointer dragging.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>easing</code>
+          </td>
+          <td style="text-align: left;">String</td>
+          <td style="text-align: left;">
+            <code>ease</code>
+          </td>
+          <td style="text-align: left;">The animation easing (CSS timing functions or cubic-bezier).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>finite</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">Disable infinite sliding.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>pause-on-hover</code>
+          </td>
+          <td style="text-align: left;">Boolean</td>
+          <td style="text-align: left;">
+            <code>true</code>
+          </td>
+          <td style="text-align: left;">Pause autoplay mode on hover.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>index</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>0</code>
+          </td>
+          <td style="text-align: left;">Slideshow item to show. 0 based index.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>velocity</code>
+          </td>
+          <td style="text-align: left;">Number</td>
+          <td style="text-align: left;">
+            <code>1</code>
+          </td>
+          <td style="text-align: left;">The animation velocity (pixel/ms).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>ratio</code>
+          </td>
+          <td style="text-align: left;">Boolean, String</td>
+          <td style="text-align: left;">
+            <code>16:9</code>
+          </td>
+          <td style="text-align: left;">The ratio. (<code>false</code> prevents height adjustment)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>min-height</code>
+          </td>
+          <td style="text-align: left;">Boolean, Number</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">The minimum height.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>max-height</code>
+          </td>
+          <td style="text-align: left;">Boolean, Number</td>
+          <td style="text-align: left;">
+            <code>false</code>
+          </td>
+          <td style="text-align: left;">The maximum height.</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2 id="javascript">JavaScript</h2>
+    <p>Learn more about <a href="javascript.md#programmatic-use">JavaScript components</a>.</p>
+    <h3 id="initialization">Initialization</h3>
+    <pre>
+      <code class="language-js">TIAdian.slideshow(element, options);
+</code>
+    </pre>
+    <h3 id="events">Events</h3>
+    <p>The following events will be triggered on elements with this component attached:</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">Name</th>
+          <th style="text-align: left;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeitemshow</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemshow</code>
+          </td>
+          <td style="text-align: left;">Fires after an item is shown.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemshown</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's show animation has completed.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>beforeitemhide</code>
+          </td>
+          <td style="text-align: left;">Fires before an item is hidden.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemhide</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's hide animation has started.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">
+            <code>itemhidden</code>
+          </td>
+          <td style="text-align: left;">Fires after an item's hide animation has completed.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="methods">Methods</h3>
+    <p>The following methods are available for the component:</p>
+    <h4 id="show">Show</h4>
+    <pre>
+      <code class="language-js">TIAdian.slideshow(element).show(index);
+</code>
+    </pre>
+    <p>Shows the slideshow item.</p>
+    <h4 id="startautoplay">startAutoplay</h4>
+    <pre>
+      <code class="language-js">TIAdian.slideshow(element).startAutoplay();
+</code>
+    </pre>
+    <p>Starts the slideshow autoplay.</p>
+    <h4 id="stopautoplay">stopAutoplay</h4>
+    <pre>
+      <code class="language-js">TIAdian.slideshow(element).stopAutoplay();
+</code>
+    </pre>
+    <p>Stops the slideshow autoplay.</p>
+ 
