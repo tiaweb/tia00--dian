@@ -1,5 +1,4 @@
-
-    <h1 id="lightbox">Lightbox</h1>
+ <h1 id="lightbox">Lightbox</h1>
     <p class="tiadian-text-lead">Create a responsive lightbox gallery with images and videos.</p>
     <p>The lightbox component is fully responsive and supports touch and swipe navigation, as well as mouse drag for desktops. When swiping between slides the animation literally sticks at your fingertip or mouse cursor. Clicking fast on the previous and next navigation, will make animations even accelerate to keep up with your pace. All animations are hardware accelerated for a smoother performance.</p>
     <h2 id="usage">Usage</h2>
@@ -10,6 +9,10 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <div tiadian-lightbox>
+    <a class="tiadian-button tiadian-button-default" href="https://tiaweb.github.io/tiadian/docs/images/photo.jpg">Open Lightbox</a>
+</div>
     <pre>
       <code class="language-example">&lt;div tiadian-lightbox&gt;
     &lt;a class="tiadian-button tiadian-button-default" href="images/photo.jpg"&gt;Open Lightbox&lt;/a&gt;
@@ -24,6 +27,9 @@
     &lt;a href="image.jpg" data-alt="Image"&gt;&lt;/a&gt;
 &lt;/div&gt;
 </code>
+<div tiadian-lightbox>
+    <a class="tiadian-button tiadian-button-default" href="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" data-alt="Image">Open Lightbox</a>
+</div>
     </pre>
     <pre>
       <code class="language-example">&lt;div tiadian-lightbox&gt;
@@ -40,6 +46,10 @@
 &lt;/div&gt;
 </code>
     </pre>
+    <div tiadian-lightbox>
+    <a class="tiadian-button tiadian-button-default" href="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" data-caption="Caption">Open Lightbox</a>
+</div>
+
     <pre>
       <code class="language-example">&lt;div tiadian-lightbox&gt;
     &lt;a class="tiadian-button tiadian-button-default" href="images/photo.jpg" data-caption="Caption"&gt;Open Lightbox&lt;/a&gt;
@@ -55,6 +65,65 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    
+     <div class="tiadian-h3">Slide</div>
+<div class="tiadian-child-width-1-3@m" tiadian-grid tiadian-lightbox="animation: slide">
+    <div>
+        <a class="tiadian-inline" href="images/photo.jpg" data-caption="Caption 1">
+            <img src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" alt="">
+        </a>
+    </div>
+    <div>
+        <a class="tiadian-inline" href="images/dark.jpg" data-caption="Caption 2">
+            <img src="https://tiaweb.github.io/tiadian/docs/images/dark.jpg" alt="">
+        </a>
+    </div>
+    <div>
+        <a class="tiadian-inline" href="images/light.jpg" data-caption="Caption 3">
+            <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="">
+        </a>
+    </div>
+</div>
+
+<div class="tiadian-h3">Fade</div>
+<div class="tiadian-child-width-1-3@m" tiadian-grid tiadian-lightbox="animation: fade">
+    <div>
+        <a class="tiadian-inline" href="images/photo.jpg" data-caption="Caption 1">
+            <img src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" alt="">
+        </a>
+    </div>
+    <div>
+        <a class="tiadian-inline" href="images/dark.jpg" data-caption="Caption 2">
+            <img src="https://tiaweb.github.io/tiadian/docs/images/dark.jpg" alt="">
+        </a>
+    </div>
+    <div>
+        <a class="tiadian-inline" href="images/light.jpg" data-caption="Caption 3">
+            <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="">
+        </a>
+    </div>
+</div>
+
+<div class="tiadian-h3">Scale</div>
+<div class="tiadian-child-width-1-3@m" tiadian-grid tiadian-lightbox="animation: scale">
+    <div>
+        <a class="tiadian-inline" href="images/photo.jpg" data-caption="Caption 1">
+            <img src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" alt="">
+        </a>
+    </div>
+    <div>
+        <a class="tiadian-inline" href="images/dark.jpg" data-caption="Caption 2">
+            <img src="https://tiaweb.github.io/tiadian/docs/images/dark.jpg" alt="">
+        </a>
+    </div>
+    <div>
+        <a class="tiadian-inline" href="images/light.jpg" data-caption="Caption 3">
+            <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="">
+        </a>
+    </div>
+</div>
+
     <pre>
       <code class="language-example">&lt;div class="tiadian-h3"&gt;Slide&lt;/div&gt;
 &lt;div class="tiadian-child-width-1-3@m" tiadian-grid tiadian-lightbox="animation: slide"&gt;
@@ -174,12 +243,20 @@
     <hr />
     <h2 id="custom-attributes">Custom Attributes</h2>
     <p>You can add custom attributes to lightbox content items by using the <code>data-attrs</code> attribute. The attributes are passed like the usual component options, e.g. <code>data-attrs="width: 1280; height: 720;"</code></p>
+    <div tiadian-lightbox>
+    <a class="tiadian-button" href="https://www.youtube.com/watch?v=c2pz2mlSfXA" data-attrs="width: 1280; height: 720;"></a>
+</div>
+
     <pre>
       <code class="language-html">&lt;div tiadian-lightbox&gt;
     &lt;a class="tiadian-button" href="https://www.youtube.com/watch?v=c2pz2mlSfXA" data-attrs="width: 1280; height: 720;"&gt;&lt;/a&gt;
 &lt;/div&gt;
 </code>
     </pre>
+    
+     <div tiadian-lightbox>
+    <a class="tiadian-button tiadian-button-default" href="https://www.youtube.com/watch?v=c2pz2mlSfXA" data-caption="YouTube" data-attrs="width: 1280; height: 720;">YouTube</a>
+</div>
     <pre>
       <code class="language-example">&lt;div tiadian-lightbox&gt;
     &lt;a class="tiadian-button tiadian-button-default" href="https://www.youtube.com/watch?v=c2pz2mlSfXA" data-caption="YouTube" data-attrs="width: 1280; height: 720;"&gt;YouTube&lt;/a&gt;
