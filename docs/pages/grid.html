@@ -1,20 +1,5 @@
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="author" content="MarkdownViewer++" />
-        <title>change.log</title>
-        <style type="text/css">
-            
-/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
-td, h1, h2, h3, h4, h5, p, ul, ol, li {
-    page-break-inside: avoid; 
-}
 
-        </style>
-      </head>
-    <body>
         <h1 id="grid">Grid</h1>
 <p class="tiadian-text-lead">Create a fully responsive, fluid and nestable grid layout.</p>
 <p>The Grid system of TIAdian allows you to arrange block elements in columns. It works closely together with the <a href="width.md">Width component</a> to determine how much space of the container each item will take up, and it can also be combined with the <a href="flex.md">Flex component</a> to align and order grid items.</p>
@@ -22,12 +7,36 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 <h2 id="usage">Usage</h2>
 <p>To create the grid container, add the <code>tiadian-grid</code> attribute to a <code>&lt;div&gt;</code> element. Add child <code>&lt;div&gt;</code> elements to create the cells. By default, all grid cells are stacked. To place them side by side, add one of the classes from the <a href="width.md">Width component</a>. Using <code>.tiadian-child-width-expand</code> will automatically apply equal width to items, regardless of how many there are.</p>
 <p><strong>Note</strong> There's no need to add a <code>.tiadian-grid</code> class as it will be added via JavaScript. However, if TIAdian's JavaScript is <a href="https://developer.mozilla.org/docs/Web/HTML/Element/script#attr-defer">deferred</a>, the class should be added to prevent stacking while loading.</p>
+
+
 <pre><code class="language-html">&lt;div tiadian-grid&gt;
     &lt;div&gt;&lt;/div&gt;
     &lt;div&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<p><strong>Note</strong> Often cards from the <a href="card.md">Card component</a> are used inside a grid. This also goes for the following examples for visualization.</p>
+<p><strong>Note</strong> Often cards from the <a href="card.md">Card component</a> are used inside a grid. This also goes for the following examples for visualization.</p><div class="tiadian-child-width-expand@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+</div>
+
+<div class="tiadian-child-width-expand@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-expand@s tiadian-text-center&quot; tiadian-grid&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
@@ -71,6 +80,55 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 </table>
 <pre><code class="language-html">&lt;div class=&quot;tiadian-grid-small&quot; tiadian-grid&gt;...&lt;/div&gt;
 </code></pre>
+
+
+<div class="tiadian-grid-small tiadian-child-width-expand@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+</div>
+
+<div class="tiadian-grid-medium tiadian-child-width-expand@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+</div>
+
+<div class="tiadian-grid-large tiadian-child-width-expand@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+</div>
+
+<div class="tiadian-grid-collapse tiadian-child-width-expand@s tiadian-text-center tiadian-margin-large-top" tiadian-grid>
+    <div>
+        <div class="tiadian-background-muted tiadian-padding">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-background-primary tiadian-padding tiadian-light">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-background-secondary tiadian-padding tiadian-light">Item</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-grid-small tiadian-child-width-expand@s tiadian-text-center&quot; tiadian-grid&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
@@ -150,6 +208,27 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 </table>
 <pre><code class="language-html">&lt;div class=&quot;tiadian-grid-column-small tiadian-grid-row-large&quot; tiadian-grid&gt;...&lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-grid-column-small tiadian-grid-row-large tiadian-child-width-1-3@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-grid-column-small tiadian-grid-row-large tiadian-child-width-1-3@s tiadian-text-center&quot; tiadian-grid&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
@@ -189,6 +268,22 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-child-width-1-2 tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+	</div>
+	<div>
+		<div class="tiadian-child-width-1-2 tiadian-text-center" tiadian-grid>
+			<div>
+				<div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+			</div>
+			<div>
+				<div class="tiadian-card tiadian-card-primary tiadian-card-body">Item</div>
+			</div>
+		</div>
+	</div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-2 tiadian-text-center&quot; tiadian-grid&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
@@ -210,6 +305,11 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 <p>Add the <code>.tiadian-grid-divider</code> class to separate grid cells with lines. This class can be combined with the gap modifiers. As soon as the grid stacks, the divider lines will become horizontal.</p>
 <pre><code class="language-html">&lt;div class=&quot;tiadian-grid-divider&quot; tiadian-grid&gt;...&lt;/div&gt;
 </code></pre>
+<div class="tiadian-grid-divider tiadian-child-width-expand@s" tiadian-grid>
+    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+    <div>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-grid-divider tiadian-child-width-expand@s&quot; tiadian-grid&gt;
     &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/div&gt;
     &lt;div&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/div&gt;
@@ -221,6 +321,18 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 <p>To match the height of the direct child of each cell, add the <code>.tiadian-grid-match</code> class. This is needed to match the height of cards from the <a href="card.md">Card component</a>.</p>
 <pre><code class="language-html">&lt;div class=&quot;tiadian-grid-match&quot; tiadian-grid&gt;....&lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-grid-match tiadian-child-width-expand@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+     </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item<br>...</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item<br>...<br>...</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-grid-match tiadian-child-width-expand@s tiadian-text-center&quot; tiadian-grid&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
@@ -241,6 +353,23 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
     &lt;div&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-child-width-expand@s" tiadian-grid>
+    <div class="tiadian-grid-item-match">
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">
+            <h3>Heading</h3>
+            <p>
+                Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+     </div>
+    <div>
+        <h3>Heading</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-expand@s&quot; tiadian-grid&gt;
     &lt;div class=&quot;tiadian-grid-item-match&quot;&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;
@@ -270,6 +399,18 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-child-width-expand@s tiadian-text-center" tiadian-grid tiadian-height-match="target: > div > .tiadian-card">
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+     </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item<br>...</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item<br>...<br>...</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-expand@s tiadian-text-center&quot; tiadian-grid tiadian-height-match=&quot;target: &gt; div &gt; .tiadian-card&quot;&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
@@ -291,6 +432,17 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
     &lt;div class=&quot;tiadian-width-expand@m&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+<div class="tiadian-text-center" tiadian-grid>
+    <div class="tiadian-width-auto@m">
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Auto</div>
+    </div>
+    <div class="tiadian-width-1-3@m">
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">1-3</div>
+    </div>
+    <div class="tiadian-width-expand@m">
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Expand</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-text-center&quot; tiadian-grid&gt;
     &lt;div class=&quot;tiadian-width-auto@m&quot;&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Auto&lt;/div&gt;
@@ -308,6 +460,18 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 <p>If the grid columns are evenly split, you can add one of the <code>.tiadian-child-width-*</code> classes to the grid container instead of adding a class to each of the items.</p>
 <pre><code class="language-html">&lt;div class=&quot;tiadian-child-width-1-2@s tiadian-child-width-1-3@m&quot; tiadian-grid&gt;...&lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-child-width-1-2@s tiadian-child-width-1-3@m tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-2@s tiadian-child-width-1-3@m tiadian-text-center&quot; tiadian-grid&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
@@ -329,6 +493,28 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
     &lt;div class=&quot;tiadian-flex-first&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-grid-small tiadian-child-width-1-4@s tiadian-flex-center tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item 1</div>
+    </div>
+    <div class="tiadian-flex-last">
+        <div class="tiadian-card tiadian-card-secondary tiadian-card-body">Item 2</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item 3</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item 4</div>
+    </div>
+    <div class="tiadian-flex-first">
+        <div class="tiadian-card tiadian-card-primary tiadian-card-body">Item 5</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item 6</div>
+    </div>
+</div>
+
 <pre><code class="language-example">&lt;div class=&quot;tiadian-grid-small tiadian-child-width-1-4@s tiadian-flex-center tiadian-text-center&quot; tiadian-grid&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item 1&lt;/div&gt;
@@ -355,6 +541,36 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 <p>If grid cells have different heights, a layout free of gaps can be created by adding <code>masonry: true</code> to the attribute.</p>
 <pre><code class="language-html">&lt;div tiadian-grid=&quot;masonry: true&quot;&gt;...&lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-child-width-1-2@s tiadian-child-width-1-3@m" tiadian-grid="masonry: true">
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-flex tiadian-flex-center tiadian-flex-middle" style="height: 100px">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-flex tiadian-flex-center tiadian-flex-middle" style="height: 130px">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-flex tiadian-flex-center tiadian-flex-middle" style="height: 150px">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-flex tiadian-flex-center tiadian-flex-middle" style="height: 160px">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-flex tiadian-flex-center tiadian-flex-middle" style="height: 120px">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-flex tiadian-flex-center tiadian-flex-middle" style="height: 140px">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-flex tiadian-flex-center tiadian-flex-middle" style="height: 200px">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-flex tiadian-flex-center tiadian-flex-middle" style="height: 180px">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-flex tiadian-flex-center tiadian-flex-middle" style="height: 140px">Item</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-2@s tiadian-child-width-1-3@m&quot; tiadian-grid=&quot;masonry: true&quot;&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-flex tiadian-flex-center tiadian-flex-middle&quot; style=&quot;height: 100px&quot;&gt;Item&lt;/div&gt;
@@ -395,6 +611,24 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 <pre><code class="language-html">&lt;div tiadian-grid=&quot;parallax: 150&quot;&gt;...&lt;/div&gt;
 </code></pre>
 <p>This effect can be applied to two types of markup. The following example uses three defined columns with three items each.</p>
+
+<div class="tiadian-child-width-expand@s tiadian-text-center" tiadian-grid="parallax: 150">
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-grid-margin">Item</div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-grid-margin">Item</div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-grid-margin">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-grid-margin">Item</div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-grid-margin">Item</div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-grid-margin">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-grid-margin">Item</div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-grid-margin">Item</div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-grid-margin">Item</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-expand@s tiadian-text-center&quot; tiadian-grid=&quot;parallax: 150&quot;&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body tiadian-grid-margin&quot;&gt;Item&lt;/div&gt;
@@ -414,6 +648,45 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 &lt;/div&gt;
 </code></pre>
 <p>The parallax effect is also applied if grid columns wrap into the next row, as shown in the next example.</p>
+
+<div class="tiadian-child-width-1-2@s tiadian-child-width-1-3@m tiadian-child-width-1-4@l tiadian-text-center" tiadian-grid="parallax: 150">
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Item</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-2@s tiadian-child-width-1-3@m tiadian-child-width-1-4@l tiadian-text-center&quot; tiadian-grid=&quot;parallax: 150&quot;&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Item&lt;/div&gt;
@@ -500,6 +773,4 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
 <pre><code class="language-js">TIAdian.grid(element, options);
 </code></pre>
 
-    </body>
-</html>
-            
+    
