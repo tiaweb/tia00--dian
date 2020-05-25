@@ -1,6 +1,4 @@
-
-
-        <h1 id="height">Height</h1>
+  <h1 id="height">Height</h1>
 <p class="tiadian-text-lead">Define the height of elements depending on the viewport or match the heights of different elements.</p>
 <p>TIAdian's Height component offers three options to set heights: using simple fixed height utility classes, depending on the viewport or by matching the heights of different elements.</p>
 <hr />
@@ -34,6 +32,18 @@
 </table>
 <pre><code class="language-html">&lt;div class=&quot;tiadian-height-small&quot;&gt;&lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-child-width-1-3@s" tiadian-grid>
+    <div>
+        <div class="tiadian-height-small tiadian-card tiadian-card-default tiadian-card-body tiadian-flex tiadian-flex-center tiadian-flex-middle">Small</div>
+    </div>
+    <div>
+        <div class="tiadian-height-medium tiadian-card tiadian-card-default tiadian-card-body tiadian-flex tiadian-flex-center tiadian-flex-middle">Medium</div>
+    </div>
+    <div>
+        <div class="tiadian-height-large tiadian-card tiadian-card-default tiadian-card-body tiadian-flex tiadian-flex-center tiadian-flex-middle">Large</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-3@s&quot; tiadian-grid&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-height-small tiadian-card tiadian-card-default tiadian-card-body tiadian-flex tiadian-flex-center tiadian-flex-middle&quot;&gt;Small&lt;/div&gt;
@@ -136,6 +146,21 @@
 <p>You can also target and match specific elements inside the container, like cards. Just add the <code>target: SELECTOR</code> option to the attribute.</p>
 <pre><code class="language-html">&lt;div tiadian-grid tiadian-height-match=&quot;target: SELECTOR&quot;&gt;...&lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-child-width-1-2@s" tiadian-grid tiadian-height-match="target: > div > .tiadian-card">
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Lorem Ipsum</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Lorem Ipsum</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-2@s&quot; tiadian-grid tiadian-height-match=&quot;target: &gt; div &gt; .tiadian-card&quot;&gt;
     &lt;div&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/div&gt;
@@ -156,6 +181,21 @@
 <p>If your grid wraps into multiple rows, only grid columns within the same row are matched. To match grid columns across all rows, just add the <code>row: false</code> option to the attribute.</p>
 <pre><code class="language-html">&lt;div tiadian-grid tiadian-height-match=&quot;row: false&quot;&gt;...&lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-child-width-1-2@s" tiadian-grid tiadian-height-match="target: > div > .tiadian-card; row: false">
+    <div class="tiadian-first-column">
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    </div>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Lorem Ipsum</div>
+    </div>
+    <div class="tiadian-grid-margin tiadian-first-column">
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    </div>
+    <div class="tiadian-grid-margin">
+        <div class="tiadian-card tiadian-card-default tiadian-card-body">Lorem Ipsum</div>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-child-width-1-2@s&quot; tiadian-grid tiadian-height-match=&quot;target: &gt; div &gt; .tiadian-card; row: false&quot;&gt;
     &lt;div class=&quot;tiadian-first-column&quot;&gt;
         &lt;div class=&quot;tiadian-card tiadian-card-default tiadian-card-body&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/div&gt;
@@ -203,5 +243,3 @@
 <h3 id="initialization">Initialization</h3>
 <pre><code class="language-js">TIAdian.heightMatch(element, options);
 </code></pre>
-
-   
