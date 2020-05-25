@@ -1,5 +1,4 @@
-
-    <h1 id="modal">Modal</h1>
+  <h1 id="modal">Modal</h1>
     <p class="tiadian-text-lead">Create modal dialogs with different styles and transitions.</p>
     <h2 id="usage">Usage</h2>
     <p>The Modal component consists of an overlay, a dialog and an optional close button. You can use any element to toggle a modal dialog. To enable the necessary JavaScript, add the <code>tiadian-toggle</code> attribute. An <code>&lt;a&gt;</code> element needs to be linked to the modal's id. If you are using another element, like a button, just add the <code>tiadian-toggle="target: #ID"</code> attribute to target the id of the modal container.</p>
@@ -51,6 +50,26 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <!-- This is a button toggling the modal -->
+<button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #modal-example">Open</button>
+
+<!-- This is an anchor toggling the modal -->
+<a href="#modal-example" tiadian-toggle>Open</a>
+
+<!-- This is the modal -->
+<div id="modal-example" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-modal-body">
+        <h2 class="tiadian-modal-title">Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="tiadian-text-right">
+            <button class="tiadian-button tiadian-button-default tiadian-modal-close" type="button">Cancel</button>
+            <button class="tiadian-button tiadian-button-primary" type="button">Save</button>
+        </p>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;!-- This is a button toggling the modal --&gt;
 &lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #modal-example"&gt;Open&lt;/button&gt;
@@ -89,6 +108,32 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+     <!-- This is a button toggling the modal with the default close button -->
+<button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #modal-close-default">Default</button>
+
+<!-- This is the modal with the default close button -->
+<div id="modal-close-default" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-modal-body">
+        <button class="tiadian-modal-close-default" type="button" tiadian-close></button>
+        <h2 class="tiadian-modal-title">Default</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+
+<!-- This is a button toggling the modal with the outside close button -->
+<button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #modal-close-outside">Outside</button>
+
+<!-- This is the modal with the outside close button -->
+<div id="modal-close-outside" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-modal-body">
+        <button class="tiadian-modal-close-outside" type="button" tiadian-close></button>
+        <h2 class="tiadian-modal-title">Outside</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;!-- This is a button toggling the modal with the default close button --&gt;
 &lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #modal-close-default"&gt;Default&lt;/button&gt;
@@ -124,6 +169,18 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <a class="tiadian-button tiadian-button-default" href="#modal-center" tiadian-toggle>Open</a>
+
+<div id="modal-center" class="tiadian-flex-top" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-modal-body tiadian-margin-auto-vertical">
+
+        <button class="tiadian-modal-close-default" type="button" tiadian-close></button>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </div>
+</div>
     <pre>
       <code class="language-example">&lt;a class="tiadian-button tiadian-button-default" href="#modal-center" tiadian-toggle&gt;Open&lt;/a&gt;
 
@@ -179,6 +236,25 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <a class="tiadian-button tiadian-button-default" href="#modal-sections" tiadian-toggle>Open</a>
+
+<div id="modal-sections" tiadian-modal>
+    <div class="tiadian-modal-dialog">
+        <button class="tiadian-modal-close-default" type="button" tiadian-close></button>
+        <div class="tiadian-modal-header">
+            <h2 class="tiadian-modal-title">Modal Title</h2>
+        </div>
+        <div class="tiadian-modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="tiadian-modal-footer tiadian-text-right">
+            <button class="tiadian-button tiadian-button-default tiadian-modal-close" type="button">Cancel</button>
+            <button class="tiadian-button tiadian-button-primary" type="button">Save</button>
+        </div>
+    </div>
+</div>
+
     <pre>
       <code class="language-example">&lt;a class="tiadian-button tiadian-button-default" href="#modal-sections" tiadian-toggle&gt;Open&lt;/a&gt;
 
@@ -206,6 +282,17 @@
       <code class="language-html">&lt;div id="my-id" class="tiadian-modal-container" tiadian-modal&gt;...&lt;/div&gt;
 </code>
     </pre>
+    <a class="tiadian-button tiadian-button-default" href="#modal-container" tiadian-toggle>Open</a>
+
+<div id="modal-container" class="tiadian-modal-container" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-modal-body">
+        <button class="tiadian-modal-close-default" type="button" tiadian-close></button>
+        <h2 class="tiadian-modal-title">Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;a class="tiadian-button tiadian-button-default" href="#modal-container" tiadian-toggle&gt;Open&lt;/a&gt;
 
@@ -230,6 +317,23 @@
 </code>
     </pre>
     <p>Using the <a href="grid.md">grid</a> and <a href="width.md">width</a> classes, you can create a nice, split fullscreen modal.</p>
+    
+     <a class="tiadian-button tiadian-button-default" href="#modal-full" tiadian-toggle>Open</a>
+
+<div id="modal-full" class="tiadian-modal-full" tiadian-modal>
+    <div class="tiadian-modal-dialog">
+        <button class="tiadian-modal-close-full tiadian-close-large" type="button" tiadian-close></button>
+        <div class="tiadian-grid-collapse tiadian-child-width-1-2@s tiadian-flex-middle" tiadian-grid>
+            <div class="tiadian-background-cover" style="background-image: url('images/photo.jpg');" tiadian-height-viewport></div>
+            <div class="tiadian-padding-large">
+                <h1>Headline</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;a class="tiadian-button tiadian-button-default" href="#modal-full" tiadian-toggle&gt;Open&lt;/a&gt;
 
@@ -256,6 +360,48 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <a class="tiadian-button tiadian-button-default" href="#modal-overflow" tiadian-toggle>Open</a>
+
+<div id="modal-overflow" tiadian-modal>
+    <div class="tiadian-modal-dialog">
+
+        <button class="tiadian-modal-close-default" type="button" tiadian-close></button>
+
+        <div class="tiadian-modal-header">
+            <h2 class="tiadian-modal-title">Headline</h2>
+        </div>
+
+        <div class="tiadian-modal-body" tiadian-overflow-auto>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+
+        <div class="tiadian-modal-footer tiadian-text-right">
+            <button class="tiadian-button tiadian-button-default tiadian-modal-close" type="button">Cancel</button>
+            <button class="tiadian-button tiadian-button-primary" type="button">Save</button>
+        </div>
+
+    </div>
+</div>
+
     <pre>
       <code class="language-example">&lt;a class="tiadian-button tiadian-button-default" href="#modal-overflow" tiadian-toggle&gt;Open&lt;/a&gt;
 
@@ -312,6 +458,42 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <p tiadian-margin>
+    <a class="tiadian-button tiadian-button-default" href="#modal-media-image" tiadian-toggle>Image</a>
+    <a class="tiadian-button tiadian-button-default" href="#modal-media-video" tiadian-toggle>Video</a>
+    <a class="tiadian-button tiadian-button-default" href="#modal-media-youtube" tiadian-toggle>YouTube</a>
+    <a class="tiadian-button tiadian-button-default" href="#modal-media-vimeo" tiadian-toggle>Vimeo</a>
+</p>
+
+<div id="modal-media-image" class="tiadian-flex-top" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-width-auto tiadian-margin-auto-vertical">
+        <button class="tiadian-modal-close-outside" type="button" tiadian-close></button>
+        <img src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" alt="">
+    </div>
+</div>
+
+<div id="modal-media-video" class="tiadian-flex-top" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-width-auto tiadian-margin-auto-vertical">
+        <button class="tiadian-modal-close-outside" type="button" tiadian-close></button>
+        <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" controls playsinline tiadian-video></video>
+    </div>
+</div>
+
+<div id="modal-media-youtube" class="tiadian-flex-top" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-width-auto tiadian-margin-auto-vertical">
+        <button class="tiadian-modal-close-outside" type="button" tiadian-close></button>
+        <iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA" width="1920" height="1080" frameborder="0" tiadian-video tiadian-responsive></iframe>
+    </div>
+</div>
+
+<div id="modal-media-vimeo" class="tiadian-flex-top" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-width-auto tiadian-margin-auto-vertical">
+        <button class="tiadian-modal-close-outside" type="button" tiadian-close></button>
+        <iframe src="https://player.vimeo.com/video/1084537" width="1280" height="720" frameborder="0" tiadian-video tiadian-responsive></iframe>
+    </div>
+</div>
+
     <pre>
       <code class="language-example"> &lt;p tiadian-margin&gt;
     &lt;a class="tiadian-button tiadian-button-default" href="#modal-media-image" tiadian-toggle&gt;Image&lt;/a&gt;
@@ -366,6 +548,44 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <p tiadian-margin>
+    <a class="tiadian-button tiadian-button-default" href="#modal-group-1" tiadian-toggle>Modal 1</a>
+    <a class="tiadian-button tiadian-button-default" href="#modal-group-2" tiadian-toggle>Modal 2</a>
+</p>
+
+<div id="modal-group-1" tiadian-modal>
+    <div class="tiadian-modal-dialog">
+        <button class="tiadian-modal-close-default" type="button" tiadian-close></button>
+        <div class="tiadian-modal-header">
+            <h2 class="tiadian-modal-title">Headline 1</h2>
+        </div>
+        <div class="tiadian-modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="tiadian-modal-footer tiadian-text-right">
+            <button class="tiadian-button tiadian-button-default tiadian-modal-close" type="button">Cancel</button>
+            <a href="#modal-group-2" class="tiadian-button tiadian-button-primary" tiadian-toggle>Next</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-group-2" tiadian-modal>
+    <div class="tiadian-modal-dialog">
+        <button class="tiadian-modal-close-default" type="button" tiadian-close></button>
+        <div class="tiadian-modal-header">
+            <h2 class="tiadian-modal-title">Headline 2</h2>
+        </div>
+        <div class="tiadian-modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="tiadian-modal-footer tiadian-text-right">
+            <button class="tiadian-button tiadian-button-default tiadian-modal-close" type="button">Cancel</button>
+            <a href="#modal-group-1" class="tiadian-button tiadian-button-primary" tiadian-toggle>Previous</a>
+        </div>
+    </div>
+</div>
+
     <pre>
       <code class="language-example">&lt;p tiadian-margin&gt;
     &lt;a class="tiadian-button tiadian-button-default" href="#modal-group-1" tiadian-toggle&gt;Modal 1&lt;/a&gt;
@@ -615,6 +835,57 @@
 const el = modal.$el; // The modal element
 </code>
     </pre>
+    
+    
+    <p tiadian-margin>
+
+    <a id="js-modal-dialog" class="tiadian-button tiadian-button-default" href="#">Dialog</a>
+
+    <a id="js-modal-alert" class="tiadian-button tiadian-button-default" href="#">Alert</a>
+
+    <a id="js-modal-confirm" class="tiadian-button tiadian-button-default" href="#">Confirm</a>
+
+    <a id="js-modal-prompt" class="tiadian-button tiadian-button-default" href="#">Prompt</a>
+
+    <script>
+
+       TIAdian.util.on('#js-modal-dialog', 'click', function (e) {
+           e.preventDefault();
+           e.target.blur();
+           TIAdian.modal.dialog('<p class="tiadian-modal-body">TIAdian dialog!</p>');
+       });
+
+       TIAdian.util.on('#js-modal-alert', 'click', function (e) {
+           e.preventDefault();
+           e.target.blur();
+           TIAdian.modal.alert('TIAdian alert!').then(function () {
+               console.log('Alert closed.')
+           });
+       });
+
+       TIAdian.util.on('#js-modal-confirm', 'click', function (e) {
+           e.preventDefault();
+           e.target.blur();
+           TIAdian.modal.confirm('TIAdian confirm!').then(function () {
+               console.log('Confirmed.')
+           }, function () {
+               console.log('Rejected.')
+           });
+       });
+
+       TIAdian.util.on('#js-modal-prompt', 'click', function (e) {
+           e.preventDefault();
+           e.target.blur();
+           TIAdian.modal.prompt('Name:', 'Your name').then(function (name) {
+               console.log('Prompted:', name)
+           });
+       });
+
+    </script>
+
+</p>
+
+    
     <pre>
       <code class="language-example">&lt;p tiadian-margin&gt;
 
@@ -665,4 +936,3 @@ const el = modal.$el; // The modal element
 &lt;/p&gt;
 </code>
     </pre>
-  
