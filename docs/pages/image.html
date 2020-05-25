@@ -1,5 +1,4 @@
-
-    <h1 id="image">Image</h1>
+<h1 id="image">Image</h1>
     <p class="tiadian-text-lead">Speed up page loading times and decrease traffic by only loading images as they enter the viewport.</p>
     <p>The Image component improves page speed significantly by following these methods:</p>
     <ul>
@@ -17,7 +16,10 @@
 </code>
     </pre>
     <p>The <code>width</code> and <code>height</code> attributes are required so an empty placeholder can be generated in the exact same size as the image. Alternatively, use <code>data-width</code> and <code>data-height</code> if you don't want to set the explicit attributes.</p>
-    <pre>
+   <img data-src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" width="1800" height="1200" alt="" tiadian-img>
+
+   
+   <pre>
       <code class="language-example">&lt;img data-src="images/light.jpg" width="1800" height="1200" alt="" tiadian-img&gt;
 </code>
     </pre>
@@ -34,6 +36,14 @@
       <code class="language-html">&lt;img data-src="" data-srcset="" sizes="" width="" height="" alt="" tiadian-img&gt;
 </code>
     </pre>
+    
+    <img data-src="https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&w=650&h=433&q=80"
+     data-srcset="https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&w=650&h=433&q=80 650w,
+                  https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&w=1300&h=866&q=80 1300w"
+     sizes="(min-width: 650px) 650px, 100vw" width="650" height="433" alt="" tiadian-img>
+
+
+    
     <pre>
       <code class="language-example">&lt;img data-src="https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=650&amp;h=433&amp;q=80"
      data-srcset="https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=650&amp;h=433&amp;q=80 650w,
@@ -49,6 +59,9 @@
       <code class="language-html">&lt;div data-src="" tiadian-img&gt;...&lt;/div&gt;
 </code>
     </pre>
+     <div class="tiadian-height-medium tiadian-flex tiadian-flex-center tiadian-flex-middle tiadian-background-cover tiadian-light" data-src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" tiadian-img>
+  <h1>Background Image</h1>
+</div>
     <pre>
       <code class="language-example">&lt;div class="tiadian-height-medium tiadian-flex tiadian-flex-center tiadian-flex-middle tiadian-background-cover tiadian-light" data-src="images/photo.jpg" tiadian-img&gt;
   &lt;h1&gt;Background Image&lt;/h1&gt;
@@ -62,6 +75,15 @@
       <code class="language-html">&lt;div data-src="" data-srcset="" data-sizes="" tiadian-img&gt;...&lt;/div&gt;
 </code>
     </pre>
+    
+     <div class="tiadian-height-medium tiadian-flex tiadian-flex-center tiadian-flex-middle tiadian-background-cover tiadian-light"
+     data-src="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=650&h=433&q=80"
+     data-srcset="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=650&h=433&q=80 650w,
+                  https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&w=1300&h=866&q=80 1300w"
+     data-sizes="(min-width: 650px) 650px, 100vw" tiadian-img>
+    <h1>Background Image</h1>
+</div>
+
     <pre>
       <code class="language-example">&lt;div class="tiadian-height-medium tiadian-flex tiadian-flex-center tiadian-flex-middle tiadian-background-cover tiadian-light"
      data-src="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&amp;w=650&amp;h=433&amp;q=80"
@@ -80,6 +102,27 @@
 </code>
     </pre>
     <p>The following example loads all images in the slides as soon as the slideshow enters the viewport. It uses <code>!.tiadian-slideshow-items</code> as a target selector. The <code>!</code> looks up the DOM to find the next parent element with the <code>.tiadian-slideshow-items</code> class.</p>
+    
+    <div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow>
+
+    <ul class="tiadian-slideshow-items">
+        <li>
+            <img data-src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !.tiadian-slideshow-items">
+        </li>
+        <li>
+            <img data-src="https://tiaweb.github.io/tiadian/docs/images/dark.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !.tiadian-slideshow-items">
+        </li>
+        <li>
+            <img data-src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !.tiadian-slideshow-items">
+        </li>
+    </ul>
+
+    <a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"></a>
+    <a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"></a>
+
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow&gt;
 
@@ -155,6 +198,27 @@
 &lt;/ul&gt;
 </code>
     </pre>
+    
+      <div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow>
+
+    <ul class="tiadian-slideshow-items">
+        <li>
+            <img data-src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !ul > :last-child, !* +*">
+        </li>
+        <li>
+            <img data-src="https://tiaweb.github.io/tiadian/docs/images/dark.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !* -*, !* +*">
+        </li>
+        <li>
+            <img data-src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !* -*, !ul > :first-child">
+        </li>
+    </ul>
+
+    <a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"></a>
+    <a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"></a>
+
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow&gt;
 
@@ -275,3 +339,4 @@
     <p>
       <strong>Note</strong> The Image component keeps records of already loaded images in the Session Storage. That's how it tries to determine if an image is already cached. A cached image is loaded immediately, without the lazy loading mechanism to prevent any rendering flashes. Prior to testing the Image component, make sure to clear these records from your browser's Session Storage.</p>
  
+
