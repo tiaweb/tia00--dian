@@ -1,4 +1,3 @@
-
     <h1 id="search">Search</h1>
     <p class="tiadian-text-lead">Easily create a nice looking search.</p>
     <h2 id="usage">Usage</h2>
@@ -32,6 +31,10 @@
 </code>
     </pre>
     <p>By default, the search has no additional styling. In this example we are using the <code>.tiadian-search-default</code> modifier.</p>
+    
+    <form class="tiadian-search tiadian-search-default">
+    <input class="tiadian-search-input" type="search" placeholder="Search...">
+</form>
     <pre>
       <code class="language-example">&lt;form class="tiadian-search tiadian-search-default"&gt;
     &lt;input class="tiadian-search-input" type="search" placeholder="Search..."&gt;
@@ -48,6 +51,20 @@
 &lt;/form&gt;
 </code>
     </pre>
+    
+     <div class="tiadian-margin">
+    <form class="tiadian-search tiadian-search-default">
+        <span tiadian-search-icon></span>
+        <input class="tiadian-search-input" type="search" placeholder="Search...">
+    </form>
+</div>
+
+<div class="tiadian-margin">
+    <form class="tiadian-search tiadian-search-default">
+        <span class="tiadian-search-icon-flip" tiadian-search-icon></span>
+        <input class="tiadian-search-input" type="search" placeholder="Search...">
+    </form>
+</div>
     <pre>
       <code class="language-example">&lt;div class="tiadian-margin"&gt;
     &lt;form class="tiadian-search tiadian-search-default"&gt;
@@ -74,6 +91,22 @@
 &lt;/form&gt;
 </code>
     </pre>
+    
+    <div class="tiadian-margin">
+    <form class="tiadian-search tiadian-search-default">
+        <a href="" tiadian-search-icon></a>
+        <input class="tiadian-search-input" type="search" placeholder="Search...">
+    </form>
+</div>
+
+<div class="tiadian-margin">
+    <form class="tiadian-search tiadian-search-default">
+        <a href="" class="tiadian-search-icon-flip" tiadian-search-icon></a>
+        <input class="tiadian-search-input" type="search" placeholder="Search...">
+    </form>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-margin"&gt;
     &lt;form class="tiadian-search tiadian-search-default"&gt;
@@ -97,6 +130,12 @@
       <code class="language-html">&lt;form class="tiadian-search tiadian-search-default"&gt;...&lt;/form&gt;
 </code>
     </pre>
+    
+     <form class="tiadian-search tiadian-search-default">
+    <span tiadian-search-icon></span>
+    <input class="tiadian-search-input" type="search" placeholder="Search...">
+</form>
+
     <pre>
       <code class="language-example">&lt;form class="tiadian-search tiadian-search-default"&gt;
     &lt;span tiadian-search-icon&gt;&lt;/span&gt;
@@ -111,6 +150,11 @@
       <code class="language-html">&lt;form class="tiadian-search tiadian-search-large"&gt;...&lt;/form&gt;
 </code>
     </pre>
+    
+    <form class="tiadian-search tiadian-search-large">
+    <span tiadian-search-icon></span>
+    <input class="tiadian-search-input" type="search" placeholder="Search...">
+</form>
     <pre>
       <code class="language-example">&lt;form class="tiadian-search tiadian-search-large"&gt;
     &lt;span tiadian-search-icon&gt;&lt;/span&gt;
@@ -125,6 +169,20 @@
       <code class="language-html">&lt;form class="tiadian-search tiadian-search-navbar"&gt;...&lt;/form&gt;
 </code>
     </pre>
+    
+    <nav class="tiadian-navbar-container" tiadian-navbar>
+    <div class="tiadian-navbar-left">
+
+        <div class="tiadian-navbar-item">
+            <form class="tiadian-search tiadian-search-navbar">
+                <span tiadian-search-icon></span>
+                <input class="tiadian-search-input" type="search" placeholder="Search...">
+            </form>
+        </div>
+
+    </div>
+</nav>
+
     <pre>
       <code class="language-example">&lt;nav class="tiadian-navbar-container" tiadian-navbar&gt;
     &lt;div class="tiadian-navbar-left"&gt;
@@ -147,6 +205,10 @@
       <code class="language-html">&lt;a class="tiadian-search-toggle" href="" tiadian-search-icon&gt;&lt;/a&gt;
 </code>
     </pre>
+    
+    <a class="tiadian-search-toggle" href="" tiadian-search-icon></a>
+
+    
     <pre>
       <code class="language-example">&lt;a class="tiadian-search-toggle" href="" tiadian-search-icon&gt;&lt;/a&gt;
 </code>
@@ -163,6 +225,39 @@
 </code>
     </pre>
     <h3 id="overlay">Overlay</h3>
+    
+    <nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar>
+
+    <div class="nav-overlay tiadian-navbar-left">
+
+        <a class="tiadian-navbar-item tiadian-logo" href="#">Logo</a>
+
+        <ul class="tiadian-navbar-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+
+    <div class="nav-overlay tiadian-navbar-right">
+
+        <a class="tiadian-navbar-toggle" tiadian-search-icon tiadian-toggle="target: .nav-overlay; animation: tiadian-animation-fade" href="#"></a>
+
+    </div>
+
+    <div class="nav-overlay tiadian-navbar-left tiadian-flex-1" hidden>
+
+        <div class="tiadian-navbar-item tiadian-width-expand">
+            <form class="tiadian-search tiadian-search-navbar tiadian-width-1-1">
+                <input class="tiadian-search-input" type="search" placeholder="Search..." autofocus>
+            </form>
+        </div>
+
+        <a class="tiadian-navbar-toggle" tiadian-close tiadian-toggle="target: .nav-overlay; animation: tiadian-animation-fade" href="#"></a>
+
+    </div>
+
+</nav>
     <pre>
       <code class="language-example">&lt;nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar&gt;
 
@@ -199,6 +294,33 @@
 </code>
     </pre>
     <h3 id="drop">Drop</h3>
+    
+    <nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar>
+    <div class="tiadian-navbar-left">
+
+        <a class="tiadian-navbar-item tiadian-logo" href="#">Logo</a>
+
+        <ul class="tiadian-navbar-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+    <div class="tiadian-navbar-right">
+
+        <div>
+            <a class="tiadian-navbar-toggle" tiadian-search-icon href="#"></a>
+            <div class="tiadian-drop" tiadian-drop="mode: click; pos: left-center; offset: 0">
+                <form class="tiadian-search tiadian-search-navbar tiadian-width-1-1">
+                    <input class="tiadian-search-input" type="search" placeholder="Search..." autofocus>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+    
     <pre>
       <code class="language-example">&lt;nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar&gt;
     &lt;div class="tiadian-navbar-left"&gt;
@@ -227,6 +349,42 @@
 </code>
     </pre>
     <h3 id="dropdown">Dropdown</h3>
+    
+    <nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar>
+    <div class="tiadian-navbar-left">
+
+        <a class="tiadian-navbar-item tiadian-logo" href="#">Logo</a>
+
+        <ul class="tiadian-navbar-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+    <div class="tiadian-navbar-right">
+
+        <div>
+            <a class="tiadian-navbar-toggle" href="#" tiadian-search-icon></a>
+            <div class="tiadian-navbar-dropdown" tiadian-drop="mode: click; cls-drop: tiadian-navbar-dropdown; boundary: !nav">
+
+                <div class="tiadian-grid-small tiadian-flex-middle" tiadian-grid>
+                    <div class="tiadian-width-expand">
+                        <form class="tiadian-search tiadian-search-navbar tiadian-width-1-1">
+                            <input class="tiadian-search-input" type="search" placeholder="Search..." autofocus>
+                        </form>
+                    </div>
+                    <div class="tiadian-width-auto">
+                        <a class="tiadian-navbar-dropdown-close" href="#" tiadian-close></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+    
     <pre>
       <code class="language-example">&lt;nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar&gt;
     &lt;div class="tiadian-navbar-left"&gt;
@@ -264,6 +422,35 @@
 </code>
     </pre>
     <h3 id="modal">Modal</h3>
+    
+     <nav class="tiadian-navbar tiadian-navbar-container tiadian-margin">
+    <div class="tiadian-navbar-left">
+
+        <a class="tiadian-navbar-item tiadian-logo" href="#">Logo</a>
+
+        <ul class="tiadian-navbar-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+    <div class="tiadian-navbar-right">
+
+        <a class="tiadian-navbar-toggle" href="#modal-full" tiadian-search-icon tiadian-toggle></a>
+
+    </div>
+</nav>
+
+<div id="modal-full" class="tiadian-modal-full tiadian-modal" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-flex tiadian-flex-center tiadian-flex-middle" tiadian-height-viewport>
+        <button class="tiadian-modal-close-full" type="button" tiadian-close></button>
+        <form class="tiadian-search tiadian-search-large">
+            <input class="tiadian-search-input tiadian-text-center" type="search" placeholder="Search..." autofocus>
+        </form>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;nav class="tiadian-navbar tiadian-navbar-container tiadian-margin"&gt;
     &lt;div class="tiadian-navbar-left"&gt;
