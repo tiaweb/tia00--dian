@@ -1,5 +1,4 @@
-
-    <h1 id="pagination">Pagination</h1>
+<h1 id="pagination">Pagination</h1>
     <p class="tiadian-text-lead">Easily create a nice looking pagination to navigate through pages.</p>
     <h2 id="usage">Usage</h2>
     <p>The Pagination component consists of button-like styled links, that are aligned side by side in a horizontal list.</p>
@@ -39,6 +38,23 @@
 &lt;/ul&gt;
 </code>
     </pre>
+    <ul class="tiadian-pagination" tiadian-margin>
+    <li><a href="#"><span tiadian-pagination-previous></span></a></li>
+    <li><a href="#">1</a></li>
+    <li class="tiadian-disabled"><span>...</span></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li class="tiadian-active"><span>7</span></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+    <li><a href="#">10</a></li>
+    <li class="tiadian-disabled"><span>...</span></li>
+    <li><a href="#">20</a></li>
+    <li><a href="#"><span tiadian-pagination-next></span></a></li>
+</ul>
+
+    
     <pre>
       <code class="language-example">&lt;ul class="tiadian-pagination" tiadian-margin&gt;
     &lt;li&gt;&lt;a href="#"&gt;&lt;span tiadian-pagination-previous&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
@@ -64,6 +80,30 @@
       <code class="language-html">&lt;ul class="tiadian-pagination tiadian-flex-center"&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    
+     <ul class="tiadian-pagination tiadian-flex-center" tiadian-margin>
+    <li><a href="#"><span tiadian-pagination-previous></span></a></li>
+    <li><a href="#">1</a></li>
+    <li class="tiadian-disabled"><span>...</span></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li class="tiadian-active"><span>7</span></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#"><span tiadian-pagination-next></span></a></li>
+</ul>
+
+<ul class="tiadian-pagination tiadian-flex-right tiadian-margin-medium-top" tiadian-margin>
+    <li><a href="#"><span tiadian-pagination-previous></span></a></li>
+    <li><a href="#">1</a></li>
+    <li class="tiadian-disabled"><span>...</span></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li class="tiadian-active"><span>7</span></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#"><span tiadian-pagination-next></span></a></li>
+</ul>
+
+    
     <pre>
       <code class="language-example">&lt;ul class="tiadian-pagination tiadian-flex-center" tiadian-margin&gt;
     &lt;li&gt;&lt;a href="#"&gt;&lt;span tiadian-pagination-previous&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
@@ -98,6 +138,12 @@
 &lt;/ul&gt;
 </code>
     </pre>
+    
+     <ul class="tiadian-pagination">
+    <li><a href="#"><span class="tiadian-margin-small-right" tiadian-pagination-previous></span> Previous</a></li>
+    <li class="tiadian-margin-auto-left"><a href="#">Next <span class="tiadian-margin-small-left" tiadian-pagination-next></span></a></li>
+</ul>
+
     <pre>
       <code class="language-example">&lt;ul class="tiadian-pagination"&gt;
     &lt;li&gt;&lt;a href="#"&gt;&lt;span class="tiadian-margin-small-right" tiadian-pagination-previous&gt;&lt;/span&gt; Previous&lt;/a&gt;&lt;/li&gt;
@@ -105,4 +151,3 @@
 &lt;/ul&gt;
 </code>
     </pre>
-  
