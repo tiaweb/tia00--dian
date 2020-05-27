@@ -7,6 +7,9 @@
       <code class="language-html">&lt;div tiadian-sticky&gt;&lt;/div&gt;
 </code>
     </pre>
+     <div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="bottom: #offset">Stick to the top</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="bottom: #offset"&gt;Stick to the top&lt;/div&gt;
 </code>
@@ -20,6 +23,9 @@
       <code class="language-html">&lt;div tiadian-sticky="offset: 100"&gt;&lt;/div&gt;
 </code>
     </pre>
+    
+    <div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="offset: 100; bottom: #top">Stick 100px below the top</div>
+
     <pre>
       <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="offset: 100; bottom: #top"&gt;Stick 100px below the top&lt;/div&gt;
 </code>
@@ -40,6 +46,19 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <div class="tiadian-child-width-1-2@s" tiadian-grid>
+    <div>
+        <div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="top: 200; bottom: #animation">Stick to the top but only after 200px scrolling</div>
+    </div>
+    <div>
+        <div id="container-1" class="tiadian-background-muted tiadian-height-medium" style="margin-bottom: 200px;">
+            <div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="top: #container-1; bottom: #animation">Stick to the top but below the box</div>
+        </div>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
     &lt;div&gt;
@@ -60,9 +79,13 @@
       <code class="language-html">&lt;div tiadian-sticky="animation: tiadian-animation-slide-top"&gt;&lt;/div&gt;
 </code>
     </pre>
+    
+     <div class="tiadian-card tiadian-card-default tiadian-card-body" style="margin-bottom: 200px; z-index: 980;" tiadian-sticky="top: 100; animation: tiadian-animation-slide-top; bottom: #sticky-on-scroll-up">Animation Slide Top</div>
+
     <pre>
       <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="margin-bottom: 200px; z-index: 980;" tiadian-sticky="top: 100; animation: tiadian-animation-slide-top; bottom: #sticky-on-scroll-up"&gt;Animation Slide Top&lt;/div&gt;
 </code>
+
     </pre>
     <hr />
     <h2 id="sticky-on-scroll-up">Sticky on scroll up</h2>
@@ -71,6 +94,10 @@
       <code class="language-html">&lt;div tiadian-sticky="show-on-up: true"&gt;&lt;/div&gt;
 </code>
     </pre>
+    
+    <div class="tiadian-card tiadian-card-default tiadian-card-body" style="margin-bottom: 200px; z-index: 980;" tiadian-sticky="show-on-up: true; animation: tiadian-animation-slide-top; bottom: #bottom">Slide in on scroll up</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body" style="margin-bottom: 200px; z-index: 980;" tiadian-sticky="show-on-up: true; animation: tiadian-animation-slide-top; bottom: #bottom"&gt;Slide in on scroll up&lt;/div&gt;
 </code>
@@ -89,6 +116,26 @@
 &lt;div id="my-id"&gt;&lt;/div&gt;
 </code>
     </pre>
+    
+    <div class="tiadian-child-width-1-2@s" tiadian-grid>
+    <div>
+        <div class="tiadian-background-muted tiadian-height-medium">
+            <div class="tiadian-height-medium tiadian-background-muted">
+                <div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="bottom: true">Stick until the bottom of its parent container</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div class="tiadian-card tiadian-card-default tiadian-card-body" style="z-index: 980;" tiadian-sticky="bottom: #container-2">Stick until the next headline</div>
+        </div>
+    </div>
+</div>
+
+<h3 id="container-2">Some Headline</h3>
+
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
     &lt;div&gt;
