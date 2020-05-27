@@ -1,5 +1,4 @@
-
-    <h1 id="switcher">Switcher</h1>
+  <h1 id="switcher">Switcher</h1>
     <p class="tiadian-text-lead">Dynamically transition through different content panes.</p>
     <h2 id="usage">Usage</h2>
     <p>The Switcher component consists of a number of toggles and their related content items. Add the <code>tiadian-switcher</code> attribute to a list element which contains the toggles. Add the <code>.tiadian-switcher</code> class to the element containing the content items.</p>
@@ -18,6 +17,20 @@
 </code>
     </pre>
     <p>In this example we are using the <a href="subnav.md">Subnav component</a>.</p>
+    
+    <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="tiadian-switcher tiadian-margin">
+    <li>Hello!</li>
+    <li>Hello again!</li>
+    <li>Bazinga!</li>
+</ul>
+
+    
     <pre>
       <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher&gt;
     &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
@@ -45,6 +58,18 @@
 &lt;/ul&gt;
 </code>
     </pre>
+    <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+<ul class="tiadian-switcher tiadian-margin">
+    <li>Hello! <a href="#" tiadian-switcher-item="2">Switch to item 3</a></li>
+    <li>Hello again! <a href="#" tiadian-switcher-item="next">Next item</a></li>
+    <li>Bazinga! <a href="#" tiadian-switcher-item="previous">Previous item</a></li>
+</ul>
+
+    
     <pre>
       <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher&gt;
     &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
@@ -71,6 +96,30 @@
 &lt;ul class="tiadian-switcher my-class"&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    
+     <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher="connect: .switcher-container">
+    <li><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<h4>Container 1</h4>
+
+<ul class="tiadian-switcher switcher-container tiadian-margin">
+    <li>Hello!</li>
+    <li>Hello again!</li>
+    <li>Bazinga!</li>
+</ul>
+
+<h4>Container 2</h4>
+
+<ul class="tiadian-switcher switcher-container tiadian-margin">
+    <li>Hello! The first item.</li>
+    <li>Hello again! The second item.</li>
+    <li>Bazinga! The third item.</li>
+</ul>
+
+    
     <pre>
       <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher="connect: .switcher-container"&gt;
     &lt;li&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
@@ -102,6 +151,18 @@
       <code class="language-html">&lt;ul tiadian-switcher="animation: tiadian-animation-fade"&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    
+    <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher="animation: tiadian-animation-fade">
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="tiadian-switcher tiadian-margin">
+    <li>Hello!</li>
+    <li>Hello again!</li>
+    <li>Bazinga!</li>
+</ul>
     <pre>
       <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher="animation: tiadian-animation-fade"&gt;
     &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
@@ -123,6 +184,20 @@
       <code class="language-html">&lt;ul tiadian-switcher="animation: tiadian-animation-slide-left-medium, tiadian-animation-slide-right-medium"&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    
+    <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher="animation: tiadian-animation-slide-left-medium, tiadian-animation-slide-right-medium">
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="tiadian-switcher tiadian-margin">
+    <li>Hello!</li>
+    <li>Hello again!</li>
+    <li>Bazinga!</li>
+</ul>
+
+    
     <pre>
       <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher="animation: tiadian-animation-slide-left-medium, tiadian-animation-slide-right-medium"&gt;
     &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
@@ -148,6 +223,20 @@
 &lt;ul class="tiadian-switcher"&gt;&lt;/ul&gt;
 </code>
     </pre>
+    
+    <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="tiadian-switcher tiadian-margin">
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+</ul>
+
+    
     <pre>
       <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-switcher&gt;
     &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
@@ -173,6 +262,20 @@
 &lt;ul class="tiadian-switcher"&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    
+     <ul tiadian-tab>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
+
+<ul class="tiadian-switcher tiadian-margin">
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+</ul>
+
+    
     <pre>
       <code class="language-example">&lt;ul tiadian-tab&gt;
     &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt;
@@ -201,6 +304,47 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <div class="tiadian-child-width-1-2@s" tiadian-grid>
+    <div>
+        <div tiadian-grid>
+            <div class="tiadian-width-auto@m">
+                <ul class="tiadian-tab-left" tiadian-tab="connect: #component-tab-left; animation: tiadian-animation-fade">
+                    <li><a href="#">Active</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                </ul>
+            </div>
+            <div class="tiadian-width-expand@m">
+                <ul id="component-tab-left" class="tiadian-switcher">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div tiadian-grid>
+            <div class="tiadian-width-auto@m tiadian-flex-last@m">
+                <ul class="tiadian-tab-right" tiadian-tab="connect: #component-tab-right; animation: tiadian-animation-fade">
+                    <li><a href="#">Active</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                </ul>
+            </div>
+            <div class="tiadian-width-expand@m">
+                <ul id="component-tab-right" class="tiadian-switcher">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
     &lt;div&gt;
@@ -255,6 +399,20 @@
 &lt;ul class="tiadian-switcher"&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    
+    <div tiadian-switcher="animation: tiadian-animation-fade; toggle: > *">
+    <button class="tiadian-button tiadian-button-default" type="button">Item</button>
+    <button class="tiadian-button tiadian-button-default" type="button">Item</button>
+    <button class="tiadian-button tiadian-button-default" type="button">Item</button>
+</div>
+
+<ul class="tiadian-switcher tiadian-margin">
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+</ul>
+
+    
     <pre>
       <code class="language-example">&lt;div tiadian-switcher="animation: tiadian-animation-fade; toggle: &gt; *"&gt;
     &lt;button class="tiadian-button tiadian-button-default" type="button"&gt;Item&lt;/button&gt;
@@ -285,6 +443,29 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <div tiadian-grid>
+    <div class="tiadian-width-small@m">
+
+        <ul class="tiadian-nav tiadian-nav-default" tiadian-switcher="connect: #component-nav; animation: tiadian-animation-fade">
+            <li><a href="#">Active</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+    <div class="tiadian-width-expand@m">
+
+        <ul id="component-nav" class="tiadian-switcher">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+        </ul>
+
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div tiadian-grid&gt;
     &lt;div class="tiadian-width-small@m"&gt;
