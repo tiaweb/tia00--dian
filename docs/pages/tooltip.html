@@ -1,5 +1,4 @@
-
-    <h1 id="tooltip">Tooltip</h1>
+<h1 id="tooltip">Tooltip</h1>
     <p class="tiadian-text-lead">Easily create a nice looking tooltip.</p>
     <h2 id="usage">Usage</h2>
     <p>To apply this component, add the <code>tiadian-tooltip</code> attribute to an element. You also need to add the <code>title: TEXT</code> option to the attribute, whose value will represent your tooltip's text.</p>
@@ -11,7 +10,9 @@
     <pre>
       <code class="language-html">&lt;div tiadian-tooltip="Hello World"&gt;&lt;/div&gt;
 </code>
-    </pre>
+    </pre><button class="tiadian-button tiadian-button-default" tiadian-tooltip="Hello World">Hover</button>
+
+    
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" tiadian-tooltip="Hello World"&gt;Hover&lt;/button&gt;
 </code>
@@ -81,6 +82,16 @@
         </tr>
       </tbody>
     </table>
+    <p tiadian-margin>
+    <button class="tiadian-button tiadian-button-default" tiadian-tooltip="Hello World">Top</button>
+    <button class="tiadian-button tiadian-button-default" tiadian-tooltip="title: Hello World; pos: top-left">Top Left</button>
+    <button class="tiadian-button tiadian-button-default" tiadian-tooltip="title: Hello World; pos: top-right">Top Right</button>
+    <button class="tiadian-button tiadian-button-default" tiadian-tooltip="title: Hello World; pos: bottom">Bottom</button>
+    <button class="tiadian-button tiadian-button-default" tiadian-tooltip="title: Hello World; pos: bottom-left">Bottom Left</button>
+    <button class="tiadian-button tiadian-button-default" tiadian-tooltip="title: Hello World; pos: bottom-right">Bottom Right</button>
+    <button class="tiadian-button tiadian-button-default" tiadian-tooltip="title: Hello World; pos: left">Left</button>
+    <button class="tiadian-button tiadian-button-default" tiadian-tooltip="title: Hello World; pos: right">Right</button>
+</p>
     <pre>
       <code class="language-example">&lt;p tiadian-margin&gt;
     &lt;button class="tiadian-button tiadian-button-default" tiadian-tooltip="Hello World"&gt;Top&lt;/button&gt;
@@ -101,6 +112,10 @@
       <code class="language-html">&lt;div tiadian-tooltip="title: Hello World; delay: 500"&gt;&lt;/div&gt;
 </code>
     </pre>
+    
+     <button class="tiadian-button tiadian-button-default" tiadian-tooltip="title: Hello World; delay: 500">Hover</button>
+
+    
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" tiadian-tooltip="title: Hello World; delay: 500"&gt;Hover&lt;/button&gt;
 </code>
@@ -281,4 +296,3 @@
 </code>
     </pre>
     <p>Hides the Tooltip.</p>
-  
