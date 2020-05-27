@@ -1,5 +1,4 @@
-
-    <h1 id="off-canvas">Off-canvas</h1>
+   <h1 id="off-canvas">Off-canvas</h1>
     <p class="tiadian-text-lead">Create an off-canvas sidebar that slides in and out of the page, which is perfect for creating mobile navigations.</p>
     <h2 id="usage">Usage</h2>
     <p>To apply this component, add the <code>tiadian-offcanvas</code> attribute to a parent <code>&lt;div&gt;</code> element and use the following classes.</p>
@@ -47,6 +46,24 @@
 &lt;/body&gt;
 </code>
     </pre>
+    
+      <button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-usage">Open</button>
+
+<a href="#offcanvas-usage" tiadian-toggle>Open</a>
+
+<div id="offcanvas-usage" tiadian-offcanvas>
+    <div class="tiadian-offcanvas-bar">
+
+        <button class="tiadian-offcanvas-close" type="button" tiadian-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-usage"&gt;Open&lt;/button&gt;
 
@@ -72,6 +89,23 @@
       <code class="language-html">&lt;div id="my-id" tiadian-offcanvas="overlay: true"&gt;...&lt;/div&gt;
 </code>
     </pre>
+    
+    <button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #offcanvas-overlay">Open</button>
+
+<div id="offcanvas-overlay" tiadian-offcanvas="overlay: true">
+    <div class="tiadian-offcanvas-bar">
+
+        <button class="tiadian-offcanvas-close" type="button" tiadian-close></button>
+
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #offcanvas-overlay"&gt;Open&lt;/button&gt;
 
@@ -96,6 +130,22 @@
       <code class="language-html">&lt;div id="my-id" tiadian-offcanvas="flip: true"&gt;...&lt;/div&gt;
 </code>
     </pre>
+    
+    <button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #offcanvas-flip">Open</button>
+
+<div id="offcanvas-flip" tiadian-offcanvas="flip: true; overlay: true">
+    <div class="tiadian-offcanvas-bar">
+
+        <button class="tiadian-offcanvas-close" type="button" tiadian-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #offcanvas-flip"&gt;Open&lt;/button&gt;
 
@@ -153,6 +203,62 @@
       <code class="language-html">&lt;div id="my-id" tiadian-offcanvas="mode: push"&gt;...&lt;/div&gt;
 </code>
     </pre>
+    
+    <button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-slide">Slide</button>
+
+<button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-push">Push</button>
+
+<button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-reveal">Reveal</button>
+
+<button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-none">None</button>
+
+<div id="offcanvas-slide" tiadian-offcanvas="overlay: true">
+    <div class="tiadian-offcanvas-bar">
+
+        <button class="tiadian-offcanvas-close" type="button" tiadian-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<div id="offcanvas-push" tiadian-offcanvas="mode: push; overlay: true">
+    <div class="tiadian-offcanvas-bar">
+
+        <button class="tiadian-offcanvas-close" type="button" tiadian-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<div id="offcanvas-reveal" tiadian-offcanvas="mode: reveal; overlay: true">
+    <div class="tiadian-offcanvas-bar">
+
+        <button class="tiadian-offcanvas-close" type="button" tiadian-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<div id="offcanvas-none" tiadian-offcanvas="mode: none; overlay: true">
+    <div class="tiadian-offcanvas-bar">
+
+        <button class="tiadian-offcanvas-close" type="button" tiadian-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-slide"&gt;Slide&lt;/button&gt;
 
@@ -222,6 +328,56 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-nav-primary">Primary Nav</button>
+
+<button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #offcanvas-nav">Default Nav</button>
+
+<div id="offcanvas-nav-primary" tiadian-offcanvas="overlay: true">
+    <div class="tiadian-offcanvas-bar tiadian-flex tiadian-flex-column">
+
+        <ul class="tiadian-nav tiadian-nav-primary tiadian-nav-center tiadian-margin-auto-vertical">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li class="tiadian-parent">
+                <a href="#">Parent</a>
+                <ul class="tiadian-nav-sub">
+                    <li><a href="#">Sub item</a></li>
+                    <li><a href="#">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="tiadian-nav-header">Header</li>
+            <li><a href="#"><span class="tiadian-margin-small-right" tiadian-icon="icon: table"></span> Item</a></li>
+            <li><a href="#"><span class="tiadian-margin-small-right" tiadian-icon="icon: thumbnails"></span> Item</a></li>
+            <li class="tiadian-nav-divider"></li>
+            <li><a href="#"><span class="tiadian-margin-small-right" tiadian-icon="icon: trash"></span> Item</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<div id="offcanvas-nav" tiadian-offcanvas="overlay: true">
+    <div class="tiadian-offcanvas-bar">
+
+        <ul class="tiadian-nav tiadian-nav-default">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li class="tiadian-parent">
+                <a href="#">Parent</a>
+                <ul class="tiadian-nav-sub">
+                    <li><a href="#">Sub item</a></li>
+                    <li><a href="#">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="tiadian-nav-header">Header</li>
+            <li><a href="#"><span class="tiadian-margin-small-right" tiadian-icon="icon: table"></span> Item</a></li>
+            <li><a href="#"><span class="tiadian-margin-small-right" tiadian-icon="icon: thumbnails"></span> Item</a></li>
+            <li class="tiadian-nav-divider"></li>
+            <li><a href="#"><span class="tiadian-margin-small-right" tiadian-icon="icon: trash"></span> Item</a></li>
+        </ul>
+
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #offcanvas-nav-primary"&gt;Primary Nav&lt;/button&gt;
 
@@ -423,4 +579,3 @@
 </code>
     </pre>
     <p>Hides the Offcanvas.</p>
-  
