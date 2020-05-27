@@ -1,4 +1,5 @@
 
+   
     <h1 id="video">Video</h1>
     <p class="tiadian-text-lead">Start playing videos as they are shown or enter the viewport.</p>
     <p>The Video component offers two advanced functions for videos. First, it allows you to pause a video whenever it's hidden with CSS and resume playing once it becomes visible again. In addition, the video can pause when it's outside the viewport and start playing when entering it.</p>
@@ -10,7 +11,10 @@
     <pre>
       <code class="language-html">&lt;video tiadian-video&gt;&lt;/video&gt;
 </code>
-    </pre>
+    </pre><button class="tiadian-button tiadian-button-default tiadian-margin" type="button" tiadian-toggle="target: +">Toggle HTML5 Video</button>
+
+<video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" controls playsinline hidden tiadian-video></video>
+
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default tiadian-margin" type="button" tiadian-toggle="target: +"&gt;Toggle HTML5 Video&lt;/button&gt;
 
@@ -23,7 +27,9 @@
     <pre>
       <code class="language-html">&lt;video tiadian-video="autoplay: inview"&gt;&lt;/video&gt;
 </code>
-    </pre>
+    </pre> <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" loop muted playsinline tiadian-video="autoplay: inview"></video>
+
+    
     <pre>
       <code class="language-example">&lt;video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" loop muted playsinline tiadian-video="autoplay: inview"&gt;&lt;/video&gt;
 </code>
@@ -34,7 +40,10 @@
     <pre>
       <code class="language-html">&lt;iframe src="" width="" height="" frameborder="0" tiadian-video="automute: true"&gt;&lt;/iframe&gt;
 </code>
-    </pre>
+    </pre><button class="tiadian-button tiadian-button-default tiadian-margin-bottom" type="button" tiadian-toggle="target: +">Toggle YouTube Video</button>
+
+<iframe src="https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="1920" height="1080" frameborder="0" allowfullscreen tiadian-responsive tiadian-video="automute: true"></iframe>
+
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default tiadian-margin-bottom" type="button" tiadian-toggle="target: +"&gt;Toggle YouTube Video&lt;/button&gt;
 
@@ -86,4 +95,3 @@
       <code class="language-js">TIAdian.video(element, options);
 </code>
     </pre>
-
