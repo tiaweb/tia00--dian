@@ -1,5 +1,4 @@
-
-    <h1 id="section">Section</h1>
+ <h1 id="section">Section</h1>
     <p class="tiadian-text-lead">Create horizontal layout sections with different background colors and styles.</p>
     <h2 id="usage">Usage</h2>
     <p>Sections are used to separate the content of a page into differently styled blocks. To apply this component, just add the <code>.tiadian-section</code> class to a container element. You can place a container from the <a href="container.md">Container component</a> to modify the width of the content inside sections and add horizontal padding. Note that the padding of a nested container will be reset.</p>
@@ -10,6 +9,28 @@
 </code>
     </pre>
     <p>By default, a section is blank. That is why it is important to add a modifier class for styling. In our example we are using the <code>.tiadian-section-muted</code> class. Normally, the section is the outermost element of a page, so this example doesn't quite reflect the realistic usage of this component.</p>
+    
+    <div class="tiadian-section tiadian-section-muted">
+    <div class="tiadian-container">
+
+        <h3>Section</h3>
+
+        <div class="tiadian-grid-match tiadian-child-width-1-3@m" tiadian-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-section tiadian-section-muted"&gt;
     &lt;div class="tiadian-container"&gt;
@@ -73,6 +94,110 @@
       <code class="language-html">&lt;div class="tiadian-section tiadian-section-primary"&gt;&lt;/div&gt;
 </code>
     </pre>
+    
+    <div class="tiadian-section tiadian-section-default">
+    <div class="tiadian-container">
+
+        <h3>Section Default</h3>
+
+        <div class="tiadian-grid-match tiadian-child-width-1-3@m" tiadian-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="tiadian-section tiadian-section-muted">
+    <div class="tiadian-container">
+
+        <h3>Section Muted</h3>
+
+        <div class="tiadian-grid-match tiadian-child-width-1-3@m" tiadian-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="tiadian-section tiadian-section-primary tiadian-light">
+    <div class="tiadian-container">
+
+        <h3>Section Primary</h3>
+
+        <div class="tiadian-grid-match tiadian-child-width-1-3@m" tiadian-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="tiadian-section tiadian-section-secondary tiadian-light">
+    <div class="tiadian-container">
+
+        <h3>Section Secondary</h3>
+
+        <div class="tiadian-grid-match tiadian-child-width-1-3@m" tiadian-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="tiadian-section-default">
+    <div class="tiadian-section tiadian-light tiadian-background-cover" style="background-image: url(images/dark.jpg)">
+        <div class="tiadian-container">
+
+            <h3>Section with Images</h3>
+
+            <div class="tiadian-grid-match tiadian-child-width-1-3@m" tiadian-grid>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-section tiadian-section-default"&gt;
     &lt;div class="tiadian-container"&gt;
@@ -184,6 +309,30 @@
       <code class="language-html">&lt;div class="tiadian-section tiadian-section-primary tiadian-preserve-color"&gt;&lt;/div&gt;
 </code>
     </pre>
+    
+     <div class="tiadian-section tiadian-section-primary tiadian-preserve-color">
+    <div class="tiadian-container">
+
+        <div class="tiadian-panel tiadian-light tiadian-margin-medium">
+            <h3>Section Primary with cards</h3>
+        </div>
+
+        <div class="tiadian-grid-match tiadian-child-width-expand@m" tiadian-grid>
+            <div>
+                <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div>
+                <div class="tiadian-card tiadian-card-default tiadian-card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
     <pre>
       <code class="language-example">&lt;div class="tiadian-section tiadian-section-primary tiadian-preserve-color"&gt;
     &lt;div class="tiadian-container"&gt;
@@ -252,6 +401,27 @@
         </tr>
       </tbody>
     </table>
+    
+    <div class="tiadian-section tiadian-section-large tiadian-section-muted">
+    <div class="tiadian-container">
+
+        <h3>Section Large</h3>
+
+        <div class="tiadian-grid-match tiadian-child-width-1-3@m" tiadian-grid>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-section tiadian-section-large tiadian-section-muted"&gt;
     &lt;div class="tiadian-container"&gt;
@@ -280,4 +450,3 @@
       <code class="language-html">&lt;div class="tiadian-section tiadian-section-overlap"&gt;&lt;/div&gt;
 </code>
     </pre>
- 
