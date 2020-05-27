@@ -1,5 +1,4 @@
-
-    <h1 id="slidenav">Slidenav</h1>
+  <h1 id="slidenav">Slidenav</h1>
     <p class="tiadian-text-lead">Defines a navigation with previous and next buttons to flip through slideshows.</p>
     <h2 id="usage">Usage</h2>
     <p>To create a navigation with previous and next buttons, just add the <code>tiadian-slidenav</code> attribute to <code>&lt;a&gt;</code> elements. Add the <code>previous</code> or <code>next</code> parameter to the attribute to style the nav items as previous or next buttons.</p>
@@ -8,6 +7,11 @@
 &lt;a href="" tiadian-slidenav-previous&gt;&lt;/a&gt;
 </code>
     </pre>
+    
+     <a href="#" tiadian-slidenav-previous></a>
+<a href="#" tiadian-slidenav-next></a>
+
+    
     <pre>
       <code class="language-example">&lt;a href="#" tiadian-slidenav-previous&gt;&lt;/a&gt;
 &lt;a href="#" tiadian-slidenav-next&gt;&lt;/a&gt;
@@ -21,6 +25,10 @@
 &lt;a href="" class="tiadian-slidenav-large" tiadian-slidenav-previous&gt;&lt;/a&gt;
 </code>
     </pre>
+     <a href="#" class="tiadian-slidenav-large" tiadian-slidenav-previous></a>
+<a href="#" class="tiadian-slidenav-large" tiadian-slidenav-next></a>
+
+    
     <pre>
       <code class="language-example">&lt;a href="#" class="tiadian-slidenav-large" tiadian-slidenav-previous&gt;&lt;/a&gt;
 &lt;a href="#" class="tiadian-slidenav-large" tiadian-slidenav-next&gt;&lt;/a&gt;
@@ -36,6 +44,12 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+    <div class="tiadian-slidenav-container">
+    <a href="" tiadian-slidenav-previous></a>
+    <a href="" tiadian-slidenav-next></a>
+</div>
+
     <pre>
       <code class="language-example">&lt;div class="tiadian-slidenav-container"&gt;
     &lt;a href="" tiadian-slidenav-previous&gt;&lt;/a&gt;
@@ -47,6 +61,15 @@
     <h2 id="position-as-overlay">Position as overlay</h2>
     <p>To position the slidenav on top of an element or the <a href="slideshow.md">Slideshow component</a> for example, just add one of the <code>.tiadian-position-*</code> classes from the <a href="position.md">Position component</a>. To create a position context on the container, add the <code>.tiadian-position-relative</code> class.</p>
     <p>Use the <code>.tiadian-light</code> or <code>.tiadian-dark</code> class from the <a href="inverse.md">Inverse component</a> to apply a light or dark color for better visibility.</p>
+    <div class="tiadian-position-relative tiadian-light">
+
+    <!-- The element which is wrapped goes here -->
+
+    <a class="tiadian-position-center-left" href="" tiadian-slidenav-previous></a>
+    <a class="tiadian-position-center-right" href="" tiadian-slidenav-next></a>
+
+</div>
+
     <pre>
       <code class="language-html">&lt;div class="tiadian-position-relative tiadian-light"&gt;
 
@@ -60,6 +83,27 @@
     </pre>
     <p>
       <strong>Note</strong> You can also apply the <a href="visibility.md#show-on-hover">Visibility component</a>, so that the slidenav only appears on hover.</p>
+      
+      <div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow>
+
+    <ul class="tiadian-slideshow-items">
+        <li>
+            <img src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" alt="" tiadian-cover>
+        </li>
+        <li>
+            <img src="https://tiaweb.github.io/tiadian/docs/images/dark.jpg" alt="" tiadian-cover>
+        </li>
+        <li>
+            <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="" tiadian-cover>
+        </li>
+    </ul>
+
+    <a class="tiadian-slidenav-large tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"></a>
+    <a class="tiadian-slidenav-large tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"></a>
+
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow&gt;
 
@@ -81,4 +125,3 @@
 &lt;/div&gt;
 </code>
     </pre>
-  
