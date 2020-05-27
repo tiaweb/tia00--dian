@@ -1,4 +1,4 @@
-
+  
     <h1 id="thumbnav">Thumbnav</h1>
     <p class="tiadian-text-lead">Create a flexible thumbnail navigation.</p>
     <h2 id="usage">Usage</h2>
@@ -34,6 +34,13 @@
     </pre>
     <p>
       <strong>Note</strong> For a better layout, if items should wrap into the next row, add the <code>tiadian-margin</code> attribute from the <a href="margin.md">Margin component</a>.</p>
+      
+      <ul class="tiadian-thumbnav" tiadian-margin>
+    <li class="tiadian-active"><a href="#"><img src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" width="100" alt=""></a></li>
+    <li><a href="#"><img src="https://tiaweb.github.io/tiadian/docs/images/dark.jpg" width="100" alt=""></a></li>
+    <li><a href="#"><img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" width="100" alt=""></a></li>
+</ul>
+
     <pre>
       <code class="language-example">&lt;ul class="tiadian-thumbnav" tiadian-margin&gt;
     &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;&lt;img src="images/photo.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
@@ -49,6 +56,12 @@
       <code class="language-html">&lt;ul class="tiadian-thumbnav tiadian-thumbnav-vertical"&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    <ul class="tiadian-thumbnav tiadian-thumbnav-vertical" tiadian-margin>
+    <li class="tiadian-active"><a href="#"><img src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" width="100" alt=""></a></li>
+    <li><a href="#"><img src="https://tiaweb.github.io/tiadian/docs/images/dark.jpg" width="100" alt=""></a></li>
+    <li><a href="#"><img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" width="100" alt=""></a></li>
+</ul>
+
     <pre>
       <code class="language-example">&lt;ul class="tiadian-thumbnav tiadian-thumbnav-vertical" tiadian-margin&gt;
     &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;&lt;img src="images/photo.jpg" width="100" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
@@ -72,6 +85,32 @@
 &lt;/div&gt;
 </code>
     </pre>
+    
+     <div class="tiadian-position-relative" tiadian-slideshow="animation: fade">
+
+    <ul class="tiadian-slideshow-items">
+        <li>
+            <img src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" alt="" tiadian-cover>
+        </li>
+        <li>
+            <img src="https://tiaweb.github.io/tiadian/docs/images/dark.jpg" alt="" tiadian-cover>
+        </li>
+        <li>
+            <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="" tiadian-cover>
+        </li>
+    </ul>
+
+    <div class="tiadian-position-bottom-center tiadian-position-small">
+        <ul class="tiadian-thumbnav">
+            <li tiadian-slideshow-item="0"><a href="#"><img src="https://tiaweb.github.io/tiadian/docs/images/photo.jpg" width="100" alt=""></a></li>
+            <li tiadian-slideshow-item="1"><a href="#"><img src="https://tiaweb.github.io/tiadian/docs/images/dark.jpg" width="100" alt=""></a></li>
+            <li tiadian-slideshow-item="2"><a href="#"><img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" width="100" alt=""></a></li>
+        </ul>
+    </div>
+
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-position-relative" tiadian-slideshow="animation: fade"&gt;
 
@@ -98,4 +137,3 @@
 &lt;/div&gt;
 </code>
     </pre>
- 
