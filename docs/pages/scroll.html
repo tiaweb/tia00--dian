@@ -1,11 +1,13 @@
 
-
         <h1 id="scroll">Scroll</h1>
 <p class="tiadian-text-lead">Scroll smoothly when jumping to different sections on a page.</p>
 <h2 id="usage">Usage</h2>
 <p>Simply add the <code>tiadian-scroll</code> attribute to any page-internal link that contains a URL fragment to add the smooth scrolling behavior.</p>
 <pre><code class="language-html">&lt;a href=&quot;#my-id&quot; tiadian-scroll&gt;&lt;/a&gt;
 </code></pre>
+
+<a class="tiadian-button tiadian-button-primary" href="#target" tiadian-scroll>Scroll down</a>
+
 <pre><code class="language-example">&lt;a class=&quot;tiadian-button tiadian-button-primary&quot; href=&quot;#target&quot; tiadian-scroll&gt;Scroll down&lt;/a&gt;
 </code></pre>
 <hr />
@@ -17,6 +19,14 @@
     alert('Done.');
 });
 </code></pre>
+
+<a id="js-scroll-trigger" class="tiadian-button tiadian-button-primary" href="#target" tiadian-scroll>Down with callback</a>
+
+<script>
+    TIAdian.util.on('#js-scroll-trigger', 'scrolled', function () {
+        alert('Done.');
+    });
+</script>
 <pre><code class="language-example">&lt;a id=&quot;js-scroll-trigger&quot; class=&quot;tiadian-button tiadian-button-primary&quot; href=&quot;#target&quot; tiadian-scroll&gt;Down with callback&lt;/a&gt;
 
 &lt;script&gt;
@@ -97,5 +107,3 @@
 </tr>
 </tbody>
 </table>
-
- 
