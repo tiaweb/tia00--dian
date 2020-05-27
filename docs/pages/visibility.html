@@ -76,7 +76,32 @@
 </code>
     </pre>
     <p>
-      <strong>Note</strong> In this example the green elements are hidden on screens that are larger than the defined breakpoint. Resize your browser window to see the effect.</p>
+      <strong>Note</strong> In this example the green elements are hidden on screens that are larger than the defined breakpoint. Resize your browser window to see the effect.</p><div class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-1-4@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-panel">
+            <div class="tiadian-alert tiadian-margin-remove tiadian-alert-success">✔ Small</div>
+            <div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden@s">Small</div>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-panel">
+            <div class="tiadian-alert tiadian-margin-remove tiadian-alert-success">✔ Medium</div>
+            <div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden@m">Medium</div>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-panel">
+            <div class="tiadian-alert tiadian-margin-remove tiadian-alert-success">✔ Large</div>
+            <div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden@l">Large</div>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-panel">
+            <div class="tiadian-alert tiadian-margin-remove tiadian-alert-success">✔ X-Large</div>
+            <div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden@xl">X-Large</div>
+        </div>
+    </div>
+</div>
     <pre>
       <code class="language-example">&lt;div class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-1-4@s tiadian-text-center" tiadian-grid&gt;
     &lt;div&gt;
@@ -149,7 +174,34 @@
 </code>
     </pre>
     <p>
-      <strong>Note</strong> In this example the green elements are displayed on screens that are larger than the defined breakpoint. Resize your browser window to see the effect.</p>
+      <strong>Note</strong> In this example the green elements are displayed on screens that are larger than the defined breakpoint. Resize your browser window to see the effect.</p><div class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-1-4@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-panel">
+            <div class="tiadian-alert tiadian-margin-remove">Small</div>
+            <div class="tiadian-alert tiadian-alert-success tiadian-position-cover tiadian-margin-remove tiadian-visible@s">✔ Small</div>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-panel">
+            <div class="tiadian-alert tiadian-margin-remove">Medium</div>
+            <div class="tiadian-alert tiadian-alert-success tiadian-position-cover tiadian-margin-remove tiadian-visible@m">✔ Medium</div>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-panel">
+            <div class="tiadian-alert tiadian-margin-remove">Large</div>
+            <div class="tiadian-alert tiadian-alert-success tiadian-position-cover tiadian-margin-remove tiadian-visible@l">✔ Large</div>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-panel">
+            <div class="tiadian-alert tiadian-margin-remove">X-Large</div>
+            <div class="tiadian-alert tiadian-alert-success tiadian-position-cover tiadian-margin-remove tiadian-visible@xl">✔ X-Large</div>
+        </div>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-1-4@s tiadian-text-center" tiadian-grid&gt;
     &lt;div&gt;
@@ -211,7 +263,40 @@
     &lt;div class="tiadian-hidden-hover"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code>
-    </pre>
+    </pre><div class="tiadian-child-width-1-2@s" tiadian-grid>
+    <div class="tiadian-visible-toggle" tabindex="-1">
+
+        <h4>Hidden when not hovered</h4>
+
+        <div tiadian-grid>
+            <div class="tiadian-width-expand">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="tiadian-width-auto">
+                <ul class="tiadian-hidden-hover tiadian-iconnav">
+                    <li><a href="#" tiadian-icon="icon: pencil"></a></li>
+                    <li><a href="#" tiadian-icon="icon: copy"></a></li>
+                    <li><a href="#" tiadian-icon="icon: trash"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="tiadian-visible-toggle" tabindex="-1">
+
+        <h4>Invisible when not hovered</h4>
+
+        <div tiadian-grid>
+            <div class="tiadian-width-expand">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="tiadian-width-auto">
+                <ul class="tiadian-invisible-hover tiadian-iconnav">
+                    <li><a href="#" tiadian-icon="icon: pencil"></a></li>
+                    <li><a href="#" tiadian-icon="icon: copy"></a></li>
+                    <li><a href="#" tiadian-icon="icon: trash"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
     <pre>
       <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
     &lt;div class="tiadian-visible-toggle" tabindex="-1"&gt;
@@ -259,7 +344,22 @@
 &lt;!-- Hidden on no-touch devices --&gt;
 &lt;div class="tiadian-hidden-notouch"&gt;&lt;/div&gt;
 </code>
-    </pre>
+    </pre><div class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-auto@s tiadian-text-center" tiadian-grid>
+    <div>
+        <div class="tiadian-panel">
+            <div class="tiadian-alert tiadian-margin-remove tiadian-alert-success">✔ Hidden Touch</div>
+            <div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden-touch">Hidden Touch</div>
+        </div>
+    </div>
+    <div>
+        <div class="tiadian-panel">
+            <div class="tiadian-alert tiadian-margin-remove tiadian-alert-success">✔ Hidden No-Touch</div>
+            <div class="tiadian-alert tiadian-position-cover tiadian-margin-remove tiadian-hidden-notouch">Hidden No-Touch</div>
+        </div>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-grid-small tiadian-child-width-1-2 tiadian-child-width-auto@s tiadian-text-center" tiadian-grid&gt;
     &lt;div&gt;
@@ -277,4 +377,3 @@
 &lt;/div&gt;
 </code>
     </pre>
-  
