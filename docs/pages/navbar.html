@@ -1,6 +1,4 @@
-
-
-        <h1 id="navbar">Navbar</h1>
+ <h1 id="navbar">Navbar</h1>
 <p class="tiadian-text-lead">Create a navigation bar that can be used for your main site navigation.</p>
 <h2 id="usage">Usage</h2>
 <p>The Navbar component consists of a navbar container, the navbar itself and one or more navigations.</p>
@@ -48,6 +46,27 @@
     &lt;/div&gt;
 &lt;/nav&gt;
 </code></pre>
+
+<nav class="tiadian-navbar-container" tiadian-navbar>
+    <div class="tiadian-navbar-left">
+
+        <ul class="tiadian-navbar-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li>
+                <a href="#">Parent</a>
+                <div class="tiadian-navbar-dropdown">
+                    <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar&gt;
     &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
 
@@ -78,6 +97,48 @@
     &lt;div class=&quot;tiadian-navbar-right&quot;&gt;...&lt;/div&gt;
 &lt;/nav&gt;
 </code></pre>
+
+<nav class="tiadian-navbar-container" tiadian-navbar>
+
+    <div class="tiadian-navbar-left">
+
+        <ul class="tiadian-navbar-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li>
+                <a href="#">Parent</a>
+                <div class="tiadian-navbar-dropdown">
+                    <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+
+    <div class="tiadian-navbar-right">
+
+        <ul class="tiadian-navbar-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li>
+                <a href="#">Parent</a>
+                <div class="tiadian-navbar-dropdown">
+                    <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar&gt;
 
     &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
@@ -125,6 +186,27 @@
 <p>A parent item inside the navbar can be enabled by either hovering or clicking the toggle. Just add the <code>mode: click</code> option to the <code>tiadian-navbar</code> attribute.</p>
 <pre><code class="language-html">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar=&quot;mode: click&quot;&gt;...&lt;/nav&gt;
 </code></pre>
+
+<nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar="mode: click">
+    <div class="tiadian-navbar-left">
+
+        <ul class="tiadian-navbar-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li>
+                <a href="#">Parent</a>
+                <div class="tiadian-navbar-dropdown">
+                    <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar-container tiadian-margin&quot; tiadian-navbar=&quot;mode: click&quot;&gt;
     &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
 
@@ -151,6 +233,34 @@
 <p>When using an image or colored background for the hero section of your website, you might want to turn the navbar transparent. Just add the <code>.tiadian-navbar-transparent</code> class to the <code>&lt;nav&gt;</code> element. If necessary, add the <code>.tiadian-light</code> or <code>.tiadian-dark</code> class from the <a href="inverse.md">Inverse component</a> to adjust the navbar's color.</p>
 <pre><code class="language-html">&lt;nav class=&quot;tiadian-navbar-container tiadian-navbar-transparent&quot; tiadian-navbar&gt;...&lt;/nav&gt;
 </code></pre>
+
+<div class="tiadian-position-relative">
+    <img src="https://tiaweb.github.io/tiadian/docs/images/light.jpg" alt="">
+    <div class="tiadian-position-top">
+        <nav class="tiadian-navbar-container tiadian-navbar-transparent" tiadian-navbar>
+            <div class="tiadian-navbar-left">
+                <ul class="tiadian-navbar-nav">
+                    <li class="tiadian-active"><a href="#">Active</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li>
+                        <a href="#">Parent</a>
+                        <div class="tiadian-navbar-dropdown">
+                            <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                <li class="tiadian-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-divider"></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-position-relative&quot;&gt;
     &lt;img src=&quot;images/light.jpg&quot; alt=&quot;&quot;&gt;
     &lt;div class=&quot;tiadian-position-top&quot;&gt;
@@ -191,6 +301,46 @@
     &lt;/a&gt;
 &lt;/li&gt;
 </code></pre>
+
+<nav class="tiadian-navbar-container" tiadian-navbar>
+    <div class="tiadian-navbar-left">
+
+        <ul class="tiadian-navbar-nav">
+            <li class="tiadian-active">
+                <a href="#">
+                    <div>
+                        Active
+                        <div class="tiadian-navbar-subtitle">Subtitle</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>
+                        Parent
+                        <div class="tiadian-navbar-subtitle">Subtitle</div>
+                    </div>
+                </a>
+                <div class="tiadian-navbar-dropdown">
+                    <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <div>
+                        Item
+                        <div class="tiadian-navbar-subtitle">Subtitle</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar&gt;
     &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
 
@@ -243,6 +393,34 @@
 &lt;/div&gt;
 </code></pre>
 <p>Add the <code>.tiadian-logo</code> class from the <a href="utility.md">Utility component</a> to an <code>&lt;a&gt;</code> or <code>&lt;div&gt;</code> element to indicate your brand.</p>
+
+<nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar>
+    <div class="tiadian-navbar-left">
+
+        <a class="tiadian-navbar-item tiadian-logo" href="#">Logo</a>
+
+        <ul class="tiadian-navbar-nav">
+            <li>
+                <a href="#">
+                    <span class="tiadian-icon tiadian-margin-small-right" tiadian-icon="icon: star"></span>
+                    Features
+                </a>
+            </li>
+        </ul>
+
+        <div class="tiadian-navbar-item">
+            <div>Some <a href="#">Link</a></div>
+        </div>
+
+        <div class="tiadian-navbar-item">
+            <form action="javascript:void(0)">
+                <input class="tiadian-input tiadian-form-width-small" type="text" placeholder="Input">
+                <button class="tiadian-button tiadian-button-default">Button</button>
+            </form>
+        </div>
+
+    </div>
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar-container tiadian-margin&quot; tiadian-navbar&gt;
     &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
 
@@ -283,6 +461,34 @@
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<nav class="tiadian-navbar-container tiadian-margin" tiadian-navbar>
+    <div class="tiadian-navbar-center">
+
+        <div class="tiadian-navbar-center-left"><div>
+            <ul class="tiadian-navbar-nav">
+                <li class="tiadian-active"><a href="#">Active</a></li>
+                <li>
+                    <a href="#">Parent</a>
+                    <div class="tiadian-navbar-dropdown">
+                        <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                            <li class="tiadian-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div></div>
+        <a class="tiadian-navbar-item tiadian-logo" href="#">Logo</a>
+        <div class="tiadian-navbar-center-right"><div>
+            <ul class="tiadian-navbar-nav">
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div></div>
+
+    </div>
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar-container tiadian-margin&quot; tiadian-navbar&gt;
     &lt;div class=&quot;tiadian-navbar-center&quot;&gt;
 
@@ -320,6 +526,20 @@
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<nav class="tiadian-navbar tiadian-navbar-container tiadian-margin">
+    <div class="tiadian-navbar-left">
+        <a class="tiadian-navbar-toggle" tiadian-navbar-toggle-icon href="#"></a>
+    </div>
+</nav>
+
+<nav class="tiadian-navbar tiadian-navbar-container tiadian-margin">
+    <div class="tiadian-navbar-left">
+        <a class="tiadian-navbar-toggle" href="#">
+            <span tiadian-navbar-toggle-icon></span> <span class="tiadian-margin-small-left">Menu</span>
+        </a>
+    </div>
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar tiadian-navbar-container tiadian-margin&quot;&gt;
     &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
         &lt;a class=&quot;tiadian-navbar-toggle&quot; tiadian-navbar-toggle-icon href=&quot;#&quot;&gt;&lt;/a&gt;
@@ -346,6 +566,50 @@
     &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
+
+<nav class="tiadian-navbar-container" tiadian-navbar>
+    <div class="tiadian-navbar-left">
+
+        <ul class="tiadian-navbar-nav">
+            <li class="tiadian-active"><a href="#">Active</a></li>
+            <li>
+                <a href="#">Parent</a>
+                <div class="tiadian-navbar-dropdown">
+                    <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="tiadian-nav-header">Header</li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="tiadian-nav-divider"></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Item</a></li>
+        </ul>
+
+    </div>
+    <div class="tiadian-navbar-right">
+
+        <ul class="tiadian-navbar-nav">
+            <li>
+                <a href="#">Parent</a>
+                <div class="tiadian-navbar-dropdown">
+                    <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="tiadian-nav-header">Header</li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="tiadian-nav-divider"></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar&gt;
     &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
 
@@ -428,6 +692,45 @@
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<nav class="tiadian-navbar-container" tiadian-navbar>
+    <div class="tiadian-navbar-left">
+
+        <ul class="tiadian-navbar-nav">
+            <li>
+                <a href="#">Two Columns</a>
+                <div class="tiadian-navbar-dropdown tiadian-navbar-dropdown-width-2">
+                    <div class="tiadian-navbar-dropdown-grid tiadian-child-width-1-2" tiadian-grid>
+                        <div>
+                            <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                <li class="tiadian-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-divider"></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                <li class="tiadian-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-divider"></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar&gt;
     &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
 
@@ -472,6 +775,118 @@
 <p>Dropdowns can be aligned to the navbar's boundary. Just append the <code>boundary-align: true</code> parameter to the <code>tiadian-navbar</code> attribute. Add the <code>align: left</code>, <code>align: center</code> or <code>align: right</code> option to change the alignment. By default, dropdowns are aligned to the left.</p>
 <pre><code class="language-html">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar=&quot;boundary-align: true; align: center;&quot;&gt;...&lt;/nav&gt;
 </code></pre>
+
+<nav class="tiadian-navbar-container" tiadian-navbar="boundary-align: true; align: center;">
+    <div class="tiadian-navbar-left">
+
+        <ul class="tiadian-navbar-nav">
+            <li>
+                <a href="#">Item</a>
+                <div class="tiadian-navbar-dropdown">
+                    <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="tiadian-nav-header">Header</li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="tiadian-nav-divider"></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">Item</a>
+                <div class="tiadian-navbar-dropdown tiadian-navbar-dropdown-width-2">
+                    <div class="tiadian-navbar-dropdown-grid tiadian-child-width-1-2" tiadian-grid>
+                        <div>
+                            <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                <li class="tiadian-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-divider"></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                <li class="tiadian-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-divider"></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Item</a>
+                <div class="tiadian-navbar-dropdown tiadian-navbar-dropdown-width-3">
+                    <div class="tiadian-navbar-dropdown-grid tiadian-child-width-1-3" tiadian-grid>
+                        <div>
+                            <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                <li class="tiadian-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-divider"></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                <li class="tiadian-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-divider"></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                <li class="tiadian-active"><a href="#">Active</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="tiadian-nav-divider"></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="tiadian-navbar-right">
+        <ul class="tiadian-navbar-nav">
+            <li>
+                <a href="#">Item</a>
+                <div class="tiadian-navbar-dropdown">
+                    <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="tiadian-nav-header">Header</li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="tiadian-nav-divider"></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar=&quot;boundary-align: true; align: center;&quot;&gt;
     &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
 
@@ -589,6 +1004,58 @@
 <p>To justify a dropdown, use the <a href="drop.md">Drop component</a> and its position feature. In the following example it is aligned to the boundary of the parent navbar.</p>
 <pre><code class="language-html">&lt;div class=&quot;tiadian-navbar-dropdown&quot; tiadian-drop=&quot;boundary: .parent; boundary-align: true; pos: bottom-justify;&quot;&gt;...&lt;/div&gt;
 </code></pre>
+
+<nav class="tiadian-navbar-container" tiadian-navbar>
+    <div class="tiadian-navbar-left">
+
+        <ul class="tiadian-navbar-nav">
+            <li>
+                <a href="#">Item</a>
+                <div class="tiadian-navbar-dropdown" tiadian-drop="boundary: !nav; boundary-align: true; pos: bottom-justify;">
+                    <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="tiadian-nav-header">Header</li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li class="tiadian-nav-divider"></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+           <li>
+               <a href="#">Item</a>
+               <div class="tiadian-navbar-dropdown" tiadian-drop="boundary: !nav; boundary-align: true; pos: bottom-justify;">
+                   <div class="tiadian-navbar-dropdown-grid tiadian-child-width-1-2" tiadian-grid>
+                       <div>
+                           <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                               <li class="tiadian-active"><a href="#">Active</a></li>
+                               <li><a href="#">Item</a></li>
+                               <li class="tiadian-nav-header">Header</li>
+                               <li><a href="#">Item</a></li>
+                               <li><a href="#">Item</a></li>
+                               <li class="tiadian-nav-divider"></li>
+                               <li><a href="#">Item</a></li>
+                           </ul>
+                       </div>
+                       <div>
+                           <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                               <li class="tiadian-active"><a href="#">Active</a></li>
+                               <li><a href="#">Item</a></li>
+                               <li class="tiadian-nav-header">Header</li>
+                               <li><a href="#">Item</a></li>
+                               <li><a href="#">Item</a></li>
+                               <li class="tiadian-nav-divider"></li>
+                               <li><a href="#">Item</a></li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </li>
+       </ul>
+
+    </div>
+</nav>
 <pre><code class="language-example">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar&gt;
     &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
 
@@ -647,6 +1114,87 @@
 <pre><code class="language-html">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar=&quot;dropbar: true;&quot;&gt;...&lt;/nav&gt;
 &lt;div class=&quot;tiadian-navbar-dropbar&quot;&gt;&lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-position-relative">
+
+    <nav class="tiadian-navbar-container" tiadian-navbar="dropbar: true">
+
+        <div class="tiadian-navbar-left">
+
+            <ul class="tiadian-navbar-nav">
+                <li>
+                    <a href="#">Item</a>
+                    <div class="tiadian-navbar-dropdown">
+                        <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                            <li class="tiadian-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="tiadian-nav-header">Header</li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="tiadian-nav-divider"></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Item</a>
+                    <div class="tiadian-navbar-dropdown tiadian-navbar-dropdown-width-2">
+                        <div class="tiadian-navbar-dropdown-grid tiadian-child-width-1-2" tiadian-grid>
+                            <div>
+                                <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                    <li class="tiadian-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li class="tiadian-nav-header">Header</li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li class="tiadian-nav-divider"></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                    <li class="tiadian-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li class="tiadian-nav-header">Header</li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li class="tiadian-nav-divider"></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="tiadian-navbar-right">
+
+            <ul class="tiadian-navbar-nav">
+                <li>
+                    <a href="#">Parent</a>
+                    <div class="tiadian-navbar-dropdown">
+                        <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                            <li class="tiadian-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="tiadian-nav-header">Header</li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="tiadian-nav-divider"></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="tiadian-navbar-dropbar"></div>
+
+</div>
+
 <pre><code class="language-example">&lt;div class=&quot;tiadian-position-relative&quot;&gt;
 
     &lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar=&quot;dropbar: true&quot;&gt;
@@ -734,6 +1282,87 @@
 <pre><code class="language-html">&lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar=&quot;dropbar: true; dropbar-mode: push&quot;&gt;...&lt;/nav&gt;
 &lt;div class=&quot;tiadian-navbar-dropbar&quot;&gt;&lt;/div&gt;
 </code></pre>
+
+<div class="tiadian-position-relative">
+
+    <nav class="tiadian-navbar-container" tiadian-navbar="dropbar: true; dropbar-mode: push">
+
+        <div class="tiadian-navbar-left">
+
+            <ul class="tiadian-navbar-nav">
+                <li>
+                    <a href="#">Item</a>
+                    <div class="tiadian-navbar-dropdown">
+                        <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                            <li class="tiadian-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="tiadian-nav-header">Header</li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="tiadian-nav-divider"></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Item</a>
+                    <div class="tiadian-navbar-dropdown tiadian-navbar-dropdown-width-2">
+                        <div class="tiadian-navbar-dropdown-grid tiadian-child-width-1-2" tiadian-grid>
+                            <div>
+                                <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                    <li class="tiadian-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li class="tiadian-nav-header">Header</li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li class="tiadian-nav-divider"></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                    <li class="tiadian-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li class="tiadian-nav-header">Header</li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li class="tiadian-nav-divider"></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="tiadian-navbar-right">
+
+            <ul class="tiadian-navbar-nav">
+                <li>
+                    <a href="#">Parent</a>
+                    <div class="tiadian-navbar-dropdown">
+                        <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                            <li class="tiadian-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="tiadian-nav-header">Header</li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="tiadian-nav-divider"></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <div class="tiadian-navbar-dropbar"></div>
+
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-position-relative&quot;&gt;
 
     &lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar=&quot;dropbar: true; dropbar-mode: push&quot;&gt;
@@ -824,6 +1453,29 @@
     &lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar&gt;...&lt;/nav&gt;
 &lt;/div&gt;
 </code></pre>
+
+<div tiadian-sticky="sel-target: .tiadian-navbar-container; cls-active: tiadian-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="tiadian-navbar-container" tiadian-navbar style="position: relative; z-index: 980;">
+        <div class="tiadian-navbar-left">
+
+            <ul class="tiadian-navbar-nav">
+                <li class="tiadian-active"><a href="#">Active</a></li>
+                <li>
+                    <a href="#">Parent</a>
+                    <div class="tiadian-navbar-dropdown">
+                        <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                            <li class="tiadian-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Item</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
 <pre><code class="language-example">&lt;div tiadian-sticky=&quot;sel-target: .tiadian-navbar-container; cls-active: tiadian-navbar-sticky; bottom: #transparent-sticky-navbar&quot;&gt;
     &lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar style=&quot;position: relative; z-index: 980;&quot;&gt;
         &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
@@ -852,6 +1504,28 @@
     &lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar=&quot;dropbar: true;&quot;&gt;...&lt;/nav&gt;
 &lt;/div&gt;
 </code></pre>
+<div tiadian-sticky="sel-target: .tiadian-navbar-container; cls-active: tiadian-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="tiadian-navbar-container" tiadian-navbar="dropbar: true;" style="position: relative; z-index: 980;">
+        <div class="tiadian-navbar-left">
+
+            <ul class="tiadian-navbar-nav">
+                <li class="tiadian-active"><a href="#">Active</a></li>
+                <li>
+                    <a href="#">Parent</a>
+                    <div class="tiadian-navbar-dropdown">
+                        <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                            <li class="tiadian-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Item</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
 <pre><code class="language-example">&lt;div tiadian-sticky=&quot;sel-target: .tiadian-navbar-container; cls-active: tiadian-navbar-sticky; bottom: #transparent-sticky-navbar&quot;&gt;
     &lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar=&quot;dropbar: true;&quot; style=&quot;position: relative; z-index: 980;&quot;&gt;
         &lt;div class=&quot;tiadian-navbar-left&quot;&gt;
@@ -882,7 +1556,49 @@
 <pre><code class="language-html">&lt;div tiadian-sticky=&quot;animation: tiadian-animation-slide-top; sel-target: .tiadian-navbar-container; cls-active: tiadian-navbar-sticky; cls-inactive: tiadian-navbar-transparent tiadian-light; top: 200&quot;&gt;
     &lt;nav class=&quot;tiadian-navbar-container&quot; tiadian-navbar&gt;...&lt;/nav&gt;
 &lt;/div&gt;
-</code></pre>
+</code></pre
+
+<div class="tiadian-section-primary tiadian-preserve-color">
+
+    <div tiadian-sticky="animation: tiadian-animation-slide-top; sel-target: .tiadian-navbar-container; cls-active: tiadian-navbar-sticky; cls-inactive: tiadian-navbar-transparent tiadian-light; top: 200">
+
+        <nav class="tiadian-navbar-container">
+            <div class="tiadian-container tiadian-container-expand">
+                <div tiadian-navbar>
+
+                    <ul class="tiadian-navbar-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li>
+                            <a href="#">Parent</a>
+                            <div class="tiadian-navbar-dropdown">
+                                <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                    <li class="tiadian-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="tiadian-section tiadian-light">
+        <div class="tiadian-container">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+
+        </div>
+    </div>
+
+</div>
 <pre><code class="language-example">&lt;div class=&quot;tiadian-section-primary tiadian-preserve-color&quot;&gt;
 
     &lt;div tiadian-sticky=&quot;animation: tiadian-animation-slide-top; sel-target: .tiadian-navbar-container; cls-active: tiadian-navbar-sticky; cls-inactive: tiadian-navbar-transparent tiadian-light; top: 200&quot;&gt;
@@ -1042,5 +1758,3 @@
 </tr>
 </tbody>
 </table>
-
-  
