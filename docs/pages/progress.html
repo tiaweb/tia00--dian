@@ -1,5 +1,4 @@
-
-    <h1 id="progress">Progress</h1>
+<h1 id="progress">Progress</h1>
     <p class="tiadian-text-lead">Defines progress bars that indicate how far along a process is.</p>
     <h2 id="usage">Usage</h2>
     <p>To apply this component, add the <code>.tiadian-progress</code> class to a <code>&lt;progress&gt;</code> element.</p>
@@ -7,6 +6,29 @@
       <code class="language-html">&lt;progress class="tiadian-progress" value="" max=""&gt;&lt;/progress&gt;
 </code>
     </pre>
+    
+     <progress id="js-progressbar" class="tiadian-progress" value="10" max="100"></progress>
+
+<script>
+    
+    TIAdian.util.ready(function () {
+        
+        var bar = document.getElementById('js-progressbar');
+
+        var animate = setInterval(function () {
+
+            bar.value += 10;
+
+            if (bar.value >= bar.max) {
+                clearInterval(animate);
+            }
+
+        }, 1000);
+
+    });
+
+</script>
+
     <pre>
       <code class="language-example">&lt;progress id="js-progressbar" class="tiadian-progress" value="10" max="100"&gt;&lt;/progress&gt;
 
@@ -33,3 +55,4 @@
 </code>
     </pre>
   
+
