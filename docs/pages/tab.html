@@ -1,4 +1,4 @@
-
+ 
     <h1 id="tab">Tab</h1>
     <p class="tiadian-text-lead">Create a tabbed navigation with different styles.</p>
     <h2 id="usage">Usage</h2>
@@ -39,6 +39,13 @@
 &lt;/ul&gt;
 </code>
     </pre>
+    
+     <ul tiadian-tab>
+    <li class="tiadian-active"><a href="#">Left</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li class="tiadian-disabled"><a>Disabled</a></li>
+</ul>
     <pre>
       <code class="language-example">&lt;ul tiadian-tab&gt;
     &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Left&lt;/a&gt;&lt;/li&gt;
@@ -55,6 +62,11 @@
       <code class="language-html">&lt;ul class="tiadian-tab-bottom" tiadian-tab&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    <ul class="tiadian-tab-bottom" tiadian-tab>
+    <li class="tiadian-active"><a href="#">Left</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
     <pre>
       <code class="language-example">&lt;ul class="tiadian-tab-bottom" tiadian-tab&gt;
     &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Left&lt;/a&gt;&lt;/li&gt;
@@ -73,6 +85,25 @@
 &lt;ul class="tiadian-tab-right" tiadian-tab&gt;...&lt;/ul&gt;
 </code>
     </pre>
+     <div class="tiadian-child-width-1-2@s" tiadian-grid>
+    <div>
+        <ul class="tiadian-tab-left" tiadian-tab>
+            <li class="tiadian-active"><a href="#">Left</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <ul class="tiadian-tab-right" tiadian-tab>
+            <li class="tiadian-active"><a href="#">Right</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+</div>
+
+    
     <pre>
       <code class="language-example">&lt;div class="tiadian-child-width-1-2@s" tiadian-grid&gt;
     &lt;div&gt;
@@ -107,6 +138,34 @@
       <code class="language-html">&lt;ul class="tiadian-flex-right" tiadian-tab&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    
+    <div class="tiadian-margin-medium-top">
+    <ul class="tiadian-flex-center" tiadian-tab>
+        <li class="tiadian-active"><a href="#">Center</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+    </ul>
+</div>
+
+<div>
+    <ul class="tiadian-flex-right" tiadian-tab>
+        <li class="tiadian-active"><a href="#">Right</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+    </ul>
+</div>
+
+<div>
+    <ul class="tiadian-child-width-expand" tiadian-tab>
+        <li class="tiadian-active"><a href="#">Justify</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+    </ul>
+</div>
+
+    
+
     <pre>
       <code class="language-example">&lt;div class="tiadian-margin-medium-top"&gt;
     &lt;ul class="tiadian-flex-center" tiadian-tab&gt;
@@ -153,6 +212,26 @@
 &lt;/ul&gt;
 </code>
     </pre>
+    
+    <ul tiadian-tab>
+    <li class="tiadian-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li>
+        <a href="#">More <span class="tiadian-margin-small-left" tiadian-icon="icon: triangle-down"></span></a>
+        <div tiadian-dropdown="mode: click">
+            <ul class="tiadian-nav tiadian-dropdown-nav">
+                <li class="tiadian-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="tiadian-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="tiadian-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>
+
     <pre>
       <code class="language-example">&lt;ul tiadian-tab&gt;
     &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
