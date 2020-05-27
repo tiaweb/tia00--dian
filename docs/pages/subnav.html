@@ -1,4 +1,4 @@
-
+ 
     <h1 id="subnav">Subnav</h1>
     <p class="tiadian-text-lead">Defines different styles for a sub navigation.</p>
     <h2 id="usage">Usage</h2>
@@ -34,6 +34,13 @@
 &lt;/ul&gt;
 </code>
     </pre>
+    
+    <ul class="tiadian-subnav" tiadian-margin>
+    <li class="tiadian-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+    <li><span>Disabled</span></li>
+</ul>
     <pre>
       <code class="language-example">&lt;ul class="tiadian-subnav" tiadian-margin&gt;
     &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
@@ -52,6 +59,12 @@
       <code class="language-html">&lt;ul class="tiadian-subnav tiadian-subnav-divider"&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    
+    <ul class="tiadian-subnav tiadian-subnav-divider" tiadian-margin>
+    <li class="tiadian-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
     <pre>
       <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-divider" tiadian-margin&gt;
     &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
@@ -67,6 +80,12 @@
       <code class="language-html">&lt;ul class="tiadian-subnav tiadian-subnav-pill"&gt;...&lt;/ul&gt;
 </code>
     </pre>
+    
+    <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+    <li class="tiadian-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li><a href="#">Item</a></li>
+</ul>
     <pre>
       <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin&gt;
     &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
@@ -87,6 +106,27 @@
 &lt;/ul&gt;
 </code>
     </pre>
+    
+    <ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin>
+    <li class="tiadian-active"><a href="#">Active</a></li>
+    <li><a href="#">Item</a></li>
+    <li>
+        <a href="#">More <span tiadian-icon="icon:  triangle-down"></span></a>
+        <div tiadian-dropdown="mode: click;">
+            <ul class="tiadian-nav tiadian-dropdown-nav">
+                <li class="tiadian-active"><a href="#">Active</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="tiadian-nav-header">Header</li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li class="tiadian-nav-divider"></li>
+                <li><a href="#">Item</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>
+
+    
     <pre>
       <code class="language-example">&lt;ul class="tiadian-subnav tiadian-subnav-pill" tiadian-margin&gt;
     &lt;li class="tiadian-active"&gt;&lt;a href="#"&gt;Active&lt;/a&gt;&lt;/li&gt;
@@ -108,4 +148,3 @@
 &lt;/ul&gt;
 </code>
     </pre>
-
