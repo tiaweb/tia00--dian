@@ -9,6 +9,11 @@
 &lt;p id="my-id"&gt;&lt;/p&gt;
 </code>
     </pre>
+    
+    <div>
+    <button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-usage">Toggle</button>
+    <p id="toggle-usage">What's up?</p>
+</div>
     <pre>
       <code class="language-example">&lt;div&gt;
     &lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-usage"&gt;Toggle&lt;/button&gt;
@@ -25,6 +30,12 @@
 &lt;p class="my-class"&gt;&lt;/p&gt;
 </code>
     </pre>
+    
+    <button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: .toggle">Toggle</button>
+<p class="toggle">Hello!</p>
+<p class="toggle" hidden>Bazinga!</p>
+
+    
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: .toggle"&gt;Toggle&lt;/button&gt;
 &lt;p class="toggle"&gt;Hello!&lt;/p&gt;
@@ -41,6 +52,10 @@
 &lt;p id="my-id" class="tiadian-card tiadian-card-default"&gt;&lt;/p&gt;
 </code>
     </pre>
+    
+    <button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-custom; cls: tiadian-card-primary">Toggle</button>
+<div id="toggle-custom" class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small">Custom class</div>
+
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-custom; cls: tiadian-card-primary"&gt;Toggle&lt;/button&gt;
 &lt;div id="toggle-custom" class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small"&gt;Custom class&lt;/div&gt;
@@ -54,6 +69,11 @@
 &lt;p id="my-id"&gt;&lt;/p&gt;
 </code>
     </pre>
+    
+     <button href="#toggle-animation" class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-animation; animation: tiadian-animation-fade">Toggle</button>
+<div id="toggle-animation" class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small">Animation</div>
+
+    
     <pre>
       <code class="language-example">&lt;button href="#toggle-animation" class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-animation; animation: tiadian-animation-fade"&gt;Toggle&lt;/button&gt;
 &lt;div id="toggle-animation" class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small"&gt;Animation&lt;/div&gt;
@@ -66,6 +86,11 @@
 &lt;p id="my-id"&gt;&lt;/p&gt;
 </code>
     </pre>
+    
+     <button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-animation-multiple; animation:  tiadian-animation-slide-left, tiadian-animation-slide-bottom">Toggle</button>
+<div id="toggle-animation-multiple" class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small">Animation</div>
+
+    
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-animation-multiple; animation:  tiadian-animation-slide-left, tiadian-animation-slide-bottom"&gt;Toggle&lt;/button&gt;
 &lt;div id="toggle-animation-multiple" class="tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small"&gt;Animation&lt;/div&gt;
@@ -79,6 +104,12 @@
 &lt;p class="my-class"&gt;&lt;/p&gt;
 </code>
     </pre>
+    
+    <button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: .toggle-animation-queued; animation: tiadian-animation-fade; queued: true; duration: 300">Toggle</button>
+<p class="toggle-animation-queued tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small">Animation</p>
+<p class="toggle-animation-queued tiadian-card tiadian-card-primary tiadian-card-body tiadian-margin-small" hidden>Animation</p>
+
+    
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: .toggle-animation-queued; animation: tiadian-animation-fade; queued: true; duration: 300"&gt;Toggle&lt;/button&gt;
 &lt;p class="toggle-animation-queued tiadian-card tiadian-card-default tiadian-card-body tiadian-margin-small"&gt;Animation&lt;/p&gt;
@@ -127,6 +158,11 @@
 &lt;p id="my-id"&gt;&lt;/p&gt;
 </code>
     </pre>
+    
+    <button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-hover; mode: hover">hover</button>
+<p id="toggle-hover">What's up?</p>
+
+    
     <pre>
       <code class="language-example">&lt;button class="tiadian-button tiadian-button-default" type="button" tiadian-toggle="target: #toggle-hover; mode: hover"&gt;hover&lt;/button&gt;
 &lt;p id="toggle-hover"&gt;What's up?&lt;/p&gt;
@@ -140,6 +176,10 @@
 &lt;div class="tiadian-card tiadian-card-default" tiadian-toggle="cls: tiadian-card-primary; mode: media; media: @l"&gt;&lt;/div&gt;
 </code>
     </pre>
+    
+    <div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-width-medium" tiadian-toggle="cls: tiadian-card-primary; mode: media; media: @l">
+    Primary on large screens
+</div>
     <pre>
       <code class="language-example">&lt;div class="tiadian-card tiadian-card-default tiadian-card-body tiadian-width-medium" tiadian-toggle="cls: tiadian-card-primary; mode: media; media: @l"&gt;
     Primary on large screens
@@ -303,4 +343,3 @@
 </code>
     </pre>
     <p>Toggles the Toggle's target.</p>
-
