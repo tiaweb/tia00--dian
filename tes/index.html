@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - clipboard to prism snippets</title>
+  <link rel="stylesheet" href="https://tiaweb.gitlab.io/tiadian/tes/style.css">
+
+</head>
+<body>
+
+<!-- This is a button toggling the modal -->
+<button class="tiadian-button tiadian-button-default tiadian-margin-small-right" type="button" tiadian-toggle="target: #modal-example">Open</button>
+
+<!-- This is an anchor toggling the modal -->
+<a href="#modal-example" tiadian-toggle>Open</a>
+
+<!-- This is the modal -->
+<div id="modal-example" tiadian-modal>
+    <div class="tiadian-modal-dialog tiadian-modal-body">
+        <h2 class="tiadian-modal-title">Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="tiadian-text-right">
+            <button class="tiadian-button tiadian-button-default tiadian-modal-close" type="button">Cancel</button>
+            <button class="tiadian-button tiadian-button-primary" type="button">Save</button>
+        </p>
+    </div>
+</div>
+
+<div class="tiadian-position-relative tiadian-visible-toggle tiadian-light" tabindex="-1" tiadian-slideshow>
+
+    <ul class="tiadian-slideshow-items">
+        <li>
+            <img data-src="https://getuikit.com/docs/images/photo.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !.tiadian-slideshow-items">
+        </li>
+        <li>
+            <img data-src="https://getuikit.com/docs/images/dark.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !.tiadian-slideshow-items">
+        </li>
+        <li>
+            <img data-src="https://getuikit.com/docs/images/light.jpg" width="1800" height="1200" alt="" tiadian-cover tiadian-img="target: !.tiadian-slideshow-items">
+        </li>
+    </ul>
+
+    <a class="tiadian-position-center-left tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-previous tiadian-slideshow-item="previous"></a>
+    <a class="tiadian-position-center-right tiadian-position-small tiadian-hidden-hover" href="#" tiadian-slidenav-next tiadian-slideshow-item="next"></a>
+
+</div>
+
+<div class="tiadian-section-primary tiadian-preserve-color">
+
+    <div tiadian-sticky="animation: tiadian-animation-slide-top; sel-target: .tiadian-navbar-container; cls-active: tiadian-navbar-sticky; cls-inactive: tiadian-navbar-transparent tiadian-light; top: 200">
+
+        <nav class="tiadian-navbar-container">
+            <div class="tiadian-container tiadian-container-expand">
+                <div tiadian-navbar>
+
+                    <ul class="tiadian-navbar-nav">
+                        <li class="tiadian-active"><a href="#">Active</a></li>
+                        <li>
+                            <a href="#">Parent</a>
+                            <div class="tiadian-navbar-dropdown">
+                                <ul class="tiadian-nav tiadian-navbar-dropdown-nav">
+                                    <li class="tiadian-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="tiadian-section tiadian-light">
+        <div class="tiadian-container">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="tiadian-alert-primary" tiadian-alert>
+    <a class="tiadian-alert-close" tiadian-close></a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+</div>
+
+<div class="tiadian-alert-success" tiadian-alert>
+    <a class="tiadian-alert-close" tiadian-close></a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+</div>
+
+<div class="tiadian-alert-warning" tiadian-alert>
+    <a class="tiadian-alert-close" tiadian-close></a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+</div>
+
+<div class="tiadian-alert-danger" tiadian-alert>
+    <a class="tiadian-alert-close" tiadian-close></a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+</div>
+<!-- partial -->
+  <script  src="https://tiaweb.gitlab.io/tiadian/tes/script.js"></script>
+
+</body>
+</html>
